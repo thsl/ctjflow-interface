@@ -1,0 +1,352 @@
+body {
+  //font-family: @font-family-primary;
+  font-weight: normal;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  background-color: #ecf0f5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  //font-family: @font-family-primary;
+  letter-spacing: -0.02em;
+  margin: 0;
+  padding: 0;
+}
+
+
+address, dl, ol, p, ul {
+  margin-bottom: 0;
+}
+
+
+// ---------------------------------------------------------------
+
+/* Tamanhos de Fontes */
+
+.fontsize-xs {
+  font-size: 8px;
+}
+
+.fontsize-sm {
+  font-size: 11px;
+}
+
+.fontsize-md {
+  font-size: 15px;
+}
+
+.fontsize-lg {
+  font-size: 25px;
+}
+
+.fontsize-xl {
+  font-size: 35px;
+}
+
+.fontsize-xxl {
+  font-size: 55px;
+}
+
+// ---------------------------------------------------------------
+
+/* Dividers */
+
+.divider-top {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #c8c8c8;
+}
+
+.divider-right {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #c8c8c8;
+}
+
+.divider-bottom {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.divider-left {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #c8c8c8;
+}
+
+/* Rolagens */
+
+.rol-vert {
+  display: block;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.rol-hor {
+  display: block;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+.rol-hor-vert {
+  display: block;
+  overflow: auto;
+}
+
+.overflow-hide {
+  overflow: hidden;
+}
+
+//Força tamanhos
+
+.width-grid {
+  @force-grid-base: 60px;
+  @force-grid-gutter: 20px;
+  &-auto {
+    width: auto;
+  }
+  &-1 {
+    width: @force-grid-base;
+  }
+
+  &-2 {
+    width: 2*@force-grid-base + @force-grid-gutter;
+  }
+
+  &-3 {
+    width: 3*@force-grid-base + 2*@force-grid-gutter;
+  }
+
+  &-4 {
+    width: 4*@force-grid-base + 3*@force-grid-gutter;
+  }
+
+  &-5 {
+    width: 5*@force-grid-base + 4*@force-grid-gutter;
+  }
+
+  &-6 {
+    width: 6*@force-grid-base + 5*@force-grid-gutter;
+  }
+
+  &-7 {
+    width: 7*@force-grid-base + 6*@force-grid-gutter;
+  }
+
+  &-8 {
+    width: 8*@force-grid-base + 7*@force-grid-gutter;
+  }
+
+  &-9 {
+    width: 9*@force-grid-base + 8*@force-grid-gutter;
+  }
+
+  &-10 {
+    width: 10*@force-grid-base + 9*@force-grid-gutter;
+  }
+
+  &-11 {
+    width: 11*@force-grid-base + 10*@force-grid-gutter;
+  }
+
+  &-12 {
+    width: 12*@force-grid-base + 11*@force-grid-gutter;
+  }
+}
+
+.height-grid {
+  @force-grid-base: 60px;
+  @force-grid-gutter: 20px;
+  &-auto {
+    height: auto;
+  }
+  &-1 {
+    height: @force-grid-base;
+  }
+
+  &-2 {
+    height: 2*@force-grid-base + @force-grid-gutter;
+  }
+
+  &-3 {
+    height: 3*@force-grid-base + 2*@force-grid-gutter;
+  }
+
+  &-4 {
+    height: 4*@force-grid-base + 3*@force-grid-gutter;
+  }
+
+  &-5 {
+    height: 5*@force-grid-base + 4*@force-grid-gutter;
+  }
+
+  &-6 {
+    height: 6*@force-grid-base + 5*@force-grid-gutter;
+  }
+
+  &-7 {
+    height: 7*@force-grid-base + 6*@force-grid-gutter;
+  }
+
+  &-8 {
+    height: 8*@force-grid-base + 7*@force-grid-gutter;
+  }
+
+  &-9 {
+    height: 9*@force-grid-base + 8*@force-grid-gutter;
+  }
+
+  &-10 {
+    height: 10*@force-grid-base + 9*@force-grid-gutter;
+  }
+
+  &-11 {
+    height: 11*@force-grid-base + 10*@force-grid-gutter;
+  }
+
+  &-12 {
+    height: 12*@force-grid-base + 11*@force-grid-gutter;
+  }
+}
+
+// ---------------------------------------------------------------
+//Cursores
+.cursor-default {
+  &:hover {
+    cursor: default;
+  }
+}
+
+.cursor-pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.cursor-help {
+  &:hover {
+    cursor: help;
+  }
+}
+
+.cursor-text {
+  &:hover {
+    cursor: text;
+  }
+}
+
+.cursor-move {
+  &:hover {
+    cursor: move;
+  }
+}
+
+.cursor-wait {
+  &:hover {
+    cursor: wait;
+  }
+}
+
+.cursor-progress {
+  &:hover {
+    cursor: progress;
+  }
+}
+
+.cursor-crosshair {
+  &:hover {
+    cursor: crosshair;
+  }
+}
+
+// positions
+.pos-absolute {
+  position: absolute;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.pos-fixed {
+  position: fixed;
+}
+
+// ---------------------------------------------------------------
+//Cores
+.text-white {
+  color: #fff;
+  &.a {
+    color: #fff;
+  }
+  a {
+    color: #fff;
+  }
+}
+
+// ---------------------------------------------------------------
+//Força Uppercase/Lower
+.text-upper {
+  text-transform: uppercase !important;
+}
+
+.text-lower {
+  text-transform: lowercase !important;
+}
+
+.text-line-through {
+  text-decoration: line-through
+}
+
+// ---------------------------------------------------------------
+// Imagens adaptativas
+.img-adaptative {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-full {
+  width: 100%;
+  height: auto !important;
+}
+
+// Cores padrão
+
+.has-alert {
+  position: relative;
+  .ball-alert {
+    position: absolute;
+    top: 19px;
+    left: 20px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    background: @red !important;
+    font-size: 11px;
+    z-index: 820;
+    font-weight: 700;
+    padding: 10px;
+    text-indent: -3px;
+    line-height: 0px;
+    a {
+      color: @white;
+    }
+    &:hover {
+      background: #FF0120 !important;
+    }
+  }
+}
