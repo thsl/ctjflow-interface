@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>CTJFlow</title>
+
+	<link href="img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
+	<link href="img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
+	<link href="img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
+	<link href="img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
+	<link href="img/favicon.png" rel="icon" type="image/png">
+	<link href="img/favicon.ico" rel="shortcut icon">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="js/plugins.js"></script>
+	<link rel="stylesheet" href="css/lib/ion-range-slider/ion.rangeSlider.css">
+	<link rel="stylesheet" href="css/lib/ion-range-slider/ion.rangeSlider.skinHTML5.css">
+	<script src="js/lib/ion-range-slider/ion.rangeSlider.js"></script>
+	<script src="js/lib/ion-range-slider/init.js"></script>
+	<script src="js/app.js"></script>
+
+    <link rel="stylesheet" href="css/lib/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="with-side-menu">
+
+	<header class="site-header">
+	    <div class="container-fluid">
+	        <a href="#" class="site-logo">
+	            <img class="hidden-md-down" src="img/logo-2.png" alt="">
+	            <img class="hidden-lg-up" src="img/logo-2-mob.png" alt="">
+	        </a>
+	        <button class="hamburger hamburger--htla">
+	            <span>toggle menu</span>
+	        </button>
+	        <div class="site-header-content">
+	            <div class="site-header-content-in">
+	                <div class="site-header-shown">
+	                    <div class="dropdown dropdown-notification notif">
+	                        <a href="#"
+	                           class="header-alarm dropdown-toggle active"
+	                           id="dd-notification"
+	                           data-toggle="dropdown"
+	                           aria-haspopup="true"
+	                           aria-expanded="false">
+	                            <i class="font-icon-alarm"></i>
+	                        </a>
+	                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification" style="width: 310px;">
+	                            <div class="dropdown-menu-notif-header">
+	                                Notificações
+	                                <span class="label label-pill label-danger">4</span>
+	                            </div>
+	                            <div class="dropdown-menu-notif-list">
+	                                <div class="dropdown-menu-notif-item">
+	                                    <div class="photo">
+	                                        <img src="img/photo-64-1.jpg" alt="">
+	                                    </div>
+	                                    <div class="dot"></div>
+	                                    <a href="#">Alex</a> aprovou sua solicitação.
+	                                    <div class="color-blue-grey-lighter">7 horas atrás.</div>
+	                                </div>
+	                                <div class="dropdown-menu-notif-item">
+	                                    <div class="photo">
+	                                        <img src="img/photo-64-2.jpg" alt="">
+	                                    </div>
+	                                    <div class="dot"></div>
+	                                    <a href="#">Leandro</a> aprovou sua solicitação.
+	                                    <div class="color-blue-grey-lighter">2 dias atrás.</div>
+	                                </div>
+	                                <div class="dropdown-menu-notif-item">
+	                                    <div class="photo">
+	                                        <img src="img/photo-64-3.jpg" alt="">
+	                                    </div>
+	                                    <div class="dot"></div>
+	                                    <a href="#">Cristina</a>  aprovou sua solicitação.
+	                                    <div class="color-blue-grey-lighter">1 semana atrás.</div>
+	                                </div>
+	                                <div class="dropdown-menu-notif-item">
+	                                    <div class="photo">
+	                                        <img src="img/photo-64-4.jpg" alt="">
+	                                    </div>
+	                                    <a href="#">Amanda</a>  aprovou sua solicitação.
+	                                    <div class="color-blue-grey-lighter">1 mês atrás</div>
+	                                </div>
+	                            </div>
+	                            <div class="dropdown-menu-notif-more">
+	                                <a href="#">Ver mais</a>
+	                            </div>
+	                        </div>
+	                    </div>
+	
+	
+	                    <div class="dropdown dropdown-lang">
+	                        <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                            <span class="flag-icon flag-icon-us"></span>
+	                        </button>
+	                        <div class="dropdown-menu dropdown-menu-right">
+	                            <div class="dropdown-menu-col">
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-br"></span>Português</a>
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-de"></span>Deutsch</a>
+	                            </div>
+	                            <div class="dropdown-menu-col">
+	                                <a class="dropdown-item current" href="#"><span class="flag-icon flag-icon-us"></span>English</a>
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-fr"></span>Français</a>
+	                            </div>
+	                        </div>
+	                    </div>
+	
+	                    <div class="dropdown user-menu">
+	                        <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                            <img src="img/avatar-2-64.png" alt="">
+	                        </button>
+	                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
+	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Perfil</a>
+	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Configuração</a>
+	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Ajuda</a>
+	                            <div class="dropdown-divider"></div>
+	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Sair</a>
+	                        </div>
+	                    </div>
+	
+	                </div><!--.site-header-shown-->
+	
+	                <div class="mobile-menu-right-overlay"></div>
+	                <div class="site-header-collapsed">
+	                    <div class="site-header-collapsed-in">
+	                        <div class="dropdown dropdown-typical">
+	                            <a class="dropdown-toggle" id="dd-header-sales" data-target="#" href="teste.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                                <span class="font-icon">  Filtros de Indicadores</span>
+	                                <span class="lbl">Sales</span>
+	                            </a>
+	                            <div class="dropdown-menu" aria-labelledby="dd-header-sales">
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-ok" style="font-size: 14px;"></span>Hoje</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-del" style="font-size: 12px;"></span>Semanal</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-del" style="font-size: 12px;"></span>Mensal</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-del" style="font-size: 12px;"></span>Anual</a>
+	                            </div>
+	                        </div>
+	                    </div><!--.site-header-collapsed-in-->
+	                </div><!--.site-header-collapsed-->
+	            </div><!--site-header-content-in-->
+	        </div><!--.site-header-content-->
+	    </div><!--.container-fluid-->
+	</header><!--.site-header-->
+
+	<div class="mobile-menu-left-overlay"></div>
+	<nav class="side-menu">
+	    <ul class="side-menu-list">
+	    
+	    	<li class="gold with-sub">
+	            <span>
+	                <i class="font-icon font-icon-dashboard"></i>
+	                <span class="lbl">Dashboard</span>
+	            </span>
+	            <ul>
+	                <li><a href="test.html"><span class="lbl">Menu 1</span></a></li>
+	                <li><a href="test.html"><span class="lbl">Menu 2</span></a></li>
+	                <li><a href="test.html"><span class="lbl">Menu 3</span></a></li>
+	            </ul>
+	        </li>
+	    	<li class="blue with-sub">
+	            <span>
+	                <i class="font-icon font-icon-home"></i>
+	                <span class="lbl">Acadêmico</span>
+	            </span>
+	            <ul>
+	                <li><a href="test.html"><span class="lbl">Menu 1</span></a></li>
+	                <li><a href="test.html"><span class="lbl">Menu 2</span></a></li>
+	                <li><a href="test.html"><span class="lbl">Menu 3</span></a></li>
+	            </ul>
+	        </li>
+	        <li class="red with-sub">
+	            <span>
+	                <i class="font-icon font-icon-speed"></i>
+	                <span class="lbl">Gestão</span>
+	            </span>
+	            <ul>
+	                <li><a href="test.html"><span class="lbl">Menu 1</span></a></li>
+	                <li><a href="test.html"><span class="lbl">Menu 2</span></a></li>
+	                <li><a href="test.html"><span class="lbl">Menu 3</span></a></li>
+	            </ul>
+	        </li>
+	        <li class="purple with-sub">
+	            <span>
+	                <i class="font-icon font-icon-chart"></i>
+	                <span class="lbl">Relatórios</span>
+	            </span>
+	            <ul>
+	                <li><a href="test.html"><span class="lbl">Menu 1</span></a></li>
+	                <li><a href="test.html"><span class="lbl">Menu 2</span></a></li>
+	                <li><a href="test.html"><span class="lbl">Menu 3</span></a></li>
+	            </ul>
+	        </li>
+	        <li class="green with-sub">
+	            <span>
+	                <i class="font-icon font-icon-cogwheel"></i>
+	                <span class="lbl">Segurança</span>
+	            </span>
+	            <ul>
+	                <li><a href="test.html"><span class="lbl">Menu 1</span></a></li>
+	                <li><a href="test.html"><span class="lbl">Menu 2</span></a></li>
+	                <li><a href="test.html"><span class="lbl">Menu 3</span></a></li>
+	            </ul>
+	        </li>
+	        <li class="grey">
+	            <a href="ajuda.html">
+	                <i class="font-icon font-icon-question"></i>
+	                <span class="lbl">Ajuda</span>
+	            </a>
+	        </li>
+	    </ul>
+	
+	    <section>
+	        <header class="side-menu-title">Favoritos</header>
+	        <ul class="side-menu-list">
+	            <li>
+	                <a href="#">
+	                    <i class="font-icon font-icon-star"></i>
+	                    <span class="lbl">Cadastro de Alunos</span>
+	                </a>
+	            </li>
+	            <li>
+	                <a href="#">
+	                    <i class="font-icon font-icon-star"></i>
+	                    <span class="lbl">Gerenciar Calendário</span>
+	                </a>
+	            </li>
+	            <li>
+	                <a href="#">
+	                    <i class="font-icon font-icon-star"></i>
+	                    <span class="lbl">Relatório Alunos</span>
+	                </a>
+	            </li>
+	            <li>
+	                <a href="#">
+	                    <i class="font-icon font-icon-star"></i>
+	                    <span class="lbl">Relatório Carga Horaria</span>
+	                </a>
+	            </li>
+	            <li>
+	                <a href="#">
+	                    <i class="font-icon font-icon-star"></i>
+	                    <span class="lbl">Relatório Evasão</span>
+	                </a>
+	            </li>
+	        </ul>
+	    </section>
+	</nav><!--.side-menu-->
+
+	<div class="page-content">
+		<div class="container-fluid">
+			<header class="section-header">
+				<div class="tbl">
+					<div class="tbl-row">
+						<div class="tbl-cell">
+							<h3>Especificação Range</h3>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="box-typical box-typical-padding">
+
+				<section class="box-typical box-typical-padding">
+				<h3 class="with-border">Layout 1</h3>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" id="range-slider-1" name="example_name" value="" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" id="range-slider-2" name="example_name" value="" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group range-slider-green">
+							<input type="text" id="range-slider-3" name="example_name" value="" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group range-slider-orange">
+							<input type="text" id="range-slider-4" name="example_name" value="" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group range-slider-red">
+							<input type="text" id="range-slider-5" name="example_name" value="" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group range-slider-purple">
+							<input type="text" id="range-slider-6" name="example_name" value="" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="box-typical box-typical-padding">
+				<h3 class="with-border">Layout 2</h3>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group range-slider-simple">
+							<input type="text" id="range-slider-7" name="example_name" value="" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group range-slider-simple range-slider-aquamarine">
+							<input type="text" id="range-slider-8" name="example_name" value="" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group range-slider-simple range-slider-purple">
+							<input type="text" id="range-slider-9" name="example_name" value="" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group range-slider-simple range-slider-red">
+							<input type="text" id="range-slider-10" name="example_name" value="" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group range-slider-simple range-slider-grey">
+							<input type="text" id="range-slider-11" name="example_name" value="" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group range-slider-simple range-slider-orange">
+							<input type="text" id="range-slider-12" name="example_name" value="" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			</div><!--.box-typical-->
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	<!--Progress bar-->
+	<!--<div class="circle-progress-bar pieProgress" role="progressbar" data-goal="100" data-barcolor="#ac6bec" data-barsize="10" aria-valuemin="0" aria-valuemax="100">-->
+	    <!--<span class="pie_progress__number">0%</span>-->
+	<!--</div>-->
+
+</body>
+</html>
