@@ -1,49 +1,49 @@
 $(document).ready(function() {
     $('#bn-basic').on('click', function() {
-        $.notify("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        $.notify("Hello World");
     });
 
     $('#bn-passing-title').on('click', function() {
         $.notify({
-            title: "Bem vindo:",
-            message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            title: "Welcome:",
+            message: "This plugin has been provided to you by Robert McIntosh aka mouse0270"
         });
     });
 
     $('#bn-passing-html').on('click', function() {
         $.notify({
-            title: "<strong>Bem vindo:</strong> ",
-            message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
+            title: "<strong>Welcome:</strong> ",
+            message: "This plugin has been provided to you by Robert McIntosh aka <a href=\"https://twitter.com/Mouse0270\" target=\"_blank\">@mouse0270</a>"
         });
     });
 
     $('#bn-url').on('click', function() {
         $.notify({
-            message: "Acesse nosso site CTJ.",
-            url: "https://www.thoma.org.br"
+            message: "Check out my twitter account by clicking on this notification!",
+            url: "https://twitter.com/Mouse0270"
         });
     });
 
     $('#bn-font-icon').on('click', function() {
         $.notify({
             icon: 'font-icon font-icon-warning',
-            message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+            message: "You're not limited to just Bootstrap Font Icons"
         });
     });
 
     $('#bn-glyphicon').on('click', function() {
         $.notify({
             icon: 'glyphicon glyphicon-star',
-            title: 'Titulo',
-            message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,"
+            title: 'Title',
+            message: "Everyone loves font icons! Use them in your notification!"
         });
     });
 
     $('#bn-center').on('click', function() {
         $.notify({
             icon: 'font-icon font-icon-warning',
-            title: '<strong>Centro</strong>',
-            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            title: '<strong>Heads up!</strong>',
+            message: 'You can use any of bootstraps other alert styles as well by default.'
         },{
             placement: {
                 align: "center"
@@ -54,8 +54,8 @@ $(document).ready(function() {
     $('#bn-bottom').on('click', function() {
         $.notify({
             icon: 'font-icon font-icon-warning',
-            title: '<strong>Rodapé</strong>',
-            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
+            title: '<strong>Heads up!</strong>',
+            message: 'You can use any of bootstraps other alert styles as well by default.'
         },{
             placement: {
                 from: "bottom"
@@ -66,8 +66,8 @@ $(document).ready(function() {
     $('#bn-success').on('click', function() {
         $.notify({
             icon: 'font-icon font-icon-check-circle',
-            title: '<strong>Notificação!</strong>',
-            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            title: '<strong>Heads up!</strong>',
+            message: 'You can use any of bootstraps other alert styles as well by default.'
         },{
             type: 'success'
         });
@@ -76,8 +76,8 @@ $(document).ready(function() {
     $('#bn-warning').on('click', function() {
         $.notify({
             icon: 'font-icon font-icon-warning',
-            title: '<strong>Notificação!</strong>',
-            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            title: '<strong>Heads up!</strong>',
+            message: 'You can use any of bootstraps other alert styles as well by default.'
         },{
             type: 'warning'
         });
@@ -86,8 +86,8 @@ $(document).ready(function() {
     $('#bn-danger').on('click', function() {
         $.notify({
             icon: 'font-icon font-icon-warning',
-            title: '<strong>Notificação!</strong>',
-            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            title: '<strong>Heads up!</strong>',
+            message: 'You can use any of bootstraps other alert styles as well by default.'
         },{
             type: 'danger'
         });
@@ -96,8 +96,8 @@ $(document).ready(function() {
     $('#bn-info').on('click', function() {
         $.notify({
             icon: 'font-icon font-icon-warning',
-            title: '<strong>Notificação!</strong>',
-            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            title: '<strong>Heads up!</strong>',
+            message: 'You can use any of bootstraps other alert styles as well by default.'
         },{
             type: 'purple'
         });
@@ -106,8 +106,8 @@ $(document).ready(function() {
     $('#bn-white').on('click', function() {
         $.notify({
             icon: 'font-icon font-icon-warning',
-            title: '<strong>Notificação!</strong>',
-            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            title: '<strong>Heads up!</strong>',
+            message: 'You can use any of bootstraps other alert styles as well by default.'
         },{
             type: 'white'
         });
@@ -116,8 +116,8 @@ $(document).ready(function() {
     $('#bn-grey').on('click', function() {
         $.notify({
             icon: 'font-icon font-icon-warning',
-            title: '<strong>Notificação!</strong>',
-            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            title: '<strong>Heads up!</strong>',
+            message: 'You can use any of bootstraps other alert styles as well by default.'
         },{
             type: 'grey'
         });
