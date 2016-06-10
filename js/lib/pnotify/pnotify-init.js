@@ -1,5 +1,3 @@
-PNotify.prototype.options.styling = "bootstrap3";
-
 $(document).ready(function() {
     $('#pn-simple').on('click', function() {
         new PNotify('Check me out! I\'m a notice.');

@@ -5,9 +5,9 @@ $(document).ready(function() {
         threshold: 10,
         warningClass: "label label-success",
         limitReachedClass: "label label-danger",
-        separator: ' of ',
-        preText: 'You have ',
-        postText: ' chars remaining.',
+        separator: ' de ',
+        preText: 'Voce tem ',
+        postText: ' caracteres restantes.',
         validate: true
     });
 
