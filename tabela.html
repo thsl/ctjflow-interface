@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>CTJFlow</title>
+
+  <link href="img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
+  <link href="img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
+  <link href="img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
+  <link href="img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
+  <link href="img/favicon.png" rel="icon" type="image/png">
+  <link href="img/favicon.ico" rel="shortcut icon">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <script src="js/plugins.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/lib/data-table/jquery.sortelements.js" type="text/javascript"></script>
+  <script src="js/lib/data-table/jquery.bdt.js" type="text/javascript"></script>
+  <script>
+    // Código que ativa a tabel (ficará aqui por enquanto)
+    $(document).ready(function () {
+      $('#tabexemplo-table').bdt({
+        pageRowCount: 30,
+        arrowDown: 'fa-angle-down',
+        arrowUp: 'fa-angle-up',
+        searchFormClass: 'pull-left search-form',
+        pageFieldText: 'Quantidade por página:',
+        searchFieldText: 'Buscar'
+      });
+
+      /* row was clicked
+      $('#tabexemplo-table > tbody > tr').click(function () {
+        $(location).href('tipografia.html')
+
+      }); */
+    });
+
+  </script>
+  <link rel="stylesheet" href="css/lib/font-awesome/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/lib/data-table/jquery.bdt.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+</head>
+<body class="with-side-menu">
+
+<header class="site-header">
+  <div class="container-fluid">
+    <a href="#" class="site-logo">
+      <img class="hidden-md-down" src="img/logo-2.png" alt="">
+      <img class="hidden-lg-up" src="img/logo-2-mob.png" alt="">
+    </a>
+    <button class="hamburger hamburger--htla">
+      <span>toggle menu</span>
+    </button>
+    <div class="site-header-content">
+      <div class="site-header-content-in">
+        <div class="site-header-shown">
+          <div class="dropdown dropdown-notification notif">
+            <a href="#"
+               class="header-alarm dropdown-toggle active"
+               id="dd-notification"
+               data-toggle="dropdown"
+               aria-haspopup="true"
+               aria-expanded="false">
+              <i class="font-icon-alarm"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification"
+                 style="width: 310px;">
+              <div class="dropdown-menu-notif-header">
+                Notificações
+                <span class="label label-pill label-danger">4</span>
+              </div>
+              <div class="dropdown-menu-notif-list">
+                <div class="dropdown-menu-notif-item">
+                  <div class="photo">
+                    <img src="img/photo-64-1.jpg" alt="">
+                  </div>
+                  <div class="dot"></div>
+                  <a href="#">Alex</a> aprovou sua solicitação.
+                  <div class="color-blue-grey-lighter">7 horas atrás.</div>
+                </div>
+                <div class="dropdown-menu-notif-item">
+                  <div class="photo">
+                    <img src="img/photo-64-2.jpg" alt="">
+                  </div>
+                  <div class="dot"></div>
+                  <a href="#">Leandro</a> aprovou sua solicitação.
+                  <div class="color-blue-grey-lighter">2 dias atrás.</div>
+                </div>
+                <div class="dropdown-menu-notif-item">
+                  <div class="photo">
+                    <img src="img/photo-64-3.jpg" alt="">
+                  </div>
+                  <div class="dot"></div>
+                  <a href="#">Cristina</a> aprovou sua solicitação.
+                  <div class="color-blue-grey-lighter">1 semana atrás.</div>
+                </div>
+                <div class="dropdown-menu-notif-item">
+                  <div class="photo">
+                    <img src="img/photo-64-4.jpg" alt="">
+                  </div>
+                  <a href="#">Amanda</a> aprovou sua solicitação.
+                  <div class="color-blue-grey-lighter">1 mês atrás</div>
+                </div>
+              </div>
+              <div class="dropdown-menu-notif-more">
+                <a href="#">Ver mais</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="dropdown dropdown-lang">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+              <span class="flag-icon flag-icon-us"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-menu-col">
+                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-br"></span>Português</a>
+                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-de"></span>Deutsch</a>
+              </div>
+              <div class="dropdown-menu-col">
+                <a class="dropdown-item current" href="#"><span class="flag-icon flag-icon-us"></span>English</a>
+                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-fr"></span>Français</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown user-menu">
+            <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+              <img src="img/avatar-2-64.png" alt="">
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
+              <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Perfil</a>
+              <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Configuração</a>
+              <a class="dropdown-item" href="#"><span
+                      class="font-icon glyphicon glyphicon-question-sign"></span>Ajuda</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Sair</a>
+            </div>
+          </div>
+
+        </div><!--.site-header-shown-->
+
+        <div class="mobile-menu-right-overlay"></div>
+        <div class="site-header-collapsed">
+          <div class="site-header-collapsed-in">
+            <div class="dropdown dropdown-typical">
+              <a class="dropdown-toggle" id="dd-header-sales" data-target="#" href="teste.html" data-toggle="dropdown"
+                 aria-haspopup="true" aria-expanded="false">
+                <span class="font-icon">  Filtros de Indicadores</span>
+                <span class="lbl">Sales</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dd-header-sales">
+                <a class="dropdown-item" href="#"><span class="font-icon font-icon-ok" style="font-size: 14px;"></span>Hoje</a>
+                <a class="dropdown-item" href="#"><span class="font-icon font-icon-del" style="font-size: 12px;"></span>Semanal</a>
+                <a class="dropdown-item" href="#"><span class="font-icon font-icon-del" style="font-size: 12px;"></span>Mensal</a>
+                <a class="dropdown-item" href="#"><span class="font-icon font-icon-del" style="font-size: 12px;"></span>Anual</a>
+              </div>
+            </div>
+          </div><!--.site-header-collapsed-in-->
+        </div><!--.site-header-collapsed-->
+      </div><!--site-header-content-in-->
+    </div><!--.site-header-content-->
+  </div><!--.container-fluid-->
+</header><!--.site-header-->
+
+<div class="mobile-menu-left-overlay"></div>
+<nav class="side-menu">
+  <ul class="side-menu-list">
+
+    <li class="gold with-sub">
+	            <span>
+	                <i class="font-icon font-icon-dashboard"></i>
+	                <span class="lbl">Dashboard</span>
+	            </span>
+      <ul>
+        <li><a href="test.html"><span class="lbl">Menu 1</span></a></li>
+        <li><a href="test.html"><span class="lbl">Menu 2</span></a></li>
+        <li><a href="test.html"><span class="lbl">Menu 3</span></a></li>
+      </ul>
+    </li>
+    <li class="blue with-sub">
+	            <span>
+	                <i class="font-icon font-icon-home"></i>
+	                <span class="lbl">Acadêmico</span>
+	            </span>
+      <ul>
+        <li><a href="test.html"><span class="lbl">Menu 1</span></a></li>
+        <li><a href="test.html"><span class="lbl">Menu 2</span></a></li>
+        <li><a href="test.html"><span class="lbl">Menu 3</span></a></li>
+      </ul>
+    </li>
+    <li class="red with-sub">
+	            <span>
+	                <i class="font-icon font-icon-speed"></i>
+	                <span class="lbl">Gestão</span>
+	            </span>
+      <ul>
+        <li><a href="test.html"><span class="lbl">Menu 1</span></a></li>
+        <li><a href="test.html"><span class="lbl">Menu 2</span></a></li>
+        <li><a href="test.html"><span class="lbl">Menu 3</span></a></li>
+      </ul>
+    </li>
+    <li class="purple with-sub">
+	            <span>
+	                <i class="font-icon font-icon-chart"></i>
+	                <span class="lbl">Relatórios</span>
+	            </span>
+      <ul>
+        <li><a href="test.html"><span class="lbl">Menu 1</span></a></li>
+        <li><a href="test.html"><span class="lbl">Menu 2</span></a></li>
+        <li><a href="test.html"><span class="lbl">Menu 3</span></a></li>
+      </ul>
+    </li>
+    <li class="green with-sub">
+	            <span>
+	                <i class="font-icon font-icon-cogwheel"></i>
+	                <span class="lbl">Segurança</span>
+	            </span>
+      <ul>
+        <li><a href="test.html"><span class="lbl">Menu 1</span></a></li>
+        <li><a href="test.html"><span class="lbl">Menu 2</span></a></li>
+        <li><a href="test.html"><span class="lbl">Menu 3</span></a></li>
+      </ul>
+    </li>
+    <li class="grey">
+      <a href="ajuda.html">
+        <i class="font-icon font-icon-question"></i>
+        <span class="lbl">Ajuda</span>
+      </a>
+    </li>
+  </ul>
+
+  <section>
+    <header class="side-menu-title">Favoritos</header>
+    <ul class="side-menu-list">
+      <li>
+        <a href="#">
+          <i class="font-icon font-icon-star"></i>
+          <span class="lbl">Cadastro de Alunos</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="font-icon font-icon-star"></i>
+          <span class="lbl">Gerenciar Calendário</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="font-icon font-icon-star"></i>
+          <span class="lbl">Relatório Alunos</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="font-icon font-icon-star"></i>
+          <span class="lbl">Relatório Carga Horaria</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="font-icon font-icon-star"></i>
+          <span class="lbl">Relatório Evasão</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</nav><!--.side-menu-->
+
+<div class="page-content">
+  <div class="container-fluid">
+    <header class="section-header">
+      <div class="tbl">
+        <div class="tbl-row">
+          <div class="tbl-cell">
+            <h3>Tabela de dados</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="box-typical box-typical-padding">
+      <!-- tabela baixa e customizada de: http://www.jqueryscript.net/table/jQuery-Plugin-For-Bootstrap-Based-Data-Table-Bootstrap-Data-Table.html -->
+      <div class="table-responsive" id="tabexemplo-table-content">
+        <table class="table table-hover" id="tabexemplo-table">
+          <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Aniversario</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><a href="#">Lucian Goodwin</a></td>
+            <td>10/08/2015</td>
+            <td>160003130000-00009011</td>
+            <td>vulputate.lacus@non.net</td>
+          </tr>
+          <tr>
+            <td>Elijah Barr</td>
+            <td>18/08/2015</td>
+            <td>169906170000-00006640</td>
+            <td>ornare@ornare.edu</td>
+          </tr>
+          <tr>
+            <td>John Hayden</td>
+            <td>04/09/2016</td>
+            <td>167309120000-00008085</td>
+            <td>fringilla.porttitor@molestieSedid.net</td>
+          </tr>
+          <tr>
+            <td>Yolanda Bonner</td>
+            <td>06/04/2017</td>
+            <td>161707120000-00001081</td>
+            <td>Phasellus.vitae.mauris@vel.ca</td>
+          </tr>
+          <tr>
+            <td>Kyla Ryan</td>
+            <td>12/10/2015</td>
+            <td>164008020000-00009672</td>
+            <td>amet.orci@Nullaeu.com</td>
+          </tr>
+          <tr>
+            <td>Jennifer Gomez</td>
+            <td>08/07/2015</td>
+            <td>163407200000-00001254</td>
+            <td>fermentum.risus@vitaeerat.net</td>
+          </tr>
+          <tr>
+            <td>Derek Hewitt</td>
+            <td>12/05/2017</td>
+            <td>168802010000-00002248</td>
+            <td>gravida@auctor.com</td>
+          </tr>
+          <tr>
+            <td>Carla Delacruz</td>
+            <td>27/05/2015</td>
+            <td>169106200000-00003491</td>
+            <td>quis.accumsan.convallis@velit.org</td>
+          </tr>
+          <tr>
+            <td>Hollee Hamilton</td>
+            <td>01/11/2016</td>
+            <td>164612200000-00004455</td>
+            <td>accumsan.interdum@Mauris.com</td>
+          </tr>
+          <tr>
+            <td>Athena Hardy</td>
+            <td>22/02/2017</td>
+            <td>160302130000-00005090</td>
+            <td>Nunc.ac@ategestas.net</td>
+          </tr>
+          <tr>
+            <td>Joel Cohen</td>
+            <td>24/12/2016</td>
+            <td>160205220000-00009602</td>
+            <td>imperdiet.ornare@Cumsociis.ca</td>
+          </tr>
+          <tr>
+            <td>Whitney Haynes</td>
+            <td>05/03/2017</td>
+            <td>161001040000-00002280</td>
+            <td>a.odio.semper@adipiscingnonluctus.ca</td>
+          </tr>
+          <tr>
+            <td>Mariam Rowe</td>
+            <td>28/11/2016</td>
+            <td>164407010000-00000141</td>
+            <td>augue@MorbimetusVivamus.org</td>
+          </tr>
+          <tr>
+            <td>Lacy Woodard</td>
+            <td>09/11/2016</td>
+            <td>163811110000-00008995</td>
+            <td>egestas@habitantmorbitristique.com</td>
+          </tr>
+          <tr>
+            <td>Thane Lawson</td>
+            <td>06/01/2017</td>
+            <td>167510270000-00000619</td>
+            <td>Aenean@purusac.edu</td>
+          </tr>
+          <tr>
+            <td>Andrew Kerr</td>
+            <td>26/03/2017</td>
+            <td>160411180000-00007693</td>
+            <td>vel@nuncidenim.com</td>
+          </tr>
+          <tr>
+            <td>Leroy Mosley</td>
+            <td>13/02/2016</td>
+            <td>163504260000-00007430</td>
+            <td>libero.nec.ligula@Cumsociis.edu</td>
+          </tr>
+          <tr>
+            <td>Zeus Saunders</td>
+            <td>03/07/2015</td>
+            <td>165812020000-00000344</td>
+            <td>feugiat.Sed@Integereu.edu</td>
+          </tr>
+          <tr>
+            <td>Holly Bush</td>
+            <td>15/05/2017</td>
+            <td>168303030000-00001663</td>
+            <td>lorem.Donec@tincidunttempus.com</td>
+          </tr>
+          <tr>
+            <td>Natalie Baxter</td>
+            <td>22/04/2016</td>
+            <td>164209110000-00002251</td>
+            <td>vestibulum@magnaseddui.org</td>
+          </tr>
+          <tr>
+            <td>Oleg Watson</td>
+            <td>24/04/2016</td>
+            <td>167601150000-00002940</td>
+            <td>non@mattis.ca</td>
+          </tr>
+          <tr>
+            <td>Stephen Hess</td>
+            <td>14/08/2015</td>
+            <td>162406180000-00007514</td>
+            <td>iaculis@ante.co.uk</td>
+          </tr>
+          <tr>
+            <td>Linda Mcmahon</td>
+            <td>05/10/2016</td>
+            <td>169706050000-00005085</td>
+            <td>ipsum.sodales@Sed.org</td>
+          </tr>
+          <tr>
+            <td>Tiger Moore</td>
+            <td>08/04/2017</td>
+            <td>164104150000-00000810</td>
+            <td>Nam@semvitae.net</td>
+          </tr>
+          <tr>
+            <td>Suki Bernard</td>
+            <td>03/11/2015</td>
+            <td>160610230000-00009758</td>
+            <td>rutrum.urna.nec@semegestas.org</td>
+          </tr>
+          <tr>
+            <td>Beau Barron</td>
+            <td>06/01/2016</td>
+            <td>166306120000-00002349</td>
+            <td>consectetuer@Nullam.com</td>
+          </tr>
+          <tr>
+            <td>Brianna Flynn</td>
+            <td>11/10/2015</td>
+            <td>166104260000-00004293</td>
+            <td>Aliquam.ultrices.iaculis@tempor.com</td>
+          </tr>
+          <tr>
+            <td>Kaden Deleon</td>
+            <td>19/07/2016</td>
+            <td>162103160000-00000046</td>
+            <td>tempus.non@placeratorci.ca</td>
+          </tr>
+          <tr>
+            <td>Jacqueline Evans</td>
+            <td>04/05/2016</td>
+            <td>168109200000-00000629</td>
+            <td>nisi.Mauris.nulla@diam.ca</td>
+          </tr>
+          <tr>
+            <td>McKenzie Farley</td>
+            <td>18/04/2017</td>
+            <td>169508040000-00008700</td>
+            <td>Integer.in@morbitristiquesenectus.com</td>
+          </tr>
+          <tr>
+            <td>Germaine Kennedy</td>
+            <td>12/08/2016</td>
+            <td>163507200000-00001451</td>
+            <td>sed.facilisis@mitemporlorem.com</td>
+          </tr>
+          <tr>
+            <td>Barbara Tillman</td>
+            <td>11/12/2015</td>
+            <td>166106120000-00002986</td>
+            <td>mattis@Donec.net</td>
+          </tr>
+          <tr>
+            <td>Erich Cash</td>
+            <td>10/02/2017</td>
+            <td>167507010000-00006611</td>
+            <td>malesuada.id.erat@ligulaDonecluctus.ca</td>
+          </tr>
+          <tr>
+            <td>Larissa Harding</td>
+            <td>16/05/2017</td>
+            <td>164805080000-00007758</td>
+            <td>eu@purusac.co.uk</td>
+          </tr>
+          <tr>
+            <td>Hadassah Shaw</td>
+            <td>19/09/2016</td>
+            <td>163508020000-00009182</td>
+            <td>velit.dui.semper@sollicitudin.edu</td>
+          </tr>
+          <tr>
+            <td>Rebecca Gibbs</td>
+            <td>09/09/2016</td>
+            <td>165504150000-00008493</td>
+            <td>dictum@insodaleselit.org</td>
+          </tr>
+          <tr>
+            <td>Nasim Mcneil</td>
+            <td>14/06/2016</td>
+            <td>163811170000-00003487</td>
+            <td>magna.a@vitae.ca</td>
+          </tr>
+          <tr>
+            <td>Kaden Huff</td>
+            <td>03/04/2017</td>
+            <td>168401150000-00008848</td>
+            <td>luctus@Aliquamadipiscing.co.uk</td>
+          </tr>
+          <tr>
+            <td>Chanda Lamb</td>
+            <td>13/12/2016</td>
+            <td>165102250000-00008992</td>
+            <td>velit.justo@fermentumarcuVestibulum.co.uk</td>
+          </tr>
+          <tr>
+            <td>Rina Brewer</td>
+            <td>24/05/2015</td>
+            <td>163911280000-00005579</td>
+            <td>amet@hendreritaarcu.org</td>
+          </tr>
+          <tr>
+            <td>John Ellison</td>
+            <td>10/01/2017</td>
+            <td>160807060000-00007863</td>
+            <td>laoreet.posuere.enim@vestibulum.com</td>
+          </tr>
+          <tr>
+            <td>Marvin Trevino</td>
+            <td>25/08/2016</td>
+            <td>160711280000-00000743</td>
+            <td>et@et.edu</td>
+          </tr>
+          <tr>
+            <td>Tanisha Madden</td>
+            <td>24/04/2017</td>
+            <td>160710150000-00004774</td>
+            <td>orci@vitae.edu</td>
+          </tr>
+          <tr>
+            <td>Tanek Pennington</td>
+            <td>27/02/2017</td>
+            <td>160005270000-00000905</td>
+            <td>lorem@aliquam.org</td>
+          </tr>
+          <tr>
+            <td>Isaac Kirby</td>
+            <td>30/08/2015</td>
+            <td>164003160000-00009309</td>
+            <td>sagittis.Nullam@mollisvitae.com</td>
+          </tr>
+          <tr>
+            <td>Coby Stone</td>
+            <td>22/09/2015</td>
+            <td>165709150000-00008165</td>
+            <td>Aliquam@vitaepurusgravida.com</td>
+          </tr>
+          <tr>
+            <td>Serena Brock</td>
+            <td>10/01/2016</td>
+            <td>160309040000-00002091</td>
+            <td>enim.Etiam@montes.ca</td>
+          </tr>
+          <tr>
+            <td>Kibo Church</td>
+            <td>19/11/2015</td>
+            <td>164910140000-00003744</td>
+            <td>vulputate.nisi.sem@non.com</td>
+          </tr>
+          <tr>
+            <td>Tyrone Rasmussen</td>
+            <td>02/07/2015</td>
+            <td>166005020000-00009571</td>
+            <td>amet@Maecenasiaculis.com</td>
+          </tr>
+          <tr>
+            <td>Lois Morin</td>
+            <td>12/06/2015</td>
+            <td>162902300000-00007210</td>
+            <td>dolor.nonummy.ac@pharetra.org</td>
+          </tr>
+          <tr>
+            <td>Noble Grant</td>
+            <td>08/09/2016</td>
+            <td>160312080000-00004551</td>
+            <td>ornare@Fuscemollis.net</td>
+          </tr>
+          <tr>
+            <td>Ainsley Hogan</td>
+            <td>31/03/2017</td>
+            <td>167805140000-00004271</td>
+            <td>luctus.Curabitur.egestas@quispedeSuspendisse.net</td>
+          </tr>
+          <tr>
+            <td>Kenneth Whitehead</td>
+            <td>28/07/2016</td>
+            <td>164007150000-00009868</td>
+            <td>Nullam.vitae@ametorciUt.org</td>
+          </tr>
+          <tr>
+            <td>Drake Potts</td>
+            <td>03/10/2015</td>
+            <td>160609180000-00003520</td>
+            <td>leo.Cras.vehicula@at.com</td>
+          </tr>
+          <tr>
+            <td>Coby Sargent</td>
+            <td>29/10/2015</td>
+            <td>161502110000-00003911</td>
+            <td>tincidunt.vehicula@bibendumDonec.ca</td>
+          </tr>
+          <tr>
+            <td>Hyatt Foster</td>
+            <td>22/09/2015</td>
+            <td>166704250000-00004546</td>
+            <td>purus@Cumsociisnatoque.net</td>
+          </tr>
+          <tr>
+            <td>Ciaran Mills</td>
+            <td>25/11/2016</td>
+            <td>165309120000-00003866</td>
+            <td>aliquet@risusquis.net</td>
+          </tr>
+          <tr>
+            <td>Donna Pugh</td>
+            <td>05/05/2017</td>
+            <td>166501230000-00007017</td>
+            <td>ipsum.dolor@malesuada.co.uk</td>
+          </tr>
+          <tr>
+            <td>Octavius Whitaker</td>
+            <td>22/11/2016</td>
+            <td>169208170000-00003337</td>
+            <td>aliquet.magna@odioAliquam.net</td>
+          </tr>
+          <tr>
+            <td>Portia Casey</td>
+            <td>05/02/2017</td>
+            <td>167604290000-00006603</td>
+            <td>id@justo.org</td>
+          </tr>
+          <tr>
+            <td>Hedy Steele</td>
+            <td>16/11/2016</td>
+            <td>168901050000-00006781</td>
+            <td>Duis.mi.enim@Morbi.ca</td>
+          </tr>
+          <tr>
+            <td>Georgia Bender</td>
+            <td>25/09/2015</td>
+            <td>164510070000-00007425</td>
+            <td>posuere.vulputate.lacus@risus.com</td>
+          </tr>
+          <tr>
+            <td>Knox Lee</td>
+            <td>30/08/2016</td>
+            <td>164203280000-00003868</td>
+            <td>nulla.Integer@dolor.com</td>
+          </tr>
+          <tr>
+            <td>Darrel Craig</td>
+            <td>27/08/2015</td>
+            <td>162508160000-00002027</td>
+            <td>aliquet.diam@Fusce.com</td>
+          </tr>
+          <tr>
+            <td>Meghan Yang</td>
+            <td>14/06/2016</td>
+            <td>164704190000-00000307</td>
+            <td>aliquet@nuncinterdumfeugiat.com</td>
+          </tr>
+          <tr>
+            <td>Nelle Barnett</td>
+            <td>24/03/2017</td>
+            <td>162208300000-00005116</td>
+            <td>sit.amet.metus@tristiquepellentesque.org</td>
+          </tr>
+          <tr>
+            <td>Maite Tyler</td>
+            <td>16/09/2016</td>
+            <td>160206150000-00005475</td>
+            <td>mauris.rhoncus.id@loremtristique.net</td>
+          </tr>
+          <tr>
+            <td>Imogene Montgomery</td>
+            <td>02/01/2016</td>
+            <td>164102210000-00007199</td>
+            <td>egestas.Sed@adipiscingligula.org</td>
+          </tr>
+          <tr>
+            <td>Sylvester Richardson</td>
+            <td>09/05/2017</td>
+            <td>169012010000-00000774</td>
+            <td>semper@ut.co.uk</td>
+          </tr>
+          <tr>
+            <td>Elijah Eaton</td>
+            <td>29/07/2015</td>
+            <td>169007240000-00006722</td>
+            <td>accumsan@arcu.ca</td>
+          </tr>
+          <tr>
+            <td>Benedict Malone</td>
+            <td>30/01/2017</td>
+            <td>161811170000-00006203</td>
+            <td>Morbi.sit@acurnaUt.com</td>
+          </tr>
+          <tr>
+            <td>Brandon Madden</td>
+            <td>28/08/2016</td>
+            <td>167507180000-00003262</td>
+            <td>tincidunt.adipiscing@morbitristique.ca</td>
+          </tr>
+          <tr>
+            <td>Hedley Curtis</td>
+            <td>20/04/2016</td>
+            <td>163205150000-00006205</td>
+            <td>risus.Duis@consectetueradipiscing.com</td>
+          </tr>
+          <tr>
+            <td>Prescott Chase</td>
+            <td>08/06/2016</td>
+            <td>164706270000-00005429</td>
+            <td>diam.eu@odiosemper.co.uk</td>
+          </tr>
+          <tr>
+            <td>Emma Burns</td>
+            <td>31/08/2016</td>
+            <td>169509290000-00003370</td>
+            <td>velit.egestas@felisegetvarius.net</td>
+          </tr>
+          <tr>
+            <td>Leonard Drake</td>
+            <td>30/04/2017</td>
+            <td>165201070000-00009984</td>
+            <td>eu.accumsan@Vivamusmolestiedapibus.com</td>
+          </tr>
+          <tr>
+            <td>Blaze Valdez</td>
+            <td>31/03/2016</td>
+            <td>163707250000-00005570</td>
+            <td>Suspendisse@a.ca</td>
+          </tr>
+          <tr>
+            <td>Olga Gibbs</td>
+            <td>26/01/2017</td>
+            <td>166906080000-00003305</td>
+            <td>dolor.vitae@Mauris.co.uk</td>
+          </tr>
+          <tr>
+            <td>Illana Hart</td>
+            <td>20/12/2016</td>
+            <td>164409190000-00007425</td>
+            <td>molestie.orci.tincidunt@congueInscelerisque.co.uk</td>
+          </tr>
+          <tr>
+            <td>Mary Woods</td>
+            <td>12/04/2016</td>
+            <td>163809120000-00001498</td>
+            <td>Nam.nulla@molestiedapibusligula.org</td>
+          </tr>
+          <tr>
+            <td>Cally Buckley</td>
+            <td>27/05/2015</td>
+            <td>169601130000-00002732</td>
+            <td>justo@vel.org</td>
+          </tr>
+          <tr>
+            <td>Scarlett Valdez</td>
+            <td>03/03/2016</td>
+            <td>161503140000-00000681</td>
+            <td>parturient.montes@dictumProin.org</td>
+          </tr>
+          <tr>
+            <td>Octavius Hill</td>
+            <td>11/06/2015</td>
+            <td>165807030000-00003690</td>
+            <td>Pellentesque@Fuscedolorquam.com</td>
+          </tr>
+          <tr>
+            <td>Chelsea Kramer</td>
+            <td>20/07/2016</td>
+            <td>163911210000-00007366</td>
+            <td>sed@ipsum.com</td>
+          </tr>
+          <tr>
+            <td>Blaze Langley</td>
+            <td>20/01/2016</td>
+            <td>168301090000-00004812</td>
+            <td>Nulla.interdum.Curabitur@feugiattelluslorem.net</td>
+          </tr>
+          <tr>
+            <td>Wang Burris</td>
+            <td>11/12/2016</td>
+            <td>169610260000-00008154</td>
+            <td>dolor.dapibus@duinec.edu</td>
+          </tr>
+          <tr>
+            <td>Breanna Caldwell</td>
+            <td>30/06/2015</td>
+            <td>166708070000-00008594</td>
+            <td>amet.orci.Ut@Proin.co.uk</td>
+          </tr>
+          <tr>
+            <td>Hillary Lester</td>
+            <td>13/01/2016</td>
+            <td>168408240000-00009830</td>
+            <td>lectus@faucibus.net</td>
+          </tr>
+          <tr>
+            <td>Cassandra Hawkins</td>
+            <td>27/05/2015</td>
+            <td>161903260000-00006250</td>
+            <td>lorem@netuset.ca</td>
+          </tr>
+          <tr>
+            <td>Otto Walter</td>
+            <td>25/12/2015</td>
+            <td>169510120000-00000299</td>
+            <td>Duis@acrisus.com</td>
+          </tr>
+          <tr>
+            <td>Hammett Neal</td>
+            <td>27/12/2016</td>
+            <td>164412040000-00002816</td>
+            <td>Fusce.aliquet.magna@nuncIn.com</td>
+          </tr>
+          <tr>
+            <td>Alma Gray</td>
+            <td>11/03/2017</td>
+            <td>167408190000-00004343</td>
+            <td>viverra.Maecenas.iaculis@metusAeneansed.com</td>
+          </tr>
+          <tr>
+            <td>Logan Obrien</td>
+            <td>15/11/2016</td>
+            <td>164509050000-00008691</td>
+            <td>auctor.non@vitaeposuereat.com</td>
+          </tr>
+          <tr>
+            <td>Lewis Hebert</td>
+            <td>16/05/2016</td>
+            <td>164511110000-00005893</td>
+            <td>eget.laoreet@egetvariusultrices.org</td>
+          </tr>
+          <tr>
+            <td>Emma Curtis</td>
+            <td>30/05/2016</td>
+            <td>167511200000-00000706</td>
+            <td>cursus.et@Aliquamvulputateullamcorper.edu</td>
+          </tr>
+          <tr>
+            <td>Benjamin Mckenzie</td>
+            <td>23/03/2017</td>
+            <td>162401130000-00001657</td>
+            <td>faucibus.orci.luctus@lobortisrisus.ca</td>
+          </tr>
+          <tr>
+            <td>Hu Kaufman</td>
+            <td>30/03/2017</td>
+            <td>163902060000-00004710</td>
+            <td>sem@utpharetra.net</td>
+          </tr>
+          <tr>
+            <td>Brenden Sosa</td>
+            <td>27/02/2016</td>
+            <td>163904270000-00006296</td>
+            <td>natoque.penatibus@amet.net</td>
+          </tr>
+          <tr>
+            <td>Harper Preston</td>
+            <td>12/10/2015</td>
+            <td>160211220000-00005701</td>
+            <td>vel@ac.co.uk</td>
+          </tr>
+          <tr>
+            <td>Yvonne Spears</td>
+            <td>14/06/2016</td>
+            <td>161801280000-00001757</td>
+            <td>a@IntegermollisInteger.com</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div><!--.box-typical-->
+  </div><!--.container-fluid-->
+</div><!--.page-content-->
+
+<!--Progress bar-->
+<!--<div class="circle-progress-bar pieProgress" role="progressbar" data-goal="100" data-barcolor="#ac6bec" data-barsize="10" aria-valuemin="0" aria-valuemax="100">-->
+<!--<span class="pie_progress__number">0%</span>-->
+<!--</div>-->
+
+</body>
+</html>

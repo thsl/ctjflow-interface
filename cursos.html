@@ -230,9 +230,9 @@
 	                <span class="lbl">Acadêmico</span>
 	            </span>
       <ul>
-        <li><a href="test.html"><span class="lbl">Menu 1</span></a></li>
-        <li><a href="test.html"><span class="lbl">Menu 2</span></a></li>
-        <li><a href="test.html"><span class="lbl">Menu 3</span></a></li>
+        <li><a href="test.html"><span class="lbl">Grupos / Cursos</span></a></li>
+        <li><a href="test.html"><span class="lbl">Níveis</span></a></li>
+        <li><a href="test.html"><span class="lbl">Material didático</span></a></li>
       </ul>
     </li>
     <li class="red with-sub">
@@ -316,14 +316,66 @@
 
 <div class="page-content">
   <div class="container-fluid">
-    <section class="card card-default" style="margin-top: 25px;">
+    <div class="row">
+      <div class="col-xs-12">
+        <ol class="breadcrumb">
+          <li><a href="#">Acadêmico</a></li>
+          <li class="ml-sm mr-sm">/</li>
+          <li class="active">Listagem de grupos e cursos</li>
+          <li class="" style="float:right;">
+            <button class="btn btn-rounded btn-sm btn-primary"><i class="fa fa-question-circle" aria-hidden="true"
+                                                                  style="padding-right: 6px;"></i>Ajuda
+            </button>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <section class="card card-default">
+      <div class="card-block">
+        <div class="row">
+          <div class="col-sm-8">
+            <fieldset class="form-group mb-0">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Pesquise grupos, cursos ou níveis">
+            <span class="input-group-btn">
+              <button class="btn btn-default-outline" type="button"><i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </span>
+              </div><!-- /input-group -->
+            </fieldset>
+          </div>
+          <div class="col-md-4">
+            <button type="button" class="btn btn-rounded btn-sm btn-primary pull-right" data-toggle="collapse"
+                    href="#AddGrupo"><i
+                    class="fa fa-plus" aria-hidden="true"></i>
+              Criar novo grupo
+            </button>
+          </div>
+
+        </div>
+        <div class="row collapse mt-sm" id="AddGrupo">
+          <div class="col-md-12">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Nome do grupo">
+                <span class="input-group-btn">
+                  <button class="btn btn-primary" type="button">Salvar</button>
+                  <button class="btn btn-secondary" type="button" data-toggle="collapse" href="#AddGrupo"><i
+                          class="fa fa-times" aria-hidden="true"></i>
+                  </button>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="card card-default mt-sm">
       <header class="card-header card-header-lg">
-        <i class="fa fa-book" aria-hidden="true" style="padding-right: 10px;"></i>Cursos
+        <i class="fa fa-sitemap" aria-hidden="true"></i> Grupo: Crianças
       </header>
       <div class="card-block">
         <div class="row">
           <div class="col-lg-12">
-            <section class="widget widget-accordion" id="accordion" role="tablist"
+            <section class="widget-accordion" id="accordion" role="tablist"
                      aria-multiselectable="true">
               <article class="panel">
                 <div class="panel-heading" role="tab" id="headingOne">
@@ -340,94 +392,160 @@
                      aria-labelledby="headingOne">
                   <div class="panel-collapse-in">
                     <div class="row">
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Unidade</label>
-                          <p>ASA NORTE</p>
-                        </fieldset>
+                      <div class="col-sm-9">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold">Tipo</label>
+                              <p class="mb-0">Presencial</p>
+                            </fieldset>
+                          </div>
+                          <div class="col-sm-4">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold">Valor</label>
+                              <p class="mb-0">R$ 000,00</p>
+                            </fieldset>
+                          </div>
+                          <div class="col-sm-4">
+                            <fieldset class="form-group">
+                              <p class="text-danger"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Livro a
+                                definir</p>
+                            </fieldset>
+                          </div>
+                        </div>
                       </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Curso</label>
-                          <p>Teens 1</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Nível</label>
-                          <p>TAG</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Turma</label>
-                          <p>PTeens-05</p>
-                        </fieldset>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Dias da Semana</label>
-                          <p>Ter - Qui</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Hórario</label>
-                          <p>09:30 às 10:30</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Período</label>
-                          <p>Matutino</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Professor</label>
-                          <p>Renata Dias</p>
-                        </fieldset>
+                      <div class="col-sm-3">
+                        <div class="dropdown pull-right">
+                          <button class="btn btn-rounded btn-primary dropdown-toggle btn-sm" type="button"
+                                  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Ações
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCadNivel">Adicionar
+                              nível</a>
+                            <a class="dropdown-item" href="#">Alterar</a>
+                            <a class="dropdown-item" href="#">Desativar</a>
+                            <a class="dropdown-item" href="#">Excluir</a>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="tbl-cell">
-                          <div class="tbl tbl-item">
-                            <div class="tbl-row">
-                              <div class="tbl-cell">
-                                <div class="title">Indicador</div>
-                                <div class="amount color-blue">20 750 000</div>
-                                <div class="amount-sm">20 750 000</div>
+                    <!-- inicio dos níveis -->
+
+                    <section class="widget-accordion" id="accordion-nivel" role="tablist"
+                             aria-multiselectable="true">
+                      <article class="panel gray-lighter">
+                        <div class="panel-heading" role="tab" id="heading-nivel-one">
+                          <a data-toggle="collapse" href="#nivel-um">
+                            Nível A1
+                            <i class="font-icon font-icon-arrow-down"></i>
+                          </a>
+                        </div>
+                        <div class="collapse" id="nivel-um">
+                          <div class="panel-collapse-in">
+                            <div class="row">
+                              <div class="col-sm-9">
+                                <div class="row">
+                                  <div class="col-sm-4">
+                                    <fieldset class="form-group">
+                                      <label class="form-label semibold">Sistema de avaliação</label>
+                                      <p class="mb-0">Aproveitamento</p>
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-sm-8">
+                                    <fieldset class="form-group">
+                                      <label class="form-label semibold">Material didático</label>
+                                      <p class="mb-0"><a href="#"><img src="img/cursos/kids/hooray-a1.jpg"
+                                                                       class="img-rounded mr-sm"/></a><a href="#">Hooray!
+                                        A – Student’s Book – Helbling Languages</a></p>
+                                    </fieldset>
+                                  </div>
+                                </div>
                               </div>
-                              <div class="tbl-cell tbl-cell-progress">
-                                <div class="circle-progress-bar-typical size-56 pieProgress"
-                                     role="progressbar" data-goal="79"
-                                     data-barcolor="#00a8ff"
-                                     data-barsize="10"
-                                     aria-valuemin="0"
-                                     aria-valuemax="100">
-                                  <span class="pie_progress__number">0%</span>
+                              <div class="col-sm-3">
+                                <div class="dropdown pull-right">
+                                  <button class="btn btn-rounded btn-primary dropdown-toggle btn-sm" type="button"
+                                          id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                          aria-expanded="false">
+                                    Ações
+                                  </button>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCadMaterial">Adicionar material didático</a>
+                                    <a class="dropdown-item" href="#">Alterar</a>
+                                    <a class="dropdown-item" href="#">Desativar</a>
+                                    <a class="dropdown-item" href="#">Excluir</a>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
+                      </article>
+                      <article class="panel gray-lighter">
+                        <div class="panel-heading" role="tab" id="heading-nivel-a2">
+                          <a data-toggle="collapse" href="#nivel-dois">
+                            Nível A2
+                            <i class="font-icon font-icon-arrow-down"></i>
+                          </a>
+                        </div>
+                        <div class="collapse" id="nivel-dois">
+                          <div class="panel-collapse-in">
+                            <div class="row">
+                              <div class="col-sm-9">
+                                <div class="row">
+                                  <div class="col-sm-4">
+                                    <fieldset class="form-group">
+                                      <label class="form-label semibold">Sistema de avaliação</label>
+                                      <p class="mb-0">Aproveitamento</p>
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-sm-8">
+                                    <fieldset class="form-group">
+                                      <label class="form-label semibold">Material didático</label>
+                                      <p class="mb-0"><a href="#"><img src="img/cursos/kids/hooray-a1.jpg"
+                                                                       class="img-rounded mr-sm"/></a><a href="#">Hooray!
+                                        A – Student’s Book – Helbling Languages</a></p>
+                                    </fieldset>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-3">
+                                <div class="dropdown pull-right">
+                                  <button class="btn btn-rounded btn-primary dropdown-toggle btn-sm" type="button"
+                                          id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                          aria-expanded="false">
+                                    Ações
+                                  </button>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCadMaterial">Adicionar material didático</a>
+                                    <a class="dropdown-item" href="#">Alterar</a>
+                                    <a class="dropdown-item" href="#">Desativar</a>
+                                    <a class="dropdown-item" href="#">Excluir</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+
+                    <!-- fim dos níveis -->
                   </div>
+
                 </div>
+
               </article>
+
+
               <article class="panel">
                 <div class="panel-heading" role="tab" id="headingTwo">
-                  <a class="collapsed"
-                     data-toggle="collapse"
+                  <a data-toggle="collapse"
                      data-parent="#accordion"
                      href="#collapseTwo"
                      aria-expanded="false"
-                     aria-controls="collapseTwo">
-                    Curso: Kids 2
+                     aria-controls="collapseOne">
+                    Curso: Kids 1
                     <i class="font-icon font-icon-arrow-down"></i>
                   </a>
                 </div>
@@ -435,147 +553,153 @@
                      aria-labelledby="headingTwo">
                   <div class="panel-collapse-in">
                     <div class="row">
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Unidade</label>
-                          <p>ASA SUL</p>
-                        </fieldset>
+                      <div class="col-sm-9">
+                        <div class="row">
+                          <div class="col-sm-4">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold">Tipo</label>
+                              <p class="mb-0">Presencial</p>
+                            </fieldset>
+                          </div>
+                          <div class="col-sm-4">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold">Valor</label>
+                              <p class="mb-0">R$ 000,00</p>
+                            </fieldset>
+                          </div>
+                          <div class="col-sm-4">
+                            <fieldset class="form-group">
+                              <p class="text-danger"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Livro a
+                                definir</p>
+                            </fieldset>
+                          </div>
+                        </div>
                       </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Curso</label>
-                          <p>Kids 2</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Nível</label>
-                          <p>TAG</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Turma</label>
-                          <p>PTeens-05</p>
-                        </fieldset>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Dias da Semana</label>
-                          <p>Sab</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Hórario</label>
-                          <p>09:30 às 12:30</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Período</label>
-                          <p>Matutino</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Professor</label>
-                          <p>Caio Silva</p>
-                        </fieldset>
+                      <div class="col-sm-3">
+                        <div class="dropdown pull-right">
+                          <button class="btn btn-rounded btn-primary dropdown-toggle btn-sm" type="button"
+                                  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Ações
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCadNivel">Adicionar
+                              nível</a>
+                            <a class="dropdown-item" href="#">Alterar</a>
+                            <a class="dropdown-item" href="#">Desativar</a>
+                            <a class="dropdown-item" href="#">Excluir</a>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                    <!-- inicio dos níveis -->
+
+                    <section class="widget-accordion" id="accordion-nivel-2" role="tablist"
+                             aria-multiselectable="true">
+                      <article class="panel gray-lighter">
+                        <div class="panel-heading" role="tab" id="heading-nivel-Two">
+                          <a data-toggle="collapse" href="#nivel-a-2-2">
+                            Nível A1
+                            <i class="font-icon font-icon-arrow-down"></i>
+                          </a>
+                        </div>
+                        <div class="collapse" id="nivel-a-2-2">
+                          <div class="panel-collapse-in">
+                            <div class="row">
+                              <div class="col-sm-9">
+                                <div class="row">
+                                  <div class="col-sm-4">
+                                    <fieldset class="form-group">
+                                      <label class="form-label semibold">Sistema de avaliação</label>
+                                      <p class="mb-0">Aproveitamento</p>
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-sm-8">
+                                    <fieldset class="form-group">
+                                      <label class="form-label semibold">Material didático</label>
+                                      <p class="mb-0"><a href="#"><img src="img/cursos/kids/hooray-a1.jpg"
+                                                                       class="img-rounded mr-sm"/></a><a href="#">Hooray!
+                                        A – Student’s Book – Helbling Languages</a></p>
+                                    </fieldset>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-3">
+                                <div class="dropdown pull-right">
+                                  <button class="btn btn-rounded btn-primary dropdown-toggle btn-sm" type="button"
+                                          id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                          aria-expanded="false">
+                                    Ações
+                                  </button>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCadMaterial">Adicionar material didático</a>
+                                    <a class="dropdown-item" href="#">Alterar</a>
+                                    <a class="dropdown-item" href="#">Desativar</a>
+                                    <a class="dropdown-item" href="#">Excluir</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                      <article class="panel gray-lighter">
+                        <div class="panel-heading" role="tab" id="">
+                          <a data-toggle="collapse" href="#heading-nivel-a-2-3">
+                            Nível A2
+                            <i class="font-icon font-icon-arrow-down"></i>
+                          </a>
+                        </div>
+                        <div class="collapse" id="heading-nivel-a-2-3">
+                          <div class="panel-collapse-in">
+                            <div class="row">
+                              <div class="col-sm-9">
+                                <div class="row">
+                                  <div class="col-sm-4">
+                                    <fieldset class="form-group">
+                                      <label class="form-label semibold">Sistema de avaliação</label>
+                                      <p class="mb-0">Aproveitamento</p>
+                                    </fieldset>
+                                  </div>
+                                  <div class="col-sm-8">
+                                    <fieldset class="form-group">
+                                      <label class="form-label semibold">Material didático</label>
+                                      <p class="mb-0"><a href="#"><img src="img/cursos/kids/hooray-a1.jpg"
+                                                                       class="img-rounded mr-sm"/></a><a href="#">Hooray!
+                                        A – Student’s Book – Helbling Languages</a></p>
+                                    </fieldset>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-3">
+                                <div class="dropdown pull-right">
+                                  <button class="btn btn-rounded btn-primary dropdown-toggle btn-sm" type="button"
+                                          id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                          aria-expanded="false">
+                                    Ações
+                                  </button>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCadMaterial">Adicionar material didático</a>
+                                    <a class="dropdown-item" href="#">Alterar</a>
+                                    <a class="dropdown-item" href="#">Desativar</a>
+                                    <a class="dropdown-item" href="#">Excluir</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    </section>
+
+                    <!-- fim dos níveis -->
                   </div>
+
                 </div>
+
               </article>
-              <article class="panel">
-                <div class="panel-heading" role="tab" id="headingThree">
-                  <a class="collapsed"
-                     data-toggle="collapse"
-                     data-parent="#accordion"
-                     href="#collapseThree"
-                     aria-expanded="false"
-                     aria-controls="collapseThree">
-                    Curso: Kids 1
-                    <i class="font-icon font-icon-arrow-down"></i>
-                  </a>
-                </div>
-                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
-                     aria-labelledby="headingThree">
-                  <div class="panel-collapse-in">
-                    <div class="row">
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Unidade</label>
-                          <p>ASA NORTE</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Curso</label>
-                          <p> Kids 1</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Nível</label>
-                          <p>TAG</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Turma</label>
-                          <p>PTeens-05</p>
-                        </fieldset>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Dias da Semana</label>
-                          <p>Seg - Qua</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Hórario</label>
-                          <p>14:30 às 14:30</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Período</label>
-                          <p>Vespertino</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Professor</label>
-                          <p>Carla Borges</p>
-                        </fieldset>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
+
+
             </section>
-          </div>
-        </div>
-
-        <hr style="margin: 0px 0px 15px 0px;">
-
-        <div class="row">
-          <div class="col-lg-12">
-            <button class="btn btn-rounded btn-sm" type="button">
-              <i class="fa fa-exchange" aria-hidden="true"></i> Transferir
-            </button>
-            <button class="btn btn-rounded btn-sm" type="button">
-              <i class="fa fa-graduation-cap" aria-hidden="true"></i> Make up
-            </button>
-            <button class="btn btn-rounded btn-sm" type="button">
-              <i class="fa fa-times" aria-hidden="true"></i> Cancelar Matrícula
-            </button>
           </div>
         </div>
       </div>
@@ -585,6 +709,80 @@
 
 
 <!-- começam os modais para cadastrar elementos -->
+
+
+<!-- Modal cadastrar grupo -->
+<div class="modal fade" id="ModalCadCurso" tabindex="-1" role="dialog" aria-labelledby="ModalCadCurso">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Cadastrar novo curso</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-6">
+                <fieldset class="form-group">
+                  <label class="form-label" for="">Nome do curso:</label>
+                  <input type="text" class="form-control" id="" placeholder="Nome do curso"
+                         value="">
+                </fieldset>
+              </div>
+              <div class="col-md-3">
+                <fieldset class="form-group">
+                  <label class="form-label" for="">Tipo:</label>
+                  <select id="exampleSelect" class="form-control">
+                    <option>Online</option>
+                    <option>Presencial</option>
+                    <option>Híbrido</option>
+                  </select>
+                </fieldset>
+              </div>
+              <div class="col-md-3">
+                <fieldset class="form-group">
+                  <label class="form-label" for="">Idade mínima:</label>
+                  <input type="text" class="form-control" id="" placeholder="00"
+                         value="">
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <fieldset class="form-group">
+                  <label class="form-label" for="">Objetivo:</label>
+                  <textarea rows="4" class="form-control" placeholder="Objetivo"></textarea>
+                </fieldset>
+              </div>
+              <div class="col-md-3">
+                <fieldset class="form-group">
+                  <label class="form-label" for="">Escolaridade:</label>
+                  <input type="text" class="form-control" id="" placeholder="Escolaridade"
+                         value="">
+                </fieldset>
+
+              </div>
+              <div class="col-md-3">
+                <fieldset class="form-group">
+                  <label class="form-label" for="">Valor do curso:</label>
+                  <input type="text" class="form-control" id="" placeholder="R$000,00"
+                         value="">
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Salvar</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- Modal cadastrar curso -->
 <div class="modal fade" id="ModalCadCurso" tabindex="-1" role="dialog" aria-labelledby="ModalCadCurso">
@@ -681,8 +879,8 @@
               </div>
               <div class="col-md-4">
                 <fieldset class="form-group">
-                  <label class="form-label" for="">Sistema de avaliação:</label>
-                  <select id="" class="form-control">
+                  <label class="form-label semibold" for="exampleInput">Sistema de avaliação</label>
+                  <select class="select2">
                     <option>Aproveitamento</option>
                     <option>Notas</option>
                     <option>Objetivo</option>
