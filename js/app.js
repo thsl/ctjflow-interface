@@ -1,6 +1,4 @@
 $(document).ready(function(){
-
-
 /* ==========================================================================
 	Scroll
 	========================================================================== */
@@ -252,17 +250,39 @@ $(document).ready(function(){
 	Select
 	========================================================================== */
 
-	// Bootstrap-select
-	$('.bootstrap-select').selectpicker({
-		style: '',
-		width: '100%',
-		size: 8
-	});
+	if ($('.bootstrap-select').size()) {
+		// Bootstrap-select
+		$('.bootstrap-select').selectpicker({
+			style: '',
+			width: '100%',
+			size: 8
+		});
+	}
 
-	// Select2
-	$.fn.select2.defaults.set("minimumResultsForSearch", "Infinity");
+	if ($('.select2').size()) {
+		// Select2
+		$.fn.select2.defaults.set("minimumResultsForSearch", "Infinity");
 
-	$('.select2').select2();
+		$('.select2').select2();
+
+		$(".select2-icon").select2({
+			templateSelection: select2Icons,
+			templateResult: select2Icons
+		});
+
+		$(".select2-arrow").select2({
+			theme: "arrow"
+		});
+
+		$(".select2-white").select2({
+			theme: "white"
+		});
+
+		$(".select2-photo").select2({
+			templateSelection: select2Photos,
+			templateResult: select2Photos
+		});
+	}
 
 	function select2Icons (state) {
 		if (!state.id) { return state.text; }
@@ -272,19 +292,6 @@ $(document).ready(function(){
 		return $state;
 	}
 
-	$(".select2-icon").select2({
-		templateSelection: select2Icons,
-		templateResult: select2Icons
-	});
-
-	$(".select2-arrow").select2({
-		theme: "arrow"
-	});
-
-	$(".select2-white").select2({
-		theme: "white"
-	});
-
 	function select2Photos (state) {
 		if (!state.id) { return state.text; }
 		var $state = $(
@@ -292,50 +299,6 @@ $(document).ready(function(){
 		);
 		return $state;
 	}
-
-	$(".select2-photo").select2({
-		templateSelection: select2Photos,
-		templateResult: select2Photos
-	});
-
-/* ==========================================================================
-	Search
-	========================================================================== */
-
-	$.typeahead({
-		input: "#typeahead-search",
-		order: "asc",
-		minLength: 1,
-		source: {
-			data: [
-				"Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda",
-				"Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh",
-				"Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia",
-				"Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burma",
-				"Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Republic", "Chad",
-				"Chile", "China", "Colombia", "Comoros", "Congo, Democratic Republic", "Congo, Republic of the",
-				"Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti",
-				"Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador",
-				"Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon",
-				"Gambia", "Georgia", "Germany", "Ghana", "Greece", "Greenland", "Grenada", "Guatemala", "Guinea",
-				"Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India",
-				"Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan",
-				"Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kuwait", "Kyrgyzstan", "Laos",
-				"Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg",
-				"Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands",
-				"Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Mongolia", "Morocco", "Monaco",
-				"Mozambique", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger",
-				"Nigeria", "Norway", "Oman", "Pakistan", "Panama", "Papua New Guinea", "Paraguay", "Peru",
-				"Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Samoa", "San Marino",
-				"Sao Tome", "Saudi Arabia", "Senegal", "Serbia and Montenegro", "Seychelles", "Sierra Leone",
-				"Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "Spain",
-				"Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan",
-				"Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey",
-				"Turkmenistan", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States",
-				"Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
-			]
-		}
-	});
 
 /* ==========================================================================
 	Datepicker
@@ -409,122 +372,6 @@ $(document).ready(function(){
 				errorListClass: 'form-tooltip-error'
 			}
 		}
-	});
-
-/* ==========================================================================
-	Sweet alerts
-	========================================================================== */
-
-	$('.swal-btn-basic').click(function(e){
-		e.preventDefault();
-		swal("Mensagem de Notificação!");
-	});
-
-	$('.swal-btn-text').click(function(e){
-		e.preventDefault();
-		swal({
-			title: "Mensagem de Notificacao!",
-			text: "Mais alguma informação aqui."
-		});
-	});
-
-	$('.swal-btn-success').click(function(e){
-		e.preventDefault();
-		swal({
-			title: "Sucesso!",
-			text: "Você confirmou!!",
-			type: "success",
-			confirmButtonClass: "btn-success",
-			confirmButtonText: "Success"
-		});
-	});
-	
-	$('.swal-btn-email').click(function(e){
-		e.preventDefault();
-		swal({
-			title: "Confirmado!",
-			text: "Seu email foi enviado com sucesso!",
-			type: "success",
-			confirmButtonClass: "btn-success",
-			confirmButtonText: "Ok"
-		});
-	});
-
-	$('.swal-btn-warning').click(function(e){
-		e.preventDefault();
-		swal({
-				title: "Você tem certeza?",
-				text: "Alguma pergunta nesse espaço.",
-				type: "warning",
-				showCancelButton: true,
-				cancelButtonClass: "btn-default",
-				confirmButtonClass: "btn-warning",
-				confirmButtonText: "Warning",
-				closeOnConfirm: false
-			},
-			function(){
-				swal({
-					title: "Ok!",
-					text: "Você cancelou!",
-					type: "success",
-					confirmButtonClass: "btn-success"
-				});
-			});
-	});
-
-	$('.swal-btn-cancel').click(function(e){
-		e.preventDefault();
-		swal({
-				title: "Você tem certeza?",
-				text: "Perdera todos as informações associadas.",
-				type: "warning",
-				showCancelButton: true,
-				confirmButtonClass: "btn-danger",
-				confirmButtonText: "Sim, exclua!",
-				cancelButtonText: "Não, cancele!",
-				closeOnConfirm: false,
-				closeOnCancel: false
-			},
-			function(isConfirm) {
-				if (isConfirm) {
-					swal({
-						title: "Confirmado!",
-						text: "Ainda bem que você tem certeza.",
-						type: "success",
-						confirmButtonClass: "btn-success"
-					});
-				} else {
-					swal({
-						title: "Cancelado",
-						text: "Ainda bem que você pensou melhor.",
-						type: "error",
-						confirmButtonClass: "btn-danger"
-					});
-				}
-			});
-	});
-
-	$('.swal-btn-custom-img').click(function(e){
-		e.preventDefault();
-		swal({
-			title: "Personalizado!",
-			text: "Qualquer notificação pode ser feita aqui.",
-			confirmButtonClass: "btn-success",
-			imageUrl: 'img/smile.png'
-		});
-	});
-
-	$('.swal-btn-info').click(function(e){
-		e.preventDefault();
-		swal({
-				title: "Você esta recebendo uma notificação.",
-				text: "Alguma informação importante aqui.",
-				type: "info",
-				showCancelButton: true,
-				cancelButtonClass: "btn-default",
-				confirmButtonText: "Info",
-				confirmButtonClass: "btn-primary"
-			});
 	});
 
 /* ==========================================================================
@@ -754,13 +601,6 @@ $(document).ready(function(){
 	});
 
 /* ==========================================================================
-	Pnotify
-	========================================================================== */
-
-	PNotify.prototype.options.styling = "bootstrap3";
-
-
-/* ==========================================================================
 	Box typical full height with header
 	========================================================================== */
 
@@ -982,10 +822,6 @@ $(document).ready(function(){
 				marginLeft: -padding,
 				marginRight: -padding
 			});
-
-			console.log(padLeft);
-			console.log(padRight);
-			console.log(padding);
 		});
 	}
 
@@ -996,4 +832,27 @@ $(document).ready(function(){
 	});
 
 /* ========================================================================== */
+
+	$('.control-panel-toggle').on('click', function() {
+		var self = $(this);
+		
+		if (self.hasClass('open')) {
+			self.removeClass('open');
+			$('.control-panel').removeClass('open');
+		} else {
+			self.addClass('open');
+			$('.control-panel').addClass('open');
+		}
+	});
+
+	$('.control-item-header .icon-toggle, .control-item-header .text').on('click', function() {
+		var content = $(this).closest('li').find('.control-item-content');
+
+		if (content.hasClass('open')) {
+			content.removeClass('open');
+		} else {
+			$('.control-item-content.open').removeClass('open');
+			content.addClass('open');
+		}
+	});
 });
