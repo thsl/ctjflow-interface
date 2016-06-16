@@ -5,7 +5,7 @@ $(document).ready(function () {
     });
 
     // traduz o datatablenet
-    $('.datatable-on , .datatable-select-on').DataTable({
+    $('.datatable-on').DataTable({
         "language": {
             "sEmptyTable": "Nenhum registro encontrado",
             "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
@@ -30,5 +30,9 @@ $(document).ready(function () {
             }
         }
     });
-
 });
+
+
+
+
+

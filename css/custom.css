@@ -20647,6 +20647,31 @@ ul {
 .blue {
   color: #2e3192 !important;
 }
+a.toggle-icon {
+  text-decoration: none;
+}
+.table a.toggle-icon {
+  border-bottom: none;
+}
+.img-circle-sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+.img-circle-xs {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+}
+.neg-mt-1 {
+  margin-top: -1px;
+}
+td.hiddenrow {
+  height: 0 !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 .mc {
   margin-left: auto;
   margin-right: auto;

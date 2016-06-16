@@ -313,7 +313,7 @@
       <ol class="breadcrumb clearfix">
         <li><a href="#">Acadêmico</a></li>
         <li class="ml-xs mr-xs"> /</li>
-        <li class="active">Grupos</li>
+        <li class="active">Cursos</li>
         <li style="float:right;">
           <button class="btn btn-sm btn-primary"><i class="fa fa-question-circle" aria-hidden="true"></i> Ajuda
           </button>
@@ -327,116 +327,44 @@
             <header class="card-header">
               <div class="row">
                 <div class="col-sm-8">
-                  <h4>10 grupos</h4>
+                  <h4>00 Cursos</h4>
                 </div>
                 <div class="col-sm-4">
-                  <button class="btn btn-sm btn-primary pull-right" data-toggle="collapse"
-                          href="#AddGrupo"><i class="fa fa-plus" aria-hidden="true"></i>
-                    Criar grupo
+                  <button class="btn btn-sm btn-primary pull-right"><i class="fa fa-plus" aria-hidden="true"></i>
+                    Criar novo curso
                   </button>
-                </div>
-              </div>
-              <div class="row collapse mt-md" id="AddGrupo">
-                <div class="col-sm-12">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Nome do grupo">
-                        <span class="input-group-btn">
-                          <button class="btn btn-success" type="button">Salvar</button>
-                          <button class="btn btn-secondary" type="button" data-toggle="collapse" href="#AddGrupo"><i
-                                  class="fa fa-times" aria-hidden="true"></i>
-                          </button>
-                        </span>
-                  </div>
                 </div>
               </div>
             </header>
             <div class="card-block">
-              <table class="display datatable-on table table-striped" cellspacing="0" width="100%">
+
+              <table class="display table datatable-on">
                 <thead>
                 <tr>
-                  <th>Nome do grupo</th>
-                  <th>Cursos associados</th>
-                  <th>Ações</th>
+                  <th>Curso</th>
+                  <th>Grupo(s)</th>
+                  <th>Tipo</th>
+                  <th>Valor</th>
+                  <th class="text-right">Ações</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                  <td>Jovens adultos</td>
-                  <td><a data-toggle="modal"
-                         data-target="#ModalAssociaCurso"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                    Associar cursos</a></td>
-                  <td>
-                    <div class="btn-group btn-group-sm pull-right">
-                      <button type="button" class="btn btn-default-outline">Ações</button>
-                      <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                        <span class="sr-only">Toggle Dropdown</span>
-                      </button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" data-toggle="modal"
-                           data-target="#ModalAssociaCurso">Associar cursos</a>
-                        <a class="dropdown-item" href="#">Editar</a>
-                        <a class="dropdown-item" href="#">Duplicar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Inativar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Excluir</a>
-                      </div>
-                    </div>
+                  <td><a><strong>Jovens adultos</strong></a>
                   </td>
-                </tr>
-                <tr>
-                  <td>Crianças</td>
-                  <td><a data-toggle="modal"
-                         data-target="#ModalMostraCurso"><strong>5</strong> cursos</a></td>
-                  <td>
-                    <div class="btn-group btn-group-sm pull-right">
-                      <button type="button" class="btn btn-default-outline">Ações</button>
-                      <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                        <span class="sr-only">Toggle Dropdown</span>
-                      </button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" data-toggle="modal"
-                           data-target="#ModalAssociaCurso">Associar cursos</a>
-                        <a class="dropdown-item" href="#">Editar</a>
-                        <a class="dropdown-item" href="#">Duplicar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Inativar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Excluir</a>
-                      </div>
-                    </div>
+                  <td><p>Crianças | Jovens | Adultos</p>
                   </td>
-                </tr>
-                <tr>
-                  <td>Jovens</td>
-                  <td><a data-toggle="modal"
-                         data-target="#ModalMostraCurso"><strong>4</strong> cursos</a></td>
                   <td>
-                    <div class="btn-group btn-group-sm pull-right">
-                      <button type="button" class="btn btn-default-outline">Ações</button>
-                      <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                        <span class="sr-only">Toggle Dropdown</span>
-                      </button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" data-toggle="modal"
-                           data-target="#ModalAssociaCurso">Associar cursos</a>
-                        <a class="dropdown-item" href="#">Editar</a>
-                        <a class="dropdown-item" href="#">Duplicar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Inativar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Excluir</a>
-                      </div>
-                    </div>
+                    Presencial
+                    <p>
+                      <small class="text-danger"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Livro a
+                        definir
+                      </small>
+                    </p>
                   </td>
-                </tr>
-                <tr>
-                  <td>Adultos</td>
-                  <td><a data-toggle="modal"
-                         data-target="#ModalMostraCurso"><strong>6</strong> cursos</a></td>
+                  <td>
+                    R$000,00
+                  </td>
                   <td>
                     <div class="btn-group btn-group-sm pull-right">
                       <button type="button" class="btn btn-default-outline">Ações</button>
@@ -446,7 +374,7 @@
                       </button>
                       <div class="dropdown-menu">
                         <a class="dropdown-item" href="#" data-toggle="modal"
-                           data-target="#ModalAssociaCurso">Associar cursos</a>
+                           data-target="#ModalAssociaCurso">Associar grupo</a>
                         <a class="dropdown-item" href="#">Editar</a>
                         <a class="dropdown-item" href="#">Duplicar</a>
                         <div class="dropdown-divider"></div>
@@ -459,7 +387,101 @@
                 </tr>
                 </tbody>
               </table>
-            </div><!--.box-typical-body-->
+              <!--
+
+
+               <tr>
+                                <td colspan="5" class="hiddenrow">
+                                  <div class="collapse m-a neg-mt-1" id="Table-Niveis-1">
+                                    <table class="table table-condensed">
+                                      <thead>
+                                      <tr>
+                                        <th>
+                                          Níveis deste curso
+                                        </th>
+                                        <th>
+                                          Avaliação
+                                        </th>
+                                        <th>
+                                          Material didático
+                                        </th>
+                                        <th class="text-right">Ações</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                        <td>
+                                          <strong>Nível A1</strong>
+                                        </td>
+                                        <td>
+                                          Notas
+                                        </td>
+                                        <td>
+                                          <p><img class="img-circle-xs" src="img/cursos/kids/hooray-a1.jpg"> Hooray! A – Student’s
+                                            Book</p>
+                                        </td>
+                                        <td>
+                                          <div class="btn-group btn-group-sm pull-right">
+                                            <button type="button" class="btn btn-default-outline">Ações</button>
+                                            <button type="button" class="btn btn-default-outline dropdown-toggle"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                              <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                              <a class="dropdown-item" href="#">Editar</a>
+                                              <a class="dropdown-item" href="#">Duplicar</a>
+                                              <div class="dropdown-divider"></div>
+                                              <a class="dropdown-item" href="#">Inativar material didático</a>
+                                              <div class="dropdown-divider"></div>
+                                              <a class="dropdown-item" href="#">Inativar</a>
+                                              <div class="dropdown-divider"></div>
+                                              <a class="dropdown-item" href="#">Excluir</a>
+                                            </div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <strong>Nível A1</strong>
+                                        </td>
+                                        <td>
+                                          Notas
+                                        </td>
+                                        <td>
+                                          <p><img class="img-circle-xs" src="img/cursos/kids/hooray-a1.jpg"> Hooray! A – Student’s
+                                            Book</p>
+                                        </td>
+                                        <td>
+                                          <div class="btn-group btn-group-sm pull-right">
+                                            <button type="button" class="btn btn-default-outline">Ações</button>
+                                            <button type="button" class="btn btn-default-outline dropdown-toggle"
+                                                    data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                              <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                              <a class="dropdown-item" href="#">Editar</a>
+                                              <a class="dropdown-item" href="#">Duplicar</a>
+                                              <div class="dropdown-divider"></div>
+                                              <a class="dropdown-item" href="#">Inativar material didático</a>
+                                              <div class="dropdown-divider"></div>
+                                              <a class="dropdown-item" href="#">Inativar</a>
+                                              <div class="dropdown-divider"></div>
+                                              <a class="dropdown-item" href="#">Excluir</a>
+                                            </div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+
+               -->
+            </div><!--.box-typical-body
+            -->
           </section><!--.box-typical-->
         </div>
       </div>
@@ -491,32 +513,6 @@
               <tr>
                 <td>KIDS FUN</td>
                 <td><p>Infantil</p></td>
-              </tr>
-              <tr>
-                <td>KIDS</td>
-                <td>
-                  <p>Crianças</p>
-                  <p>Infantil</p>
-                </td>
-
-              </tr>
-              <tr>
-                <td>TOP KIDS</td>
-                <td>
-                  <p>Crianças</p>
-                </td>
-              </tr>
-              <tr>
-                <td>JUNIOR</td>
-                <td>
-                  <p>Infantil</p>
-                </td>
-              </tr>
-              <tr>
-                <td>THOMAS FLEX</td>
-                <td>
-                  <p>Infantil</p>
-                </td>
               </tr>
               </tbody>
             </table>
