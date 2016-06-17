@@ -1,0 +1,71 @@
+.tab-indetify {
+  .tab-content {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    border-radius: 8px 8px 0 0;
+    background-color: @white;
+    min-height: 120px;
+    text-align: center;
+    > .active {
+      background-color: @white;
+    }
+  }
+
+  .nav-tabs {
+    border-bottom: 0px;
+    border-top: 1px solid #ddd;
+    > li {
+      margin-bottom: 0;
+      margin-top: -1px;
+      width: 33.33333333%;
+      text-align: center;
+      > a {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        line-height: 20px;
+        border: 1px solid transparent;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+        -moz-border-radius-bottomright: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+    }
+    > .active {
+      > a {
+        color: #555555;
+        cursor: default;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-top-color: transparent;
+        &:hover {
+          color: #555555;
+          cursor: default;
+          background-color: #ffffff;
+          border: 1px solid #ddd;
+          border-top-color: transparent;
+        }
+        &:focus {
+          color: #555555;
+          cursor: default;
+          background-color: #ffffff;
+          border: 1px solid #ddd;
+          border-top-color: transparent;
+        }
+      }
+    }
+  }
+
+}
+
+
+.tab-list{
+  .tab-content{
+    background-color: @white;
+  }
+}
