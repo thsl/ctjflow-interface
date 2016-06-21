@@ -64,14 +64,14 @@
   </section>
 </nav><!--.side-menu-->
 
-<!-- gambiarra para o angular enxergar o jquery dentro deste menu. Josgar isso for, pois este código ja existe! -->
+<!-- gambiarra para o angular enxergar o jquery dentro deste menu. Jogar isso fora, pois este código ja existe!  -->
 <script>
-  $('.side-menu-list li.with-sub').each(function(){
+  $('.side-menu-list li.with-sub').each(function () {
     var parent = $(this),
             clickLink = parent.find('>span'),
             subMenu = parent.find('ul');
 
-    clickLink.click(function(){
+    clickLink.click(function () {
       if (parent.hasClass('opened')) {
         parent.removeClass('opened');
         subMenu.slideUp("slow");

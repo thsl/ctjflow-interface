@@ -25,6 +25,7 @@
 
 
 <div class="page-content">
+
   <div class="container-fluid">
     <section>
       <ol class="breadcrumb clearfix">
@@ -32,8 +33,8 @@
         <li class="ml-xs mr-xs"> /</li>
         <li class="active">Grupos</li>
         <li style="float:right;">
-          <button class="btn btn-rounded btn-inline btn-secondary-outline btn-sm"><i class="fa fa-question-circle"
-                                                                                     aria-hidden="true"></i> Ajuda
+          <button class="btn btn-inline btn-secondary-outline btn-sm"><i class="fa fa-question-circle"
+                                                                         aria-hidden="true"></i> Ajuda
           </button>
         </li>
       </ol>
@@ -41,141 +42,160 @@
 
     <section>
       <div class="row">
+        <div class="col-sm-4">
+          <section class="widget-simple-sm">
+            <div class="widget-simple-sm-icon bck-analitcs-grey">
+              <i class="fa fa-sitemap" aria-hidden="true"></i>
+            </div>
+            <div class="widget-simple-sm-bottom"><h5>7 Grupos cadastrados</h5></div>
+          </section>
+        </div>
+        <div class="col-sm-4">
+          <section class="widget-simple-sm">
+            <div class="widget-simple-sm-icon bck-analitcs-grey">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+            </div>
+            <div class="widget-simple-sm-bottom"><h5>34 cursos</h5></div>
+          </section>
+        </div>
+        <div class="col-sm-4">
+          <section class="widget-simple-sm">
+            <div class="widget-simple-sm-icon bck-analitcs-grey">
+              <i class="fa fa-users" aria-hidden="true"></i>
+            </div>
+            <div class="widget-simple-sm-bottom"><h5>1.500 alunos</h5></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="row mt-md">
+        <div class="col-lg-12">
+          <section class="card">
+            <header class="card-header">
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <div class="form-group input-group mb-0">
+                    <input type="text" class="form-control" aria-label="" placeholder="Buscar grupos">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default-outline">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div class="card-block collapse" id="collapseBuscaAvancada">
+
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="row mt-sm">
         <div class="col-lg-12">
           <section class="box-typical">
             <header class="box-typical-header header-bordered">
               <div class="tbl-row">
                 <div class="tbl-cell tbl-cell-title">
-                  <h3>23 Registros</h3>
+                  <i class="fa fa-sitemap mr-xs" aria-hidden="true"></i> <strong>7 Grupos cadastrados</strong>
                 </div>
                 <div class="tbl-cell tbl-cell-action-bordered">
-                  <button type="button" class="action-btn btn-success"><i class="fa fa-plus-circle mr-xs"></i>Adicionar
+                  <button type="button" class="action-btn btn-success" data-toggle="collapse" href="#AddGrupo"
+                          aria-expanded="false" aria-controls="AddGrupo"><i class="fa fa-plus-circle mr-xs"></i>Novo
+                    grupo
                   </button>
                 </div>
               </div>
-              <div class="row collapse mt-md" id="AddGrupo">
-                <div class="col-sm-12">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Nome do grupo">
+            </header>
+
+            <div class="card-block">
+              <div class="clearfix collapse mt-sm mb-md pb-md divider-bottom" id="AddGrupo">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Nome do grupo">
                         <span class="input-group-btn">
                           <button class="btn btn-success" type="button">Salvar</button>
                           <button class="btn btn-secondary" type="button" data-toggle="collapse" href="#AddGrupo"><i
                                   class="fa fa-times" aria-hidden="true"></i>
                           </button>
                         </span>
-                  </div>
                 </div>
               </div>
-            </header>
-            <div class="card-block">
-              <table class="display datatable-on table table-striped" cellspacing="0" width="100%">
-                <thead>
-                <tr>
-                  <th>Nome do grupo</th>
-                  <th>Cursos associados</th>
-                  <th>Ações</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>Jovens adultos</td>
-                  <td><a data-toggle="modal"
-                         data-target="#ModalAssociaCurso"><i class="fa fa-plus-circle" aria-hidden="true"></i>
-                    Associar cursos</a></td>
-                  <td>
-                    <div class="btn-group btn-group-sm pull-right">
-                      <button type="button" class="btn btn-default-outline">Ações</button>
-                      <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                        <span class="sr-only">Toggle Dropdown</span>
-                      </button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" data-toggle="modal"
-                           data-target="#ModalAssociaCurso">Associar cursos</a>
-                        <a class="dropdown-item" href="#">Editar</a>
-                        <a class="dropdown-item" href="#">Duplicar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Inativar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Excluir</a>
+              <div class="table-responsive">
+                <table class="datatable-on table table-hover" cellspacing="0" width="100%">
+                  <thead>
+                  <tr>
+                    <th>Nome do grupo</th>
+                    <th>Cursos associados</th>
+                    <th class="text-right">Ações</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+
+                  <tr>
+                    <td data-toggle="modal"
+                        data-target="#ModalDetalhaGrupo" class="cursor-pointer"><strong>Crianças</strong></td>
+                    <td>5 Cursos</td>
+                    <td>
+                      <div class="btn-group btn-group-sm pull-right">
+                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Ações
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item"><i class="fa fa-retweet mr-xs" aria-hidden="true"></i>
+                            Associar cursos</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
+                                                               aria-hidden="true"></i>
+                            Editar</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i>
+                            Duplicar</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
+                            Inativar</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
+                            Excluir</a>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Crianças</td>
-                  <td><a data-toggle="modal"
-                         data-target="#ModalMostraCurso"><strong>5</strong> cursos</a></td>
-                  <td>
-                    <div class="btn-group btn-group-sm pull-right">
-                      <button type="button" class="btn btn-default-outline">Ações</button>
-                      <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                        <span class="sr-only">Toggle Dropdown</span>
-                      </button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" data-toggle="modal"
-                           data-target="#ModalAssociaCurso">Associar cursos</a>
-                        <a class="dropdown-item" href="#">Editar</a>
-                        <a class="dropdown-item" href="#">Duplicar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Inativar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Excluir</a>
+                    </td>
+                  </tr>
+
+                  <tr data-toggle="modal"
+                       data-target="#ModalAssociaCurso" class="cursor-pointer">
+                    <td><strong>Jovens adultos</strong></td>
+                    <td><i class="fa fa-plus-circle" aria-hidden="true"></i> Associar cursos</td>
+                    <td>
+                      <div class="btn-group btn-group-sm pull-right">
+                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Ações
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item"><i class="fa fa-retweet mr-xs" aria-hidden="true"></i>
+                            Associar cursos</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
+                                                               aria-hidden="true"></i>
+                            Editar</a>
+                          <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i>
+                            Duplicar</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
+                            Inativar</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
+                            Excluir</a>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Jovens</td>
-                  <td><a data-toggle="modal"
-                         data-target="#ModalMostraCurso"><strong>4</strong> cursos</a></td>
-                  <td>
-                    <div class="btn-group btn-group-sm pull-right">
-                      <button type="button" class="btn btn-default-outline">Ações</button>
-                      <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                        <span class="sr-only">Toggle Dropdown</span>
-                      </button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" data-toggle="modal"
-                           data-target="#ModalAssociaCurso">Associar cursos</a>
-                        <a class="dropdown-item" href="#">Editar</a>
-                        <a class="dropdown-item" href="#">Duplicar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Inativar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Excluir</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Adultos</td>
-                  <td><a data-toggle="modal"
-                         data-target="#ModalMostraCurso"><strong>6</strong> cursos</a></td>
-                  <td>
-                    <div class="btn-group btn-group-sm pull-right">
-                      <button type="button" class="btn btn-default-outline">Ações</button>
-                      <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                        <span class="sr-only">Toggle Dropdown</span>
-                      </button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" data-toggle="modal"
-                           data-target="#ModalAssociaCurso">Associar cursos</a>
-                        <a class="dropdown-item" href="#">Editar</a>
-                        <a class="dropdown-item" href="#">Duplicar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Inativar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Excluir</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                </tbody>
-              </table>
+                    </td>
+                  </tr>
+
+                  </tbody>
+                </table>
+              </div>
             </div><!--.box-typical-body-->
           </section><!--.box-typical-->
         </div>
@@ -186,7 +206,7 @@
 
 
 <!-- Modal cadastrar curso -->
-<div class="modal fade" id="ModalMostraCurso" tabindex="-1" role="dialog" aria-labelledby="ModalCadCurso">
+<div class="modal fade" id="ModalDetalhaGrupo" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaGrupo">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
