@@ -15,290 +15,17 @@
   <link rel="stylesheet" href="css/lib/font-awesome/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/custom.css">
+
+
 </head>
-<body class="with-side-menu">
+<body class="with-side-menu" ng-app="">
 
-<header class="site-header">
-  <div class="container-fluid">
-    <a href="#" class="site-logo">
-      <img class="hidden-md-down" src="img/logo-2.png" alt="">
-      <img class="hidden-lg-up" src="img/logo-2-mob.png" alt="">
-    </a>
-    <button class="hamburger hamburger--htla">
-      <span>toggle menu</span>
-    </button>
-    <div class="site-header-content">
-      <div class="site-header-content-in">
-        <div class="site-header-shown">
-          <div class="dropdown dropdown-notification notif">
-            <a href="#"
-               class="header-alarm dropdown-toggle active"
-               id="dd-notification"
-               data-toggle="dropdown"
-               aria-haspopup="true"
-               aria-expanded="false">
-              <i class="font-icon-alarm"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
-              <div class="dropdown-menu-notif-header">
-                Notifications
-                <span class="label label-pill label-danger">4</span>
-              </div>
-              <div class="dropdown-menu-notif-list">
-                <div class="dropdown-menu-notif-item">
-                  <div class="photo">
-                    <img src="img/photo-64-1.jpg" alt="">
-                  </div>
-                  <div class="dot"></div>
-                  <a href="#">Morgan</a> was bothering about something
-                  <div class="color-blue-grey-lighter">7 hours ago</div>
-                </div>
-                <div class="dropdown-menu-notif-item">
-                  <div class="photo">
-                    <img src="img/photo-64-2.jpg" alt="">
-                  </div>
-                  <div class="dot"></div>
-                  <a href="#">Lioneli</a> had commented on this <a href="#">Super Important Thing</a>
-                  <div class="color-blue-grey-lighter">7 hours ago</div>
-                </div>
-                <div class="dropdown-menu-notif-item">
-                  <div class="photo">
-                    <img src="img/photo-64-3.jpg" alt="">
-                  </div>
-                  <div class="dot"></div>
-                  <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
-                  <div class="color-blue-grey-lighter">7 hours ago</div>
-                </div>
-                <div class="dropdown-menu-notif-item">
-                  <div class="photo">
-                    <img src="img/photo-64-4.jpg" alt="">
-                  </div>
-                  <a href="#">Lionely</a> wants to go to <a href="#">Cinema</a> with you to see <a href="#">This
-                  Movie</a>
-                  <div class="color-blue-grey-lighter">7 hours ago</div>
-                </div>
-              </div>
-              <div class="dropdown-menu-notif-more">
-                <a href="#">See more</a>
-              </div>
-            </div>
-          </div>
+<ng-include src="'includes/header.html'"></ng-include>
+<ng-include src="'includes/side-bar.html'"></ng-include>
 
-          <div class="dropdown dropdown-notification messages">
-            <a href="#"
-               class="header-alarm dropdown-toggle active"
-               id="dd-messages"
-               data-toggle="dropdown"
-               aria-haspopup="true"
-               aria-expanded="false">
-              <i class="font-icon-mail"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right dropdown-menu-messages" aria-labelledby="dd-messages">
-              <div class="dropdown-menu-messages-header">
-                <ul class="nav" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active"
-                       data-toggle="tab"
-                       href="#tab-incoming"
-                       role="tab">
-                      Inbox
-                      <span class="label label-pill label-danger">8</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link"
-                       data-toggle="tab"
-                       href="#tab-outgoing"
-                       role="tab">Outbox</a>
-                  </li>
-                </ul>
-                <!--<button type="button" class="create">
-                    <i class="font-icon font-icon-pen-square"></i>
-                </button>-->
-              </div>
-              <div class="tab-content">
-                <div class="tab-pane active" id="tab-incoming" role="tabpanel">
-                  <div class="dropdown-menu-messages-list">
-                    <a href="#" class="mess-item">
-                      <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
-                      <span class="mess-item-name">Tim Collins</span>
-                      <span class="mess-item-txt">Morgan was bothering about something!</span>
-                    </a>
-                    <a href="#" class="mess-item">
-                      <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
-                      <span class="mess-item-name">Christian Burton</span>
-                      <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something.</span>
-                    </a>
-                    <a href="#" class="mess-item">
-                      <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
-                      <span class="mess-item-name">Tim Collins</span>
-                      <span class="mess-item-txt">Morgan was bothering about something!</span>
-                    </a>
-                    <a href="#" class="mess-item">
-                      <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
-                      <span class="mess-item-name">Christian Burton</span>
-                      <span class="mess-item-txt">Morgan was bothering about something...</span>
-                    </a>
-                  </div>
-                </div>
-                <div class="tab-pane" id="tab-outgoing" role="tabpanel">
-                  <div class="dropdown-menu-messages-list">
-                    <a href="#" class="mess-item">
-                      <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
-                      <span class="mess-item-name">Christian Burton</span>
-                      <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something...</span>
-                    </a>
-                    <a href="#" class="mess-item">
-                      <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
-                      <span class="mess-item-name">Tim Collins</span>
-                      <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something.</span>
-                    </a>
-                    <a href="#" class="mess-item">
-                      <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
-                      <span class="mess-item-name">Christian Burtons</span>
-                      <span class="mess-item-txt">Morgan was bothering about something!</span>
-                    </a>
-                    <a href="#" class="mess-item">
-                      <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
-                      <span class="mess-item-name">Tim Collins</span>
-                      <span class="mess-item-txt">Morgan was bothering about something!</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown-menu-notif-more">
-                <a href="#">See more</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="dropdown dropdown-lang">
-            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-              <span class="flag-icon flag-icon-br"></span>
-            </button>
-            <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-menu-col">
-                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-us"></span>English</a>
-                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-fr"></span>French</a>
-                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-it"></span>Italiano</a>
-                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-es"></span>Español</a>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="dropdown user-menu">
-            <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-              <img src="img/avatar-2-64.png" alt="">
-            </button>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
-              <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Perfil</a>
-              <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Configurações</a>
-              <a class="dropdown-item" href="#"><span
-                      class="font-icon glyphicon glyphicon-question-sign"></span>Ajuda</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Sair</a>
-            </div>
-          </div>
-
-          <button type="button" class="burger-right">
-            <i class="font-icon-menu-addl"></i>
-          </button>
-        </div><!--.site-header-shown-->
-
-        <div class="mobile-menu-right-overlay"></div>
-        <div class="site-header-collapsed">
-          <div class="site-header-collapsed-in">
-            <div class="dropdown dropdown-typical">
-              Filtros :
-              <a class="dropdown-toggle" id="dd-header-sales" data-target="#" href="http://example.com"
-                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span>Hoje</span>
-              </a>
-
-              <div class="dropdown-menu" aria-labelledby="dd-header-sales">
-                <a class="dropdown-item" href="#">Hoje</a>
-                <a class="dropdown-item" href="#">Semanal</a>
-                <a class="dropdown-item" href="#">Mensal</a>
-                <a class="dropdown-item" href="#">Anual</a>
-              </div>
-            </div>
-          </div><!--.site-header-collapsed-in-->
-        </div><!--.site-header-collapsed-->
-      </div><!--site-header-content-in-->
-    </div><!--.site-header-content-->
-  </div><!--.container-fluid-->
-</header><!--.site-header-->
-
-<div class="mobile-menu-left-overlay"></div>
-<nav class="side-menu">
-  <ul class="side-menu-list">
-    <li class="gold with-sub">
-	            <span>
-	                <i class="font-icon font-icon-widget"></i>
-	                <span class="lbl">Dashboard</span>
-	            </span>
-      <ul>
-        <li><a href="#"><span class="lbl">Menu 1</span></a></li>
-        <li><a href="#"><span class="lbl">Menu 2</span></a></li>
-        <li><a href="#"><span class="lbl">Menu 3</span></a></li>
-
-      </ul>
-    </li>
-    <li class="blue with-sub">
-	            <span>
-	                <i class="fa fa-book" aria-hidden="true"></i>
-	                <span class="lbl">Acadêmico</span>
-	            </span>
-      <ul>
-        <li><a href="grupos.html"><span class="lbl">Grupos</span></a></li>
-        <li><a href="cursos.html"><span class="lbl">Cursos</span></a></li>
-        <li><a href="niveis.html"><span class="lbl">Níveis</span></a></li>
-        <li><a href="materiais-didaticos.html"><span class="lbl">Materiais didáticos</span></a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <section>
-    <header class="side-menu-title">FAVORITOS</header>
-    <ul class="side-menu-list">
-      <li>
-        <a href="#">
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <span class="lbl">Cadastro de Alunos</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <span class="lbl">Gerenciar Calendário</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <span class="lbl">Relatório Alunos</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <span class="lbl">Relatório Carga Horaria</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <span class="lbl">Relatório Evasão</span>
-        </a>
-      </li>
-    </ul>
-  </section>
-</nav><!--.side-menu-->
 
 <div class="page-content">
+
   <div class="container-fluid">
     <section>
       <ol class="breadcrumb clearfix">
@@ -306,86 +33,257 @@
         <li class="ml-xs mr-xs"> /</li>
         <li class="active">Cursos</li>
         <li style="float:right;">
-          <button class="btn btn-sm btn-primary"><i class="fa fa-question-circle" aria-hidden="true"></i> Ajuda
+          <button class="btn btn-inline btn-secondary-outline btn-sm"><i class="fa fa-question-circle"
+                                                                         aria-hidden="true"></i> Ajuda
           </button>
         </li>
       </ol>
     </section>
+
     <section>
-      <div class="row">
+      <div class="row mt-md">
         <div class="col-lg-12">
           <section class="card">
             <header class="card-header">
               <div class="row">
-                <div class="col-sm-8">
-                  <h4>00 Cursos</h4>
+                <div class="col-sm-5 col-sm-offset-3">
+                  <div class="form-group input-group mb-0">
+                    <input type="text" class="form-control" aria-label="" placeholder="Buscar cursos">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default-outline">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <div class="col-sm-4">
-                  <button class="btn btn-sm btn-primary pull-right"><i class="fa fa-plus" aria-hidden="true"></i>
-                    Criar novo curso
-                  </button>
+                  <p class="mt-sm"><a data-toggle="collapse" href="#collapseBuscaAvancada" aria-expanded="false"
+                                      aria-controls="collapseBuscaAvancada"><i class="fa fa-search-plus"
+                                                                               aria-hidden="true"></i> Busca
+                    avançada</a></p>
                 </div>
               </div>
             </header>
-            <div class="card-block">
-              <table class="display table table-hover datatable-on">
-                <thead>
-                <tr>
-                  <th>Curso</th>
-                  <th>Grupo(s)</th>
-                  <th>Tipo</th>
-                  <th>Níveis</th>
-                  <th>Valor</th>
-                  <th class="text-right">Ações</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>
-                    <strong>KIDS FUN</strong>
-                  </td>
-                  <td>
-                    <p>Crianças | Jovens | Adultos</p>
-                  </td>
-                  <td>
-                    Presencial
-                    <p>
-                      <small class="text-danger"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Livro a
-                        definir
-                      </small>
-                    </p>
-                  </td>
-                  <td>
-                    <a data-toggle="modal" data-target="#ModalNiveisCurso"><strong>3 níveis</strong></a>
-                  </td>
-                  <td>
-                    R$000,00
-                  </td>
-                  <td>
-                    <div class="btn-group btn-group-sm pull-right">
-                      <button type="button" class="btn btn-default-outline">Ações</button>
-                      <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false">
-                        <span class="sr-only">Toggle Dropdown</span>
-                      </button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" data-toggle="modal"
-                           data-target="#ModalAssociaCurso">Associar grupo</a>
-                        <a class="dropdown-item" href="#">Editar</a>
-                        <a class="dropdown-item" href="#">Duplicar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Inativar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Excluir</a>
-                      </div>
+            <div class="card-block collapse" id="collapseBuscaAvancada">
+              <div class="row">
+                <div class="col-lg-4">
+                  <fieldset class="form-group mb-0">
+                    <label class="form-label semibold" for="">Grupo do curso</label>
+                    <input type="text" class="form-control" id="" placeholder="Grupo do curso">
+                    <small class="text-muted">Por exemplo: Crianças.</small>
+                  </fieldset>
+                </div>
+                <div class="col-lg-3">
+                  <div class="checkbox-toggle mt-lg">
+                    <input type="checkbox" id="check-toggle-1"/>
+                    <label class="form-label" for="check-toggle-1">livro a definir</label>
+                  </div>
+                </div>
+              </div>
+              <div class="divider-top">
+                <button type="button" class="btn btn-primary btn-sm">Buscar</button>
+                <button type="button" class="btn btn-secondary btn-sm ml-md" data-toggle="collapse"
+                        href="#collapseBuscaAvancada" aria-expanded="false"
+                        aria-controls="collapseBuscaAvancada">Cancelar
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="row mt-sm">
+        <div class="col-lg-12">
+          <section class="tabs-section">
+            <div class="tabs-section-nav">
+              <div class="tbl">
+                <ul class="nav" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#tabs-cursos-tab-1" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+										Cursos
+										<span class="label label-pill label-primary">100</span>
+									</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#tabs-cursos-tab-2" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+										<i class="fa fa-plus mr-xs" aria-hidden="true"></i>
+ Criar novo curso
+									</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div><!--.tabs-section-nav-->
+
+            <div class="tab-content">
+              <section role="tabpanel" class="tab-pane fade in active" id="tabs-cursos-tab-1">
+                <div class="table-responsive">
+                  <table class="datatable-on table table-hover" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                      <th>Nome do curso</th>
+                      <th>Grupo(s)</th>
+                      <th>Tipo</th>
+                      <th>Valor</th>
+                      <th class="text-right">Ações</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                      <td data-toggle="modal"
+                          data-target="#ModalDetalhaGrupo" class="cursor-pointer"><strong>KIDS FUN</strong></td>
+                      <td>Crianças | Jovens e adultos</td>
+                      <td>Presencial</td>
+                      <td>R$ 000,00</td>
+                      <td>
+                        <div class="btn-group btn-group-sm pull-right">
+                          <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">Ações
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item"><i class="fa fa-retweet mr-xs" aria-hidden="true"></i>
+                              Associar a um grupo</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
+                                                                 aria-hidden="true"></i>
+                              Editar</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i>
+                              Duplicar</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
+                              Inativar</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
+                              Excluir</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-toggle="modal"
+                          data-target="#ModalDetalhaGrupo" class="cursor-pointer"><strong>Thomas FLEX</strong></td>
+                      <td>Adultos</td>
+                      <td>Online</td>
+                      <td>R$ 000,00</td>
+                      <td>
+                        <div class="btn-group btn-group-sm pull-right">
+                          <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">Ações
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item"><i class="fa fa-retweet mr-xs" aria-hidden="true"></i>
+                              Associar a um grupo</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
+                                                                 aria-hidden="true"></i>
+                              Editar</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i>
+                              Duplicar</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
+                              Inativar</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
+                              Excluir</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </section><!--.tab-pane 1-->
+
+
+              <section role="tabpanel" class="tab-pane fade" id="tabs-cursos-tab-2">
+                <div class="row mt-sm">
+                  <div class="col-sm-12">
+                    <h4 class="semibold"> Cadastrar novo curso</h4>
+                    <small>Campos com asterisco vermelho ( <span class="semibold text-danger">*</span> ) são
+                      obrigatórios
+                    </small>
+                  </div>
+                </div>
+                <div class="row mt-md divider-top">
+                  <div class="col-lg-4">
+                    <fieldset class="form-group">
+                      <label class="form-label semibold" for="">Nome do curso <span
+                              class="semibold text-danger h4">*</span></label>
+                      <input type="text" class="form-control" id="" placeholder="Nome do curso">
+                      <small class="text-muted">Defina o nome, tomando cuidado com as pontuações.</small>
+                    </fieldset>
+                  </div>
+                  <div class="col-sm-4">
+                    <label class="form-label semibold" for="">Grupo(s) <span
+                            class="semibold text-danger h4">*</span></label>
+                    <select class="select2" multiple="multiple">
+                      <option>Crianças</option>
+                      <option>Adolescentes</option>
+                      <option>Jovens e adultos</option>
+                      <option>Cursos online</option>
+                      <option>Cursos especiais</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-4">
+                    <label class="form-label semibold" for="">Tipo de curso <span
+                            class="semibold text-danger h4">*</span></label>
+                    <select class="select2-arrow">
+                      <option>Online</option>
+                      <option>Híbrido</option>
+                      <option>Presencial</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row divider-top pb-md">
+                  <div class="col-lg-3">
+                    <label class="form-label semibold" for="">Idade mínima</label>
+                    <input type="text" class="form-control" id="" placeholder="Idade mínima">
+                  </div>
+                  <div class="col-lg-3">
+                    <label class="form-label semibold" for="">Escolaridade</label>
+                    <input type="text" class="form-control" id="" placeholder="Escolaridade">
+                  </div>
+                  <div class="col-lg-3">
+                    <label class="form-label semibold" for="">Valor do curso</label>
+                    <input type="text" class="form-control" id="" placeholder="000,00">
+                  </div>
+                  <div class="col-lg-3">
+                    <label class="form-label semibold" for="">Classificação</label>
+                    <select class="select2-arrow">
+                      <option>Regular</option>
+                      <option>Único</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row divider-top pb-md">
+                  <div class="col-sm-8">
+                    <label class="form-label semibold" for="">Objetivos do curso</label>
+                    <textarea rows="4" class="form-control" placeholder="Objetivos do curso"></textarea>
+                  </div>
+                  <div class="col-sm-4">
+                    <label class="form-label semibold" for="">Status do curso</label>
+                    <div class="checkbox-toggle">
+                      <input type="checkbox" id="check-status" checked="">
+                      <label for="check-status">Ativo</label>
                     </div>
-                  </td>
-                </tr>
-                </tbody>
-              </table>
-            </div><!--.box-typical-body
-            -->
-          </section><!--.box-typical-->
+                  </div>
+                </div>
+                <div class="row divider-top pb-md">
+                  <div class="col-sm-12">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i>
+                      Salvar</button>
+                  </div>
+                </div>
+              </section>
+              <!--.tab-pane novo curso -->
+            </div><!--.tab-content-->
+          </section><!--.tabs-section-->
         </div>
       </div>
     </section>
@@ -394,31 +292,169 @@
 
 
 <!-- Modal cadastrar curso -->
-<div class="modal fade" id="ModalMostraCurso" tabindex="-1" role="dialog" aria-labelledby="ModalCadCurso">
+<div class="modal fade" id="ModalDetalhaGrupo" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaGrupo">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                 aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Cursos deste grupo</h4>
+        <h4 class="modal-title"><i class="fa fa-graduation-cap mr-xs" aria-hidden="true"></i>Detalhes do curso</h4>
       </div>
       <div class="modal-body">
         <div class="row">
-          <div class="col-md-12">
-            <table class="display datatable-on table table-striped table-bordered" cellspacing="0" width="100%">
-              <thead>
-              <tr>
-                <th>Curso</th>
-                <th>Outros Grupo(s) associado(s)</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>KIDS FUN</td>
-                <td><p>Infantil</p></td>
-              </tr>
-              </tbody>
-            </table>
+          <div class="col-md-3">
+            <label class="form-label semibold">Curso</label>
+            <p class="h5 semibold">KIDS FUN</p>
+            <p><span class="label label-pill label-success mt-sm">curso ativo</span></p>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label semibold">Data de criação</label>
+            <p>00/00/0000</p>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label semibold">Grupo(s) do curso</label>
+            <p>Crianças | Jovens e adultos</p>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label semibold">Tipo de curso</label>
+            <p>Presencial | Online</p>
+          </div>
+        </div>
+        <div class="row divider-top">
+          <div class="col-md-6">
+            <label class="form-label semibold">Objetivos</label>
+            <p>Os principais objetivos do curso são apresentar o inglês à criança de forma lúdica e familiarizá-la
+              com
+              os sons, vocabulário e comandos básicos da língua, despertando seu interesse em aprender o novo
+              idioma.</p>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label semibold">Valor do curso</label>
+            <p>R$ 000,00</p>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label semibold">Clasifficação</label>
+            <p>Único</p>
+          </div>
+        </div>
+        <div class="row divider-top">
+          <div class="col-sm-12">
+            <h5 class="semibold">Níveis</h5>
+            <section class="widget widget-accordion mt-md" id="accordion" role="tablist" aria-multiselectable="true">
+              <article class="panel">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <a data-toggle="collapse"
+                     data-parent="#accordion"
+                     href="#collapseOne"
+                     aria-expanded="false"
+                     aria-controls="collapseOne">
+                    Nível A1
+                    <i class="font-icon font-icon-arrow-down"></i>
+                  </a>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-collapse-in">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <fieldset class="form-group">
+                          <label class="form-label semibold" for="exampleInput">Unidades</label>
+                          <p>3 unidades</p>
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-3">
+                        <fieldset class="form-group">
+                          <label class="form-label semibold" for="exampleInput">Nota média</label>
+                          <p>00,00</p>
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-3">
+                        <fieldset class="form-group">
+                          <label class="form-label semibold" for="exampleInput">Nível</label>
+                          <p>TAG</p>
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-3">
+                        <fieldset class="form-group">
+                          <label class="form-label semibold" for="exampleInput">Avaliação</label>
+                          <p>Notas</p>
+                        </fieldset>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <fieldset class="form-group">
+                          <label class="form-label semibold" for="exampleInput">Material didático</label>
+                          <p><img class="img-circle-xs" src="img/cursos/kids/hooray-a1.jpg"> Hooray! A – Student’s Book
+                            – Helbling Languages</p>
+                        </fieldset>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="panel">
+                <div class="panel-heading" role="tab" id="heading-2">
+                  <a data-toggle="collapse"
+                     data-parent="#accordion"
+                     href="#collapse-2"
+                     aria-expanded="false"
+                     aria-controls="collapse-2">
+                    Nível A2
+                    <i class="font-icon font-icon-arrow-down"></i>
+                  </a>
+                </div>
+                <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+                  <div class="panel-collapse-in">
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <fieldset class="form-group">
+                          <label class="form-label semibold" for="exampleInput">Unidades</label>
+                          <p>3 unidades</p>
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-3">
+                        <fieldset class="form-group">
+                          <label class="form-label semibold" for="exampleInput">Nota média</label>
+                          <p>00,00</p>
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-3">
+                        <fieldset class="form-group">
+                          <label class="form-label semibold" for="exampleInput">Nível</label>
+                          <p>TAG</p>
+                        </fieldset>
+                      </div>
+                      <div class="col-lg-3">
+                        <fieldset class="form-group">
+                          <label class="form-label semibold" for="exampleInput">Avaliação</label>
+                          <p>Notas</p>
+                        </fieldset>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <fieldset class="form-group">
+                          <label class="form-label semibold" for="exampleInput">Material didático</label>
+                          <p><img class="img-circle-xs" src="img/cursos/kids/hooray-a1.jpg"> Hooray! A – Student’s Book
+                            – Helbling Languages</p>
+                        </fieldset>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+        <div class="row divider-top">
+          <div class="col-sm-8">
+            <canvas id="chart1"/>
+          </div>
+          <div class="col-sm-4">
+            <p class="mt-lg">Dados relativos às matrículas realizadas em cada mês em comparação com o ano anterior</p>
           </div>
         </div>
       </div>
@@ -430,164 +466,26 @@
 </div>
 
 
-<!-- Modal associar curso -->
-<div class="modal fade" id="ModalAssociaCurso" tabindex="-1" role="dialog" aria-labelledby="ModalCadCurso">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Associar ao grupo "jovens adultos"</h4>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-12">
-            <table class="display table table-striped datatable-on" cellspacing="0" width="100%">
-              <thead>
-              <tr>
-                <th class="text-center">
-                  <input type="checkbox">
-                </th>
-                <th>Curso</th>
-                <th>Outros Grupo(s) associado(s)</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td class="text-center">
-                  <input type="checkbox">
-                </td>
-                <td>KIDS FUN</td>
-                <td><p>Infantil</p></td>
-              </tr>
-              <tr>
-                <td class="text-center">
-                  <input type="checkbox">
-                </td>
-                <td>KIDS</td>
-                <td>
-                  <p>Crianças</p>
-                  <p>Infantil</p>
-                </td>
 
-              </tr>
-              <tr>
-                <td class="text-center">
-                  <input type="checkbox">
-                </td>
-                <td>TOP KIDS</td>
-                <td>
-                  <p>Crianças</p>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-center">
-                  <input type="checkbox">
-                </td>
-                <td>JUNIOR</td>
-                <td>
-                  <p>Infantil</p>
-                </td>
-              </tr>
-              <tr>
-                <td class="text-center">
-                  <input type="checkbox">
-                </td>
-                <td>THOMAS FLEX</td>
-                <td>
-                  <p>Infantil</p>
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Associar selecionados</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Modal niveis do curso -->
-<div class="modal fade" id="ModalNiveisCurso" tabindex="-1" role="dialog" aria-labelledby="ModalNiveisCurso">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Níveis do curso KIDS FUN - <strong>03 níveis</strong></h4>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-12">
-            <section class="card">
-              <div class="card-block">
-                <table class="table table-condensed datatable-on">
-                  <thead>
-                  <tr>
-                    <th>
-                      Níveis deste curso
-                    </th>
-                    <th>
-                      Avaliação
-                    </th>
-                    <th>
-                      Material didático
-                    </th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>
-                      <strong>Nível A1</strong>
-                    </td>
-                    <td>
-                      Notas
-                    </td>
-                    <td>
-                      <p><img class="img-circle-xs" src="img/cursos/kids/hooray-a1.jpg"> Hooray! A – Student’s
-                        Book</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Nível A2</strong>
-                    </td>
-                    <td>
-                      Notas
-                    </td>
-                    <td>
-                      <p><img class="img-circle-xs" src="img/cursos/kids/hooray-a1.jpg"> Hooray! A – Student’s
-                        Book</p>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <script src="js/lib/jquery/jquery.min.js"></script>
 <script src="js/lib/tether/tether.min.js"></script>
 <script src="js/lib/bootstrap/bootstrap.min.js"></script>
-<script src="js/plugins.js"></script>
 
 <script src="js/lib/datatables-net/datatables.min.js"></script>
 <script src="js/start-datatables.js"></script>
 
 <script src="js/app.js"></script>
+<script src="js/plugins.js"></script>
+
+<script src="js/lib/chartsjs/Chart.min.js"></script>
+<script src="js/paginas/cursos-init-chart.js"></script>
+
+<script src="js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="js/lib/select2/select2.full.min.js"></script>
+
+<script src="js/lib/angular/angular.min.js"></script>
+<script src="js/lib/angular/controllers.js"></script>
 
 </body>
 </html>

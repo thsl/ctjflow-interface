@@ -6,6 +6,10 @@ body {
   background-color: #ecf0f5;
 }
 
+html, button, input, select, textarea {
+  font-family:@font-text;
+}
+
 h1,
 h2,
 h3,
@@ -61,27 +65,27 @@ address, dl, ol, p, ul {
 /* Dividers */
 
 .divider-top {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid #c8c8c8;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid @color-border-light;
 }
 
 .divider-right {
-  margin-right: 10px;
-  padding-right: 10px;
-  border-right: 1px solid #c8c8c8;
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 1px solid @color-border-light;
 }
 
 .divider-bottom {
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #c8c8c8;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid @color-border-light;
 }
 
 .divider-left {
-  margin-left: 10px;
-  padding-left: 10px;
-  border-left: 1px solid #c8c8c8;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 1px solid @color-border-light;
 }
 
 /* Rolagens */
@@ -363,18 +367,20 @@ a.toggle-icon {
   }
 }
 
-.img-circle-sm{
-  width:40px;
-  height:40px;
+.img-circle-sm {
+  width: 40px;
+  height: 40px;
   border-radius: 40px;
 }
-.img-circle-xs{
-  width:25px;
-  height:25px;
+
+.img-circle-xs {
+  width: 25px;
+  height: 25px;
   border-radius: 25px;
 }
-.neg-mt-1{
-  margin-top:-1px
+
+.neg-mt-1 {
+  margin-top: -1px
 }
 
 td.hiddenrow {
@@ -382,4 +388,10 @@ td.hiddenrow {
   border: 0 !important;
   padding: 0 !important;
   margin: 0 !important;
+}
+
+
+// Backgrounds genericos
+.bck-analitcs-grey{
+  background: url("../img/statistic-box-gray.png") 50% 50% no-repeat;
 }
