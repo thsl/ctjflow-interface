@@ -9107,7 +9107,13 @@ a.btn-square-icon {
 }
 .dataTables_wrapper .top {
   float: right;
-  margin: 11px 0px 0px 0px;
+}
+.dataTables_wrapper .top select {
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  padding: .375rem .75rem;
+  height: 36px;
 }
 /* ==========================================================================
    Dashboards boxes
