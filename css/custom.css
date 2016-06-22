@@ -8916,6 +8916,11 @@ a.btn-square-icon {
 .dropdown-menu {
   margin-top: 0;
 }
+.btn-group .btn.active,
+.btn-group-vertical .btn.active {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
 /*Customiza a tabela*/
 #tabexemplo-table-content tr {
   cursor: pointer;
@@ -8938,6 +8943,15 @@ a.btn-square-icon {
   .table-responsive {
     overflow: visible;
   }
+}
+.checkbox-toggle input:checked + label:before {
+  background-color: #5cb85c;
+}
+.checkbox-toggle input:checked + label:before {
+  background-color: #5cb85c;
+}
+.checkbox-toggle input:checked + label:after {
+  border-color: #5cb85c;
 }
 .modal-black-full.modal {
   background: rgba(0, 0, 0, 0.8);
@@ -9086,10 +9100,9 @@ a.btn-square-icon {
 .dataTables_wrapper .search input {
   margin: 0 !important;
   width: 100% !important;
+  background: url("../img/icons/font-awesome-search.png") no-repeat right 10px center;
 }
 .dataTables_wrapper .search input:before {
-  content: "\f000";
-  font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   text-decoration: inherit;
@@ -9109,11 +9122,21 @@ a.btn-square-icon {
   float: right;
 }
 .dataTables_wrapper .top select {
-  -moz-appearance: none;
-  text-indent: 0.01px;
-  text-overflow: '';
   padding: .375rem .75rem;
   height: 36px;
+}
+.dt-bootstrap .pagination .paginate_button a {
+  color: #2e3192;
+}
+.dt-bootstrap .pagination .paginate_button.active a {
+  background-color: #2e3192 !important;
+  border-color: #2e3192 !important;
+}
+.table thead th:first-of-type {
+  border-left: 1px solid #d8e2e7;
+}
+.table thead th:last-of-type {
+  border-right: 1px solid #d8e2e7;
 }
 /* ==========================================================================
    Dashboards boxes

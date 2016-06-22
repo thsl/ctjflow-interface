@@ -1,14 +1,13 @@
-.dataTables_wrapper{
-  .search{
+.dataTables_wrapper {
+  .search {
     float: left;
     width: 50%;
-    margin:0px 0px 25px 0px;
-    input{
+    margin: 0px 0px 25px 0px;
+    input {
       margin: 0 !important;
       width: 100% !important;
+      background: url("../img/icons/font-awesome-search.png") no-repeat right 10px center;
       &:before {
-        content: "\f000";
-        font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
         text-decoration: inherit;
@@ -27,16 +26,33 @@
     }
 
   }
-  .top{
+  .top {
     float: right;
     //margin: 11px 0px 0px 0px;
-
     select{
-      -moz-appearance: none;
-      text-indent: 0.01px;
-      text-overflow: '';
       padding: .375rem .75rem;
       height: 36px;
     }
   }
 }
+
+.dt-bootstrap .pagination .paginate_button a {
+  color: @color-blue;
+}
+
+.dt-bootstrap .pagination .paginate_button.active a {
+  background-color: @color-blue !important;
+  border-color: @color-blue !important;
+}
+
+.table {
+  thead {
+    th:first-of-type {
+      border-left: 1px solid #d8e2e7;
+    }
+    th:last-of-type {
+      border-right: 1px solid #d8e2e7;
+    }
+  }
+}
+
