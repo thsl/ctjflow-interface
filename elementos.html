@@ -253,9 +253,9 @@
 	                <span class="lbl">Acadêmico</span>
 	            </span>
       <ul>
-        <li><a href="grupos.html"><span class="lbl">Grupos</span></a></li>
+        <li><a href="pages/academico/grupos.html"><span class="lbl">Grupos</span></a></li>
         <li><a href="cursos_OLD_.html"><span class="lbl">Cursos</span></a></li>
-        <li><a href="niveis.html"><span class="lbl">Níveis</span></a></li>
+        <li><a href="pages/academico/niveis.html"><span class="lbl">Níveis</span></a></li>
         <li><a href="materiais-didaticos.html"><span class="lbl">Materiais didáticos</span></a></li>
       </ul>
     </li>
@@ -606,6 +606,111 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+<section>
+  <div class="row">
+    <div class="col-lg-12">
+      <section class="widget-accordion" id="accordion-buscaavancada" role="tablist"
+               aria-multiselectable="true">
+        <section class="panel">
+          <div class="panel-heading" role="tab" id="busca-headingOne">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one"
+               aria-expanded="true"
+               aria-controls="collapseOne" class="">
+              <i class="fa fa-search-plus"
+                 aria-hidden="true"></i> Busca avançada
+              <i class="font-icon font-icon-arrow-down"></i></a>
+          </div>
+          <div id="collapse-busca-one" class="panel-collapse collapse" role="tabpanel"
+               aria-labelledby="collapse-busca-one"
+               aria-expanded="true">
+            <div class="panel-collapse-in">
+              <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                  <fieldset class="form-group mb-0">
+                    <label class="form-label semibold" for="">Sistema de avaliação</label>
+                    <select class="select2" multiple="multiple">
+                      <option>Aproveitamento</option>
+                      <option>Notas</option>
+                      <option>Objetivo</option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12">
+                  <fieldset class="form-group mb-0">
+                    <label class="form-label semibold" for="">Unidades</label>
+                    <input type="text" class="form-control" id="" placeholder="000">
+                  </fieldset>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                  <label class="form-label semibold" for="">Certificados</label>
+                  <div class="checkbox-toggle mt-sm">
+                    <input type="checkbox" id="check-toggle-2"/>
+                    <label class="form-label" for="check-toggle-2">Certificados</label>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <label class="form-label semibold" for="">Status</label>
+                  <div class="form-group">
+                    <div class="btn-group btn-group-sm" data-toggle="buttons">
+                      <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option3" autocomplete="off" checked="">
+                        Todos
+                      </label>
+                      <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option1" autocomplete="off"> Ativos
+                      </label>
+                      <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Inativos
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row divider-top">
+
+                <div class="col-sm-12">
+                  <button type="button" class="btn btn-primary btn-sm">Buscar</button>
+                  <button type="button" class="btn btn-secondary btn-sm ml-md" data-toggle="collapse"
+                          data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
+                          aria-controls="collapseOne">Cancelar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script src="js/lib/jquery/jquery.min.js"></script>
 <script src="js/lib/tether/tether.min.js"></script>
