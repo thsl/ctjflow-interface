@@ -29,10 +29,9 @@ $(document).ready(function () {
             }
         }
     });
+
+    oTable = $('.table-custom .datatable-on').DataTable();   //pay attention to capital D, which is mandatory to retrieve "api" datatables' object, as @Lionel said
+    $('.input-table-custom').keyup(function () {
+        oTable.search($(this).val()).draw();
+    });
 });
-
-
-/*$(".clickable-row").click(function () {
-    window.document.location = $(this).data("href");
-});*/
-

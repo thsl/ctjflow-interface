@@ -6,33 +6,32 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>CTJ Flow</title>
 
-  <link href="img/favicon.ico" rel="shortcut icon">
+  <link href="../../img/favicon.ico" rel="shortcut icon">
 
   <!-- css's especificos -->
-  <link rel="stylesheet" href="css/lib/datatables-net/datatables.min.css">
+  <link rel="stylesheet" href="../../css/lib/datatables-net/datatables.min.css">
 
   <!-- css's gerais -->
-  <link rel="stylesheet" href="css/lib/font-awesome/font-awesome.min.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/custom.css">
 
 
 </head>
 <body class="with-side-menu" ng-app="">
 
-<ng-include src="'includes/header.html'"></ng-include>
-<ng-include src="'includes/side-bar.html'"></ng-include>
+<ng-include src="'../../includes/header.html'"></ng-include>
+<ng-include src="'../../includes/side-bar.html'"></ng-include>
 
 
-z
 <div class="page-content">
 
   <div class="container-fluid">
     <section>
       <ol class="breadcrumb clearfix">
-        <li><a href="#">Acadêmico</a></li>
+        <li><a href="#">Serviços</a></li>
         <li class="ml-xs mr-xs"> /</li>
-        <li class="active">Cursos</li>
+        <li class="active">Listagem de serviços</li>
         <li style="float:right;">
           <button class="btn btn-inline btn-secondary-outline btn-sm"><i class="fa fa-question-circle"
                                                                          aria-hidden="true"></i> Ajuda
@@ -48,18 +47,18 @@ z
             <div class="tbl">
               <ul class="nav" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#tabs-cursos-tab-1" role="tab" data-toggle="tab">
+                  <a class="nav-link active" href="#tabs-servicos-tab-1" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
-										Cursos
+										Serviços
 										<span class="label label-pill label-primary">100</span>
 									</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#tabs-cursos-tab-2" role="tab" data-toggle="tab">
+                  <a class="nav-link" href="#tabs-servicos-tab-2" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
 										<i class="fa fa-plus mr-xs" aria-hidden="true"></i>
- Criar novo curso
+ Criar novo serviço
 									</span>
                   </a>
                 </li>
@@ -68,26 +67,36 @@ z
           </div><!--.tabs-section-nav-->
 
           <div class="tab-content">
-            <section role="tabpanel" class="tab-pane fade in active" id="tabs-cursos-tab-1">
-              <section class="widget widget-accordion mb-0" id="accordion-buscaavancada" role="tablist"
-                       aria-multiselectable="true">
-                <section class="panel">
-                  <div class="panel-heading" role="tab" id="busca-headingOne">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
-                       aria-controls="collapseOne" class="">
-                      <i class="fa fa-search-plus"
-                         aria-hidden="true"></i> Busca avançada
-                      <i class="font-icon font-icon-arrow-down"></i></a>
+
+
+            <section role="tabpanel" class="tab-pane fade in active" id="tabs-servicos-tab-1">
+              <section>
+                <div class="row">
+                  <div class="col-sm-9">
+                    <div class="form-control-wrapper form-control-icon-right">
+                      <input type="text" class="form-control input-table-custom" placeholder="Filtre nos resultados">
+                      <i class="fa fa-search"></i>
+                    </div>
                   </div>
-                  <div id="collapse-busca-one" class="panel-collapse collapse" role="tabpanel"
-                       aria-labelledby="collapse-busca-one"
-                       aria-expanded="true">
-                    <div class="panel-collapse-in">
+                  <div class="col-sm-3">
+                    <p class="mt-sm">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
+                         aria-controls="collapseOne">
+                        <i class="fa fa-search-plus"
+                           aria-hidden="true"></i> Busca avançada</a>
+                    </p>
+                  </div>
+                </div>
+                <div id="collapse-busca-one" class="collapse mt-md" role="tabpanel"
+                     aria-labelledby="collapse-busca-one"
+                     aria-expanded="true">
+                  <section class="card">
+                    <div class="card-block">
                       <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                           <label class="form-label semibold" for="">Busca geral</label>
                           <div class="form-group input-group mb-0">
-                            <input type="text" class="form-control" aria-label="" placeholder="Buscar cursos">
+                            <input type="text" class="form-control" aria-label="" placeholder="Buscar serviços">
                             <div class="input-group-btn">
                               <button type="button" class="btn btn-default-outline">
                                 <i class="fa fa-search" aria-hidden="true"></i>
@@ -96,20 +105,64 @@ z
                           </div>
                         </div>
                         <div class="col-sm-3">
-                          <fieldset class="form-group mb-0">
-                            <label class="form-label semibold" for="">Grupo do curso</label>
-                            <input type="text" class="form-control" id="" placeholder="Grupo do curso">
-                            <small class="text-muted">Por exemplo: Crianças.</small>
-                          </fieldset>
+                          <label class="form-label semibold" for="">Tipo de serviço</label>
+                          <select class="select2-arrow">
+                            <option>Workshop</option>
+                            <option>Teste</option>
+                            <option>Evento</option>
+                          </select>
                         </div>
-                        <div class="col-sm-2">
-                          <div class="checkbox-toggle mt-lg">
-                            <input type="checkbox" id="check-toggle-1"/>
-                            <label class="form-label" for="check-toggle-1">livro a definir</label>
+                        <div class="col-sm-3"><label class="form-label semibold" for="">Público-alvo</label>
+                          <select class="select2-arrow">
+                            <option>Empresários</option>
+                            <option>Melhor idade</option>
+                            <option>Jovens</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-3">
+                          <label class="form-label semibold" for="">Divulgação site</label>
+                          <div class="form-group">
+                            <div class="btn-group btn-group-sm" data-toggle="buttons">
+                              <label class="btn btn-secondary active">
+                                <input type="radio" name="options" id="" autocomplete="off" checked="">
+                                Privado
+                              </label>
+                              <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="" autocomplete="off"> Publico
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-md divider-top">
+                        <div class="col-sm-3">
+                          <div class="checkbox-toggle">
+                            <input type="checkbox" id="check-toggle-Ativo"/>
+                            <label class="form-label" for="check-toggle-Ativo">Ativo</label>
                           </div>
                         </div>
                         <div class="col-sm-3">
-                          <div class="pt-md mt-sm">
+                          <div class="checkbox-toggle">
+                            <input type="checkbox" id="check-toggle-Gratuito"/>
+                            <label class="form-label" for="check-toggle-Gratuito">Gratuito</label>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="checkbox-toggle">
+                            <input type="checkbox" id="check-toggle-Certificado"/>
+                            <label class="form-label" for="check-toggle-Certificado">Certificado</label>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="checkbox-toggle">
+                            <input type="checkbox" id="check-toggle-Desconto"/>
+                            <label class="form-label" for="check-toggle-Desconto">Desconto</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row divider-top">
+                        <div class="col-sm-12">
+                          <div>
                             <button type="button" class="btn btn-primary btn-sm mt-sm">Buscar</button>
                             <button type="button" class="btn btn-secondary btn-sm ml-md mt-sm" data-toggle="collapse"
                                     data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
@@ -119,19 +172,18 @@ z
                         </div>
                       </div>
                     </div>
-                  </div>
-                </section>
+                  </section>
+                </div>
               </section>
-
               <div class="row mt-md">
                 <div class="col-sm-12">
-                  <div class="table-responsive">
+                  <div class="table-responsive table-custom">
                     <table class="datatable-on table table-hover" cellspacing="0" width="100%">
                       <thead>
                       <tr>
-                        <th>Nome do curso</th>
-                        <th>Grupo(s)</th>
-                        <th>Tipo</th>
+                        <th>Serviço</th>
+                        <th>Descrição</th>
+                        <th>Carga horária</th>
                         <th>Valor</th>
                         <th class="text-right">Ações</th>
                       </tr>
@@ -139,11 +191,10 @@ z
                       <tbody>
 
                       <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaGrupo"
-                                       href="#ModalDetalhaGrupo">KIDS
-                          FUN</a></strong></td>
-                        <td>Crianças / Jovens e adultos</td>
-                        <td>Presencial</td>
+                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaServico"
+                                       href="#ModalDetalhaServico">Teste aplicado</a></strong></td>
+                        <td>Exames de proficiência em língua inglesa</td>
+                        <td>40 horas</td>
                         <td>R$ 000,00</td>
                         <td>
                           <div class="btn-group btn-group-sm pull-right">
@@ -152,8 +203,6 @@ z
                                     aria-haspopup="true" aria-expanded="false">Ações
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item"><i class="fa fa-retweet mr-xs" aria-hidden="true"></i>
-                                Associar a um grupo</a>
                               <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
                                                                    aria-hidden="true"></i>
                                 Editar</a>
@@ -170,12 +219,12 @@ z
                           </div>
                         </td>
                       </tr>
+
                       <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaGrupo"
-                                       href="#ModalDetalhaGrupo">THOMAS
-                          FLEX</a></strong></td>
-                        <td>Adultos</td>
-                        <td>Online</td>
+                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaServico"
+                                       href="#ModalDetalhaServico">Quadro Europeu Comum (QECR)</a></strong></td>
+                        <td>Guia usado para descrever os diferentes níveis de conhecimento nos idiomas</td>
+                        <td>40 horas</td>
                         <td>R$ 000,00</td>
                         <td>
                           <div class="btn-group btn-group-sm pull-right">
@@ -184,8 +233,6 @@ z
                                     aria-haspopup="true" aria-expanded="false">Ações
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item"><i class="fa fa-retweet mr-xs" aria-hidden="true"></i>
-                                Associar a um grupo</a>
                               <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
                                                                    aria-hidden="true"></i>
                                 Editar</a>
@@ -202,6 +249,8 @@ z
                           </div>
                         </td>
                       </tr>
+
+
 
                       </tbody>
                     </table>
@@ -210,8 +259,7 @@ z
               </div>
             </section>
 
-
-            <section role="tabpanel" class="tab-pane fade" id="tabs-cursos-tab-2">
+            <section role="tabpanel" class="tab-pane fade" id="tabs-servicos-tab-2">
               <div class="row mt-sm">
                 <div class="col-sm-12">
                   <h4 class="semibold"> Cadastrar novo curso</h4>
@@ -232,7 +280,7 @@ z
                 <div class="col-sm-4">
                   <label class="form-label semibold" for="">Grupo(s) <span
                           class="semibold text-danger h4">*</span></label>
-                  <select class="select2" multiple="multiple">
+                  <select class="select2 open-select2" multiple="multiple">
                     <option>Crianças</option>
                     <option>Adolescentes</option>
                     <option>Jovens e adultos</option>
@@ -300,7 +348,7 @@ z
                 </div>
               </div>
             </section>
-            <!--.tab-pane novo curso -->
+            <!--.tab-pane novo -->
           </div><!--.tab-content-->
         </div><!--.tabs-section-->
       </div>
@@ -310,53 +358,50 @@ z
 
 
 <!-- Modal cadastrar curso -->
-<div class="modal fade" id="ModalDetalhaGrupo" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaGrupo">
+<div class="modal fade" id="ModalDetalhaServico" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaServico">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                 aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"><i class="fa fa-graduation-cap mr-xs" aria-hidden="true"></i>Detalhes do curso</h4>
+        <h4 class="modal-title"><i class="fa fa-cogs mr-xs" aria-hidden="true"></i>Detalhes do Serviço</h4>
       </div>
       <div class="modal-body">
         <div class="row">
           <div class="col-md-4">
-            <label class="form-label semibold">Curso</label>
-            <p class="h5 semibold">KIDS FUN <span class="label label-pill label-success ml-sm"><i class="fa fa-check"
+            <label class="form-label semibold">Serviço</label>
+            <p class="h5 semibold">Teste aplicado <span class="label label-pill label-success ml-sm"><i class="fa fa-check"
                                                                                                   aria-hidden="true"></i>
  Curso ativo</span></p>
           </div>
           <div class="col-md-4">
-            <label class="form-label semibold">Data de criação</label>
-            <p>00/00/0000</p>
+            <label class="form-label semibold">Carga horária</label>
+            <p>000 horas</p>
           </div>
           <div class="col-md-4">
-            <label class="form-label semibold">Grupo(s) do curso</label>
-            <p>Crianças / Jovens e adultos</p>
+            <label class="form-label semibold">Valor</label>
+            <p>R$ 000,00</p>
           </div>
         </div>
 
         <div class="row divider-top">
           <div class="col-md-4">
-            <label class="form-label semibold">Tipo de curso</label>
-            <p>Presencial / Online</p>
+            <label class="form-label semibold">Gratuito</label>
+            <p>Sim</p>
           </div>
           <div class="col-md-4">
-            <label class="form-label semibold">Valor do curso</label>
-            <p>R$ 000,00</p>
+            <label class="form-label semibold">Certificado</label>
+            <p>Sim</p>
           </div>
           <div class="col-md-4">
-            <label class="form-label semibold">Clasifficação</label>
-            <p>Único</p>
+            <label class="form-label semibold">Desconto</label>
+            <p>Sim</p>
           </div>
         </div>
         <div class="row divider-top">
           <div class="col-md-12">
-            <label class="form-label semibold">Objetivos</label>
-            <p>Os principais objetivos do curso são apresentar o inglês à criança de forma lúdica e familiarizá-la
-              com
-              os sons, vocabulário e comandos básicos da língua, despertando seu interesse em aprender o novo
-              idioma.</p>
+            <label class="form-label semibold">Descrição</label>
+            <p>Nosso Departamento de Testes Internacionais é credenciado para aplicar os mais reconhecidos exames de proficiência em língua inglesa. Somos credenciados pelas principais bancas examinadoras no mundo: universidade de Cambridge (Cambridge English Language Assessments), ETS (English Testing Services) e CaMLA (Cambridge-Michigan Language Assessments). Somos centro examinador para os mais importantes exames em língua inglesa: KET, PET, FCE e CAE (Cambridge), YLTE e ECPE (CaMLA),  TOEFL iBT, TOEFL ITP, GRE e TOEIC (ETS). Além disso, a partir de 2016, funcionaremos como local de provas para o exame IELTS, oferecido pelo Conselho Britânico.</p>
           </div>
         </div>
         <div class="row divider-top">
@@ -406,7 +451,7 @@ z
                       <div class="col-lg-12">
                         <fieldset class="form-group">
                           <label class="form-label semibold" for="exampleInput">Material didático</label>
-                          <p><img class="img-circle-xs" src="img/cursos/kids/hooray-a1.jpg"> Hooray! A – Student’s
+                          <p><img class="img-circle-xs" src="../../img/cursos/kids/hooray-a1.jpg"> Hooray! A – Student’s
                             Book
                             – Helbling Languages</p>
                         </fieldset>
@@ -460,7 +505,7 @@ z
                       <div class="col-lg-12">
                         <fieldset class="form-group">
                           <label class="form-label semibold" for="exampleInput">Material didático</label>
-                          <p><img class="img-circle-xs" src="img/cursos/kids/hooray-a1.jpg"> Hooray! A – Student’s
+                          <p><img class="img-circle-xs" src="../../img/cursos/kids/hooray-a1.jpg"> Hooray! A – Student’s
                             Book
                             – Helbling Languages</p>
                         </fieldset>
@@ -482,24 +527,24 @@ z
 </div>
 
 
-<script src="js/lib/jquery/jquery.min.js"></script>
-<script src="js/lib/tether/tether.min.js"></script>
-<script src="js/lib/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/lib/jquery/jquery.min.js"></script>
+<script src="../../js/lib/tether/tether.min.js"></script>
+<script src="../../js/lib/bootstrap/bootstrap.min.js"></script>
 
-<script src="js/lib/datatables-net/datatables.min.js"></script>
-<script src="js/start-datatables.js"></script>
+<script src="../../js/lib/datatables-net/datatables.min.js"></script>
+<script src="../../js/start-datatables.js"></script>
 
-<script src="js/app.js"></script>
-<script src="js/plugins.js"></script>
+<script src="../../js/app.js"></script>
+<script src="../../js/plugins.js"></script>
 
-<script src="js/lib/bootstrap-select/bootstrap-select.min.js"></script>
-<script src="js/lib/select2/select2.full.min.js"></script>
+<script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="../../js/lib/select2/select2.full.min.js"></script>
 
-<script src="js/lib/input-mask/jquery.mask.min.js"></script>
-<script src="js/lib/input-mask/input-mask-init.js"></script>
+<script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
+<script src="../../js/lib/input-mask/input-mask-init.js"></script>
 
-<script src="js/lib/angular/angular.min.js"></script>
-<script src="js/lib/angular/controllers.js"></script>
+<script src="../../js/lib/angular/angular.min.js"></script>
+<script src="../../js/lib/angular/controllers.js"></script>
 
 </body>
 </html>
