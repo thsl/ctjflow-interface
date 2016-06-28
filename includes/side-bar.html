@@ -73,20 +73,41 @@
 
 <!-- gambiarra para o angular enxergar o jquery dentro deste menu. Jogar isso fora, pois este código ja existe!  -->
 <script>
-  $('.side-menu-list li.with-sub').each(function () {
-    var parent = $(this),
-            clickLink = parent.find('>span'),
-            subMenu = parent.find('ul');
+  $(document).ready(function () {
+    $('.side-menu-list li.with-sub').each(function () {
+      var parent = $(this),
+              clickLink = parent.find('>span'),
+              subMenu = parent.find('ul');
 
-    clickLink.click(function () {
-      if (parent.hasClass('opened')) {
-        parent.removeClass('opened');
-        subMenu.slideUp("slow");
+      clickLink.click(function () {
+        if (parent.hasClass('opened')) {
+          parent.removeClass('opened');
+          subMenu.slideUp("slow");
+        } else {
+          $('.side-menu-list li.with-sub').not(this).removeClass('opened').find('ul').slideUp("slow");
+          parent.addClass('opened');
+          subMenu.slideDown("slow");
+        }
+      });
+    });
+
+    // Left mobile menu
+    $('.hamburger').click(function () {
+      if ($('body').hasClass('menu-left-opened')) {
+        $(this).removeClass('is-active');
+        $('body').removeClass('menu-left-opened');
+        $('html').css('overflow', 'auto');
       } else {
-        $('.side-menu-list li.with-sub').not(this).removeClass('opened').find('ul').slideUp("slow");
-        parent.addClass('opened');
-        subMenu.slideDown("slow");
+        $(this).addClass('is-active');
+        $('body').addClass('menu-left-opened');
+        $('html').css('overflow', 'hidden');
       }
+    });
+
+    $('.mobile-menu-left-overlay').click(function () {
+      $('.hamburger').removeClass('is-active');
+      $('body').removeClass('menu-left-opened');
+      $('html').css('overflow', 'auto');
     });
   });
 </script>
