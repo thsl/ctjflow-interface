@@ -31,7 +31,7 @@
       <ol class="breadcrumb clearfix">
         <li><a href="#">Acadêmico</a></li>
         <li class="ml-xs mr-xs"> /</li>
-        <li class="active">Cursos</li>
+        <li class="active">Postos avançados</li>
         <li style="float:right;">
           <button class="btn btn-inline btn-secondary-outline btn-sm"><i class="fa fa-question-circle"
                                                                          aria-hidden="true"></i> Ajuda
@@ -47,18 +47,18 @@
             <div class="tbl">
               <ul class="nav" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#tabs-cursos-tab-1" role="tab" data-toggle="tab">
+                  <a class="nav-link active" href="#tabs-servicos-tab-1" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
-										Cursos
+										Postos avançados
 										<span class="label label-pill label-primary">100</span>
 									</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#tabs-cursos-tab-2" role="tab" data-toggle="tab">
+                  <a class="nav-link" href="#tabs-servicos-tab-2" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
 										<i class="fa fa-plus mr-xs" aria-hidden="true"></i>
- Criar novo curso
+ Criar novo posto de serviço
 									</span>
                   </a>
                 </li>
@@ -69,7 +69,7 @@
           <div class="tab-content">
 
 
-            <section role="tabpanel" class="tab-pane fade in active" id="tabs-cursos-tab-1">
+            <section role="tabpanel" class="tab-pane fade in active" id="tabs-servicos-tab-1">
               <section>
                 <div class="row">
                   <div class="col-sm-9">
@@ -93,54 +93,36 @@
                   <section class="card">
                     <div class="card-block">
                       <div class="row">
-                        <div class="col-sm-5">
-                          <label class="form-label semibold" for="">Nome do curso</label>
-                          <input type="text" class="form-control" aria-label="" placeholder="Nome do curso">
-                        </div>
-                        <div class="col-sm-3">
-                          <div class="checkbox-toggle mt-lg">
-                            <input type="checkbox" id="check-toggle-1"/>
-                            <label class="form-label" for="check-toggle-1">livro a definir</label>
-                          </div>
+                        <div class="col-sm-8">
+                          <label class="form-label semibold" for="">Nome do posto avançado</label>
+                          <input type="text" class="form-control" aria-label="" placeholder="Nome do posto avançado">
                         </div>
                         <div class="col-sm-4">
-                          <label class="form-label semibold" for="">Status do curso</label>
+                          <label class="form-label semibold" for="">Status</label>
                           <div class="form-group">
                             <div class="btn-group btn-group-sm" data-toggle="buttons">
                               <label class="btn btn-secondary active">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Ativo
+                                <input type="radio" name="options" id="" autocomplete="off" checked="">
+                                Todos
                               </label>
                               <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> Inativo
+                                <input type="radio" name="options" id="" autocomplete="off"> Ativo
                               </label>
                               <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> Pendente
+                                <input type="radio" name="options" id="" autocomplete="off"> Inativo
                               </label>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="row">
+                      <div class="row divider-top">
                         <div class="col-sm-12">
-                          <label class="form-label semibold" for="">Grupos do curso <span
-                                  class="semibold text-danger h4">*</span></label>
-                          <select class="select2" multiple="multiple">
-                            <option>Crianças</option>
-                            <option>Jovens e adultos</option>
-                            <option>TEENS</option>
-                            <option>TOP KIDS</option>
-                            <option>JUNIOR</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div class="divider-top">
-                            <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-search mr-xs"
-                                                                                    aria-hidden="true"></i>
+                          <div>
+                            <button type="button" class="btn btn-primary btn-sm mt-sm"><i class="fa fa-search mr-xs"
+                                                                                          aria-hidden="true"></i>
                               Buscar
                             </button>
-                            <button type="button" class="btn btn-secondary btn-sm ml-md" data-toggle="collapse"
+                            <button type="button" class="btn btn-secondary btn-sm ml-md mt-sm" data-toggle="collapse"
                                     data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
                                     aria-controls="collapseOne"><i class="fa fa-times" aria-hidden="true"></i> Cancelar
                             </button>
@@ -157,24 +139,23 @@
                     <table class="datatable-on table table-hover" cellspacing="0" width="100%">
                       <thead>
                       <tr>
-                        <th>Nome do curso</th>
-                        <th>Grupo(s)</th>
-                        <th>Tipo</th>
-                        <th>Valor</th>
+                        <th>Nome do posto</th>
+                        <th>Unidade</th>
                         <th>Status</th>
+                        <th>Gestor principal</th>
+                        <th>Telefone</th>
                         <th class="text-right">Ações</th>
                       </tr>
                       </thead>
                       <tbody>
 
                       <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaGrupo"
-                                       href="#ModalDetalhaGrupo">KIDS
-                          FUN</a></strong></td>
-                        <td>Crianças / Jovens e adultos</td>
-                        <td>Presencial</td>
-                        <td>R$ 000,00</td>
+                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
+                                       href="#ModalDetalhaPosto">Leonardo Da Vinci</a></strong></td>
+                        <td>Asa sul</td>
                         <td>Ativo</td>
+                        <td>João Carlos Silva</td>
+                        <td>(61) 0000-0000</td>
                         <td>
                           <div class="btn-group btn-group-sm pull-right">
                             <button type="button" class="btn btn-default-outline dropdown-toggle"
@@ -182,33 +163,24 @@
                                     aria-haspopup="true" aria-expanded="false">Ações
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item"><i class="fa fa-retweet mr-xs" aria-hidden="true"></i>
-                                Associar a um grupo</a>
                               <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
                                                                    aria-hidden="true"></i>
                                 Editar</a>
-                              <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs"
-                                                                   aria-hidden="true"></i>
-                                Duplicar</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
                                 Inativar</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
-                                Excluir</a>
                             </div>
                           </div>
                         </td>
                       </tr>
 
                       <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaGrupo"
-                                       href="#ModalDetalhaGrupo">THOMAS
-                          FLEX</a></strong></td>
-                        <td>Adultos</td>
-                        <td>Online</td>
-                        <td>R$ 000,00</td>
-                        <td><p class="text-warning"><i class="fa fa-exclamation-circle mr-xs" aria-hidden="true"></i> Pendente</p></td>
+                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
+                                       href="#ModalDetalhaPosto">Sigma</a></strong></td>
+                        <td>Asa norte</td>
+                        <td>Ativo</td>
+                        <td>Aline Silva Linhares</td>
+                        <td>(61) 0000-0000</td>
                         <td>
                           <div class="btn-group btn-group-sm pull-right">
                             <button type="button" class="btn btn-default-outline dropdown-toggle"
@@ -216,24 +188,17 @@
                                     aria-haspopup="true" aria-expanded="false">Ações
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item"><i class="fa fa-retweet mr-xs" aria-hidden="true"></i>
-                                Associar a um grupo</a>
                               <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
                                                                    aria-hidden="true"></i>
                                 Editar</a>
-                              <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs"
-                                                                   aria-hidden="true"></i>
-                                Duplicar</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
                                 Inativar</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
-                                Excluir</a>
                             </div>
                           </div>
                         </td>
                       </tr>
+
 
                       </tbody>
                     </table>
@@ -242,10 +207,10 @@
               </div>
             </section>
 
-            <section role="tabpanel" class="tab-pane fade" id="tabs-cursos-tab-2">
+            <section role="tabpanel" class="tab-pane fade" id="tabs-servicos-tab-2">
               <div class="row mt-sm">
                 <div class="col-sm-12">
-                  <h4 class="semibold"> Cadastrar novo curso</h4>
+                  <h4 class="semibold"> Cadastrar novo serviço</h4>
                   <small>Campos com asterisco vermelho ( <span class="semibold text-danger">*</span> ) são
                     obrigatórios
                   </small>
@@ -254,7 +219,7 @@
               <div class="row mt-md divider-top">
                 <div class="col-lg-8">
                   <fieldset class="form-group">
-                    <label class="form-label semibold" for="">Nome do curso <span
+                    <label class="form-label semibold" for="">Nome do serviço <span
                             class="semibold text-danger h4">*</span></label>
                     <input type="text" class="form-control" id="" placeholder="Nome do curso">
                     <small class="text-muted">Defina o nome, tomando cuidado com as pontuações.</small>
@@ -262,62 +227,54 @@
                 </div>
 
                 <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Tipo de curso <span
+                  <label class="form-label semibold" for="">Tipo de serviço <span
                           class="semibold text-danger h4">*</span></label>
                   <select class="select2 select2-arrow">
-                    <option>Online</option>
-                    <option>Híbrido</option>
-                    <option>Presencial</option>
+                    <option>Workshop</option>
+                    <option>Teste</option>
+                    <option>Evento</option>
                   </select>
                 </div>
               </div>
-              <div class="row divider-top">
-                <div class="col-sm-12">
-                  <label class="form-label semibold" for="">Grupo(s) <span
-                          class="semibold text-danger h4">*</span></label>
-                  <select class="select2" multiple="multiple">
-                    <option>Crianças</option>
-                    <option>Adolescentes</option>
-                    <option>Jovens e adultos</option>
-                    <option>Cursos online</option>
-                    <option>Cursos especiais</option>
+              <div class="row mt-md divider-top">
+                <div class="col-sm-4">
+                  <label class="form-label semibold" for="">Setor</label>
+                  <select class="select2 select2-arrow">
+                    <option>T.I.</option>
+                    <option>Biblioteca</option>
+                    <option>Dep. de testes</option>
                   </select>
-                </div>
-              </div>
-              <div class="row divider-top pb-md">
-                <div class="col-lg-2">
-                  <label class="form-label semibold" for="">Idade mínima</label>
-                  <input type="number" class="form-control" id="" placeholder="Idade">
-                </div>
-                <div class="col-lg-3">
-                  <label class="form-label semibold" for="">Escolaridade</label>
-                  <input type="text" class="form-control" id="" placeholder="Escolaridade">
-                </div>
-                <div class="col-lg-3">
-                  <label class="form-label semibold" for="">Valor do curso</label>
-                  <input type="text" class="form-control" id="money-mask-input" placeholder="R$">
                 </div>
                 <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Status do curso</label>
-                  <div class="form-group">
-                    <div class="btn-group btn-group-sm" data-toggle="buttons">
-                      <label class="btn btn-secondary active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Ativo
-                      </label>
-                      <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> Inativo
-                      </label>
-                      <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> Pendente
-                      </label>
-                    </div>
-                  </div>
+                  <label class="form-label semibold" for="">Carga horária</label>
+                  <input type="number" class="form-control" id="" placeholder="Carga horária">
+                </div>
+                <div class="col-sm-4">
+                  <label class="form-label semibold" for="">Público-alvo</label>
+                  <select class="select2 select2-arrow">
+                    <option>Empresários</option>
+                    <option>Melhor idade</option>
+                    <option>Jovens</option>
+                  </select>
                 </div>
               </div>
-              <div class="row divider-top pb-md">
-                <div class="col-sm-3">
-                  <label class="form-label semibold" for="">Status do curso</label>
-                  <div class="form-group">
+              <div class="row mt-md divider-top">
+                <div class="col-sm-4">
+                  <label class="form-label semibold" for="">Divulgação no site</label>
+                  <div class="form-group mt-sm">
+                    <div class="btn-group btn-group-sm" data-toggle="buttons">
+                      <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Publico
+                      </label>
+                      <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Privado
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <label class="form-label semibold" for="">Status</label>
+                  <div class="form-group mt-sm">
                     <div class="btn-group btn-group-sm" data-toggle="buttons">
                       <label class="btn btn-secondary active">
                         <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Ativo
@@ -328,9 +285,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-3">
-                  <label class="form-label semibold" for="">Curso especial</label>
-                  <div class="form-group">
+                <div class="col-sm-4">
+                  <label class="form-label semibold" for="">Certificado</label>
+                  <div class="form-group mt-sm">
                     <div class="btn-group btn-group-sm" data-toggle="buttons">
                       <label class="btn btn-secondary active">
                         <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Sim
@@ -341,27 +298,17 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-3">
-                  <label class="form-label semibold" for="">Data de criação</label>
-                  <p>00/00/0000</p>
-                </div>
-                <div class="col-lg-3">
-                  <label class="form-label semibold" for="">Classificação</label>
-                  <select class="select2 select2-arrow">
-                    <option>Regular</option>
-                    <option>Único</option>
-                  </select>
-                </div>
               </div>
               <div class="row divider-top pb-md">
                 <div class="col-sm-12">
-                  <label class="form-label semibold" for="">Objetivos do curso</label>
+                  <label class="form-label semibold" for="">Objetivos do curso <span
+                          class="semibold text-danger h4">*</span></label>
                   <textarea rows="4" class="form-control" placeholder="Objetivos do curso"></textarea>
                 </div>
               </div>
               <div class="row divider-top pb-md">
                 <div class="col-sm-12">
-                  <button type="button" class="btn btn-primary btn-success" data-dismiss="modal"><i
+                  <button type="button" class="btn btn-primary btn-success"><i
                           class="fa fa-floppy-o mr-xs"
                           aria-hidden="true"></i>
                     Salvar
@@ -369,7 +316,7 @@
                 </div>
               </div>
             </section>
-            <!--.tab-pane novo curso -->
+            <!--.tab-pane novo -->
           </div><!--.tab-content-->
         </div><!--.tabs-section-->
       </div>
@@ -379,70 +326,77 @@
 
 
 <!-- Modal cadastrar curso -->
-<div class="modal fade" id="ModalDetalhaGrupo" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaGrupo">
+<div class="modal fade" id="ModalDetalhaServico" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaServico">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                 aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Detalhes do curso</h4>
+        <h4 class="modal-title">Detalhes do Serviço</h4>
       </div>
       <div class="modal-body">
 
-
         <section class="card card-default">
           <header class="card-header">
-            <h5 class="semibold"><i class="fa fa-graduation-cap mr-xs" aria-hidden="true"></i> KIDS FUN </h5>
+            <h5 class="semibold"><i class="fa fa-cogs mr-xs" aria-hidden="true"></i> Teste aplicado</h5>
           </header>
           <div class="card-block">
             <div class="row">
               <div class="col-md-4">
-                <label class="form-label semibold">Status do curso</label>
-                <p class="text-success"><strong><i class="fa fa-check" aria-hidden="true"></i> Curso ativo</strong></p>
+                <label class="form-label semibold">Status</label>
+                <p class="text-success"><i class="fa fa-check"
+                                           aria-hidden="true"></i>
+                  <strong>Curso ativo</strong></p>
               </div>
               <div class="col-md-4">
-                <label class="form-label semibold">Data de criação</label>
-                <p>00/00/0000</p>
+                <label class="form-label semibold">Carga horária</label>
+                <p>000 horas</p>
               </div>
               <div class="col-md-4">
-                <label class="form-label semibold">Grupo(s) do curso</label>
-                <p>Crianças / Jovens e adultos</p>
-              </div>
-            </div>
-
-            <div class="row mt-lg">
-              <div class="col-md-4">
-                <label class="form-label semibold">Tipo de curso</label>
-                <p>Presencial / Online</p>
-              </div>
-              <div class="col-md-4">
-                <label class="form-label semibold">Valor do curso</label>
+                <label class="form-label semibold">Valor</label>
                 <p>R$ 000,00</p>
               </div>
+            </div>
+            <div class="row mt-lg">
               <div class="col-md-4">
-                <label class="form-label semibold">Clasifficação</label>
-                <p>Único</p>
+                <label class="form-label semibold">Gratuito</label>
+                <p>Sim</p>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label semibold">Certificado</label>
+                <p>Sim</p>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label semibold">Desconto</label>
+                <p>Sim</p>
               </div>
             </div>
             <div class="row mt-lg">
               <div class="col-md-12">
-                <label class="form-label semibold">Objetivos</label>
-                <p>Os principais objetivos do curso são apresentar o inglês à criança de forma lúdica e familiarizá-la
-                  com
-                  os sons, vocabulário e comandos básicos da língua, despertando seu interesse em aprender o novo
-                  idioma.</p>
+                <label class="form-label semibold">Descrição</label>
+                <p>Nosso Departamento de Testes Internacionais é credenciado para aplicar os mais reconhecidos exames de
+                  proficiência em língua inglesa. Somos credenciados pelas principais bancas examinadoras no mundo:
+                  universidade de Cambridge (Cambridge English Language Assessments), ETS (English Testing Services) e
+                  CaMLA
+                  (Cambridge-Michigan Language Assessments). Somos centro examinador para os mais importantes exames em
+                  língua inglesa: KET, PET, FCE e CAE (Cambridge), YLTE e ECPE (CaMLA), TOEFL iBT, TOEFL ITP, GRE e
+                  TOEIC
+                  (ETS). Além disso, a partir de 2016, funcionaremos como local de provas para o exame IELTS, oferecido
+                  pelo
+                  Conselho Britânico.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="card card-default mt-md">
+        <section class="card card-default">
           <header class="card-header">
             <h5 class="semibold"><i class="fa fa-list mr-xs" aria-hidden="true"></i> Níveis</h5>
           </header>
           <div class="card-block">
             <div class="row">
               <div class="col-sm-12">
+
                 <section class="widget widget-accordion mt-md" id="accordion" role="tablist"
                          aria-multiselectable="true">
                   <article class="panel">
@@ -559,8 +513,6 @@
             </div>
           </div>
         </section>
-
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
