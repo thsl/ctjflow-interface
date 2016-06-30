@@ -94,30 +94,20 @@
                     <div class="card">
                       <div class="card-block">
                         <div class="row">
-                          <div class="col-lg-3 col-md-6 col-sm-12">
-                            <fieldset class="form-group mb-0">
-                              <label class="form-label semibold" for="">Sistema de avaliação</label>
-                              <select class="select2" multiple="multiple">
-                                <option>Aproveitamento</option>
-                                <option>Notas</option>
-                                <option>Objetivo</option>
-                              </select>
-                            </fieldset>
-                          </div>
-                          <div class="col-lg-2 col-md-6 col-sm-12">
+                          <div class="col-lg-4 col-md-6 col-sm-12">
                             <fieldset class="form-group mb-0">
                               <label class="form-label semibold" for="">Unidades</label>
                               <input type="text" class="form-control" id="" placeholder="000">
                             </fieldset>
                           </div>
-                          <div class="col-lg-3 col-md-6 col-sm-12">
+                          <div class="col-lg-4 col-md-6 col-sm-12">
                             <label class="form-label semibold" for="">Certificados</label>
                             <div class="checkbox-toggle mt-sm">
                               <input type="checkbox" id="check-toggle-2"/>
                               <label class="form-label" for="check-toggle-2">Certificados</label>
                             </div>
                           </div>
-                          <div class="col-lg-4 col-md-6 col-sm-12">
+                          <div class="col-lg-4 col-md-12">
                             <label class="form-label semibold" for="">Status</label>
                             <div class="form-group">
                               <div class="btn-group btn-group-sm" data-toggle="buttons">
@@ -133,6 +123,18 @@
                                 </label>
                               </div>
                             </div>
+                          </div>
+                        </div>
+                        <div class="row divider-top">
+                          <div class="col-sm-12">
+                            <fieldset class="form-group mb-0">
+                              <label class="form-label semibold" for="">Sistema de avaliação</label>
+                              <select class="select2" multiple="multiple">
+                                <option>Aproveitamento</option>
+                                <option>Notas</option>
+                                <option>Objetivo</option>
+                              </select>
+                            </fieldset>
                           </div>
                         </div>
                         <div class="row divider-top">
@@ -158,7 +160,7 @@
                         <tr>
                           <th>Nome do nível</th>
                           <th>Curso(s)</th>
-                          <th>Nota média</th>
+                          <th>Certificados</th>
                           <th class="text-right">Ações</th>
                         </tr>
                         </thead>
@@ -167,8 +169,8 @@
                         <tr>
                           <td><a href="ModalDetalhaNivel" data-toggle="modal"
                                  data-target="#ModalDetalhaNivel"><strong>A1</strong></a></td>
-                          <td>TEENS | THOMAS-GRIGGS HIGH SCHOOL</td>
-                          <td>00,00</td>
+                          <td>TEENS / THOMAS-GRIGGS HIGH SCHOOL</td>
+                          <td>Sim</td>
                           <td>
                             <div class="btn-group btn-group-sm pull-right">
                               <button type="button" class="btn btn-default-outline dropdown-toggle"
@@ -196,8 +198,8 @@
                         <tr>
                           <td><a href="ModalDetalhaNivel" data-toggle="modal"
                                  data-target="#ModalDetalhaNivel"><strong>A2</strong></a></td>
-                          <td>TEENS | THOMAS-GRIGGS HIGH SCHOOL</td>
-                          <td>00,00</td>
+                          <td>TEENS / THOMAS-GRIGGS HIGH SCHOOL</td>
+                          <td>Sim</td>
                           <td>
                             <div class="btn-group btn-group-sm pull-right">
                               <button type="button" class="btn btn-default-outline dropdown-toggle"
@@ -242,26 +244,16 @@
                   </div>
                 </div>
                 <div class="row mt-md divider-top">
-                  <div class="col-lg-4">
+                  <div class="col-lg-12">
                     <fieldset class="form-group">
                       <label class="form-label semibold" for="">Nome do nível <span
                               class="semibold text-danger h4">*</span></label>
-                      <input type="text" class="form-control" id="" placeholder="Nome do curso">
+                      <input type="text" class="form-control" id="" placeholder="Nome do nível">
                       <small class="text-muted">Defina o nome, tomando cuidado com as pontuações.</small>
                     </fieldset>
                   </div>
-                  <div class="col-sm-4">
-                    <label class="form-label semibold" for="">Unidades <span
-                            class="semibold text-danger h4">*</span></label>
-                    <select class="select2" multiple="multiple">
-                      <option>KIDS</option>
-                      <option>KIDS FUN</option>
-                      <option>TEENS</option>
-                      <option>TOP KIDS</option>
-                      <option>JUNIOR</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-4">
+
+                  <!--<div class="col-sm-4">
                     <label class="form-label semibold" for="">Sistema de avaliação <span
                             class="semibold text-danger h4">*</span></label>
                     <select class="select2-arrow">
@@ -269,37 +261,40 @@
                       <option>Notas</option>
                       <option>Objetivo</option>
                     </select>
-                  </div>
+                  </div>-->
                 </div>
                 <div class="row divider-top pb-md">
-                  <div class="col-lg-3">
+                  <!--<div class="col-lg-3">
                     <label class="form-label semibold" for="">Nota média</label>
                     <input type="text" class="form-control" id="" placeholder="00,00">
+                  </div>-->
+                  <div class="col-sm-4">
+                    <label class="form-label semibold" for=""> Quatidade de Unidades <span
+                            class="semibold text-danger h4">*</span></label>
+                    <input type="number" class="form-control" id="" placeholder="00">
                   </div>
-                  <div class="col-lg-3">
+                  <div class="col-sm-4">
+                    <label class="form-label semibold" for="">Replacement test</label>
+                    <div class="checkbox-toggle">
+                      <input type="checkbox" id="check-RepTest">
+                      <label for="check-RepTest">Sim</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
                     <label class="form-label semibold" for="">Certificado</label>
                     <div class="checkbox-toggle">
                       <input type="checkbox" id="check-Certificado">
                       <label for="check-Certificado">Sim</label>
                     </div>
                   </div>
-                  <div class="col-sm-3">
-                    <label class="form-label semibold" for="">Status do curso</label>
-                    <div class="checkbox-toggle">
-                      <input type="checkbox" id="check-status">
-                      <label for="check-status">Ativo</label>
-                    </div>
-                  </div>
-
                 </div>
-                <div class="row divider-top">
+                <div class="row">
                   <div class="col-sm-12">
-                    <h5 class="semibold">Materiais didáticos</h5>
                     <section class="box-typical mt-md">
                       <header class="box-typical-header header-bordered">
                         <div class="tbl-row">
                           <div class="tbl-cell tbl-cell-title">
-                            <h3>23 Registros</h3>
+                            <h5 class="semibold"><i class="fa fa-book mr-xs" aria-hidden="true"></i> Materiais didáticos</h5>
                           </div>
                           <div class="tbl-cell tbl-cell-action-bordered">
                             <form>
@@ -316,7 +311,7 @@
                           <table class="datatable-on table table-hover">
                             <thead>
                             <tr>
-                              <th>Material didático</th>
+                              <th>Nome do material didático</th>
                               <th class="text-right">Ações</th>
                             </tr>
                             </thead>
@@ -411,65 +406,76 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                 aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"><i class="fa fa-list mr-xs" aria-hidden="true"></i> Detalhes do nível</h4>
+        <h4 class="modal-title">Detalhes do nível</h4>
       </div>
       <div class="modal-body">
-        <div class="row">
-          <div class="col-md-3">
-            <label class="form-label semibold">Nível</label>
-            <p class="h5 semibold">A1</p>
-          </div>
-          <div class="col-md-3">
-            <label class="form-label semibold">Unidades</label>
-            <p>0000</p>
-          </div>
-          <div class="col-md-3">
-            <label class="form-label semibold">Curso(s)</label>
-            <p>TEENS | Jovens e adultos</p>
-          </div>
-          <div class="col-md-3">
-            <label class="form-label semibold">Certificado</label>
-            <p>Sim</p>
-          </div>
-        </div>
-        <div class="row divider-top">
-          <div class="col-md-6">
-            <label class="form-label semibold">Nota média</label>
-            <p>00,00</p>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label semibold">Status</label>
-            <p class="semibold text-success">Ativo</p>
-          </div>
-        </div>
-        <div class="row divider-top">
-          <div class="col-sm-12">
-            <h5 class="semibold">Materiais didáticos</h5>
-            <div class="table-responsive mt-md">
-              <table class="table table-hover">
-                <thead>
-                <tr>
-                  <th>Material didático</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td><p><img src="../../img/cursos/junior/junior-001.jpg" class="img-circle-xs"> Teens 1: Time Zones 1A
-                    -
-                    (Combo
-                    Split) + Activity Pack Teens 1 – Cengage Learning</p></td>
-                </tr>
-                <tr>
-                  <td><p><img src="../../img/cursos/kids/hooray-a1.jpg" class="img-circle-xs"> Hooray! A – Student’s
-                    Book –
-                    Helbling Languages</p></td>
-                </tr>
-                </tbody>
-              </table>
-            </div>
 
+        <section class="card card-default">
+          <header class="card-header">
+            <h4 class="semibold"><i class="fa fa-list mr-xs" aria-hidden="true"></i> Nível A1</h4>
+          </header>
+          <div class="card-block">
+            <div class="row">
+              <div class="col-md-2">
+                <label class="form-label semibold">Unidades</label>
+                <p>0000</p>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label semibold">Curso(s)</label>
+                <p>TEENS / Jovens e adultos</p>
+              </div>
+              <div class="col-md-2">
+                <label class="form-label semibold">Certificado</label>
+                <p>Sim</p>
+              </div>
+              <div class="col-md-2">
+                <label class="form-label semibold">Nota média</label>
+                <p>00,00</p>
+              </div>
+              <div class="col-md-2">
+                <label class="form-label semibold">Status</label>
+                <p class="semibold text-success">Ativo</p>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <section class="card card-default mt-lg">
+          <header class="card-header">
+            <h5 class="semibold"><i class="fa fa-book mr-xs" aria-hidden="true"></i> Materiais didáticos</h5>
+          </header>
+          <div class="card-block">
+            <div class="row">
+              <div class="col-sm-12">
+
+                <div class="table-responsive mt-md">
+                  <table class="table table-hover">
+                    <thead>
+                    <tr>
+                      <th>Nome do material</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><p><img src="../../img/cursos/junior/junior-001.jpg" class="img-circle-xs"> Teens 1: Time
+                        Zones 1A
+                        -
+                        (Combo
+                        Split) + Activity Pack Teens 1 – Cengage Learning</p></td>
+                    </tr>
+                    <tr>
+                      <td><p><img src="../../img/cursos/kids/hooray-a1.jpg" class="img-circle-xs"> Hooray! A – Student’s
+                        Book –
+                        Helbling Languages</p></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
@@ -491,13 +497,12 @@
       <div class="modal-body">
         <div class="row">
           <div class="col-sm-12">
-            <h5 class="semibold">Materiais didáticos</h5>
             <div class="table-responsive mt-md">
               <table class="datatable-on table table-hover">
                 <thead>
                 <tr>
                   <th>
-                    <div class="checkbox-bird">
+                    <div class="checkbox-bird mb-0">
                       <input type="checkbox" id="check-modal-01"/>
                       <label for="check-modal-01"></label>
                     </div>

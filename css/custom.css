@@ -10479,6 +10479,19 @@ a.btn-square-icon {
 .checkbox-toggle input:checked + label:after {
   border-color: #5cb85c;
 }
+.modal {
+  overflow-x: auto;
+  overflow-y: scroll;
+  /* Elimina a segunda barra de rolagem no mobile */
+  font-size: 18px;
+}
+.modal .form-label {
+  margin-bottom: 0;
+}
+.modal .modal-lg {
+  width: 95%;
+  max-width: 1024px;
+}
 .modal-black-full.modal {
   background: rgba(0, 0, 0, 0.8);
 }
@@ -10712,6 +10725,7 @@ a.btn-square-icon {
 .box-typical .box-typical-header {
   display: table;
   width: 100%;
+  background-color: #f6f8fa;
 }
 .box-typical .box-typical-header.box-typical-header-bordered {
   border-bottom: solid 1px #d8e2e7;

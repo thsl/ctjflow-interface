@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#notie-success').on('click', function() {
-        notie.alert(1, 'Success!', 2);
+        notie.alert(1, 'Salvo com sucesso!', 2);
     });
 
     $('#notie-warning').on('click', function() {

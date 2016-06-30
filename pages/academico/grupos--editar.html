@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-br">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>CTJ Flow</title>
+
+  <link href="../../img/favicon.ico" rel="shortcut icon">
+
+  <!-- css's especificos -->
+  <link rel="stylesheet" href="../../css/lib/datatables-net/datatables.min.css">
+
+  <!-- css's gerais -->
+  <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/custom.css">
+
+
+</head>
+<body class="with-side-menu" ng-app="">
+
+<ng-include src="'../../includes/header.html'"></ng-include>
+<ng-include src="'../../includes/side-bar.html'"></ng-include>
+
+
+<div class="page-content">
+
+  <div class="container-fluid">
+    <section>
+      <ol class="breadcrumb clearfix">
+        <li><a href="#">Acadêmico</a></li>
+        <li class="ml-xs mr-xs"> /</li>
+        <li class="active">Grupos</li>
+        <li style="float:right;">
+          <button class="btn btn-inline btn-secondary-outline btn-sm"><i class="fa fa-question-circle"
+                                                                         aria-hidden="true"></i> Ajuda
+          </button>
+        </li>
+      </ol>
+    </section>
+
+
+    <div class="row mt-sm">
+      <div class="col-lg-12">
+        <div class="tabs-section">
+          <div class="tabs-section-nav">
+            <div class="tbl">
+              <ul class="nav" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link" href="grupos.html">
+									<span class="nav-link-in">
+										Grupos
+										<span class="label label-pill label-primary">10</span>
+									</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="grupos.html">
+									<span class="nav-link-in">
+										<i class="fa fa-plus mr-xs" aria-hidden="true"></i>
+ Criar novo grupo
+									</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#tabs-grupos-tab-3" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+										<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+ Editar grupo
+									</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div><!--.tabs-section-nav-->
+
+          <div class="tab-content">
+
+            <section role="tabpanel" class="tab-pane fade in active" id="tabs-grupos-tab-3">
+              <div class="row mt-sm">
+                <div class="col-sm-12">
+                  <h4 class="semibold"> Editar grupo</h4>
+                  <small>Campos com asterisco vermelho ( <span class="semibold text-danger">*</span> ) são
+                    obrigatórios
+                  </small>
+                </div>
+              </div>
+              <form id="form-signin_v1" name="form-signin_v1" method="post">
+              <div class="row mt-md divider-top">
+                <div class="col-lg-6">
+                  <fieldset class="form-group">
+                    <label class="form-label semibold" for="">Nome do grupo <span
+                            class="semibold text-danger h4">*</span></label>
+                    <input id="nome-grupo" class="form-control" name="signin_v1[<strong>Nome do grupo</strong>]" type="text" data-validation="[NOTEMPTY]" placeholder="Crianças">
+                    <small class="text-muted">Defina o nome, tomando cuidado com as pontuações.</small>
+                  </fieldset>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label semibold" for="">Status do curso</label>
+                  <div class="form-group mt-sm">
+                    <div class="btn-group btn-group-sm" data-toggle="buttons">
+                      <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Ativo
+                      </label>
+                      <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Inativo
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="row divider-top pb-md">
+                  <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary btn-success" id="notie-success"> <i class="fa fa-floppy-o mr-xs"></i> Salvar</button>
+                    <a href="grupos.html" class="btn btn-secondary ml-md"> <i class="fa fa-ban mr-xs" aria-hidden="true"></i>
+                      Cancelar</a>
+                  </div>
+                </div>
+              </form>
+
+            </section>
+            <!--.tab-pane novo curso -->
+          </div><!--.tab-content-->
+        </div><!--.tabs-section-->
+      </div>
+    </div>
+
+
+  </div><!--.container-fluid-->
+</div><!--.page-content-->
+
+<script src="../../js/lib/jquery/jquery.min.js"></script>
+<script src="../../js/lib/tether/tether.min.js"></script>
+<script src="../../js/lib/bootstrap/bootstrap.min.js"></script>
+
+<script src="../../js/lib/datatables-net/datatables.min.js"></script>
+<script src="../../js/start-datatables.js"></script>
+
+<script src="../../js/app.js"></script>
+<script src="../../js/plugins.js"></script>
+
+<script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="../../js/lib/select2/select2.full.min.js"></script>
+
+<script src="../../js/custom-jquery.validation.js"></script>
+
+<script src="../../js/lib/angular/angular.min.js"></script>
+<script src="../../js/lib/angular/controllers.js"></script>
+
+<script>
+  $('#form-signin_v1').validate();
+</script>
+</body>
+</html>
