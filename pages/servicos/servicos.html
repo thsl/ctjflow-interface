@@ -29,7 +29,7 @@
   <div class="container-fluid">
     <section>
       <ol class="breadcrumb clearfix">
-        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Acadêmico</a></li>
         <li class="ml-xs mr-xs"> /</li>
         <li class="active">Listagem de serviços</li>
         <li style="float:right;">
@@ -94,15 +94,8 @@
                     <div class="card-block">
                       <div class="row">
                         <div class="col-sm-3">
-                          <label class="form-label semibold" for="">Busca geral</label>
-                          <div class="form-group input-group mb-0">
-                            <input type="text" class="form-control" aria-label="" placeholder="Buscar serviços">
-                            <div class="input-group-btn">
-                              <button type="button" class="btn btn-default-outline">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                              </button>
-                            </div>
-                          </div>
+                          <label class="form-label semibold" for="">Nome do serviço</label>
+                          <input type="text" class="form-control" aria-label="" placeholder="Nome do serviço">
                         </div>
                         <div class="col-sm-3">
                           <label class="form-label semibold" for="">Tipo de serviço</label>
@@ -163,10 +156,13 @@
                       <div class="row divider-top">
                         <div class="col-sm-12">
                           <div>
-                            <button type="button" class="btn btn-primary btn-sm mt-sm">Buscar</button>
+                            <button type="button" class="btn btn-primary btn-sm mt-sm"><i class="fa fa-search mr-xs"
+                                                                                          aria-hidden="true"></i>
+                              Buscar
+                            </button>
                             <button type="button" class="btn btn-secondary btn-sm ml-md mt-sm" data-toggle="collapse"
                                     data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
-                                    aria-controls="collapseOne">Cancelar
+                                    aria-controls="collapseOne"><i class="fa fa-times" aria-hidden="true"></i> Cancelar
                             </button>
                           </div>
                         </div>
@@ -251,7 +247,6 @@
                       </tr>
 
 
-
                       </tbody>
                     </table>
                   </div>
@@ -269,7 +264,7 @@
                 </div>
               </div>
               <div class="row mt-md divider-top">
-                <div class="col-lg-4">
+                <div class="col-lg-8">
                   <fieldset class="form-group">
                     <label class="form-label semibold" for="">Nome do serviço <span
                             class="semibold text-danger h4">*</span></label>
@@ -277,56 +272,56 @@
                     <small class="text-muted">Defina o nome, tomando cuidado com as pontuações.</small>
                   </fieldset>
                 </div>
+
                 <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Grupo(s) <span
+                  <label class="form-label semibold" for="">Tipo de serviço <span
                           class="semibold text-danger h4">*</span></label>
-                  <select class="select2 open-select2" multiple="multiple">
-                    <option>Crianças</option>
-                    <option>Adolescentes</option>
-                    <option>Jovens e adultos</option>
-                    <option>Cursos online</option>
-                    <option>Cursos especiais</option>
-                  </select>
-                </div>
-                <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Tipo de curso <span
-                          class="semibold text-danger h4">*</span></label>
-                  <select class="select2-arrow">
-                    <option>Online</option>
-                    <option>Híbrido</option>
-                    <option>Presencial</option>
+                  <select class="select2 select2-arrow">
+                    <option>Workshop</option>
+                    <option>Teste</option>
+                    <option>Evento</option>
                   </select>
                 </div>
               </div>
-              <div class="row divider-top pb-md">
-                <div class="col-lg-3">
-                  <label class="form-label semibold" for="">Idade mínima</label>
-                  <input type="number" class="form-control" id="" placeholder="Idade mínima">
+              <div class="row mt-md divider-top">
+                <div class="col-sm-4">
+                  <label class="form-label semibold" for="">Setor</label>
+                  <select class="select2 select2-arrow">
+                    <option>T.I.</option>
+                    <option>Biblioteca</option>
+                    <option>Dep. de testes</option>
+                  </select>
                 </div>
-                <div class="col-lg-3">
-                  <label class="form-label semibold" for="">Escolaridade</label>
-                  <input type="text" class="form-control" id="" placeholder="Escolaridade">
+                <div class="col-sm-4">
+                  <label class="form-label semibold" for="">Carga horária</label>
+                  <input type="number" class="form-control" id="" placeholder="Carga horária">
                 </div>
-                <div class="col-lg-3">
-                  <label class="form-label semibold" for="">Valor do curso</label>
-                  <input type="text" class="form-control" id="money-mask-input" placeholder="R$">
-                </div>
-                <div class="col-lg-3">
-                  <label class="form-label semibold" for="">Classificação</label>
-                  <select class="select2-arrow">
-                    <option>Regular</option>
-                    <option>Único</option>
+                <div class="col-sm-4">
+                  <label class="form-label semibold" for="">Público-alvo</label>
+                  <select class="select2 select2-arrow">
+                    <option>Empresários</option>
+                    <option>Melhor idade</option>
+                    <option>Jovens</option>
                   </select>
                 </div>
               </div>
-              <div class="row divider-top pb-md">
-                <div class="col-sm-9">
-                  <label class="form-label semibold" for="">Objetivos do curso</label>
-                  <textarea rows="4" class="form-control" placeholder="Objetivos do curso"></textarea>
+              <div class="row mt-md divider-top">
+                <div class="col-sm-4">
+                  <label class="form-label semibold" for="">Divulgação no site</label>
+                  <div class="form-group mt-sm">
+                    <div class="btn-group btn-group-sm" data-toggle="buttons">
+                      <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Publico
+                      </label>
+                      <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Privado
+                      </label>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-sm-3">
-                  <label class="form-label semibold" for="">Status do curso</label>
-                  <div class="form-group">
+                <div class="col-sm-4">
+                  <label class="form-label semibold" for="">Status</label>
+                  <div class="form-group mt-sm">
                     <div class="btn-group btn-group-sm" data-toggle="buttons">
                       <label class="btn btn-secondary active">
                         <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Ativo
@@ -337,10 +332,30 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-sm-4">
+                  <label class="form-label semibold" for="">Certificado</label>
+                  <div class="form-group mt-sm">
+                    <div class="btn-group btn-group-sm" data-toggle="buttons">
+                      <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Sim
+                      </label>
+                      <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Não
+                      </label>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="row divider-top pb-md">
                 <div class="col-sm-12">
-                  <button type="button" class="btn btn-primary btn-success" data-dismiss="modal"><i
+                  <label class="form-label semibold" for="">Objetivos do curso <span
+                          class="semibold text-danger h4">*</span></label>
+                  <textarea rows="4" class="form-control" placeholder="Objetivos do curso"></textarea>
+                </div>
+              </div>
+              <div class="row divider-top pb-md">
+                <div class="col-sm-12">
+                  <button type="button" class="btn btn-primary btn-success"><i
                           class="fa fa-floppy-o mr-xs"
                           aria-hidden="true"></i>
                     Salvar
@@ -364,160 +379,187 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                 aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"><i class="fa fa-cogs mr-xs" aria-hidden="true"></i>Detalhes do Serviço</h4>
+        <h4 class="modal-title">Detalhes do Serviço</h4>
       </div>
       <div class="modal-body">
-        <div class="row">
-          <div class="col-md-4">
-            <label class="form-label semibold">Serviço</label>
-            <p class="h5 semibold">Teste aplicado <span class="label label-pill label-success ml-sm"><i class="fa fa-check"
-                                                                                                  aria-hidden="true"></i>
- Curso ativo</span></p>
-          </div>
-          <div class="col-md-4">
-            <label class="form-label semibold">Carga horária</label>
-            <p>000 horas</p>
-          </div>
-          <div class="col-md-4">
-            <label class="form-label semibold">Valor</label>
-            <p>R$ 000,00</p>
-          </div>
-        </div>
 
-        <div class="row divider-top">
-          <div class="col-md-4">
-            <label class="form-label semibold">Gratuito</label>
-            <p>Sim</p>
+        <section class="card card-default">
+          <header class="card-header">
+            <h5 class="semibold"><i class="fa fa-cogs mr-xs" aria-hidden="true"></i> Teste aplicado</h5>
+          </header>
+          <div class="card-block">
+            <div class="row">
+              <div class="col-md-4">
+                <label class="form-label semibold">Status</label>
+                <p class="text-success"><i class="fa fa-check"
+                                           aria-hidden="true"></i>
+                  <strong>Curso ativo</strong></p>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label semibold">Carga horária</label>
+                <p>000 horas</p>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label semibold">Valor</label>
+                <p>R$ 000,00</p>
+              </div>
+            </div>
+            <div class="row mt-lg">
+              <div class="col-md-4">
+                <label class="form-label semibold">Gratuito</label>
+                <p>Sim</p>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label semibold">Certificado</label>
+                <p>Sim</p>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label semibold">Desconto</label>
+                <p>Sim</p>
+              </div>
+            </div>
+            <div class="row mt-lg">
+              <div class="col-md-12">
+                <label class="form-label semibold">Descrição</label>
+                <p>Nosso Departamento de Testes Internacionais é credenciado para aplicar os mais reconhecidos exames de
+                  proficiência em língua inglesa. Somos credenciados pelas principais bancas examinadoras no mundo:
+                  universidade de Cambridge (Cambridge English Language Assessments), ETS (English Testing Services) e
+                  CaMLA
+                  (Cambridge-Michigan Language Assessments). Somos centro examinador para os mais importantes exames em
+                  língua inglesa: KET, PET, FCE e CAE (Cambridge), YLTE e ECPE (CaMLA), TOEFL iBT, TOEFL ITP, GRE e
+                  TOEIC
+                  (ETS). Além disso, a partir de 2016, funcionaremos como local de provas para o exame IELTS, oferecido
+                  pelo
+                  Conselho Britânico.</p>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4">
-            <label class="form-label semibold">Certificado</label>
-            <p>Sim</p>
-          </div>
-          <div class="col-md-4">
-            <label class="form-label semibold">Desconto</label>
-            <p>Sim</p>
-          </div>
-        </div>
-        <div class="row divider-top">
-          <div class="col-md-12">
-            <label class="form-label semibold">Descrição</label>
-            <p>Nosso Departamento de Testes Internacionais é credenciado para aplicar os mais reconhecidos exames de proficiência em língua inglesa. Somos credenciados pelas principais bancas examinadoras no mundo: universidade de Cambridge (Cambridge English Language Assessments), ETS (English Testing Services) e CaMLA (Cambridge-Michigan Language Assessments). Somos centro examinador para os mais importantes exames em língua inglesa: KET, PET, FCE e CAE (Cambridge), YLTE e ECPE (CaMLA),  TOEFL iBT, TOEFL ITP, GRE e TOEIC (ETS). Além disso, a partir de 2016, funcionaremos como local de provas para o exame IELTS, oferecido pelo Conselho Britânico.</p>
-          </div>
-        </div>
-        <div class="row divider-top">
-          <div class="col-sm-12">
-            <h5 class="semibold">Níveis</h5>
-            <section class="widget widget-accordion mt-md" id="accordion" role="tablist" aria-multiselectable="true">
-              <article class="panel">
-                <div class="panel-heading" role="tab" id="headingOne">
-                  <a data-toggle="collapse"
-                     data-parent="#accordion"
-                     href="#collapseOne"
-                     aria-expanded="false"
-                     aria-controls="collapseOne">
-                    Nível A1
-                    <i class="font-icon font-icon-arrow-down"></i>
-                  </a>
-                </div>
-                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                  <div class="panel-collapse-in">
-                    <div class="row">
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Unidades</label>
-                          <p>3 unidades</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Nota média</label>
-                          <p>00,00</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Nível</label>
-                          <p>TAG</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Avaliação</label>
-                          <p>Notas</p>
-                        </fieldset>
+        </section>
+
+        <section class="card card-default">
+          <header class="card-header">
+            <h5 class="semibold"><i class="fa fa-list mr-xs" aria-hidden="true"></i> Níveis</h5>
+          </header>
+          <div class="card-block">
+            <div class="row">
+              <div class="col-sm-12">
+
+                <section class="widget widget-accordion mt-md" id="accordion" role="tablist"
+                         aria-multiselectable="true">
+                  <article class="panel">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                      <a data-toggle="collapse"
+                         data-parent="#accordion"
+                         href="#collapseOne"
+                         aria-expanded="false"
+                         aria-controls="collapseOne">
+                        Nível A1
+                        <i class="font-icon font-icon-arrow-down"></i>
+                      </a>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="panel-collapse-in">
+                        <div class="row">
+                          <div class="col-lg-3">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold" for="exampleInput">Unidades</label>
+                              <p>3 unidades</p>
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-3">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold" for="exampleInput">Nota média</label>
+                              <p>00,00</p>
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-3">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold" for="exampleInput">Nível</label>
+                              <p>TAG</p>
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-3">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold" for="exampleInput">Avaliação</label>
+                              <p>Notas</p>
+                            </fieldset>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold" for="exampleInput">Material didático</label>
+                              <p><img class="img-circle-xs" src="../../img/cursos/kids/hooray-a1.jpg"> Hooray! A –
+                                Student’s
+                                Book
+                                – Helbling Languages</p>
+                            </fieldset>
+                          </div>
+
+                        </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Material didático</label>
-                          <p><img class="img-circle-xs" src="../../img/cursos/kids/hooray-a1.jpg"> Hooray! A – Student’s
-                            Book
-                            – Helbling Languages</p>
-                        </fieldset>
-                      </div>
+                  </article>
 
+                  <article class="panel">
+                    <div class="panel-heading" role="tab" id="heading-2">
+                      <a data-toggle="collapse"
+                         data-parent="#accordion"
+                         href="#collapse-2"
+                         aria-expanded="false"
+                         aria-controls="collapse-2">
+                        Nível A2
+                        <i class="font-icon font-icon-arrow-down"></i>
+                      </a>
                     </div>
-                  </div>
-                </div>
-              </article>
+                    <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+                      <div class="panel-collapse-in">
+                        <div class="row">
+                          <div class="col-lg-3">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold" for="exampleInput">Unidades</label>
+                              <p>3 unidades</p>
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-3">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold" for="exampleInput">Nota média</label>
+                              <p>00,00</p>
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-3">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold" for="exampleInput">Nível</label>
+                              <p>TAG</p>
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-3">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold" for="exampleInput">Avaliação</label>
+                              <p>Notas</p>
+                            </fieldset>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <fieldset class="form-group">
+                              <label class="form-label semibold" for="exampleInput">Material didático</label>
+                              <p><img class="img-circle-xs" src="../../img/cursos/kids/hooray-a1.jpg"> Hooray! A –
+                                Student’s
+                                Book
+                                – Helbling Languages</p>
+                            </fieldset>
+                          </div>
 
-              <article class="panel">
-                <div class="panel-heading" role="tab" id="heading-2">
-                  <a data-toggle="collapse"
-                     data-parent="#accordion"
-                     href="#collapse-2"
-                     aria-expanded="false"
-                     aria-controls="collapse-2">
-                    Nível A2
-                    <i class="font-icon font-icon-arrow-down"></i>
-                  </a>
-                </div>
-                <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
-                  <div class="panel-collapse-in">
-                    <div class="row">
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Unidades</label>
-                          <p>3 unidades</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Nota média</label>
-                          <p>00,00</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Nível</label>
-                          <p>TAG</p>
-                        </fieldset>
-                      </div>
-                      <div class="col-lg-3">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Avaliação</label>
-                          <p>Notas</p>
-                        </fieldset>
+                        </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <fieldset class="form-group">
-                          <label class="form-label semibold" for="exampleInput">Material didático</label>
-                          <p><img class="img-circle-xs" src="../../img/cursos/kids/hooray-a1.jpg"> Hooray! A – Student’s
-                            Book
-                            – Helbling Languages</p>
-                        </fieldset>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </section>
+                  </article>
+                </section>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
