@@ -31,7 +31,7 @@
       <ol class="breadcrumb clearfix">
         <li><a href="#">Acadêmico</a></li>
         <li class="ml-xs mr-xs"> /</li>
-        <li class="active">Postos avançados</li>
+        <li class="active">Unidades</li>
         <li style="float:right;">
           <button class="btn btn-inline btn-secondary-outline btn-sm"><i class="fa fa-question-circle"
                                                                          aria-hidden="true"></i> Ajuda
@@ -49,7 +49,7 @@
                 <li class="nav-item">
                   <a class="nav-link active" href="#tabs-servicos-tab-1" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
-										Postos avançados
+										Unidades
 										<span class="label label-pill label-primary">100</span>
 									</span>
                   </a>
@@ -58,7 +58,7 @@
                   <a class="nav-link" href="#tabs-servicos-tab-2" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
 										<i class="fa fa-plus mr-xs" aria-hidden="true"></i>
- Criar novo posto avançado
+ Criar nova unidade
 									</span>
                   </a>
                 </li>
@@ -94,8 +94,8 @@
                     <div class="card-block">
                       <div class="row">
                         <div class="col-sm-8">
-                          <label class="form-label semibold" for="">Nome do posto avançado</label>
-                          <input type="text" class="form-control" aria-label="" placeholder="Nome do posto avançado">
+                          <label class="form-label semibold" for="">Nome da unidade</label>
+                          <input type="text" class="form-control" aria-label="" placeholder="Nome da unidade">
                         </div>
                         <div class="col-sm-4">
                           <label class="form-label semibold" for="">Status</label>
@@ -139,23 +139,21 @@
                     <table class="datatable-on table table-hover" cellspacing="0" width="100%">
                       <thead>
                       <tr>
-                        <th>Nome do posto</th>
                         <th>Unidade</th>
+                        <th>Responsável pedagógico</th>
+                        <th>Telefone principal</th>
                         <th>Status</th>
-                        <th>Gestor principal</th>
-                        <th>Telefone</th>
                         <th class="text-right">Ações</th>
                       </tr>
                       </thead>
                       <tbody>
 
                       <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Leonardo Da Vinci</a></strong></td>
-                        <td>Asa sul</td>
-                        <td>Ativo</td>
+                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaUnidade"
+                                       href="#ModalDetalhaPosto">Asa sul</a></strong></td>
                         <td>João Carlos Silva</td>
                         <td>(61) 0000-0000</td>
+                        <td>Ativo</td>
                         <td>
                           <div class="btn-group btn-group-sm pull-right">
                             <button type="button" class="btn btn-default-outline dropdown-toggle"
@@ -175,12 +173,11 @@
                       </tr>
 
                       <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Sigma</a></strong></td>
-                        <td>Asa norte</td>
-                        <td>Ativo</td>
-                        <td>Aline Silva Linhares</td>
+                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaUnidade"
+                                       href="#ModalDetalhaPosto">Asa norte</a></strong></td>
+                        <td>Aline Silveira</td>
                         <td>(61) 0000-0000</td>
+                        <td>Ativo</td>
                         <td>
                           <div class="btn-group btn-group-sm pull-right">
                             <button type="button" class="btn btn-default-outline dropdown-toggle"
@@ -210,7 +207,7 @@
             <section role="tabpanel" class="tab-pane fade" id="tabs-servicos-tab-2">
               <div class="row mt-sm">
                 <div class="col-sm-12">
-                  <h4 class="semibold"> Cadastrar novo posto avançado</h4>
+                  <h4 class="semibold"> Cadastrar nova unidade</h4>
                   <small>Campos com asterisco vermelho ( <span class="semibold text-danger">*</span> ) são
                     obrigatórios
                   </small>
@@ -219,7 +216,7 @@
 
               <section class="card card-default mt-md">
                 <header class="card-header">
-                  <h5 class="semibold"><i class="fa fa-building-o mr-xs" aria-hidden="true"></i> Dados do posto
+                  <h5 class="semibold"><i class="fa fa-building-o mr-xs" aria-hidden="true"></i> Dados da unidade
                   </h5>
                 </header>
                 <div class="card-block">
@@ -233,22 +230,11 @@
                         <option>Águas claras</option>
                       </select>
                     </div>
-                    <div class="col-sm-8">
-                      <label class="form-label semibold" for="">Nome do posto</label>
-                      <select class="select2 select2-arrow">
-                        <option>Selecione</option>
-                        <option>Leonardo da Vinci</option>
-                        <option>Sigma</option>
-                        <option>CTJ</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row mt-md">
                     <div class="col-sm-4">
                       <label class="form-label semibold" for="">CNPJ</label>
                       <p>000.000.000/0000-00</p>
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-4">
                       <label class="form-label semibold" for="">Centro de custo</label>
                       <p>Centro de custo</p>
                     </div>
@@ -259,7 +245,7 @@
 
               <section class="card card-default mt-md">
                 <header class="card-header">
-                  <h5 class="semibold"><i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização do posto
+                  <h5 class="semibold"><i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização da unidade
                   </h5>
                 </header>
                 <div class="card-block">
@@ -305,12 +291,8 @@
                 </header>
                 <div class="card-block">
                   <div class="row">
-                    <div class="col-sm-6">
-                      <label class="form-label semibold" for="">Gestor do contrato</label>
-                      <input type="text" class="form-control" aria-label="" placeholder="Gestor do contrato">
-                    </div>
-                    <div class="col-sm-6">
-                      <label class="form-label semibold" for="">Responsável acadêmico</label>
+                    <div class="col-sm-12">
+                      <label class="form-label semibold" for="">Responsável pedagógico</label>
                       <select class="select2 select2-arrow">
                         <option>Selecione</option>
                         <option>Luan Almeida Barbosa</option>
@@ -323,11 +305,10 @@
                     <div class="col-sm-12">
                       <label class="form-label semibold" for="">Interessados</label>
                       <select class="select2" multiple="multiple">
-                        <option>Crianças</option>
-                        <option>Adolescentes</option>
-                        <option>Jovens e adultos</option>
-                        <option>Cursos online</option>
-                        <option>Cursos especiais</option>
+                        <option>Selecione</option>
+                        <option>Luan Almeida Barbosa</option>
+                        <option>Otávio Goncalves Souza</option>
+                        <option>Ana Souza Martins</option>
                       </select>
                     </div>
                   </div>
@@ -404,13 +385,13 @@
 
 
 <!-- Modal detalha posto -->
-<div class="modal fade" id="ModalDetalhaPosto" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaPosto">
+<div class="modal fade" id="ModalDetalhaUnidade" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaUnidade">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                 aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Detalhes do posto avançado</h4>
+        <h4 class="modal-title">Detalhes da unidade</h4>
       </div>
       <div class="modal-body">
 
@@ -422,19 +403,15 @@
           </header>
           <div class="card-block">
             <div class="row">
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">Nome do posto</label>
-                <p>Leonardo da Vinci</p>
-              </div>
-              <div class="col-sm-3">
+              <div class="col-sm-4">
                 <label class="form-label semibold" for="">Unidade</label>
                 <p>Asa sul</p>
               </div>
-              <div class="col-sm-3">
+              <div class="col-sm-4">
                 <label class="form-label semibold" for="">CNPJ</label>
                 <p>000.000.000/0000-00</p>
               </div>
-              <div class="col-sm-3ß">
+              <div class="col-sm-4">
                 <label class="form-label semibold" for="">Centro de custo</label>
                 <p>Centro de custo</p>
               </div>
@@ -491,17 +468,15 @@
           </header>
           <div class="card-block">
             <div class="row">
-              <div class="col-sm-4">
-                <label class="form-label semibold" for="">Gestor do contrato</label>
+              <div class="col-sm-6">
+                <label class="form-label semibold" for="">Responsável pedagógico</label>
                 <p>Rodrigo Sousa Martins</p>
               </div>
-              <div class="col-sm-4">
-                <label class="form-label semibold" for="">Responsável acadêmico</label>
-                <p>Rodrigo Sousa Martins</p>
-              </div>
-              <div class="col-sm-4">
+              <div class="col-sm-6">
                 <label class="form-label semibold" for="">Interessados</label>
-                <p>Crianças / Adolescentes / Jovens e adultos</p>
+                <p>Luan Almeida Barbosa</p>
+                <p>Otávio Goncalves Souza</p>
+                <p>Ana Souza Martins</p>
               </div>
             </div>
             <div class="row mt-md">
