@@ -58,7 +58,7 @@
                   <a class="nav-link" href="#tabs-servicos-tab-2" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
 										<i class="fa fa-plus mr-xs" aria-hidden="true"></i>
- Criar novo posto de serviço
+ Criar novo posto avançado
 									</span>
                   </a>
                 </li>
@@ -210,105 +210,194 @@
             <section role="tabpanel" class="tab-pane fade" id="tabs-servicos-tab-2">
               <div class="row mt-sm">
                 <div class="col-sm-12">
-                  <h4 class="semibold"> Cadastrar novo serviço</h4>
+                  <h4 class="semibold"> Cadastrar novo posto avançado</h4>
                   <small>Campos com asterisco vermelho ( <span class="semibold text-danger">*</span> ) são
                     obrigatórios
                   </small>
                 </div>
               </div>
-              <div class="row mt-md divider-top">
-                <div class="col-lg-8">
-                  <fieldset class="form-group">
-                    <label class="form-label semibold" for="">Nome do serviço <span
-                            class="semibold text-danger h4">*</span></label>
-                    <input type="text" class="form-control" id="" placeholder="Nome do curso">
-                    <small class="text-muted">Defina o nome, tomando cuidado com as pontuações.</small>
-                  </fieldset>
-                </div>
 
-                <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Tipo de serviço <span
-                          class="semibold text-danger h4">*</span></label>
-                  <select class="select2 select2-arrow">
-                    <option>Workshop</option>
-                    <option>Teste</option>
-                    <option>Evento</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row mt-md divider-top">
-                <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Setor</label>
-                  <select class="select2 select2-arrow">
-                    <option>T.I.</option>
-                    <option>Biblioteca</option>
-                    <option>Dep. de testes</option>
-                  </select>
-                </div>
-                <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Carga horária</label>
-                  <input type="number" class="form-control" id="" placeholder="Carga horária">
-                </div>
-                <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Público-alvo</label>
-                  <select class="select2 select2-arrow">
-                    <option>Empresários</option>
-                    <option>Melhor idade</option>
-                    <option>Jovens</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row mt-md divider-top">
-                <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Divulgação no site</label>
-                  <div class="form-group mt-sm">
-                    <div class="btn-group btn-group-sm" data-toggle="buttons">
-                      <label class="btn btn-secondary active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Publico
-                      </label>
-                      <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> Privado
-                      </label>
+              <section class="card card-default mt-md">
+                <header class="card-header">
+                  <h5 class="semibold"><i class="fa fa-building-o mr-xs" aria-hidden="true"></i> Dados do posto
+                  </h5>
+                </header>
+                <div class="card-block">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <label class="form-label semibold" for="">Nome do posto</label>
+                      <input type="text" class="form-control" aria-label="" placeholder="Nome do posto">
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="form-label semibold" for="">Unidade</label>
+                      <select class="select2 select2-arrow">
+                        <option>Selecione</option>
+                        <option>Asa sul</option>
+                        <option>Asa norte</option>
+                        <option>Águas claras</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-md">
+                    <div class="col-sm-4">
+                      <label class="form-label semibold" for="">CPJ</label>
+                      <input type="number" class="form-control" aria-label="" placeholder="CNPJ">
+                    </div>
+                    <div class="col-sm-8">
+                      <label class="form-label semibold" for="">Centro de custo</label>
+                      <input type="text" class="form-control" aria-label="" placeholder="Centro de custo">
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Status</label>
-                  <div class="form-group mt-sm">
-                    <div class="btn-group btn-group-sm" data-toggle="buttons">
-                      <label class="btn btn-secondary active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Ativo
-                      </label>
-                      <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> Inativo
-                      </label>
+              </section>
+
+
+              <section class="card card-default mt-lg">
+                <header class="card-header">
+                  <h5 class="semibold"><i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização do posto
+                  </h5>
+                </header>
+                <div class="card-block">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <label class="form-label semibold" for="">Endereço</label>
+                      <input type="text" class="form-control" aria-label="" placeholder="Endereço">
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="form-label semibold" for="">Número</label>
+                      <input type="text" class="form-control" aria-label="" placeholder="Número">
+                    </div>
+                  </div>
+                  <div class="row mt-lg">
+                    <div class="col-sm-8">
+                      <label class="form-label semibold" for="">Complemento</label>
+                      <input type="text" class="form-control" aria-label="" placeholder="Complemento">
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="form-label semibold" for="">CEP</label>
+                      <input type="number" class="form-control" aria-label="" placeholder="CEP">
+                    </div>
+                  </div>
+                  <div class="row mt-lg">
+                    <div class="col-sm-4">
+                      <label class="form-label semibold" for="">Bairro</label>
+                      <select class="select2 select2-arrow">
+                        <option>Selecione</option>
+                        <option>Asa sul</option>
+                        <option>Asa norte</option>
+                        <option>Águas claras</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="form-label semibold" for="">Cidade</label>
+                      <select class="select2 select2-arrow">
+                        <option>Selecione</option>
+                        <option>Asa sul</option>
+                        <option>Asa norte</option>
+                        <option>Águas claras</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-4">
+                      <label class="form-label semibold" for="">UF</label>
+                      <select class="select2 select2-arrow">
+                        <option>Selecione</option>
+                        <option>Distrito federal</option>
+                        <option>Minas Gerais</option>
+                        <option>São Paulo</option>
+                      </select>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Certificado</label>
-                  <div class="form-group mt-sm">
-                    <div class="btn-group btn-group-sm" data-toggle="buttons">
-                      <label class="btn btn-secondary active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Sim
-                      </label>
-                      <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> Não
-                      </label>
+              </section>
+
+              <section class="card card-default mt-lg">
+                <header class="card-header">
+                  <h5 class="semibold"><i class="fa fa-commenting mr-xs" aria-hidden="true"></i> Contatos
+                  </h5>
+                </header>
+                <div class="card-block">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label class="form-label semibold" for="">Gestor do contrato</label>
+                      <input type="text" class="form-control" aria-label="" placeholder="Gestor do contrato">
+                    </div>
+                    <div class="col-sm-6">
+                      <label class="form-label semibold" for="">Responsável acadêmico</label>
+                      <select class="select2 select2-arrow">
+                        <option>Selecione</option>
+                        <option>Luan Almeida Barbosa</option>
+                        <option>Otávio Goncalves Souza</option>
+                        <option>Ana Souza Martins</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-md">
+                    <div class="col-sm-12">
+                      <label class="form-label semibold" for="">Interessados</label>
+                      <select class="select2" multiple="multiple">
+                        <option>Crianças</option>
+                        <option>Adolescentes</option>
+                        <option>Jovens e adultos</option>
+                        <option>Cursos online</option>
+                        <option>Cursos especiais</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-md">
+                    <div class="col-sm-7">
+                      <div class="row">
+                        <div class="col-sm-12 mb-md">
+                          <label class="form-label semibold" for=""><i class="fa fa-phone mr-xs" aria-hidden="true"></i> Telefones</label>
+                        </div>
+                        <div class="col-sm-5">
+                          <label class="form-label semibold" for="">Tipo</label>
+                          <select class="select2 select2-arrow">
+                            <option>Selecione</option>
+                            <option>Principal</option>
+                            <option>Comercial</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-7">
+                          <label class="form-label semibold" for="">Número</label>
+                          <div class="input-group">
+                            <input type="number" class="form-control" placeholder="Número">
+                        <span class="input-group-btn">
+                          <button class="btn btn-success-outline" type="button"><i class="fa fa-plus"
+                                                                                   aria-hidden="true"></i>
+                          </button>
+                        </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-5">
+                      <label class="form-label semibold" for="">Telefones cadastrados</label>
+                      <table class="table">
+                        <thead>
+                        <tr>
+                          <th>Tipo</th>
+                          <th>Número</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td>Principal</td>
+                          <td>(61) 0000-0000</td>
+                        </tr>
+                        <tr>
+                          <td>Comercial</td>
+                          <td>(61) 0000-0000</td>
+                        </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
-              </div>
+              </section>
+
               <div class="row divider-top pb-md">
                 <div class="col-sm-12">
-                  <label class="form-label semibold" for="">Objetivos do curso <span
-                          class="semibold text-danger h4">*</span></label>
-                  <textarea rows="4" class="form-control" placeholder="Objetivos do curso"></textarea>
-                </div>
-              </div>
-              <div class="row divider-top pb-md">
-                <div class="col-sm-12">
-                  <button type="button" class="btn btn-primary btn-success"><i
+                  <button type="button" class="btn btn-primary btn-success" data-dismiss="modal"><i
                           class="fa fa-floppy-o mr-xs"
                           aria-hidden="true"></i>
                     Salvar
@@ -325,194 +414,134 @@
 </div><!--.page-content-->
 
 
-<!-- Modal cadastrar curso -->
-<div class="modal fade" id="ModalDetalhaServico" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaServico">
+<!-- Modal detalha posto -->
+<div class="modal fade" id="ModalDetalhaPosto" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaPosto">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                 aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Detalhes do Serviço</h4>
+        <h4 class="modal-title">Detalhes do posto avançado</h4>
       </div>
       <div class="modal-body">
 
-        <section class="card card-default">
+
+        <section class="card card-default mt-md">
           <header class="card-header">
-            <h5 class="semibold"><i class="fa fa-cogs mr-xs" aria-hidden="true"></i> Teste aplicado</h5>
+            <h5 class="semibold"><i class="fa fa-building-o mr-xs" aria-hidden="true"></i> Dados do posto
+            </h5>
           </header>
           <div class="card-block">
             <div class="row">
-              <div class="col-md-4">
-                <label class="form-label semibold">Status</label>
-                <p class="text-success"><i class="fa fa-check"
-                                           aria-hidden="true"></i>
-                  <strong>Curso ativo</strong></p>
+              <div class="col-sm-3">
+                <label class="form-label semibold" for="">Nome do posto</label>
+                <p>Leonardo da Vinci</p>
               </div>
-              <div class="col-md-4">
-                <label class="form-label semibold">Carga horária</label>
-                <p>000 horas</p>
+              <div class="col-sm-3">
+                <label class="form-label semibold" for="">Unidade</label>
+                <p>Asa sul</p>
               </div>
-              <div class="col-md-4">
-                <label class="form-label semibold">Valor</label>
-                <p>R$ 000,00</p>
+              <div class="col-sm-3">
+                <label class="form-label semibold" for="">CPJ</label>
+                <p>000.000.000/0000-00</p>
               </div>
-            </div>
-            <div class="row mt-lg">
-              <div class="col-md-4">
-                <label class="form-label semibold">Gratuito</label>
-                <p>Sim</p>
-              </div>
-              <div class="col-md-4">
-                <label class="form-label semibold">Certificado</label>
-                <p>Sim</p>
-              </div>
-              <div class="col-md-4">
-                <label class="form-label semibold">Desconto</label>
-                <p>Sim</p>
-              </div>
-            </div>
-            <div class="row mt-lg">
-              <div class="col-md-12">
-                <label class="form-label semibold">Descrição</label>
-                <p>Nosso Departamento de Testes Internacionais é credenciado para aplicar os mais reconhecidos exames de
-                  proficiência em língua inglesa. Somos credenciados pelas principais bancas examinadoras no mundo:
-                  universidade de Cambridge (Cambridge English Language Assessments), ETS (English Testing Services) e
-                  CaMLA
-                  (Cambridge-Michigan Language Assessments). Somos centro examinador para os mais importantes exames em
-                  língua inglesa: KET, PET, FCE e CAE (Cambridge), YLTE e ECPE (CaMLA), TOEFL iBT, TOEFL ITP, GRE e
-                  TOEIC
-                  (ETS). Além disso, a partir de 2016, funcionaremos como local de provas para o exame IELTS, oferecido
-                  pelo
-                  Conselho Britânico.</p>
+              <div class="col-sm-3ß">
+                <label class="form-label semibold" for="">Centro de custo</label>
+                <p>Centro de custo</p>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="card card-default">
+
+        <section class="card card-default mt-lg">
           <header class="card-header">
-            <h5 class="semibold"><i class="fa fa-list mr-xs" aria-hidden="true"></i> Níveis</h5>
+            <h5 class="semibold"><i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização do posto
+            </h5>
           </header>
           <div class="card-block">
             <div class="row">
+              <div class="col-sm-6">
+                <label class="form-label semibold" for="">Endereço</label>
+                <p>Avenida Maria Teresa, quadra 43, rua antonieta, 1646</p>
+              </div>
+              <div class="col-sm-3">
+                <label class="form-label semibold" for="">Número</label>
+                <p>1289</p>
+              </div>
+              <div class="col-sm-3">
+                <label class="form-label semibold" for="">Complemento</label>
+                <p>Alameda 303</p>
+              </div>
+            </div>
+            <div class="row mt-lg">
+              <div class="col-sm-3">
+                <label class="form-label semibold" for="">Bairro</label>
+                <p>Asa sul</p>
+              </div>
+              <div class="col-sm-3">
+                <label class="form-label semibold" for="">Cidade</label>
+                <p>Brasília</p>
+              </div>
+              <div class="col-sm-3">
+                <label class="form-label semibold" for="">UF</label>
+                <p>Distrito Federal</p>
+              </div>
+              <div class="col-sm-3">
+                <label class="form-label semibold" for="">CEP</label>
+                <p>00000-000</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card card-default mt-lg">
+          <header class="card-header">
+            <h5 class="semibold"><i class="fa fa-commenting mr-xs" aria-hidden="true"></i> Contatos
+            </h5>
+          </header>
+          <div class="card-block">
+            <div class="row">
+              <div class="col-sm-4">
+                <label class="form-label semibold" for="">Gestor do contrato</label>
+                <p>Rodrigo Sousa Martins</p>
+              </div>
+              <div class="col-sm-4">
+                <label class="form-label semibold" for="">Responsável acadêmico</label>
+                <p>Rodrigo Sousa Martins</p>
+              </div>
+              <div class="col-sm-4">
+                <label class="form-label semibold" for="">Interessados</label>
+                <p>Crianças / Adolescentes / Jovens e adultos</p>
+              </div>
+            </div>
+            <div class="row mt-md">
               <div class="col-sm-12">
-
-                <section class="widget widget-accordion mt-md" id="accordion" role="tablist"
-                         aria-multiselectable="true">
-                  <article class="panel">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                      <a data-toggle="collapse"
-                         data-parent="#accordion"
-                         href="#collapseOne"
-                         aria-expanded="false"
-                         aria-controls="collapseOne">
-                        Nível A1
-                        <i class="font-icon font-icon-arrow-down"></i>
-                      </a>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                      <div class="panel-collapse-in">
-                        <div class="row">
-                          <div class="col-lg-3">
-                            <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Unidades</label>
-                              <p>3 unidades</p>
-                            </fieldset>
-                          </div>
-                          <div class="col-lg-3">
-                            <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Nota média</label>
-                              <p>00,00</p>
-                            </fieldset>
-                          </div>
-                          <div class="col-lg-3">
-                            <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Nível</label>
-                              <p>TAG</p>
-                            </fieldset>
-                          </div>
-                          <div class="col-lg-3">
-                            <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Avaliação</label>
-                              <p>Notas</p>
-                            </fieldset>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Material didático</label>
-                              <p><img class="img-circle-xs" src="../../img/cursos/kids/hooray-a1.jpg"> Hooray! A –
-                                Student’s
-                                Book
-                                – Helbling Languages</p>
-                            </fieldset>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-
-                  <article class="panel">
-                    <div class="panel-heading" role="tab" id="heading-2">
-                      <a data-toggle="collapse"
-                         data-parent="#accordion"
-                         href="#collapse-2"
-                         aria-expanded="false"
-                         aria-controls="collapse-2">
-                        Nível A2
-                        <i class="font-icon font-icon-arrow-down"></i>
-                      </a>
-                    </div>
-                    <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
-                      <div class="panel-collapse-in">
-                        <div class="row">
-                          <div class="col-lg-3">
-                            <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Unidades</label>
-                              <p>3 unidades</p>
-                            </fieldset>
-                          </div>
-                          <div class="col-lg-3">
-                            <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Nota média</label>
-                              <p>00,00</p>
-                            </fieldset>
-                          </div>
-                          <div class="col-lg-3">
-                            <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Nível</label>
-                              <p>TAG</p>
-                            </fieldset>
-                          </div>
-                          <div class="col-lg-3">
-                            <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Avaliação</label>
-                              <p>Notas</p>
-                            </fieldset>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Material didático</label>
-                              <p><img class="img-circle-xs" src="../../img/cursos/kids/hooray-a1.jpg"> Hooray! A –
-                                Student’s
-                                Book
-                                – Helbling Languages</p>
-                            </fieldset>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </section>
+                <label class="form-label semibold" for="">Telefones cadastrados</label>
+                <table class="table mt-md">
+                  <thead>
+                  <tr>
+                    <th>Tipo</th>
+                    <th>Número</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>Principal</td>
+                    <td>(61) 0000-0000</td>
+                  </tr>
+                  <tr>
+                    <td>Comercial</td>
+                    <td>(61) 0000-0000</td>
+                  </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </section>
+
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
