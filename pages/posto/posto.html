@@ -28,7 +28,7 @@
 
   <div class="container-fluid">
     <section>
-      <ol class="breadcrumb clearfix">
+      <ol class="breadcrumb blue-ctj">
         <li><a href="#">Acadêmico</a></li>
         <li class="ml-xs mr-xs"> /</li>
         <li class="active">Postos avançados</li>
@@ -71,6 +71,51 @@
 
             <section role="tabpanel" class="tab-pane fade in active" id="tabs-servicos-tab-1">
               <section>
+                <div id="collapse-busca-one" class="collapse mb-md" role="tabpanel"
+                            aria-labelledby="collapse-busca-one"
+                            aria-expanded="true">
+                <section class="card">
+                  <div class="card-block">
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <label class="form-label semibold" for="">Nome do posto avançado</label>
+                        <input type="text" class="form-control" aria-label="" placeholder="Nome do posto avançado">
+                      </div>
+                      <div class="col-sm-4">
+                        <label class="form-label semibold" for="">Status</label>
+                        <div class="form-group">
+                          <div class="btn-group btn-group-sm" data-toggle="buttons">
+                            <label class="btn btn-secondary active">
+                              <input type="radio" name="options" id="" autocomplete="off" checked="">
+                              Todos
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="options" id="" autocomplete="off"> Ativo
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="options" id="" autocomplete="off"> Inativo
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row divider-top">
+                      <div class="col-sm-12">
+                        <div>
+                          <button type="button" class="btn btn-primary btn-sm mt-sm"><i class="fa fa-search mr-xs"
+                                                                                        aria-hidden="true"></i>
+                            Buscar
+                          </button>
+                          <button type="button" class="btn btn-secondary btn-sm ml-md mt-sm" data-toggle="collapse"
+                                  data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
+                                  aria-controls="collapseOne"><i class="fa fa-times" aria-hidden="true"></i> Cancelar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
                 <div class="row">
                   <div class="col-sm-9">
                     <div class="form-control-wrapper form-control-icon-right">
@@ -87,51 +132,7 @@
                     </p>
                   </div>
                 </div>
-                <div id="collapse-busca-one" class="collapse mt-md" role="tabpanel"
-                     aria-labelledby="collapse-busca-one"
-                     aria-expanded="true">
-                  <section class="card">
-                    <div class="card-block">
-                      <div class="row">
-                        <div class="col-sm-8">
-                          <label class="form-label semibold" for="">Nome do posto avançado</label>
-                          <input type="text" class="form-control" aria-label="" placeholder="Nome do posto avançado">
-                        </div>
-                        <div class="col-sm-4">
-                          <label class="form-label semibold" for="">Status</label>
-                          <div class="form-group">
-                            <div class="btn-group btn-group-sm" data-toggle="buttons">
-                              <label class="btn btn-secondary active">
-                                <input type="radio" name="options" id="" autocomplete="off" checked="">
-                                Todos
-                              </label>
-                              <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="" autocomplete="off"> Ativo
-                              </label>
-                              <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="" autocomplete="off"> Inativo
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row divider-top">
-                        <div class="col-sm-12">
-                          <div>
-                            <button type="button" class="btn btn-primary btn-sm mt-sm"><i class="fa fa-search mr-xs"
-                                                                                          aria-hidden="true"></i>
-                              Buscar
-                            </button>
-                            <button type="button" class="btn btn-secondary btn-sm ml-md mt-sm" data-toggle="collapse"
-                                    data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
-                                    aria-controls="collapseOne"><i class="fa fa-times" aria-hidden="true"></i> Cancelar
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
+
               </section>
               <div class="row mt-md">
                 <div class="col-sm-12">

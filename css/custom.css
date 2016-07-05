@@ -7617,7 +7617,7 @@ body.modal-open {
   display: none;
 }
 .side-menu-list ul a {
-  padding-left: 18px;
+  padding-left: 45px;
 }
 .side-menu-list .label {
   margin: 0 0 0 .5em;
@@ -7663,6 +7663,29 @@ body.modal-open {
   right: 21px;
   top: 50%;
   margin-top: -8px;
+}
+.side-menu-list a.active,
+.side-menu-list > li > span.active {
+  background-color: #ecf2f5;
+  border-left: solid 4px transparent;
+}
+.side-menu-list a.active :before,
+.side-menu-list > li > span.active :before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 7px;
+  border-color: transparent transparent transparent #2e3192;
+}
+.side-menu-list a.active .lbl,
+.side-menu-list > li > span.active .lbl {
+  color: #343434;
 }
 .side-menu-list > li.with-sub {
   transition: all 0.2s ease-in-out;
@@ -7884,6 +7907,10 @@ body.modal-open {
 }
 .side-menu-list > li.blue.opened a,
 .side-menu-list > li.blue.opened > span {
+  border-left-color: #2e3192;
+}
+.side-menu-list > li.blue.opened a,
+.side-menu-list > li.blue.opened > .active {
   border-left-color: #2e3192;
 }
 .side-menu-list > li.purple .font-icon,
@@ -10050,10 +10077,39 @@ td.hiddenrow {
   margin-top: 0px;
   padding: 15px 15px 5px 15px;
   font-size: 18px;
+  *zoom: 1;
+  zoom: 1;
 }
 .breadcrumb .btn.btn-secondary-outline {
   border-color: #c2c9cf;
   color: #828c94;
+}
+.breadcrumb.blue-ctj {
+  border-top: 5px solid #2e3192;
+}
+.breadcrumb:before,
+.breadcrumb:after {
+  content: " ";
+  display: table;
+}
+.breadcrumb:after {
+  clear: both;
+}
+.breadcrumb:before,
+.breadcrumb:after {
+  content: " ";
+  display: table;
+}
+.breadcrumb:after {
+  clear: both;
+}
+.breadcrumb:before,
+.breadcrumb:after {
+  content: " ";
+  display: table;
+}
+.breadcrumb:after {
+  clear: both;
 }
 .breadcrumb > li + li::before {
   content: normal;
@@ -10078,8 +10134,8 @@ td.hiddenrow {
    ========================================================================== */
 .btn {
   border-radius: 3px;
-  border: solid 1px #2e3192;
-  background: #2e3192;
+  border: solid 1px #0082c6;
+  background: #0082c6;
   color: #fff;
   font-weight: 600;
 }
@@ -10183,12 +10239,12 @@ td.hiddenrow {
   border-color: #bec6cc;
 }
 .btn.btn-primary {
-  background-color: #2e3192;
-  border-color: #2e3192;
+  background-color: #0082c6;
+  border-color: #0082c6;
 }
 .btn.btn-primary:hover {
-  background-color: #5b5ecb;
-  border-color: #5b5ecb;
+  background-color: #00a3f9;
+  border-color: #00a3f9;
 }
 .btn.btn-secondary {
   background-color: #6b7a85;

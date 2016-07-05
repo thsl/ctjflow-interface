@@ -13,8 +13,8 @@
 
 .btn {
   border-radius: 3px;
-  border: solid 1px @color-blue;
-  background: @color-blue;
+  border: solid 1px @color-link;
+  background: @color-link;
   color: #fff;
   font-weight: 600;
   &:hover {
@@ -100,11 +100,11 @@
     }
   }
   &.btn-primary {
-    background-color: @color-blue;
-    border-color: @color-blue;
+    background-color: @color-link;
+    border-color: @color-link;
     &:hover {
-      background-color: @color-hover-bg;
-      border-color: @color-hover-bg;
+      background-color: lighten( @color-link, 10%);
+      border-color: lighten( @color-link, 10%);
     }
   }
   &.btn-secondary {
