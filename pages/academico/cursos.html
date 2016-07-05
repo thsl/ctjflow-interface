@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>CTJ Flow</title>
+  <title>CTJFlow</title>
 
   <link href="../../img/favicon.ico" rel="shortcut icon">
 
@@ -88,17 +88,17 @@
                           </div>
                         </div>
                         <div class="col-sm-4">
-                          <label class="form-label semibold" for="">Status do curso</label>
+                          <label class="form-label semibold" for="">Situação do curso</label>
                           <div class="form-group">
                             <div class="btn-group btn-group-sm" data-toggle="buttons">
-                              <label class="btn btn-secondary active">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Ativo
+                              <label class="btn btn-secondary-outline active">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Todos
                               </label>
-                              <label class="btn btn-secondary">
+                              <label class="btn btn-secondary-outline">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> Ativo
+                              </label>
+                              <label class="btn btn-secondary-outline">
                                 <input type="radio" name="options" id="option2" autocomplete="off"> Inativo
-                              </label>
-                              <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> Pendente
                               </label>
                             </div>
                           </div>
@@ -162,7 +162,7 @@
                         <th>Grupo(s)</th>
                         <th>Tipo</th>
                         <th>Valor</th>
-                        <th>Status</th>
+                        <th>Situação</th>
                         <th class="text-right">Ações</th>
                       </tr>
                       </thead>
@@ -183,17 +183,9 @@
                                     aria-haspopup="true" aria-expanded="false">Ações
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item"><i class="fa fa-retweet mr-xs" aria-hidden="true"></i>
-                                Associar a um grupo</a>
                               <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
                                                                    aria-hidden="true"></i>
                                 Editar</a>
-                              <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs"
-                                                                   aria-hidden="true"></i>
-                                Duplicar</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
-                                Inativar</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
                                 Excluir</a>
@@ -218,17 +210,9 @@
                                     aria-haspopup="true" aria-expanded="false">Ações
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item"><i class="fa fa-retweet mr-xs" aria-hidden="true"></i>
-                                Associar a um grupo</a>
                               <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
                                                                    aria-hidden="true"></i>
                                 Editar</a>
-                              <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs"
-                                                                   aria-hidden="true"></i>
-                                Duplicar</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
-                                Inativar</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
                                 Excluir</a>
@@ -299,19 +283,9 @@
                   <input type="text" class="form-control" id="money-mask-input" placeholder="R$">
                 </div>
                 <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Status do curso</label>
-                  <div class="form-group">
-                    <div class="btn-group btn-group-sm" data-toggle="buttons">
-                      <label class="btn btn-secondary active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Ativo
-                      </label>
-                      <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> Inativo
-                      </label>
-                      <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> Pendente
-                      </label>
-                    </div>
+                  <div class="checkbox-toggle mt-lg">
+                    <input type="checkbox" id="check-toggle-situacao"/>
+                    <label class="form-label" for="check-toggle-situacao">Ativo</label>
                   </div>
                 </div>
               </div>
@@ -320,10 +294,10 @@
                   <label class="form-label semibold" for="">Curso especial</label>
                   <div class="form-group">
                     <div class="btn-group btn-group-sm" data-toggle="buttons">
-                      <label class="btn btn-secondary active">
+                      <label class="btn btn-secondary-outline active">
                         <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Sim
                       </label>
-                      <label class="btn btn-secondary">
+                      <label class="btn btn-secondary-outline">
                         <input type="radio" name="options" id="option2" autocomplete="off"> Não
                       </label>
                     </div>
@@ -385,7 +359,7 @@
           <div class="card-block">
             <div class="row">
               <div class="col-md-4">
-                <label class="form-label semibold">Status do curso</label>
+                <label class="form-label semibold">Situação do curso</label>
                 <p class="text-success"><strong><i class="fa fa-check" aria-hidden="true"></i> Curso ativo</strong></p>
               </div>
               <div class="col-md-4">
@@ -405,7 +379,7 @@
               </div>
               <div class="col-md-4">
                 <label class="form-label semibold">Valor do curso</label>
-                <p>R$ 000,00</p>
+                <p class="text-warning"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Informação pendente</strong></p>
               </div>
               <div class="col-md-4">
                 <label class="form-label semibold">Clasifficação</label>

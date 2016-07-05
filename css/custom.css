@@ -526,7 +526,7 @@ video {
 }
 .no-border,
 .b-a-0 {
-  border: none;
+  border: none !important;
 }
 .b-a {
   border: solid 1px #d8e2e7;
@@ -544,10 +544,10 @@ video {
   border-bottom: solid 1px #d8e2e7;
 }
 .b-t-0 {
-  border-top: none;
+  border-top: none !important;
 }
 .b-r-0 {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 .border-primary {
   border-color: #2e3192;
@@ -743,31 +743,31 @@ video {
   margin-bottom: 15px;
 }
 .m-a-0 {
-  margin: 0;
+  margin: 0 !important;
 }
 .m-r-0 {
-  margin-right: 0;
+  margin-right: 0 !important;
 }
 .m-b-0 {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 .m-l-0 {
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 .m-t-0 {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 .m-x-0 {
   margin-left: 0;
-  margin-right: 0;
+  margin-right: 0 !important;
 }
 .m-y-0 {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 .m-x-auto {
   margin-right: auto;
-  margin-left: auto;
+  margin-left: auto !important;
 }
 .p-x-n {
   padding-left: -15px;
@@ -852,24 +852,24 @@ video {
   padding: 0;
 }
 .p-r-0 {
-  padding-right: 0;
+  padding-right: 0 !important;
 }
 .p-b-0 {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 }
 .p-l-0 {
-  padding-left: 0;
+  padding-left: 0 !important;
 }
 .p-t-0 {
-  padding-top: 0;
+  padding-top: 0 !important;
 }
 .p-x-0 {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .p-y-0 {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 .p-x-auto {
   padding-right: auto;
@@ -9525,6 +9525,9 @@ td.hiddenrow {
 .bck-analitcs-grey {
   background: url("../img/statistic-box-gray.png") 50% 50% no-repeat;
 }
+.hidden-iten {
+  display: none;
+}
 .mc {
   margin-left: auto;
   margin-right: auto;
@@ -10498,10 +10501,15 @@ a.btn-square-icon {
 .dropdown-menu {
   margin-top: 0;
 }
+.btn-group .btn.btn-secondary-outline,
+.btn-group-vertical .btn.btn-secondary-outline {
+  border-color: #bec5ca;
+}
 .btn-group .btn.active,
 .btn-group-vertical .btn.active {
   background-color: #5cb85c;
   border-color: #5cb85c;
+  color: #fff;
 }
 /*Customiza a tabela*/
 #tabexemplo-table-content tr {

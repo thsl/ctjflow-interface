@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>CTJ Flow</title>
+  <title>CTJFlow</title>
 
   <link href="../../img/favicon.ico" rel="shortcut icon">
 
@@ -88,7 +88,7 @@
                       <tr>
                         <th>Nome do grupo</th>
                         <th>Cursos associados</th>
-                        <th>Status</th>
+                        <th>Situação</th>
                         <th class="text-right">Ações</th>
                       </tr>
                       </thead>
@@ -168,16 +168,9 @@
                   </fieldset>
                 </div>
                 <div class="col-sm-6">
-                  <label class="form-label semibold" for="">Status do curso</label>
-                  <div class="form-group mt-sm">
-                    <div class="btn-group btn-group-sm" data-toggle="buttons">
-                      <label class="btn btn-secondary active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Ativo
-                      </label>
-                      <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> Inativo
-                      </label>
-                    </div>
+                  <div class="checkbox-toggle mt-lg">
+                    <input type="checkbox" id="check-toggle-1"/>
+                    <label class="form-label" for="check-toggle-1">Ativo</label>
                   </div>
                 </div>
               </div>
@@ -188,8 +181,9 @@
                           aria-hidden="true"></i>
                     Salvar
                   </button>
-                  <a href="#tabs-grupos-tab-1" data-toggle="tab" class="btn btn-secondary ml-md"> <i class="fa fa-ban mr-xs"
-                                                                                    aria-hidden="true"></i>
+                  <a href="#tabs-grupos-tab-1" data-toggle="tab" class="btn btn-secondary ml-md"> <i
+                          class="fa fa-ban mr-xs"
+                          aria-hidden="true"></i>
                     Cancelar</a>
                 </div>
               </div>
@@ -222,18 +216,21 @@
               <tr>
                 <th>Curso</th>
                 <th>Outros Grupo(s) associado(s)</th>
+                <th>Situação</th>
               </tr>
               </thead>
               <tbody>
               <tr>
                 <td>KIDS FUN</td>
                 <td><p>Infantil</p></td>
+                <td>Ativo</td>
               </tr>
               <tr>
                 <td>KIDS</td>
                 <td>
                   <p>Crianças</p>
                   <p>Infantil</p>
+                <td>Ativo</td>
                 </td>
 
               </tr>
@@ -242,18 +239,21 @@
                 <td>
                   <p>Crianças</p>
                 </td>
+                <td>Ativo</td>
               </tr>
               <tr>
                 <td>JUNIOR</td>
                 <td>
                   <p>Infantil</p>
                 </td>
+                <td>Ativo</td>
               </tr>
               <tr>
                 <td>THOMAS FLEX</td>
                 <td>
                   <p>Infantil</p>
                 </td>
+                <td>Ativo</td>
               </tr>
               </tbody>
             </table>

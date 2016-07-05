@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>CTJ Flow</title>
+  <title>CTJFlow</title>
 
   <link href="../../img/favicon.ico" rel="shortcut icon">
 
@@ -84,24 +84,23 @@
                             </fieldset>
                           </div>
                           <div class="col-lg-4 col-md-6 col-sm-12">
-                            <label class="form-label semibold" for="">Certificados</label>
-                            <div class="checkbox-toggle mt-sm">
+                            <div class="checkbox-toggle mt-lg">
                               <input type="checkbox" id="check-toggle-2"/>
                               <label class="form-label" for="check-toggle-2">Certificados</label>
                             </div>
                           </div>
                           <div class="col-lg-4 col-md-12">
-                            <label class="form-label semibold" for="">Status</label>
+                            <label class="form-label semibold" for="">Situação</label>
                             <div class="form-group">
                               <div class="btn-group btn-group-sm" data-toggle="buttons">
-                                <label class="btn btn-secondary active">
+                                <label class="btn btn-secondary-outline active">
                                   <input type="radio" name="options" id="option3" autocomplete="off" checked="">
                                   Todos
                                 </label>
-                                <label class="btn btn-secondary">
+                                <label class="btn btn-secondary-outline">
                                   <input type="radio" name="options" id="option1" autocomplete="off"> Ativos
                                 </label>
-                                <label class="btn btn-secondary">
+                                <label class="btn btn-secondary-outline">
                                   <input type="radio" name="options" id="option2" autocomplete="off"> Inativos
                                 </label>
                               </div>
@@ -165,6 +164,7 @@
                           <th>Nome do nível</th>
                           <th>Curso(s)</th>
                           <th>Certificados</th>
+                          <th>Situação</th>
                           <th class="text-right">Ações</th>
                         </tr>
                         </thead>
@@ -175,6 +175,7 @@
                                  data-target="#ModalDetalhaNivel"><strong>A1</strong></a></td>
                           <td>TEENS / THOMAS-GRIGGS HIGH SCHOOL</td>
                           <td>Sim</td>
+                          <td>Ativo</td>
                           <td>
                             <div class="btn-group btn-group-sm pull-right">
                               <button type="button" class="btn btn-default-outline dropdown-toggle"
@@ -182,16 +183,11 @@
                                       aria-haspopup="true" aria-expanded="false">Ações
                               </button>
                               <div class="dropdown-menu">
-                                <a class="dropdown-item"><i class="fa fa-retweet mr-xs" aria-hidden="true"></i>
-                                  Associar a cursos</a>
                                 <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
                                                                      aria-hidden="true"></i>
                                   Editar</a>
                                 <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i>
-                                  Duplicar</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
-                                  Inativar</a>
+                                  Replicar</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
                                   Excluir</a>
@@ -204,6 +200,7 @@
                                  data-target="#ModalDetalhaNivel"><strong>A2</strong></a></td>
                           <td>TEENS / THOMAS-GRIGGS HIGH SCHOOL</td>
                           <td>Sim</td>
+                          <td>Ativo</td>
                           <td>
                             <div class="btn-group btn-group-sm pull-right">
                               <button type="button" class="btn btn-default-outline dropdown-toggle"
@@ -211,16 +208,11 @@
                                       aria-haspopup="true" aria-expanded="false">Ações
                               </button>
                               <div class="dropdown-menu">
-                                <a class="dropdown-item"><i class="fa fa-retweet mr-xs" aria-hidden="true"></i>
-                                  Associar a cursos</a>
                                 <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
                                                                      aria-hidden="true"></i>
                                   Editar</a>
                                 <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i>
-                                  Duplicar</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
-                                  Inativar</a>
+                                  Replicar</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
                                   Excluir</a>
@@ -274,17 +266,15 @@
                     <input type="number" class="form-control" id="" placeholder="00">
                   </div>
                   <div class="col-sm-4">
-                    <label class="form-label semibold" for="">Replacement test</label>
                     <div class="checkbox-toggle">
                       <input type="checkbox" id="check-RepTest">
-                      <label for="check-RepTest">Sim</label>
+                      <label for="check-RepTest">Replacement test</label>
                     </div>
                   </div>
                   <div class="col-sm-4">
-                    <label class="form-label semibold" for="">Certificado</label>
                     <div class="checkbox-toggle">
                       <input type="checkbox" id="check-Certificado">
-                      <label for="check-Certificado">Sim</label>
+                      <label for="check-Certificado">Certificado</label>
                     </div>
                   </div>
                 </div>
@@ -310,9 +300,9 @@
                       <div class="card-block">
                         <div class="table-responsive">
                           <table class="datatable-on table table-hover">
-                            <thead>
+                            <thead class="hidden-iten">
                             <tr>
-                              <th></th>
+                              <th> </th>
                               <th class="text-right"></th>
                             </tr>
                             </thead>
@@ -431,10 +421,10 @@
               </div>
               <div class="col-md-2">
                 <label class="form-label semibold">Nota média</label>
-                <p>00,00</p>
+                <p class="text-warning"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Pendente</strong></p>
               </div>
               <div class="col-md-2">
-                <label class="form-label semibold">Status</label>
+                <label class="form-label semibold">Situação</label>
                 <p class="semibold text-success">Ativo</p>
               </div>
             </div>
@@ -448,8 +438,7 @@
           <div class="card-block">
             <div class="row">
               <div class="col-sm-12">
-
-                <div class="table-responsive mt-md">
+                <div class="table-responsive">
                   <table class="table table-hover">
                     <tbody>
                     <tr>
