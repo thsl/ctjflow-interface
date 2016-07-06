@@ -14,6 +14,8 @@
   <!-- css's gerais -->
   <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
 
+  <link rel="stylesheet" href="../../css/lib/bootstrap-sweetalert/sweetalert.css"/>
+
   <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="../../css/custom.css">
 
@@ -48,7 +50,7 @@
             <div class="tbl">
               <ul class="nav" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#tabs-cursos-tab-1" role="tab" data-toggle="tab">
+                  <a class="nav-link" href="cursos.html" role="tab">
 									<span class="nav-link-in">
 										Cursos
 										<span class="label label-pill label-primary">100</span>
@@ -56,10 +58,18 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#tabs-cursos-tab-2" role="tab" data-toggle="tab">
+                  <a class="nav-link" href="cursos.html" role="tab">
 									<span class="nav-link-in">
 										<i class="fa fa-plus mr-xs" aria-hidden="true"></i>
  Criar novo curso
+									</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="tabs-cursos-tab-3" role="tab">
+									<span class="nav-link-in">
+										<i class="fa fa-plus mr-xs" aria-hidden="true"></i>
+ Editar curso
 									</span>
                   </a>
                 </li>
@@ -70,160 +80,7 @@
           <div class="tab-content">
 
 
-            <section role="tabpanel" class="tab-pane fade in active" id="tabs-cursos-tab-1">
-              <section>
-                <div id="collapse-busca-one" class="collapse mb-md" role="tabpanel"
-                     aria-labelledby="collapse-busca-one"
-                     aria-expanded="true">
-                  <section class="card">
-                    <div class="card-block">
-                      <div class="row">
-                        <div class="col-sm-8">
-                          <label class="form-label semibold" for="">Nome do curso</label>
-                          <input type="text" class="form-control" aria-label="" placeholder="Nome do curso">
-                        </div>
-                        <div class="col-sm-4">
-                          <label class="form-label semibold" for="">Situação do curso</label>
-                          <div class="form-group">
-                            <div class="btn-group btn-group-sm" data-toggle="buttons">
-                              <label class="btn btn-secondary-outline active">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Todos
-                              </label>
-                              <label class="btn btn-secondary-outline">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> Ativo
-                              </label>
-                              <label class="btn btn-secondary-outline">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> Inativo
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <label class="form-label semibold" for="">Grupos do curso <span
-                                  class="semibold text-danger h4">*</span></label>
-                          <select class="select2" multiple="multiple">
-                            <option>Crianças</option>
-                            <option>Jovens e adultos</option>
-                            <option>TEENS</option>
-                            <option>TOP KIDS</option>
-                            <option>JUNIOR</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div class="divider-top">
-                            <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-search mr-xs"
-                                                                                    aria-hidden="true"></i>
-                              Buscar
-                            </button>
-                            <button type="button" class="btn btn-secondary btn-sm ml-md" data-toggle="collapse"
-                                    data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
-                                    aria-controls="collapseOne"><i class="fa fa-times" aria-hidden="true"></i> Cancelar
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-                <div class="row">
-                  <div class="col-sm-9">
-                    <div class="form-control-wrapper form-control-icon-right">
-                      <input type="text" class="form-control input-table-custom" placeholder="Filtre nos resultados">
-                      <i class="fa fa-search"></i>
-                    </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="mt-sm">
-                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
-                         aria-controls="collapseOne">
-                        <i class="fa fa-search-plus"
-                           aria-hidden="true"></i> Busca avançada</a>
-                    </p>
-                  </div>
-                </div>
-
-              </section>
-              <div class="row mt-md">
-                <div class="col-sm-12">
-                  <div class="table-responsive table-custom">
-                    <table class="datatable-on table table-hover" cellspacing="0" width="100%">
-                      <thead>
-                      <tr>
-                        <th>Nome do curso</th>
-                        <th>Grupo(s)</th>
-                        <th>Tipo</th>
-                        <th>Valor</th>
-                        <th>Situação</th>
-                        <th class="text-right">Ações</th>
-                      </tr>
-                      </thead>
-                      <tbody>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaGrupo"
-                                       href="#ModalDetalhaGrupo">KIDS
-                          FUN</a></strong></td>
-                        <td>Crianças / Jovens e adultos</td>
-                        <td>Presencial</td>
-                        <td>R$ 000,00</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="btn-group btn-group-sm pull-right">
-                            <button type="button" class="btn btn-default-outline dropdown-toggle"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">Ações
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="cursos--editar.html"><i class="fa fa-pencil-square-o mr-xs"
-                                                                   aria-hidden="true"></i>
-                                Editar</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
-                                Excluir</a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaGrupo"
-                                       href="#ModalDetalhaGrupo">THOMAS
-                          FLEX</a></strong></td>
-                        <td>Adultos</td>
-                        <td>Online</td>
-                        <td>R$ 000,00</td>
-                        <td><p class="text-warning"><i class="fa fa-exclamation-circle mr-xs" aria-hidden="true"></i>
-                          Pendente</p></td>
-                        <td>
-                          <div class="btn-group btn-group-sm pull-right">
-                            <button type="button" class="btn btn-default-outline dropdown-toggle"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">Ações
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="cursos--editar.html"><i class="fa fa-pencil-square-o mr-xs"
-                                                                   aria-hidden="true"></i>
-                                Editar</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
-                                Excluir</a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section role="tabpanel" class="tab-pane fade" id="tabs-cursos-tab-2">
+            <section role="tabpanel" class="tab-pane fade in active" id="tabs-cursos-tab-3">
               <div class="row mt-sm">
                 <div class="col-sm-12">
                   <h4 class="semibold"> Cadastrar novo curso</h4>
@@ -237,7 +94,7 @@
                   <fieldset class="form-group">
                     <label class="form-label semibold" for="">Nome do curso <span
                             class="semibold text-danger h4">*</span></label>
-                    <input type="text" class="form-control" id="" placeholder="Nome do curso">
+                    <input type="text" class="form-control" id="" placeholder="Nome do curso" value="THOMAS FLEX">
                   </fieldset>
                 </div>
 
@@ -246,7 +103,7 @@
                           class="semibold text-danger h4">*</span></label>
                   <select class="select2 select2-arrow">
                     <option>Online</option>
-                    <option>Híbrido</option>
+                    <option selected>Híbrido</option>
                     <option>Presencial</option>
                   </select>
                 </div>
@@ -257,17 +114,17 @@
                           class="semibold text-danger h4">*</span></label>
                   <select class="select2" multiple="multiple">
                     <option>Crianças</option>
-                    <option>Adolescentes</option>
+                    <option selected>Adolescentes</option>
                     <option>Jovens e adultos</option>
-                    <option>Cursos online</option>
-                    <option>Cursos especiais</option>
+                    <option selected>Cursos online</option>
+                    <option selected>Cursos especiais</option>
                   </select>
                 </div>
               </div>
               <div class="row divider-top">
                 <div class="col-lg-2">
                   <label class="form-label semibold" for="">Idade mínima</label>
-                  <input type="number" class="form-control" id="" placeholder="Idade">
+                  <input type="number" class="form-control" id="" placeholder="Idade" value="15">
                 </div>
                 <div class="col-lg-3">
                   <label class="form-label semibold" for="">Escolaridade</label>
@@ -275,11 +132,11 @@
                 </div>
                 <div class="col-lg-3">
                   <label class="form-label semibold" for="">Valor do curso</label>
-                  <input type="text" class="form-control" id="money-mask-input" placeholder="R$">
+                  <input type="text" class="form-control" id="money-mask-input" placeholder="R$" value="R$ 350,00">
                 </div>
                 <div class="col-sm-4">
                   <div class="checkbox-toggle mt-lg">
-                    <input type="checkbox" id="check-toggle-situacao"/>
+                    <input type="checkbox" id="check-toggle-situacao" checked/>
                     <label class="form-label" for="check-toggle-situacao">Ativo</label>
                   </div>
                 </div>
@@ -306,7 +163,8 @@
               <div class="row divider-top">
                 <div class="col-sm-12">
                   <label class="form-label semibold" for="">Objetivos do curso</label>
-                  <textarea rows="4" class="form-control" placeholder="Objetivos do curso"></textarea>
+                  <textarea rows="4" class="form-control" placeholder="Objetivos do curso">Neste curso, o jovem aprende a língua inglesa por meio de diálogos, leituras, redações, jogos, vídeos e discussão de textos que exploram temas de seu interesse. Todas as atividades integram as quatro habilidades básicas (falar, ouvir, ler e escrever) necessárias ao domínio do inglês.
+                  </textarea>
                 </div>
               </div>
               <div class="row divider-top">
@@ -429,10 +287,25 @@
                           aria-hidden="true"></i>
                     Salvar
                   </button>
+                  <button type="button" class="btn btn-primary btn-danger swal-btn-cancel"><i
+                          class="fa fa-times mr-xs"
+                          aria-hidden="true"></i>
+                    Excluir
+                  </button>
                 </div>
               </div>
             </section>
             <!--.tab-pane novo curso -->
+
+
+
+
+
+
+
+
+
+
 
 
           </div><!--.tab-content-->
@@ -642,6 +515,45 @@
 
 <script src="../../js/lib/angular/angular.min.js"></script>
 <script src="../../js/lib/angular/controllers.js"></script>
+
+<script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
+
+
+<script>
+  $(document).ready(function () {
+    $('.swal-btn-cancel').click(function (e) {
+      e.preventDefault();
+      swal({
+                title: "Você tem certeza desta ação?",
+                text: "Esta ação excuirá este registro",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Sim, excluir",
+                cancelButtonText: "Não, cancelar",
+                closeOnConfirm: false,
+                closeOnCancel: false
+              },
+              function (isConfirm) {
+                if (isConfirm) {
+                  swal({
+                    title: "Excluído!",
+                    text: "O registro foi excluído",
+                    type: "success",
+                    confirmButtonClass: "btn-success"
+                  });
+                } else {
+                  swal({
+                    title: "Cancelado",
+                    text: "Ação cancelada",
+                    type: "error",
+                    confirmButtonClass: "btn-danger"
+                  });
+                }
+              });
+    });
+  });
+</script>
 
 </body>
 </html>
