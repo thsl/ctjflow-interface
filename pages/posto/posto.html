@@ -77,22 +77,32 @@
                 <section class="card">
                   <div class="card-block">
                     <div class="row">
-                      <div class="col-sm-8">
+
+                      <div class="col-sm-5">
                         <label class="form-label semibold" for="">Nome do posto avançado</label>
                         <input type="text" class="form-control" aria-label="" placeholder="Nome do posto avançado">
                       </div>
+                      <div class="col-sm-3">
+                        <label class="form-label semibold" for="">Unidade</label>
+                        <select class="select2 select2-arrow">
+                          <option>Selecione</option>
+                          <option>Asa sul</option>
+                          <option>Asa norte</option>
+                          <option>Águas claras</option>
+                        </select>
+                      </div>
                       <div class="col-sm-4">
-                        <label class="form-label semibold" for="">Status</label>
+                        <label class="form-label semibold" for="">Situação</label>
                         <div class="form-group">
                           <div class="btn-group btn-group-sm" data-toggle="buttons">
-                            <label class="btn btn-secondary active">
+                            <label class="btn btn-secondary-outline active">
                               <input type="radio" name="options" id="" autocomplete="off" checked="">
                               Todos
                             </label>
-                            <label class="btn btn-secondary">
+                            <label class="btn btn-secondary-outline">
                               <input type="radio" name="options" id="" autocomplete="off"> Ativo
                             </label>
-                            <label class="btn btn-secondary">
+                            <label class="btn btn-secondary-outline">
                               <input type="radio" name="options" id="" autocomplete="off"> Inativo
                             </label>
                           </div>
@@ -142,7 +152,7 @@
                       <tr>
                         <th>Nome do posto</th>
                         <th>Unidade</th>
-                        <th>Status</th>
+                        <th>Situação</th>
                         <th>Gestor principal</th>
                         <th>Telefone</th>
                         <th class="text-right">Ações</th>
@@ -169,7 +179,7 @@
                                 Editar</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
-                                Inativar</a>
+                                Excluir</a>
                             </div>
                           </div>
                         </td>
@@ -194,7 +204,7 @@
                                 Editar</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
-                                Inativar</a>
+                                Excluir</a>
                             </div>
                           </div>
                         </td>
@@ -324,11 +334,9 @@
                     <div class="col-sm-12">
                       <label class="form-label semibold" for="">Interessados</label>
                       <select class="select2" multiple="multiple">
-                        <option>Crianças</option>
-                        <option>Adolescentes</option>
-                        <option>Jovens e adultos</option>
-                        <option>Cursos online</option>
-                        <option>Cursos especiais</option>
+                        <option>Luan Almeida Barbosa</option>
+                        <option>Otávio Goncalves Souza</option>
+                        <option>Ana Souza Martins</option>
                       </select>
                     </div>
                   </div>
