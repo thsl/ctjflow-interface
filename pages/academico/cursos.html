@@ -77,15 +77,9 @@
                   <section class="card">
                     <div class="card-block">
                       <div class="row">
-                        <div class="col-sm-5">
+                        <div class="col-sm-8">
                           <label class="form-label semibold" for="">Nome do curso</label>
                           <input type="text" class="form-control" aria-label="" placeholder="Nome do curso">
-                        </div>
-                        <div class="col-sm-3">
-                          <div class="checkbox-toggle mt-lg">
-                            <input type="checkbox" id="check-toggle-1"/>
-                            <label class="form-label" for="check-toggle-1">livro a definir</label>
-                          </div>
                         </div>
                         <div class="col-sm-4">
                           <label class="form-label semibold" for="">Situação do curso</label>
@@ -291,7 +285,7 @@
               </div>
               <div class="row divider-top">
                 <div class="col-sm-4">
-                  <div class="checkbox-toggle mt-lg">
+                  <div class="checkbox-toggle mt-md">
                     <input type="checkbox" id="check-toggle-esp"/>
                     <label class="form-label" for="check-toggle-esp">Curso especial</label>
                   </div>
@@ -316,7 +310,120 @@
               </div>
               <div class="row divider-top">
                 <div class="col-sm-12">
-                  <button type="button" class="btn btn-primary btn-success" data-dismiss="modal"><i
+                  <h5 class="semibold"><i class="fa fa-list mr-xs" aria-hidden="true"></i> Níveis</h5>
+
+                  <section class="widget widget-accordion mt-md" id="accordion" role="tablist"
+                           aria-multiselectable="true">
+                    <article class="panel">
+                      <div class="panel-heading" role="tab" id="headingOne">
+                        <a data-toggle="collapse"
+                           data-parent="#accordion"
+                           href="#collapseOne"
+                           aria-expanded="false"
+                           aria-controls="collapseOne">
+                          Nível A1
+                          <i class="font-icon font-icon-arrow-down"></i>
+                        </a>
+                      </div>
+                      <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
+                           aria-labelledby="headingOne">
+                        <div class="panel-collapse-in">
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <fieldset class="form-group">
+                                <label class="form-label semibold" for="exampleInput">Quantidade de
+                                  unidades</label>
+                                <p>3 unidades</p>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-4">
+                              <fieldset class="form-group">
+                                <label class="form-label semibold" for="exampleInput">Nota média</label>
+                                <p>00,00</p>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-4">
+                              <fieldset class="form-group">
+                                <label class="form-label semibold" for="exampleInput">Avaliação</label>
+                                <p>Notas</p>
+                              </fieldset>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <fieldset class="form-group">
+                                <label class="form-label semibold" for="exampleInput">Material didático</label>
+                                <p><img class="img-circle-xs" src="../../img/cursos/kids/hooray-a1.jpg"> Hooray!
+                                  A –
+                                  Student’s
+                                  Book
+                                  – Helbling Languages</p>
+                              </fieldset>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="panel">
+                      <div class="panel-heading" role="tab" id="heading-2">
+                        <a data-toggle="collapse"
+                           data-parent="#accordion"
+                           href="#collapse-2"
+                           aria-expanded="false"
+                           aria-controls="collapse-2">
+                          Nível A2
+                          <i class="font-icon font-icon-arrow-down"></i>
+                        </a>
+                      </div>
+                      <div id="collapse-2" class="panel-collapse collapse" role="tabpanel"
+                           aria-labelledby="heading-2">
+                        <div class="panel-collapse-in">
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <fieldset class="form-group">
+                                <label class="form-label semibold" for="exampleInput">Quantidade de
+                                  unidades</label>
+                                <p>3 unidades</p>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-4">
+                              <fieldset class="form-group">
+                                <label class="form-label semibold" for="exampleInput">Nota média</label>
+                                <p>00,00</p>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-4">
+                              <fieldset class="form-group">
+                                <label class="form-label semibold" for="exampleInput">Avaliação</label>
+                                <p>Notas</p>
+                              </fieldset>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <fieldset class="form-group">
+                                <label class="form-label semibold" for="exampleInput">Material didático</label>
+                                <p><img class="img-circle-xs" src="../../img/cursos/kids/hooray-a1.jpg"> Hooray!
+                                  A –
+                                  Student’s
+                                  Book
+                                  – Helbling Languages</p>
+                              </fieldset>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </section>
+
+                </div>
+              </div>
+              <div class="row divider-top">
+                <div class="col-sm-12">
+                  <button type="button" class="btn btn-primary btn-success"><i
                           class="fa fa-floppy-o mr-xs"
                           aria-hidden="true"></i>
                     Salvar
@@ -372,7 +479,8 @@
               </div>
               <div class="col-md-4">
                 <label class="form-label semibold">Valor do curso</label>
-                <p class="text-warning"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Informação pendente</strong></p>
+                <p class="text-warning"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Informação
+                  pendente</strong></p>
               </div>
               <div class="col-md-4">
                 <label class="form-label semibold">Clasifficação</label>
@@ -414,25 +522,19 @@
                     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                       <div class="panel-collapse-in">
                         <div class="row">
-                          <div class="col-lg-3">
+                          <div class="col-lg-4">
                             <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Unidades</label>
+                              <label class="form-label semibold" for="exampleInput">Quantidade de unidades</label>
                               <p>3 unidades</p>
                             </fieldset>
                           </div>
-                          <div class="col-lg-3">
+                          <div class="col-lg-4">
                             <fieldset class="form-group">
                               <label class="form-label semibold" for="exampleInput">Nota média</label>
                               <p>00,00</p>
                             </fieldset>
                           </div>
-                          <div class="col-lg-3">
-                            <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Nível</label>
-                              <p>TAG</p>
-                            </fieldset>
-                          </div>
-                          <div class="col-lg-3">
+                          <div class="col-lg-4">
                             <fieldset class="form-group">
                               <label class="form-label semibold" for="exampleInput">Avaliação</label>
                               <p>Notas</p>
@@ -469,25 +571,19 @@
                     <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
                       <div class="panel-collapse-in">
                         <div class="row">
-                          <div class="col-lg-3">
+                          <div class="col-lg-4">
                             <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Unidades</label>
+                              <label class="form-label semibold" for="exampleInput">Quantidade de unidades</label>
                               <p>3 unidades</p>
                             </fieldset>
                           </div>
-                          <div class="col-lg-3">
+                          <div class="col-lg-4">
                             <fieldset class="form-group">
                               <label class="form-label semibold" for="exampleInput">Nota média</label>
                               <p>00,00</p>
                             </fieldset>
                           </div>
-                          <div class="col-lg-3">
-                            <fieldset class="form-group">
-                              <label class="form-label semibold" for="exampleInput">Nível</label>
-                              <p>TAG</p>
-                            </fieldset>
-                          </div>
-                          <div class="col-lg-3">
+                          <div class="col-lg-4">
                             <fieldset class="form-group">
                               <label class="form-label semibold" for="exampleInput">Avaliação</label>
                               <p>Notas</p>
