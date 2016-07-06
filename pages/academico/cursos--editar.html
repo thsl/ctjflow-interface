@@ -83,7 +83,7 @@
             <section role="tabpanel" class="tab-pane fade in active" id="tabs-cursos-tab-3">
               <div class="row mt-sm">
                 <div class="col-sm-12">
-                  <h4 class="semibold"> Editar curso</h4>
+                  <h4 class="semibold"> Editar</h4>
                   <small>Campos com asterisco vermelho ( <span class="semibold text-danger">*</span> ) são
                     obrigatórios
                   </small>
@@ -92,14 +92,14 @@
               <div class="row mt-md divider-top">
                 <div class="col-lg-8">
                   <fieldset class="form-group">
-                    <label class="form-label semibold" for="">Nome do curso <span
+                    <label class="form-label semibold" for="">Nome<span
                             class="semibold text-danger h4">*</span></label>
-                    <input type="text" class="form-control" id="" placeholder="Nome do curso" value="THOMAS FLEX">
+                    <input type="text" class="form-control" id="" placeholder="Nome" value="THOMAS FLEX">
                   </fieldset>
                 </div>
 
                 <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Tipo de curso <span
+                  <label class="form-label semibold" for="">Tipo<span
                           class="semibold text-danger h4">*</span></label>
                   <select class="select2 select2-arrow">
                     <option>Online</option>
@@ -131,8 +131,10 @@
                   <input type="text" class="form-control" id="" placeholder="Escolaridade">
                 </div>
                 <div class="col-lg-3">
-                  <label class="form-label semibold" for="">Valor do curso</label>
-                  <input type="text" class="form-control" id="money-mask-input" placeholder="R$" value="R$ 350,00">
+                  <div class="form-group has-warning">
+                    <label class="form-label semibold" for="">Valor</label>
+                    <input type="text" class="form-control" id="money-mask-input" placeholder="R$" value="">
+                  </div>
                 </div>
                 <div class="col-sm-4">
                   <div class="checkbox-toggle mt-lg">
@@ -162,15 +164,21 @@
               </div>
               <div class="row divider-top">
                 <div class="col-sm-12">
-                  <label class="form-label semibold" for="">Objetivos do curso</label>
+                  <label class="form-label semibold" for="">Objetivos</label>
                   <textarea rows="4" class="form-control" placeholder="Objetivos do curso">Neste curso, o jovem aprende a língua inglesa por meio de diálogos, leituras, redações, jogos, vídeos e discussão de textos que exploram temas de seu interesse. Todas as atividades integram as quatro habilidades básicas (falar, ouvir, ler e escrever) necessárias ao domínio do inglês.
                   </textarea>
                 </div>
               </div>
               <div class="row divider-top">
                 <div class="col-sm-12">
-                  <h5 class="semibold"><i class="fa fa-list mr-xs" aria-hidden="true"></i> Níveis</h5>
-
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h5 class="semibold"><i class="fa fa-list mr-xs" aria-hidden="true"></i> Níveis</h5>
+                    </div>
+                  <div class="col-sm-6">
+                    <p class="text-right"><a href="#" class="btn btn-primary-outline btn-sm"><i class="fa fa-plus mr-xs" aria-hidden="true"></i> Adicionar nível</a> </p>
+                  </div>
+                  </div>
                   <section class="widget widget-accordion mt-md" id="accordion-nv-cad" role="tablist"
                            aria-multiselectable="true">
                     <article class="panel">
@@ -287,11 +295,13 @@
                           aria-hidden="true"></i>
                     Salvar
                   </button>
-                  <button type="button" class="btn btn-primary btn-danger swal-btn-cancel"><i
+                  <button type="button" class="btn btn-primary btn-danger swal-btn-cancel ml-sm"><i
                           class="fa fa-times mr-xs"
                           aria-hidden="true"></i>
                     Excluir
                   </button>
+                  <a href="cursos.html" class="btn btn-secondary ml-sm"> <i class="fa fa-ban mr-xs" aria-hidden="true"></i>
+                    Cancelar</a>
                 </div>
               </div>
             </section>
@@ -323,7 +333,7 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                 aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Detalhes do curso</h4>
+        <h4 class="modal-title">Detalhes</h4>
       </div>
       <div class="modal-body">
 
@@ -335,7 +345,7 @@
           <div class="card-block">
             <div class="row">
               <div class="col-md-4">
-                <label class="form-label semibold">Situação do curso</label>
+                <label class="form-label semibold">Situação</label>
                 <p class="text-success"><strong><i class="fa fa-check" aria-hidden="true"></i> Curso ativo</strong></p>
               </div>
               <div class="col-md-4">
@@ -343,18 +353,18 @@
                 <p>00/00/0000</p>
               </div>
               <div class="col-md-4">
-                <label class="form-label semibold">Grupo(s) do curso</label>
+                <label class="form-label semibold">Grupo(s)</label>
                 <p>Crianças / Jovens e adultos</p>
               </div>
             </div>
 
             <div class="row mt-lg">
               <div class="col-md-4">
-                <label class="form-label semibold">Tipo de curso</label>
+                <label class="form-label semibold">Tipo</label>
                 <p>Presencial / Online</p>
               </div>
               <div class="col-md-4">
-                <label class="form-label semibold">Valor do curso</label>
+                <label class="form-label semibold">Valor</label>
                 <p class="text-warning"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Informação
                   pendente</strong></p>
               </div>

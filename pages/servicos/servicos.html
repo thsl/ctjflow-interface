@@ -78,11 +78,11 @@
                     <div class="card-block">
                       <div class="row">
                         <div class="col-sm-8">
-                          <label class="form-label semibold" for="">Nome do serviço</label>
-                          <input type="text" class="form-control" aria-label="" placeholder="Nome do serviço">
+                          <label class="form-label semibold" for="">Nome</label>
+                          <input type="text" class="form-control" aria-label="" placeholder="Nome">
                         </div>
                         <div class="col-sm-4">
-                          <label class="form-label semibold" for="">Tipo de serviço</label>
+                          <label class="form-label semibold" for="">Tipo</label>
                           <select class="select2-arrow">
                             <option>Workshop</option>
                             <option>Teste</option>
@@ -235,9 +235,10 @@
                       <thead>
                       <tr>
                         <th>Serviço</th>
-                        <th>Descrição</th>
+                        <th>Tipo</th>
                         <th>Carga horária</th>
                         <th>Valor</th>
+                        <th>Situação</th>
                         <th class="text-right">Ações</th>
                       </tr>
                       </thead>
@@ -246,9 +247,10 @@
                       <tr>
                         <td><strong><a data-toggle="modal" data-target="#ModalDetalhaServico"
                                        href="#ModalDetalhaServico">Teste aplicado</a></strong></td>
-                        <td>Exames de proficiência em língua inglesa</td>
+                        <td>Workshop</td>
                         <td>40 horas</td>
                         <td>R$ 000,00</td>
+                        <td>Ativo</td>
                         <td>
                           <div class="btn-group btn-group-sm pull-right">
                             <button type="button" class="btn btn-default-outline dropdown-toggle"
@@ -259,12 +261,6 @@
                               <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
                                                                    aria-hidden="true"></i>
                                 Editar</a>
-                              <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs"
-                                                                   aria-hidden="true"></i>
-                                Duplicar</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
-                                Inativar</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
                                 Excluir</a>
@@ -276,9 +272,10 @@
                       <tr>
                         <td><strong><a data-toggle="modal" data-target="#ModalDetalhaServico"
                                        href="#ModalDetalhaServico">Quadro Europeu Comum (QECR)</a></strong></td>
-                        <td>Guia usado para descrever os diferentes níveis de conhecimento nos idiomas</td>
+                        <td>Evento</td>
                         <td>40 horas</td>
                         <td>R$ 000,00</td>
+                        <td>Inativo</td>
                         <td>
                           <div class="btn-group btn-group-sm pull-right">
                             <button type="button" class="btn btn-default-outline dropdown-toggle"
@@ -289,12 +286,6 @@
                               <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
                                                                    aria-hidden="true"></i>
                                 Editar</a>
-                              <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs"
-                                                                   aria-hidden="true"></i>
-                                Duplicar</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
-                                Inativar</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i>
                                 Excluir</a>
@@ -323,10 +314,9 @@
               <div class="row mt-md divider-top">
                 <div class="col-lg-8">
                   <fieldset class="form-group">
-                    <label class="form-label semibold" for="">Nome do serviço <span
+                    <label class="form-label semibold" for="">Nome<span
                             class="semibold text-danger h4">*</span></label>
-                    <input type="text" class="form-control" id="" placeholder="Nome do curso">
-                    <small class="text-muted">Defina o nome, tomando cuidado com as pontuações.</small>
+                    <input type="text" class="form-control" id="" placeholder="Nome">
                   </fieldset>
                 </div>
 
@@ -384,22 +374,20 @@
               </div>
               <div class="row divider-top">
                 <div class="col-sm-12">
-                  <label class="form-label semibold" for="">Curso(s) <span
+                  <label class="form-label semibold" for="">Grupos(s) <span
                           class="semibold text-danger h4">*</span></label>
                   <select class="select2" multiple="multiple">
-                    <option>Crianças</option>
-                    <option>Adolescentes</option>
-                    <option>Jovens e adultos</option>
-                    <option>Cursos online</option>
-                    <option>Cursos especiais</option>
+                    <option>Acadêmico</option>
+                    <option>Resource center</option>
+                    <option>Departamento de testes</option>
                   </select>
                 </div>
               </div>
               <div class="row divider-top pb-md">
                 <div class="col-sm-12">
-                  <label class="form-label semibold" for="">Descrição do serviço<span
+                  <label class="form-label semibold" for="">Descrição<span
                           class="semibold text-danger h4">*</span></label>
-                  <textarea rows="4" class="form-control" placeholder="Objetivos do curso"></textarea>
+                  <textarea rows="4" class="form-control" placeholder="Descrição"></textarea>
                 </div>
               </div>
               <div class="row divider-top pb-md">
@@ -428,7 +416,7 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                 aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Detalhes do Serviço</h4>
+        <h4 class="modal-title">Detalhes</h4>
       </div>
       <div class="modal-body">
 

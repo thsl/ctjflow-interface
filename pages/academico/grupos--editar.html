@@ -13,6 +13,9 @@
 
   <!-- css's gerais -->
   <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
+
+  <link rel="stylesheet" href="../../css/lib/bootstrap-sweetalert/sweetalert.css"/>
+
   <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="../../css/custom.css">
 
@@ -92,7 +95,7 @@
                   <fieldset class="form-group">
                     <label class="form-label semibold" for="">Nome do grupo <span
                             class="semibold text-danger h4">*</span></label>
-                    <input id="nome-grupo" class="form-control" name="signin_v1[<strong>Nome do grupo</strong>]" type="text" data-validation="[NOTEMPTY]" placeholder="Crianças">
+                    <input id="nome-grupo" class="form-control" name="signin_v1[<strong>Nome do grupo</strong>]" type="text" data-validation="[NOTEMPTY]" value="Crianças">
                   </fieldset>
                 </div>
                 <div class="col-sm-6">
@@ -104,9 +107,11 @@
               </div>
                 <div class="row divider-top pb-md">
                   <div class="col-sm-12">
-                    <button type="submit" class="btn btn-primary btn-success" id="notie-success"> <i class="fa fa-floppy-o mr-xs"></i> Salvar</button>
-                    <a href="grupos.html" class="btn btn-secondary ml-md"> <i class="fa fa-ban mr-xs" aria-hidden="true"></i>
+                    <button type="submit" class="btn btn-success" id="notie-success"> <i class="fa fa-floppy-o mr-xs"></i> Salvar</button>
+                    <button type="button" class="btn btn-danger swal-btn-cancel ml-sm" id=""> <i class="fa fa-times mr-xs"></i> Excluir</button>
+                    <a href="grupos.html" class="btn btn-secondary ml-sm"> <i class="fa fa-ban mr-xs" aria-hidden="true"></i>
                       Cancelar</a>
+
                   </div>
                 </div>
               </form>
@@ -140,8 +145,48 @@
 <script src="../../js/lib/angular/angular.min.js"></script>
 <script src="../../js/lib/angular/controllers.js"></script>
 
+<script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
+
 <script>
   $('#form-signin_v1').validate();
 </script>
+
+<script>
+  $(document).ready(function () {
+    $('.swal-btn-cancel').click(function (e) {
+      e.preventDefault();
+      swal({
+                title: "Você tem certeza desta ação?",
+                text: "Isto excluirá o grupo, mas não excluirá os cursos vinculados a ele.",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Sim, deletar",
+                cancelButtonText: "Não, cancelar",
+                closeOnConfirm: false,
+                closeOnCancel: false
+              },
+              function (isConfirm) {
+                if (isConfirm) {
+                  swal({
+                    title: "Excluído!",
+                    text: "O grupo foi excluído",
+                    type: "success",
+                    confirmButtonClass: "btn-success"
+                  });
+                } else {
+                  swal({
+                    title: "Cancelado",
+                    text: "Ação cancelada",
+                    type: "error",
+                    confirmButtonClass: "btn-danger"
+                  });
+                }
+              });
+    });
+  });
+</script>
+
+
 </body>
 </html>
