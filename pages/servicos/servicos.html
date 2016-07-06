@@ -77,11 +77,11 @@
                   <section class="card">
                     <div class="card-block">
                       <div class="row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-8">
                           <label class="form-label semibold" for="">Nome do serviço</label>
                           <input type="text" class="form-control" aria-label="" placeholder="Nome do serviço">
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                           <label class="form-label semibold" for="">Tipo de serviço</label>
                           <select class="select2-arrow">
                             <option>Workshop</option>
@@ -89,18 +89,64 @@
                             <option>Evento</option>
                           </select>
                         </div>
-                        <div class="col-sm-3"><label class="form-label semibold" for="">Público-alvo</label>
+                      </div>
+                      <div class="row mt-md divider-top">
+                        <div class="col-sm-4">
+                          <label class="form-label semibold" for="">Público-alvo</label>
                           <select class="select2-arrow">
                             <option>Empresários</option>
                             <option>Melhor idade</option>
                             <option>Jovens</option>
                           </select>
                         </div>
-                        <div class="col-sm-3">
-                          <label class="form-label semibold" for="">Divulgação site</label>
+                        <div class="col-sm-4">
+                          <label class="form-label semibold" for="">Situação</label>
                           <div class="form-group">
                             <div class="btn-group btn-group-sm" data-toggle="buttons">
                               <label class="btn btn-secondary-outline active">
+                                <input type="radio" name="options" id="" autocomplete="off" checked="">
+                                Todos
+                              </label>
+                              <label class="btn btn-secondary-outline">
+                                <input type="radio" name="options" id="" autocomplete="off" checked="">
+                                Ativos
+                              </label>
+                              <label class="btn btn-secondary-outline">
+                                <input type="radio" name="options" id="" autocomplete="off"> Inativos
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <label class="form-label semibold" for="">Gratuidade</label>
+                          <div class="form-group">
+                            <div class="btn-group btn-group-sm" data-toggle="buttons">
+                              <label class="btn btn-secondary-outline active">
+                                <input type="radio" name="options" id="" autocomplete="off" checked="">
+                                Todos
+                              </label>
+                              <label class="btn btn-secondary-outline">
+                                <input type="radio" name="options" id="" autocomplete="off" checked="">
+                                Sim
+                              </label>
+                              <label class="btn btn-secondary-outline">
+                                <input type="radio" name="options" id="" autocomplete="off">Não
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="row mt-md divider-top">
+                        <div class="col-sm-4">
+                          <label class="form-label semibold" for="">Divulgação no site</label>
+                          <div class="form-group">
+                            <div class="btn-group btn-group-sm" data-toggle="buttons">
+                              <label class="btn btn-secondary-outline active">
+                                <input type="radio" name="options" id="" autocomplete="off" checked="">
+                                Todos
+                              </label>
+                              <label class="btn btn-secondary-outline">
                                 <input type="radio" name="options" id="" autocomplete="off" checked="">
                                 Privado
                               </label>
@@ -110,30 +156,40 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="row mt-md divider-top">
-                        <div class="col-sm-3">
-                          <div class="checkbox-toggle">
-                            <input type="checkbox" id="check-toggle-Ativo"/>
-                            <label class="form-label" for="check-toggle-Ativo">Ativo</label>
+                        <div class="col-sm-4">
+                          <label class="form-label semibold" for="">Desconto</label>
+                          <div class="form-group">
+                            <div class="btn-group btn-group-sm" data-toggle="buttons">
+                              <label class="btn btn-secondary-outline active">
+                                <input type="radio" name="options" id="" autocomplete="off" checked="">
+                                Todos
+                              </label>
+                              <label class="btn btn-secondary-outline">
+                                <input type="radio" name="options" id="" autocomplete="off" checked="">
+                                Sim
+                              </label>
+                              <label class="btn btn-secondary-outline">
+                                <input type="radio" name="options" id="" autocomplete="off">Não
+                              </label>
+                            </div>
                           </div>
                         </div>
-                        <div class="col-sm-3">
-                          <div class="checkbox-toggle">
-                            <input type="checkbox" id="check-toggle-Gratuito"/>
-                            <label class="form-label" for="check-toggle-Gratuito">Gratuito</label>
-                          </div>
-                        </div>
-                        <div class="col-sm-3">
-                          <div class="checkbox-toggle">
-                            <input type="checkbox" id="check-toggle-Certificado"/>
-                            <label class="form-label" for="check-toggle-Certificado">Certificado</label>
-                          </div>
-                        </div>
-                        <div class="col-sm-3">
-                          <div class="checkbox-toggle">
-                            <input type="checkbox" id="check-toggle-Desconto"/>
-                            <label class="form-label" for="check-toggle-Desconto">Desconto</label>
+                        <div class="col-sm-4">
+                          <label class="form-label semibold" for="">Certificado</label>
+                          <div class="form-group">
+                            <div class="btn-group btn-group-sm" data-toggle="buttons">
+                              <label class="btn btn-secondary-outline active">
+                                <input type="radio" name="options" id="" autocomplete="off" checked="">
+                                Todos
+                              </label>
+                              <label class="btn btn-secondary-outline">
+                                <input type="radio" name="options" id="" autocomplete="off" checked="">
+                                Sim
+                              </label>
+                              <label class="btn btn-secondary-outline">
+                                <input type="radio" name="options" id="" autocomplete="off">Não
+                              </label>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -341,7 +397,7 @@
               </div>
               <div class="row divider-top pb-md">
                 <div class="col-sm-12">
-                  <label class="form-label semibold" for="">Objetivos do curso <span
+                  <label class="form-label semibold" for="">Descrição do serviço<span
                           class="semibold text-danger h4">*</span></label>
                   <textarea rows="4" class="form-control" placeholder="Objetivos do curso"></textarea>
                 </div>

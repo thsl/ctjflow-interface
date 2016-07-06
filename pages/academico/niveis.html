@@ -79,14 +79,25 @@
                         <div class="row">
                           <div class="col-lg-4 col-md-6 col-sm-12">
                             <fieldset class="form-group mb-0">
-                              <label class="form-label semibold" for="">Unidades</label>
+                              <label class="form-label semibold" for="">Quatidade de unidades</label>
                               <input type="text" class="form-control" id="" placeholder="000">
                             </fieldset>
                           </div>
                           <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="checkbox-toggle mt-lg">
-                              <input type="checkbox" id="check-toggle-2"/>
-                              <label class="form-label" for="check-toggle-2">Certificados</label>
+                            <label class="form-label semibold" for="">Certificado</label>
+                            <div class="form-group">
+                              <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                <label class="btn btn-secondary-outline active">
+                                  <input type="radio" name="options" id="option3" autocomplete="off" checked="">
+                                  Todos
+                                </label>
+                                <label class="btn btn-secondary-outline">
+                                  <input type="radio" name="options" id="option1" autocomplete="off"> Sim
+                                </label>
+                                <label class="btn btn-secondary-outline">
+                                  <input type="radio" name="options" id="option2" autocomplete="off"> Não
+                                </label>
+                              </div>
                             </div>
                           </div>
                           <div class="col-lg-4 col-md-12">
@@ -249,7 +260,7 @@
                 </div>
                 <div class="row divider-top pb-md">
                   <div class="col-sm-3">
-                    <label class="form-label semibold" for=""> Quatidade de Unidades <span
+                    <label class="form-label semibold" for=""> Quatidade de unidades <span
                             class="semibold text-danger h4">*</span></label>
                     <input type="number" class="form-control" id="" placeholder="00">
                   </div>
@@ -308,25 +319,12 @@
                                 1A -
                                 (Combo
                                 Split) + Activity Pack Teens 1 – Cengage Learning</p></td>
-                              <td>
-                                <div class="btn-group btn-group-sm pull-right">
-                                  <button type="button" class="btn btn-default-outline dropdown-toggle"
-                                          data-toggle="dropdown"
-                                          aria-haspopup="true" aria-expanded="false">Ações
-                                  </button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs"
-                                                                         aria-hidden="true"></i>
-                                      Duplicar</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
-                                      Inativar</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs"
-                                                                         aria-hidden="true"></i>
-                                      Excluir</a>
-                                  </div>
-                                </div>
+                              <td class="text-right">
+                                <button type="button" class="tabledit-edit-button btn btn-sm btn-danger"><i
+                                        class="fa fa-times mr-xs"
+                                        aria-hidden="true"></i>
+                                  Remover
+                                </button>
                               </td>
                             </tr>
                             <tr>
@@ -334,25 +332,12 @@
                                 Student’s
                                 Book –
                                 Helbling Languages</p></td>
-                              <td>
-                                <div class="btn-group btn-group-sm pull-right">
-                                  <button type="button" class="btn btn-default-outline dropdown-toggle"
-                                          data-toggle="dropdown"
-                                          aria-haspopup="true" aria-expanded="false">Ações
-                                  </button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs"
-                                                                         aria-hidden="true"></i>
-                                      Duplicar</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
-                                      Inativar</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs"
-                                                                         aria-hidden="true"></i>
-                                      Excluir</a>
-                                  </div>
-                                </div>
+                              <td class="text-right">
+                                <button type="button" class="tabledit-edit-button btn btn-sm btn-danger"><i
+                                        class="fa fa-times mr-xs"
+                                        aria-hidden="true"></i>
+                                  Remover
+                                </button>
                               </td>
                             </tr>
                             </tbody>

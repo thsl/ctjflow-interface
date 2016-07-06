@@ -10503,13 +10503,23 @@ a.btn-square-icon {
 }
 .btn-group .btn.btn-secondary-outline,
 .btn-group-vertical .btn.btn-secondary-outline {
-  border-color: #bec5ca;
+  border-color: #d4dee6;
+  background-color: #efefef;
+  color: #6b7a85;
+}
+.btn-group .btn.btn-secondary-outline:hover,
+.btn-group-vertical .btn.btn-secondary-outline:hover {
+  color: #91a1ad !important;
 }
 .btn-group .btn.active,
 .btn-group-vertical .btn.active {
   background-color: #5cb85c;
   border-color: #5cb85c;
   color: #fff;
+}
+.btn-group .btn.active:hover,
+.btn-group-vertical .btn.active:hover {
+  color: #fff !important;
 }
 /*Customiza a tabela*/
 #tabexemplo-table-content tr {
