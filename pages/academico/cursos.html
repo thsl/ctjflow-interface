@@ -13,6 +13,9 @@
 
   <!-- css's gerais -->
   <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
+
+  <link rel="stylesheet" href="../../css/lib/bootstrap-sweetalert/sweetalert.css"/>
+
   <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="../../css/custom.css">
 
@@ -312,20 +315,20 @@
                 <div class="col-sm-12">
                   <h5 class="semibold"><i class="fa fa-list mr-xs" aria-hidden="true"></i> Níveis</h5>
 
-                  <section class="widget widget-accordion mt-md" id="accordion" role="tablist"
+                  <section class="widget widget-accordion mt-md" id="accordion-nv-cad" role="tablist"
                            aria-multiselectable="true">
                     <article class="panel">
-                      <div class="panel-heading" role="tab" id="headingOne">
+                      <div class="panel-heading" role="tab" id="headingOne-nv-cad">
                         <a data-toggle="collapse"
-                           data-parent="#accordion"
-                           href="#collapseOne"
+                           data-parent="#accordion-nv-cad"
+                           href="#collapseOne-nv-cad"
                            aria-expanded="false"
-                           aria-controls="collapseOne">
+                           aria-controls="collapseOne-nv-cad">
                           Nível A1
                           <i class="font-icon font-icon-arrow-down"></i>
                         </a>
                       </div>
-                      <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
+                      <div id="collapseOne-nv-cad" class="panel-collapse collapse" role="tabpanel"
                            aria-labelledby="headingOne">
                         <div class="panel-collapse-in">
                           <div class="row">
@@ -367,18 +370,18 @@
                     </article>
 
                     <article class="panel">
-                      <div class="panel-heading" role="tab" id="heading-2">
+                      <div class="panel-heading" role="tab" id="heading-2-nv-cad">
                         <a data-toggle="collapse"
-                           data-parent="#accordion"
-                           href="#collapse-2"
+                           data-parent="#accordion-nv-cad"
+                           href="#collapse-2-nv-cad"
                            aria-expanded="false"
-                           aria-controls="collapse-2">
+                           aria-controls="collapse-2-nv-cad">
                           Nível A2
                           <i class="font-icon font-icon-arrow-down"></i>
                         </a>
                       </div>
-                      <div id="collapse-2" class="panel-collapse collapse" role="tabpanel"
-                           aria-labelledby="heading-2">
+                      <div id="collapse-2-nv-cad" class="panel-collapse collapse" role="tabpanel"
+                           aria-labelledby="heading-2-nv-cad">
                         <div class="panel-collapse-in">
                           <div class="row">
                             <div class="col-lg-4">
@@ -427,6 +430,11 @@
                           class="fa fa-floppy-o mr-xs"
                           aria-hidden="true"></i>
                     Salvar
+                  </button>
+                  <button type="button" class="btn btn-primary btn-danger swal-btn-cancel"><i
+                          class="fa fa-times mr-xs"
+                          aria-hidden="true"></i>
+                    Excluir
                   </button>
                 </div>
               </div>
@@ -639,6 +647,45 @@
 
 <script src="../../js/lib/angular/angular.min.js"></script>
 <script src="../../js/lib/angular/controllers.js"></script>
+
+<script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
+
+
+<script>
+  $(document).ready(function () {
+    $('.swal-btn-cancel').click(function (e) {
+      e.preventDefault();
+      swal({
+                title: "Você tem certeza desta ação?",
+                text: "Esta ação excuirá este registro",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Sim, excluir",
+                cancelButtonText: "Não, cancelar",
+                closeOnConfirm: false,
+                closeOnCancel: false
+              },
+              function (isConfirm) {
+                if (isConfirm) {
+                  swal({
+                    title: "Excluído!",
+                    text: "O registro foi excluído",
+                    type: "success",
+                    confirmButtonClass: "btn-success"
+                  });
+                } else {
+                  swal({
+                    title: "Cancelado",
+                    text: "Ação cancelada",
+                    type: "error",
+                    confirmButtonClass: "btn-danger"
+                  });
+                }
+              });
+    });
+  });
+</script>
 
 </body>
 </html>
