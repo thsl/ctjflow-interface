@@ -1,3 +1,4 @@
+// Extensão que faz com que o datatable ordene corretamente nomas que começam com caracteres especiais (ex. Águas claras)
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "portugues-pre": function ( data ) {
         var a = 'a';
@@ -59,7 +60,8 @@ $(document).ready(function () {
         }
     });
 
-    oTable = $('.table-custom .datatable-on').DataTable();   //pay attention to capital D, which is mandatory to retrieve "api" datatables' object, as @Lionel said
+    // Faz com que a busca fique fora do componente
+    oTable = $('.table-custom .datatable-on').DataTable();
     $('.input-table-custom').keyup(function () {
         oTable.search($(this).val()).draw();
     });
