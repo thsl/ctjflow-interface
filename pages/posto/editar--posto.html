@@ -13,6 +13,9 @@
 
   <!-- css's gerais -->
   <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
+
+  <link rel="stylesheet" href="../../css/lib/bootstrap-sweetalert/sweetalert.css"/>
+
   <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="../../css/custom.css">
 
@@ -47,7 +50,7 @@
             <div class="tbl">
               <ul class="nav" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#tabs-servicos-tab-1" role="tab" data-toggle="tab">
+                  <a class="nav-link" href="posto.html">
 									<span class="nav-link-in">
 										Postos avançados
 										<span class="label label-pill label-primary">100</span>
@@ -55,10 +58,17 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#tabs-servicos-tab-2" role="tab" data-toggle="tab">
+                  <a class="nav-link" href="posto.html">
 									<span class="nav-link-in">
 										<i class="fa fa-plus mr-xs" aria-hidden="true"></i>
  Criar novo posto avançado
+									</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#tabs-servicos-tab-3">
+									<span class="nav-link-in">
+										<i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar posto avançado
 									</span>
                   </a>
                 </li>
@@ -68,160 +78,10 @@
 
           <div class="tab-content">
 
-
-            <section role="tabpanel" class="tab-pane fade in active" id="tabs-servicos-tab-1">
-              <section>
-                <div id="collapse-busca-one" class="collapse mb-md" role="tabpanel"
-                            aria-labelledby="collapse-busca-one"
-                            aria-expanded="true">
-                <section class="card">
-                  <div class="card-block">
-                    <div class="row">
-
-                      <div class="col-sm-5">
-                        <label class="form-label semibold" for="">Nome</label>
-                        <input type="text" class="form-control" aria-label="" placeholder="Nome">
-                      </div>
-                      <div class="col-sm-3">
-                        <label class="form-label semibold" for="">Unidade</label>
-                        <select class="select2 select2-arrow">
-                          <option>Selecione</option>
-                          <option>Asa sul</option>
-                          <option>Asa norte</option>
-                          <option>Águas claras</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-4">
-                        <label class="form-label semibold" for="">Situação</label>
-                        <div class="form-group">
-                          <div class="btn-group btn-group-sm" data-toggle="buttons">
-                            <label class="btn btn-secondary-outline active">
-                              <input type="radio" name="options" id="" autocomplete="off" checked="">
-                              Todos
-                            </label>
-                            <label class="btn btn-secondary-outline">
-                              <input type="radio" name="options" id="" autocomplete="off"> Ativo
-                            </label>
-                            <label class="btn btn-secondary-outline">
-                              <input type="radio" name="options" id="" autocomplete="off"> Inativo
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row divider-top">
-                      <div class="col-sm-12">
-                        <div>
-                          <button type="button" class="btn btn-primary btn-sm mt-sm"><i class="fa fa-search mr-xs"
-                                                                                        aria-hidden="true"></i>
-                            Buscar
-                          </button>
-                          <button type="button" class="btn btn-secondary btn-sm ml-md mt-sm" data-toggle="collapse"
-                                  data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
-                                  aria-controls="collapseOne"><i class="fa fa-times" aria-hidden="true"></i> Cancelar
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-                <div class="row">
-                  <div class="col-sm-9">
-                    <div class="form-control-wrapper form-control-icon-right">
-                      <input type="text" class="form-control input-table-custom" placeholder="Filtre nos resultados">
-                      <i class="fa fa-search"></i>
-                    </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="mt-sm">
-                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
-                         aria-controls="collapseOne">
-                        <i class="fa fa-search-plus"
-                           aria-hidden="true"></i> Busca avançada</a>
-                    </p>
-                  </div>
-                </div>
-
-              </section>
-              <div class="row mt-md">
-                <div class="col-sm-12">
-                  <div class="table-responsive table-custom">
-                    <table class="datatable-on table table-hover" cellspacing="0" width="100%">
-                      <thead>
-                      <tr>
-                        <th>Nome</th>
-                        <th>Unidade</th>
-                        <th>Gestor principal</th>
-                        <th>Telefone</th>
-                        <th>Situação</th>
-                        <th class="text-right">Ações</th>
-                      </tr>
-                      </thead>
-                      <tbody>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Leonardo Da Vinci</a></strong></td>
-                        <td>Asa sul</td>
-                        <td>João Carlos Silva</td>
-                        <td>(61) 0000-0000</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="btn-group btn-group-sm pull-right">
-                            <button type="button" class="btn btn-default-outline dropdown-toggle"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">Ações
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
-                                                                   aria-hidden="true"></i>
-                                Editar</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
-                                Excluir</a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Sigma</a></strong></td>
-                        <td>Asa norte</td>
-                        <td>Aline Silva Linhares</td>
-                        <td>(61) 0000-0000</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="btn-group btn-group-sm pull-right">
-                            <button type="button" class="btn btn-default-outline dropdown-toggle"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">Ações
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs"
-                                                                   aria-hidden="true"></i>
-                                Editar</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i>
-                                Excluir</a>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-
-
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section role="tabpanel" class="tab-pane fade" id="tabs-servicos-tab-2">
+            <section role="tabpanel" class="tab-pane fade in active" id="tabs-servicos-tab-3">
               <div class="row mt-sm">
                 <div class="col-sm-12">
-                  <h4 class="semibold"> Cadastrar novo posto avançado</h4>
+                  <h4 class="semibold"> Editar posto avançado</h4>
                   <small>Campos com asterisco vermelho ( <span class="semibold text-danger">*</span> ) são
                     obrigatórios
                   </small>
@@ -239,7 +99,7 @@
                       <label class="form-label semibold" for="">Unidade</label>
                       <select class="select2 select2-arrow">
                         <option>Selecione</option>
-                        <option>Asa sul</option>
+                        <option selected>Asa sul</option>
                         <option>Asa norte</option>
                         <option>Águas claras</option>
                       </select>
@@ -249,7 +109,7 @@
                       <select class="select2 select2-arrow">
                         <option>Selecione</option>
                         <option>Leonardo da Vinci</option>
-                        <option>Sigma</option>
+                        <option selected>Sigma</option>
                         <option>CTJ</option>
                       </select>
                     </div>
@@ -270,7 +130,7 @@
 
               <section class="card card-default mt-md">
                 <header class="card-header">
-                  <h5 class="semibold"><i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização do posto
+                  <h5 class="semibold"><i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização
                   </h5>
                 </header>
                 <div class="card-block">
@@ -318,13 +178,13 @@
                   <div class="row">
                     <div class="col-sm-6">
                       <label class="form-label semibold" for="">Gestor do contrato</label>
-                      <input type="text" class="form-control" aria-label="" placeholder="Gestor do contrato">
+                      <input type="text" class="form-control" aria-label="" value="Otávio Goncalves Souza">
                     </div>
                     <div class="col-sm-6">
                       <label class="form-label semibold" for="">Responsável acadêmico</label>
                       <select class="select2 select2-arrow">
                         <option>Selecione</option>
-                        <option>Luan Almeida Barbosa</option>
+                        <option selected>Luan Almeida Barbosa</option>
                         <option>Otávio Goncalves Souza</option>
                         <option>Ana Souza Martins</option>
                       </select>
@@ -395,11 +255,19 @@
 
               <div class="row divider-top pb-md">
                 <div class="col-sm-12">
-                  <button type="button" class="btn btn-primary btn-success" data-dismiss="modal"><i
+                  <button type="button" class="btn btn-primary btn-success"><i
                           class="fa fa-floppy-o mr-xs"
                           aria-hidden="true"></i>
                     Salvar
                   </button>
+                  <button type="button" class="btn btn-primary btn-danger swal-btn-cancel ml-sm"><i
+                          class="fa fa-times mr-xs"
+                          aria-hidden="true"></i>
+                    Excluir
+                  </button>
+                  <a href="cursos.html" class="btn btn-secondary ml-sm"> <i class="fa fa-ban mr-xs"
+                                                                            aria-hidden="true"></i>
+                    Cancelar</a>
                 </div>
               </div>
             </section>
@@ -569,6 +437,45 @@
 
 <script src="../../js/lib/angular/angular.min.js"></script>
 <script src="../../js/lib/angular/controllers.js"></script>
+
+
+<script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('.swal-btn-cancel').click(function (e) {
+      e.preventDefault();
+      swal({
+                title: "Você tem certeza desta ação?",
+                text: "Esta ação excuirá este registro",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Sim, excluir",
+                cancelButtonText: "Não, cancelar",
+                closeOnConfirm: false,
+                closeOnCancel: false
+              },
+              function (isConfirm) {
+                if (isConfirm) {
+                  swal({
+                    title: "Excluído!",
+                    text: "O registro foi excluído",
+                    type: "success",
+                    confirmButtonClass: "btn-success"
+                  });
+                } else {
+                  swal({
+                    title: "Cancelado",
+                    text: "Ação cancelada",
+                    type: "error",
+                    confirmButtonClass: "btn-danger"
+                  });
+                }
+              });
+    });
+  });
+</script>
 
 </body>
 </html>
