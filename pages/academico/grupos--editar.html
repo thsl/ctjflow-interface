@@ -95,7 +95,7 @@
                   <fieldset class="form-group">
                     <label class="form-label semibold" for="">Nome do grupo <span
                             class="semibold text-danger h4">*</span></label>
-                    <input id="nome-grupo" class="form-control" name="signin_v1[<strong>Nome do grupo</strong>]" type="text" data-validation="[NOTEMPTY]" value="Crianças">
+                    <input id="nome-grupo" class="form-control" name="signin_v1[<strong>Nome do grupo</strong>]" type="text" data-validation="[NOTEMPTY]" value="Adolescente">
                   </fieldset>
                 </div>
                 <div class="col-sm-6">
@@ -107,7 +107,7 @@
               </div>
                 <div class="row divider-top pb-md">
                   <div class="col-sm-12">
-                    <button type="submit" class="btn btn-success" id="notie-success"> <i class="fa fa-floppy-o mr-xs"></i> Salvar</button>
+                    <button type="button" class="btn btn-success" id="notie-success"> <i class="fa fa-floppy-o mr-xs"></i> Salvar</button>
                     <button type="button" class="btn btn-danger swal-btn-cancel ml-sm" id=""> <i class="fa fa-times mr-xs"></i> Excluir</button>
                     <a href="grupos.html" class="btn btn-secondary ml-sm"> <i class="fa fa-ban mr-xs" aria-hidden="true"></i>
                       Cancelar</a>
@@ -146,6 +146,8 @@
 <script src="../../js/lib/angular/controllers.js"></script>
 
 <script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
+<script src="../../js/lib/notie/notie.js"></script>
+<script src="../../js/lib/notie/notie-init.js"></script>
 
 <script>
   $('#form-signin_v1').validate();
