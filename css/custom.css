@@ -10823,6 +10823,25 @@ a.btn-square-icon {
   line-height: 1.4;
   padding: 1px 0;
 }
+.box-typical .box-typical-header .tbl-cell.tbl-cell-title h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+.box-typical .box-typical-header .tbl-cell.tbl-cell-title h2 {
+  font-size: 2rem;
+}
+.box-typical .box-typical-header .tbl-cell.tbl-cell-title h3 {
+  font-size: 1.75rem;
+}
+.box-typical .box-typical-header .tbl-cell.tbl-cell-title h4 {
+  font-size: 1.5rem;
+}
+.box-typical .box-typical-header .tbl-cell.tbl-cell-title h5 {
+  font-size: 1.25rem;
+}
+.box-typical .box-typical-header .tbl-cell.tbl-cell-title h6 {
+  font-size: 1rem;
+}
 .box-typical .box-typical-header .tbl-cell.tbl-cell-actions {
   text-align: right;
   white-space: nowrap;
