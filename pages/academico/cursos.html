@@ -414,11 +414,10 @@
                   <input type="text" class="form-control" id="" placeholder="Escolaridade">
                 </div>
                 <div class="col-sm-4">
-                  <label class="form-label semibold" for="">Classificação</label>
-                  <select class="select2 select2-arrow">
-                    <option>Nível único</option>
-                    <option>Multi níveis</option>
-                  </select>
+                  <div class="checkbox-toggle mt-md pt-sm">
+                    <input type="checkbox" id="check-qtd-niveis" checked/>
+                    <label class="form-label" for="check-qtd-niveis">Multiníveis</label>
+                  </div>
                 </div>
               </div>
               <div class="row divider-top">
@@ -499,7 +498,7 @@
                                   <div class="dropdown-divider"></div>
                                   <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs"
                                                                        aria-hidden="true"></i>
-                                    Excluir</a>
+                                    Remover</a>
                                 </div>
                               </div>
                             </td>
@@ -524,7 +523,7 @@
                                   <div class="dropdown-divider"></div>
                                   <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs"
                                                                        aria-hidden="true"></i>
-                                    Excluir</a>
+                                    Remover</a>
                                 </div>
                               </div>
                             </td>
@@ -764,7 +763,7 @@
       </div>
       <div class="modal-body">
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <label class="form-label semibold" for="">Valor</label>
             <input type="number" class="form-control" aria-label="" placeholder="Valor">
           </div>
@@ -777,6 +776,12 @@
               <div class="col-sm-6">
                 <input id="datetimepicker-final" type="text" value="" class="form-control" placeholder="Selecione a data final">
               </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="checkbox-toggle mt-md">
+              <input type="checkbox" id="check-situacao-valor"/>
+              <label class="form-label" for="check-situacao-valor">Ativo</label>
             </div>
           </div>
         </div>
