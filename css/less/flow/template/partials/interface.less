@@ -733,6 +733,25 @@ a.label-light-grey:hover {
 }
 
 // Colored
+
+.table-inactive,
+.table-inactive > td,
+.table-inactive > th {
+  background-color: @color-bg-grey;
+  color: @color-grey-blue-lighter-txt;
+}
+
+.table-active-visual {
+  & > td {
+    background-color: @white;
+    border-bottom: 2px solid @color-grey-blue-lighter-txt;
+    font-weight: 700;
+  }
+  & > th {
+
+  }
+}
+
 .table-active,
 .table-active > td,
 .table-active > th {

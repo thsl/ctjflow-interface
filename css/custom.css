@@ -4559,6 +4559,17 @@ a.label-light-grey:hover {
 .table-striped tbody tr:nth-of-type(even) {
   background-color: #fbfcfd;
 }
+.table-inactive,
+.table-inactive > td,
+.table-inactive > th {
+  background-color: #ecf2f5;
+  color: #919fa9;
+}
+.table-active-visual > td {
+  background-color: #ffffff;
+  border-bottom: 2px solid #919fa9;
+  font-weight: 700;
+}
 .table-active,
 .table-active > td,
 .table-active > th {
@@ -9502,6 +9513,9 @@ a.toggle-icon {
 }
 .table a.toggle-icon {
   border-bottom: none;
+}
+.table .row-b-t-0 td {
+  border-top: none !important;
 }
 .img-circle-sm {
   width: 40px;
