@@ -4565,8 +4565,15 @@ a.label-light-grey:hover {
   background-color: #ecf2f5;
   color: #919fa9;
 }
-.table-active-visual > td {
+.table-active-next > td {
   background-color: #ffffff;
+  color: #757575;
+}
+.table-active-next > th {
+  color: #757575;
+}
+.table-active-visual > td {
+  background-color: #edf9ee;
   border-bottom: 2px solid #919fa9;
   font-weight: 700;
 }
