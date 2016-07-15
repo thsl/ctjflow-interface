@@ -645,7 +645,6 @@
                       <th>Data fim</th>
                       <th>Situação</th>
                       <th>Valor</th>
-                      <th>Observação</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -654,21 +653,18 @@
                       <td>00/00/0000</td>
                       <td>Ativo</td>
                       <td>R$450,00</td>
-                      <td>Alteração por reajuste inflacionário </td>
                     </tr>
                     <tr class="table-active-visual">
                       <td>00/00/0000</td>
                       <td>00/00/0000</td>
                       <td>Ativo</td>
                       <td>R$450,00</td>
-                      <td>Alteração por reajuste inflacionário </td>
                     </tr>
                     <tr class="table-inactive">
                       <td>00/00/0000</td>
                       <td>00/00/0000</td>
                       <td>Ativo</td>
                       <td>R$450,00</td>
-                      <td>Alteração por reajuste inflacionário </td>
                     </tr>
 
                     </tbody>
@@ -819,12 +815,15 @@
             <input type="number" class="form-control" aria-label="" placeholder="Valor">
           </div>
           <div class="col-md-6">
-            <label class="form-label semibold" for="">Vigência</label>
+            <label class="form-label semibold" for="">Período de vigência</label>
             <div class="row">
               <div class="col-sm-6">
                 <input id="datetimepicker-inicial" type="text" value="" class="form-control" placeholder="Selecione a data inicial">
               </div>
-              <div class="col-sm-6">
+              <div class="col-sm-1 text-center">
+                <p class="mt-sm">à</p>
+              </div>
+              <div class="col-sm-5">
                 <input id="datetimepicker-final" type="text" value="" class="form-control" placeholder="Selecione a data final">
               </div>
             </div>
