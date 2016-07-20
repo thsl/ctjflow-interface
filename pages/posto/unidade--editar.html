@@ -194,45 +194,72 @@
 
 
 
-              <div class="row mt-md">
-                <div class="col-sm-12">
-                  <section class="box-typical">
-                    <header class="box-typical-header header-bordered">
-                      <div class="tbl-row">
-                        <div class="tbl-cell tbl-cell-title">
-                          <h5 class="semibold"><i class="fa fa-phone" aria-hidden="true"></i> Telefones
-                          </h5>
+              <section class="card card-default mt-md">
+                <header class="card-header">
+                  <h5 class="semibold"><i class="fa fa-phone mr-xs" aria-hidden="true"></i> Telefones
+                  </h5>
+                </header>
+                <div class="card-block">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="row mt-md">
+                        <div class="col-sm-7">
+                          <div class="row">
+                            <div class="col-sm-12 mb-md">
+                              <label class="form-label semibold" for="">
+                                Telefones</label>
+                            </div>
+                            <div class="col-sm-5">
+                              <label class="form-label semibold" for="">Tipo</label>
+                              <select class="select2 select2-arrow">
+                                <option>Selecione</option>
+                                <option>Principal</option>
+                                <option>Comercial</option>
+                                <option>Outros</option>
+                              </select>
+                            </div>
+                            <div class="col-sm-7">
+                              <label class="form-label semibold" for="">Número</label>
+                              <div class="input-group">
+                                <input type="number" class="form-control" placeholder="Número">
+                        <span class="input-group-btn">
+                          <button class="btn btn-success-outline" type="button"><i class="fa fa-plus"
+                                                                                   aria-hidden="true"></i>
+                          </button>
+                        </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-5">
+                          <label class="form-label semibold" for="">Telefones cadastrados</label>
+                          <table class="table">
+                            <thead>
+                            <tr>
+                              <th>Tipo</th>
+                              <th>Número</th>
+                              <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td>Principal</td>
+                              <td>(61) 0000-0000</td>
+                              <td><button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                            </tr>
+                            <tr>
+                              <td>Comercial</td>
+                              <td>(61) 0000-0000</td>
+                              <td><button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                            </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
-                    </header>
-                    <div class="card-block">
-                      <div class="table-responsive">
-                        <table class="table mt-md">
-                          <thead>
-                          <tr>
-                            <th>Tipo</th>
-                            <th>Número</th>
-                            <th></th>
-                          </tr>
-                          </thead>
-                          <tbody>
-                          <tr>
-                            <td>Principal</td>
-                            <td>(61) 3442-5757</td>
-                            <td><button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i class="fa fa-times" aria-hidden="true"></i></button></td>
-                          </tr>
-                          <tr>
-                            <td>Comercial</td>
-                            <td>(61) 3442-5757</td>
-                            <td><button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i class="fa fa-times" aria-hidden="true"></i></button></td>
-                          </tr>
-                          </tbody>
-                        </table>
-                      </div>
                     </div>
-                  </section>
+                  </div>
                 </div>
-              </div>
+              </section>
 
 
 
