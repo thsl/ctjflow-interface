@@ -194,7 +194,7 @@
                           </tr>
                           </thead>
                           <tbody>
-                          <tr class="table-active-next">
+                          <tr class="table-active-next" data-toggle="tooltip" data-placement="top" title="Próximo valor vigente">
                             <td>00/00/0000</td>
                             <td>00/00/0000</td>
                             <td>Ativo</td>
@@ -219,7 +219,7 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="table-active-visual">
+                          <tr class="table-active-visual" data-toggle="tooltip" data-placement="top" title="Valor vigente">
                             <td>00/00/0000</td>
                             <td>00/00/0000</td>
                             <td>Ativo</td>
@@ -244,7 +244,7 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="table-inactive">
+                          <tr class="table-inactive" data-toggle="tooltip" data-placement="top" title="Valor inativo">
                             <td>00/00/0000</td>
                             <td>00/00/0000</td>
                             <td>Ativo</td>
@@ -252,9 +252,25 @@
                             <td class="text-right">
                             </td>
                           </tr>
-
                           </tbody>
                         </table>
+                      </div>
+                      <div class="row mt-md">
+                        <div class="col-xs-12 mb-sm">
+                          <strong><small>Legenda da tabela</small></strong>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                          <small><i class="fa fa-circle-thin mr-xs" aria-hidden="true"></i> Próximo valor vigente
+                          </small>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                          <small><i class="fa fa-circle mr-xs text-success" aria-hidden="true"></i> Valor vigente
+                          </small>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                          <small><i class="fa fa-circle mr-xs" aria-hidden="true"></i> Valor inativo
+                          </small>
+                        </div>
                       </div>
                     </div>
                   </section>
