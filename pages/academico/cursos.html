@@ -473,7 +473,6 @@
                             <th>Data fim</th>
                             <th>Situação</th>
                             <th>Valor</th>
-                            <th>Observação</th>
                             <th class="text-right">Ações</th>
                           </tr>
                           </thead>
@@ -483,7 +482,6 @@
                             <td>00/00/0000</td>
                             <td>Ativo</td>
                             <td>R$450,00</td>
-                            <td>Alteração por reajuste inflacionário </td>
                             <td class="text-right">
                               <div class="btn-group btn-group-sm pull-right">
                                 <button type="button" class="btn btn-default-outline dropdown-toggle"
@@ -509,7 +507,6 @@
                             <td>00/00/0000</td>
                             <td>Ativo</td>
                             <td>R$450,00</td>
-                            <td>Alteração por reajuste inflacionário </td>
                             <td class="text-right">
                               <div class="btn-group btn-group-sm pull-right">
                                 <button type="button" class="btn btn-default-outline dropdown-toggle"
@@ -535,12 +532,28 @@
                             <td>00/00/0000</td>
                             <td>Ativo</td>
                             <td>R$450,00</td>
-                            <td>Alteração por reajuste inflacionário </td>
                             <td class="text-right">
                             </td>
                           </tr>
                           </tbody>
                         </table>
+                      </div>
+                      <div class="row mt-md">
+                        <div class="col-xs-12 mb-sm">
+                          <strong><small>Legenda da tabela</small></strong>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                          <small><i class="fa fa-circle-thin mr-xs" aria-hidden="true"></i> Próximo valor vigente
+                          </small>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                          <small><i class="fa fa-circle mr-xs text-success" aria-hidden="true"></i> Valor vigente
+                          </small>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                          <small><i class="fa fa-circle mr-xs" aria-hidden="true"></i> Valor inativo
+                          </small>
+                        </div>
                       </div>
                     </div>
                   </section>
@@ -604,17 +617,20 @@
             </div>
 
             <div class="row mt-lg">
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <label class="form-label semibold">Tipo de curso</label>
                 <p>Presencial / Online</p>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <label class="form-label semibold">Valor</label>
-                <p class="text-warning"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Informação
-                  pendente</strong></p>
+                <p class="text-warning"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Pendente</strong></p>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <label class="form-label semibold">Multinível</label>
+                <p>Sim</p>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label semibold">Curso especial</label>
                 <p>Sim</p>
               </div>
             </div>
@@ -646,31 +662,51 @@
                       <th>Data fim</th>
                       <th>Situação</th>
                       <th>Valor</th>
+                      <th>Observação</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="table-active-next">
+                    <tr class="table-active-next" data-toggle="tooltip" data-placement="top" title="Próximo valor vigente">
                       <td>00/00/0000</td>
                       <td>00/00/0000</td>
                       <td>Ativo</td>
                       <td>R$450,00</td>
+                      <td>Alteração por reajuste inflacionário </td>
                     </tr>
-                    <tr class="table-active-visual">
+                    <tr class="table-active-visual" data-toggle="tooltip" data-placement="top" title="Valor vigente">
                       <td>00/00/0000</td>
                       <td>00/00/0000</td>
                       <td>Ativo</td>
                       <td>R$450,00</td>
+                      <td>Alteração por reajuste inflacionário </td>
                     </tr>
-                    <tr class="table-inactive">
+                    <tr class="table-inactive" data-toggle="tooltip" data-placement="top" title="Valor inativo">
                       <td>00/00/0000</td>
                       <td>00/00/0000</td>
                       <td>Ativo</td>
                       <td>R$450,00</td>
+                      <td>Alteração por reajuste inflacionário </td>
                     </tr>
-
                     </tbody>
                   </table>
                 </div>
+              </div>
+            </div>
+            <div class="row mt-md">
+              <div class="col-xs-12 mb-sm">
+                <strong><small>Legenda da tabela</small></strong>
+              </div>
+              <div class="col-sm-4 text-center">
+                <small><i class="fa fa-circle-thin mr-xs" aria-hidden="true"></i> Próximo valor vigente
+                </small>
+              </div>
+              <div class="col-sm-4 text-center">
+                <small><i class="fa fa-circle mr-xs text-success" aria-hidden="true"></i> Valor vigente
+                </small>
+              </div>
+              <div class="col-sm-4 text-center">
+                <small><i class="fa fa-circle mr-xs" aria-hidden="true"></i> Valor inativo
+                </small>
               </div>
             </div>
           </div>

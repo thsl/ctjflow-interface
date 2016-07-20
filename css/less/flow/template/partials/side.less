@@ -40,7 +40,7 @@
       }
     }
   }
-  a, > li > span {
+  a, li > span {
     display: block;
     padding: 11px 10px 11px 46px;
     position: relative;
@@ -85,7 +85,7 @@
   }
 
   // Menu Item with Submenu
-  > li.with-sub {
+  li.with-sub {
     .hover_animate();
     > span {
       padding-right: 25px;
@@ -105,10 +105,40 @@
         transform: rotate(-90deg);
       }
     }
+
+    li.with-sub {
+      > span {
+        padding-left: 45px;
+      }
+
+      li > a, li > span {
+        padding-left: 55px;
+      }
+
+      li.with-sub {
+        > span {
+          padding-left: 55px;
+        }
+
+        li > a, li > span {
+          padding-left: 65px;
+        }
+
+        li.with-sub {
+          > span {
+            padding-left: 65px;
+          }
+
+          li > a, li > span {
+            padding-left: 65px;
+          }
+        }
+      }
+    }
   }
 
   // Menu Opened Item
-  > li.opened {
+  li.opened {
     background-color: @color-bg-grey-light;
     > span {
       &:before {
@@ -272,7 +302,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-brown;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, &.opened.with-sub > span, .with-sub > span {
       border-left-color: @color-brown;
     }
   }
@@ -280,7 +310,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-green;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-green;
     }
   }
@@ -288,7 +318,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-gold;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-gold;
     }
   }
@@ -296,7 +326,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-blue;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-blue;
     }
     &.opened a, &.opened > .active {
@@ -307,7 +337,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-purple;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-purple;
     }
   }
@@ -315,7 +345,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-orange-red;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-orange-red;
     }
   }
@@ -323,7 +353,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-grey;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-grey;
     }
   }
@@ -331,7 +361,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-red;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-red;
     }
   }
@@ -339,7 +369,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-aquamarine;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-aquamarine;
     }
   }
@@ -347,7 +377,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-magenta;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-magenta;
     }
   }
@@ -355,7 +385,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-blue-dirty;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-blue-dirty;
     }
   }
@@ -363,7 +393,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-coral;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-coral;
     }
   }
@@ -371,7 +401,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-pink-red;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-pink-red;
     }
   }
@@ -379,7 +409,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-pink;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-pink;
     }
   }
@@ -387,7 +417,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-blue-darker;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-blue-darker;
     }
   }
@@ -395,7 +425,7 @@
     .font-icon, .glyphicon, .fa {
       color: @color-blue-sky;
     }
-    &.opened a, &.opened > span {
+    &.opened a, &.opened > span, .with-sub > span {
       border-left-color: @color-blue-sky;
     }
   }
@@ -722,6 +752,26 @@
         }
         &:hover:before {
           border-top-color: #fff;
+        }
+      }
+
+      ul {
+        > li.with-sub {
+          a, > span {
+            border-left-color: transparent;
+            &:hover {
+              background-color: #fff !important;
+              .lbl {
+                color: @color-text;
+              }
+              .font-icon, .glyphicon, .fa {
+                color: @color-grey-blue-lighter-txt;
+                &.active:after {
+                  border-color: #fff !important;
+                }
+              }
+            }
+          }
         }
       }
     }

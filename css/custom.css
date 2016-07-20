@@ -7655,7 +7655,7 @@ body.modal-open {
   border-top: none;
 }
 .side-menu-list a,
-.side-menu-list > li > span {
+.side-menu-list li > span {
   display: block;
   padding: 11px 10px 11px 46px;
   position: relative;
@@ -7664,31 +7664,31 @@ body.modal-open {
   border-left: solid 4px transparent;
 }
 .side-menu-list a:hover,
-.side-menu-list > li > span:hover {
+.side-menu-list li > span:hover {
   background-color: #ecf2f5;
 }
 .side-menu-list a:hover .lbl,
-.side-menu-list > li > span:hover .lbl {
+.side-menu-list li > span:hover .lbl {
   color: #343434;
 }
 .side-menu-list a.label-right,
-.side-menu-list > li > span.label-right {
+.side-menu-list li > span.label-right {
   padding-right: 38px;
 }
 .side-menu-list a.label-right .label,
-.side-menu-list > li > span.label-right .label {
+.side-menu-list li > span.label-right .label {
   position: absolute;
   right: 21px;
   top: 50%;
   margin-top: -8px;
 }
 .side-menu-list a.active,
-.side-menu-list > li > span.active {
+.side-menu-list li > span.active {
   background-color: #ecf2f5;
   border-left: solid 4px transparent;
 }
 .side-menu-list a.active :before,
-.side-menu-list > li > span.active :before {
+.side-menu-list li > span.active :before {
   content: '';
   position: absolute;
   left: 0;
@@ -7702,16 +7702,16 @@ body.modal-open {
   border-color: transparent transparent transparent #2e3192;
 }
 .side-menu-list a.active .lbl,
-.side-menu-list > li > span.active .lbl {
+.side-menu-list li > span.active .lbl {
   color: #343434;
 }
-.side-menu-list > li.with-sub {
+.side-menu-list li.with-sub {
   transition: all 0.2s ease-in-out;
 }
-.side-menu-list > li.with-sub > span {
+.side-menu-list li.with-sub > span {
   padding-right: 25px;
 }
-.side-menu-list > li.with-sub > span:before {
+.side-menu-list li.with-sub > span:before {
   content: '';
   position: absolute;
   right: 21px;
@@ -7726,16 +7726,37 @@ body.modal-open {
   transition: all 0.2s ease-in-out;
   transform: rotate(-90deg);
 }
-.side-menu-list > li.opened {
+.side-menu-list li.with-sub li.with-sub > span {
+  padding-left: 45px;
+}
+.side-menu-list li.with-sub li.with-sub li > a,
+.side-menu-list li.with-sub li.with-sub li > span {
+  padding-left: 55px;
+}
+.side-menu-list li.with-sub li.with-sub li.with-sub > span {
+  padding-left: 55px;
+}
+.side-menu-list li.with-sub li.with-sub li.with-sub li > a,
+.side-menu-list li.with-sub li.with-sub li.with-sub li > span {
+  padding-left: 65px;
+}
+.side-menu-list li.with-sub li.with-sub li.with-sub li.with-sub > span {
+  padding-left: 65px;
+}
+.side-menu-list li.with-sub li.with-sub li.with-sub li.with-sub li > a,
+.side-menu-list li.with-sub li.with-sub li.with-sub li.with-sub li > span {
+  padding-left: 65px;
+}
+.side-menu-list li.opened {
   background-color: #f6f8fa;
 }
-.side-menu-list > li.opened > span:before {
+.side-menu-list li.opened > span:before {
   transform: rotate(0deg);
 }
-.side-menu-list > li.opened > span .lbl {
+.side-menu-list li.opened > span .lbl {
   color: #343434;
 }
-.side-menu-list > li.opened > ul {
+.side-menu-list li.opened > ul {
   display: block !important;
 }
 .side-menu-list .font-icon,
@@ -7897,7 +7918,9 @@ body.modal-open {
   color: #cd6724;
 }
 .side-menu-list > li.brown.opened a,
-.side-menu-list > li.brown.opened > span {
+.side-menu-list > li.brown.opened > span,
+.side-menu-list > li.brown.opened.with-sub > span,
+.side-menu-list > li.brown .with-sub > span {
   border-left-color: #cd6724;
 }
 .side-menu-list > li.green .font-icon,
@@ -7906,7 +7929,8 @@ body.modal-open {
   color: #46c35f;
 }
 .side-menu-list > li.green.opened a,
-.side-menu-list > li.green.opened > span {
+.side-menu-list > li.green.opened > span,
+.side-menu-list > li.green .with-sub > span {
   border-left-color: #46c35f;
 }
 .side-menu-list > li.gold .font-icon,
@@ -7915,7 +7939,8 @@ body.modal-open {
   color: #f29824;
 }
 .side-menu-list > li.gold.opened a,
-.side-menu-list > li.gold.opened > span {
+.side-menu-list > li.gold.opened > span,
+.side-menu-list > li.gold .with-sub > span {
   border-left-color: #f29824;
 }
 .side-menu-list > li.blue .font-icon,
@@ -7924,7 +7949,8 @@ body.modal-open {
   color: #2e3192;
 }
 .side-menu-list > li.blue.opened a,
-.side-menu-list > li.blue.opened > span {
+.side-menu-list > li.blue.opened > span,
+.side-menu-list > li.blue .with-sub > span {
   border-left-color: #2e3192;
 }
 .side-menu-list > li.blue.opened a,
@@ -7937,7 +7963,8 @@ body.modal-open {
   color: #ac6bec;
 }
 .side-menu-list > li.purple.opened a,
-.side-menu-list > li.purple.opened > span {
+.side-menu-list > li.purple.opened > span,
+.side-menu-list > li.purple .with-sub > span {
   border-left-color: #ac6bec;
 }
 .side-menu-list > li.orange-red .font-icon,
@@ -7946,7 +7973,8 @@ body.modal-open {
   color: #ff561c;
 }
 .side-menu-list > li.orange-red.opened a,
-.side-menu-list > li.orange-red.opened > span {
+.side-menu-list > li.orange-red.opened > span,
+.side-menu-list > li.orange-red .with-sub > span {
   border-left-color: #ff561c;
 }
 .side-menu-list > li.grey .font-icon,
@@ -7955,7 +7983,8 @@ body.modal-open {
   color: #adb7be;
 }
 .side-menu-list > li.grey.opened a,
-.side-menu-list > li.grey.opened > span {
+.side-menu-list > li.grey.opened > span,
+.side-menu-list > li.grey .with-sub > span {
   border-left-color: #adb7be;
 }
 .side-menu-list > li.red .font-icon,
@@ -7964,7 +7993,8 @@ body.modal-open {
   color: #fa424a;
 }
 .side-menu-list > li.red.opened a,
-.side-menu-list > li.red.opened > span {
+.side-menu-list > li.red.opened > span,
+.side-menu-list > li.red .with-sub > span {
   border-left-color: #fa424a;
 }
 .side-menu-list > li.aquamarine .font-icon,
@@ -7973,7 +8003,8 @@ body.modal-open {
   color: #21a788;
 }
 .side-menu-list > li.aquamarine.opened a,
-.side-menu-list > li.aquamarine.opened > span {
+.side-menu-list > li.aquamarine.opened > span,
+.side-menu-list > li.aquamarine .with-sub > span {
   border-left-color: #21a788;
 }
 .side-menu-list > li.magenta .font-icon,
@@ -7982,7 +8013,8 @@ body.modal-open {
   color: #b348ae;
 }
 .side-menu-list > li.magenta.opened a,
-.side-menu-list > li.magenta.opened > span {
+.side-menu-list > li.magenta.opened > span,
+.side-menu-list > li.magenta .with-sub > span {
   border-left-color: #b348ae;
 }
 .side-menu-list > li.blue-dirty .font-icon,
@@ -7991,7 +8023,8 @@ body.modal-open {
   color: #1b99cf;
 }
 .side-menu-list > li.blue-dirty.opened a,
-.side-menu-list > li.blue-dirty.opened > span {
+.side-menu-list > li.blue-dirty.opened > span,
+.side-menu-list > li.blue-dirty .with-sub > span {
   border-left-color: #1b99cf;
 }
 .side-menu-list > li.coral .font-icon,
@@ -8000,7 +8033,8 @@ body.modal-open {
   color: #fe664c;
 }
 .side-menu-list > li.coral.opened a,
-.side-menu-list > li.coral.opened > span {
+.side-menu-list > li.coral.opened > span,
+.side-menu-list > li.coral .with-sub > span {
   border-left-color: #fe664c;
 }
 .side-menu-list > li.pink-red .font-icon,
@@ -8009,7 +8043,8 @@ body.modal-open {
   color: #f5465e;
 }
 .side-menu-list > li.pink-red.opened a,
-.side-menu-list > li.pink-red.opened > span {
+.side-menu-list > li.pink-red.opened > span,
+.side-menu-list > li.pink-red .with-sub > span {
   border-left-color: #f5465e;
 }
 .side-menu-list > li.pink .font-icon,
@@ -8018,7 +8053,8 @@ body.modal-open {
   color: #e84f9a;
 }
 .side-menu-list > li.pink.opened a,
-.side-menu-list > li.pink.opened > span {
+.side-menu-list > li.pink.opened > span,
+.side-menu-list > li.pink .with-sub > span {
   border-left-color: #e84f9a;
 }
 .side-menu-list > li.blue-darker .font-icon,
@@ -8027,7 +8063,8 @@ body.modal-open {
   color: #1280d0;
 }
 .side-menu-list > li.blue-darker.opened a,
-.side-menu-list > li.blue-darker.opened > span {
+.side-menu-list > li.blue-darker.opened > span,
+.side-menu-list > li.blue-darker .with-sub > span {
   border-left-color: #1280d0;
 }
 .side-menu-list > li.blue-sky .font-icon,
@@ -8036,7 +8073,8 @@ body.modal-open {
   color: #23b9e2;
 }
 .side-menu-list > li.blue-sky.opened a,
-.side-menu-list > li.blue-sky.opened > span {
+.side-menu-list > li.blue-sky.opened > span,
+.side-menu-list > li.blue-sky .with-sub > span {
   border-left-color: #23b9e2;
 }
 /* ==========================================================================
@@ -8352,6 +8390,34 @@ body.modal-open {
 }
 .dark-theme .side-menu .side-menu-list > li.with-sub > span:hover:before {
   border-top-color: #fff;
+}
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub a,
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub > span {
+  border-left-color: transparent;
+}
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub a:hover,
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub > span:hover {
+  background-color: #fff !important;
+}
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub a:hover .lbl,
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub > span:hover .lbl {
+  color: #343434;
+}
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub a:hover .font-icon,
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub > span:hover .font-icon,
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub a:hover .glyphicon,
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub > span:hover .glyphicon,
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub a:hover .fa,
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub > span:hover .fa {
+  color: #919fa9;
+}
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub a:hover .font-icon.active:after,
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub > span:hover .font-icon.active:after,
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub a:hover .glyphicon.active:after,
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub > span:hover .glyphicon.active:after,
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub a:hover .fa.active:after,
+.dark-theme .side-menu .side-menu-list > li.with-sub ul > li.with-sub > span:hover .fa.active:after {
+  border-color: #fff !important;
 }
 .dark-theme .side-menu .side-menu-list > li.opened {
   background-color: #919fa9;

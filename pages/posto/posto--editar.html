@@ -348,146 +348,6 @@
 
 
 <!-- Modal detalha posto -->
-<div class="modal fade" id="ModalDetalhaPosto" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaPosto">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Detalhes do posto avançado</h4>
-      </div>
-      <div class="modal-body">
-
-
-        <section class="card card-default mt-md">
-          <header class="card-header">
-            <h5 class="semibold"><i class="fa fa-building-o mr-xs" aria-hidden="true"></i> Dados do posto
-            </h5>
-          </header>
-          <div class="card-block">
-            <div class="row">
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">Nome</label>
-                <p>Leonardo da Vinci</p>
-              </div>
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">Unidade</label>
-                <p>Asa sul</p>
-              </div>
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">CNPJ</label>
-                <p>000.000.000/0000-00</p>
-              </div>
-              <div class="col-sm-3ß">
-                <label class="form-label semibold" for="">Centro de custo</label>
-                <p>Centro de custo</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-        <section class="card card-default mt-md">
-          <header class="card-header">
-            <h5 class="semibold"><i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização
-            </h5>
-          </header>
-          <div class="card-block">
-            <div class="row">
-              <div class="col-sm-6">
-                <label class="form-label semibold" for="">Endereço</label>
-                <p>Avenida Maria Teresa, quadra 43, rua antonieta, 1646</p>
-              </div>
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">Número</label>
-                <p>1289</p>
-              </div>
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">Complemento</label>
-                <p>Alameda 303</p>
-              </div>
-            </div>
-            <div class="row mt-md">
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">Bairro</label>
-                <p>Asa sul</p>
-              </div>
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">Cidade</label>
-                <p>Brasília</p>
-              </div>
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">UF</label>
-                <p>Distrito Federal</p>
-              </div>
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">CEP</label>
-                <p>00000-000</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="card card-default mt-md">
-          <header class="card-header">
-            <h5 class="semibold"><i class="fa fa-commenting mr-xs" aria-hidden="true"></i> Contatos
-            </h5>
-          </header>
-          <div class="card-block">
-            <div class="row">
-              <div class="col-sm-4">
-                <label class="form-label semibold" for="">Gestor do contrato</label>
-                <p>Rodrigo Sousa Martins</p>
-              </div>
-              <div class="col-sm-4">
-                <label class="form-label semibold" for="">Responsável acadêmico</label>
-                <p>Rodrigo Sousa Martins</p>
-              </div>
-              <div class="col-sm-4">
-                <label class="form-label semibold" for="">Interessados</label>
-                <p>Luan Almeida Barbosa</p>
-                <p>Otávio Goncalves Souza</p>
-                <p>Ana Souza Martins</p>
-              </div>
-            </div>
-            <div class="row mt-md">
-              <div class="col-sm-12">
-                <label class="form-label semibold" for="">Telefones cadastrados</label>
-                <table class="table mt-md">
-                  <thead>
-                  <tr>
-                    <th>Tipo</th>
-                    <th>Número</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>Principal</td>
-                    <td>(61) 0000-0000</td>
-                  </tr>
-                  <tr>
-                    <td>Comercial</td>
-                    <td>(61) 0000-0000</td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
 <div class="modal fade" id="ModalContatosPosto" tabindex="-1" role="dialog" aria-labelledby="ModalContatosPosto">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -551,16 +411,19 @@
                   <tr>
                     <th>Tipo</th>
                     <th>Número</th>
+                    <th></th>
                   </tr>
                   </thead>
                   <tbody>
                   <tr>
                     <td>Principal</td>
                     <td>(61) 0000-0000</td>
+                    <td><button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i class="fa fa-times" aria-hidden="true"></i></button></td>
                   </tr>
                   <tr>
                     <td>Comercial</td>
                     <td>(61) 0000-0000</td>
+                    <td><button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i class="fa fa-times" aria-hidden="true"></i></button></td>
                   </tr>
                   </tbody>
                 </table>
