@@ -20,10 +20,10 @@
   <link rel="stylesheet" href="../../css/custom.css">
 
 </head>
-<body class="with-side-menu" ng-app="">
+<body class="with-side-menu">
 
-<ng-include src="'../../includes/header.html'"></ng-include>
-<ng-include src="'../../includes/side-bar.html'"></ng-include>
+<div id="carrega-barra-superior"></div>
+<div id="carrega-menu"></div>
 
 
 <div class="page-content">
@@ -407,7 +407,6 @@
 <script src="../../js/lib/tether/tether.min.js"></script>
 <script src="../../js/lib/bootstrap/bootstrap.min.js"></script>
 
-
 <script src="../../js/lib/datatables-net/datatables.min.js"></script>
 <script src="../../js/start-datatables.js"></script>
 
@@ -419,9 +418,6 @@
 
 <script src="../../js/lib/notie/notie.js"></script>
 <script src="../../js/lib/notie/notie-init.js"></script>
-
-<script src="../../js/lib/angular/angular.min.js"></script>
-<script src="../../js/lib/angular/controllers.js"></script>
 
 
 <script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
@@ -461,5 +457,10 @@
     });
   });
 </script>
+
+
+<!-- script par carregar includes - Jogar fora -->
+<script src="../../js/load-includes.js"></script>
+
 </body>
 </html>

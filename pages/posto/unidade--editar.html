@@ -21,10 +21,10 @@
 
 
 </head>
-<body class="with-side-menu" ng-app="">
+<body class="with-side-menu">
 
-<ng-include src="'../../includes/header.html'"></ng-include>
-<ng-include src="'../../includes/side-bar.html'"></ng-include>
+<div id="carrega-barra-superior"></div>
+<div id="carrega-menu"></div>
 
 
 <div class="page-content">
@@ -210,11 +210,7 @@
                     <div class="col-sm-12">
                       <div class="row mt-md">
                         <div class="col-sm-7">
-                          <div class="row">
-                            <div class="col-sm-12 mb-md">
-                              <label class="form-label semibold" for="">
-                                Telefones</label>
-                            </div>
+                          <div class="row mt-lg">
                             <div class="col-sm-5">
                               <label class="form-label semibold" for="">Tipo</label>
                               <select class="select2 select2-arrow">
@@ -309,9 +305,6 @@
 <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
 <script src="../../js/lib/input-mask/input-mask-init.js"></script>
 
-<script src="../../js/lib/angular/angular.min.js"></script>
-<script src="../../js/lib/angular/controllers.js"></script>
-
 <script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
 
 <script src="../../js/lib/notie/notie.js"></script>
@@ -352,6 +345,11 @@
     });
   });
 </script>
+
+
+<!-- script par carregar includes - Jogar fora -->
+<script src="../../js/load-includes.js"></script>
+
 
 </body>
 </html>

@@ -19,10 +19,10 @@
 
 
 </head>
-<body class="with-side-menu" ng-app=""> 
+<body class="with-side-menu">
 
-<ng-include src="'../../includes/header.html'"></ng-include>
-<ng-include src="'../../includes/side-bar.html'"></ng-include>
+<div id="carrega-barra-superior"></div>
+<div id="carrega-menu"></div>
 
 
 <div class="page-content">
@@ -551,7 +551,7 @@
                           </small>
                         </div>
                         <div class="col-sm-4 text-center">
-                          <small><i class="fa fa-circle mr-xs" aria-hidden="true"></i> Valor inativo
+                          <small><i class="fa fa-circle mr-xs text-light-grey" aria-hidden="true"></i> Valor inativo
                           </small>
                         </div>
                       </div>
@@ -604,7 +604,7 @@
             <div class="row">
               <div class="col-md-4">
                 <label class="form-label semibold">Situação</label>
-                <p class="text-success"><strong><i class="fa fa-check" aria-hidden="true"></i> Curso ativo</strong></p>
+                <p class="text-success"><strong><i class="fa fa-check" aria-hidden="true"></i> Ativo</strong></p>
               </div>
               <div class="col-md-4">
                 <label class="form-label semibold">Data de criação</label>
@@ -662,7 +662,6 @@
                       <th>Data fim</th>
                       <th>Situação</th>
                       <th>Valor</th>
-                      <th>Observação</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -671,21 +670,18 @@
                       <td>00/00/0000</td>
                       <td>Ativo</td>
                       <td>R$450,00</td>
-                      <td>Alteração por reajuste inflacionário </td>
                     </tr>
                     <tr class="table-active-visual" data-toggle="tooltip" data-placement="top" title="Valor vigente">
                       <td>00/00/0000</td>
                       <td>00/00/0000</td>
                       <td>Ativo</td>
                       <td>R$450,00</td>
-                      <td>Alteração por reajuste inflacionário </td>
                     </tr>
                     <tr class="table-inactive" data-toggle="tooltip" data-placement="top" title="Valor inativo">
                       <td>00/00/0000</td>
                       <td>00/00/0000</td>
                       <td>Ativo</td>
                       <td>R$450,00</td>
-                      <td>Alteração por reajuste inflacionário </td>
                     </tr>
                     </tbody>
                   </table>
@@ -705,7 +701,7 @@
                 </small>
               </div>
               <div class="col-sm-4 text-center">
-                <small><i class="fa fa-circle mr-xs" aria-hidden="true"></i> Valor inativo
+                <small><i class="fa fa-circle mr-xs text-light-grey" aria-hidden="true"></i> Valor inativo
                 </small>
               </div>
             </div>
@@ -905,8 +901,6 @@
 <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
 <script src="../../js/lib/input-mask/input-mask-init.js"></script>
 
-<script src="../../js/lib/angular/angular.min.js"></script>
-<script src="../../js/lib/angular/controllers.js"></script>
 
 <script src="../../js/lib/eonasdan-bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript">
@@ -917,6 +911,10 @@
     });
   });
 </script>
+
+
+<!-- script par carregar includes - Jogar fora -->
+<script src="../../js/load-includes.js"></script>
 
 </body>
 </html>

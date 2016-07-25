@@ -21,11 +21,10 @@
 
 
 </head>
-<body class="with-side-menu" ng-app="">
+<body class="with-side-menu">
 
-<ng-include src="'../../includes/header.html'"></ng-include>
-<ng-include src="'../../includes/side-bar.html'"></ng-include>
-
+<div id="carrega-barra-superior"></div>
+<div id="carrega-menu"></div>
 
 <div class="page-content">
 
@@ -212,9 +211,7 @@
             <div class="row">
               <div class="col-md-4">
                 <label class="form-label semibold">Situação</label>
-                <p class="text-success"><i class="fa fa-check"
-                                           aria-hidden="true"></i>
-                  <strong>Curso ativo</strong></p>
+                <p class="text-success"><strong><i class="fa fa-check" aria-hidden="true"></i> Ativo</strong></p>
               </div>
               <div class="col-md-4">
                 <label class="form-label semibold">Carga horária</label>
@@ -280,9 +277,6 @@
 
 <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
 <script src="../../js/lib/input-mask/input-mask-init.js"></script>
-
-<script src="../../js/lib/angular/angular.min.js"></script>
-<script src="../../js/lib/angular/controllers.js"></script>
 
 <script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
 

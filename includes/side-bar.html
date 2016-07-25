@@ -132,4 +132,41 @@
   </section>
 </nav><!--.side-menu-->
 
-<script src="../../js/app.js"></script>
+<script type="text/javascript">
+  // Gambiarra temporária, só para funcionar os includes. Este script deve ser jogado fora após o início do desenvolvimento! ;)
+  $(document).ready(function () {
+    $(function () {
+      $('.side-menu-list li.with-sub').each(function () {
+        var parent = $(this),
+                clickLink = parent.find('>span'),
+                subMenu = parent.find('>ul');
+
+        clickLink.click(function () {
+          if (parent.hasClass('opened')) {
+            parent.removeClass('opened');
+            subMenu.slideUp();
+            subMenu.find('.opened').removeClass('opened');
+          } else {
+            if (clickLink.parents('.with-sub').size() == 1) {
+              $('.side-menu-list .opened').removeClass('opened').find('ul').slideUp();
+            }
+            parent.addClass('opened');
+            subMenu.slideDown();
+          }
+        });
+      });
+      $('.hamburger').click(function () {
+        if ($('body').hasClass('menu-left-opened')) {
+          $(this).removeClass('is-active');
+          $('body').removeClass('menu-left-opened');
+          $('html').css('overflow', 'auto');
+        } else {
+          $(this).addClass('is-active');
+          $('body').addClass('menu-left-opened');
+          $('html').css('overflow', 'hidden');
+        }
+      });
+
+    });
+  });
+</script>

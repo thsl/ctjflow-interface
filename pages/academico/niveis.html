@@ -18,10 +18,10 @@
 
 
 </head>
-<body class="with-side-menu" ng-app="">
+<body class="with-side-menu">
 
-<ng-include src="'../../includes/header.html'"></ng-include>
-<ng-include src="'../../includes/side-bar.html'"></ng-include>
+<div id="carrega-barra-superior"></div>
+<div id="carrega-menu"></div>
 
 
 <div class="page-content">
@@ -128,10 +128,10 @@
                                   Todos
                                 </label>
                                 <label class="btn btn-secondary-outline">
-                                  <input type="radio" name="options" id="option1" autocomplete="off"> Ativos
+                                  <input type="radio" name="options" id="option1" autocomplete="off"> Ativo
                                 </label>
                                 <label class="btn btn-secondary-outline">
-                                  <input type="radio" name="options" id="option2" autocomplete="off"> Inativos
+                                  <input type="radio" name="options" id="option2" autocomplete="off"> Inativo
                                 </label>
                               </div>
                             </div>
@@ -840,8 +840,7 @@
                     </fieldset>
                   </div>
                   <div class="col-sm-4">
-                    <label class="form-label semibold" for="">Quantidade de unidades avaliativas<span
-                            class="semibold text-danger h4">*</span></label>
+                    <label class="form-label semibold" for="">Quantidade de unidades avaliativas</label>
                     <input type="number" class="form-control" id="" placeholder="00">
                   </div>
                 </div>
@@ -975,7 +974,7 @@
             <div class="row">
               <div class="col-md-2">
                 <label class="form-label semibold">Situação</label>
-                <p class="semibold text-success">Ativo</p>
+                <p class="text-success"><strong><i class="fa fa-check" aria-hidden="true"></i> Ativo</strong></p>
               </div>
               <div class="col-md-4">
                 <label class="form-label semibold">Quantidade de unidades avaliativas</label>
@@ -1108,9 +1107,8 @@
 <script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
 <script src="../../js/lib/select2/select2.full.min.js"></script>
 
-<script src="../../js/lib/angular/angular.min.js"></script>
-<script src="../../js/lib/angular/controllers.js"></script>
-
+<!-- script par carregar includes - Jogar fora -->
+<script src="../../js/load-includes.js"></script>
 
 </body>
 </html>

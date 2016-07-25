@@ -18,10 +18,10 @@
 
 
 </head>
-<body class="with-side-menu" ng-app="">
+<body class="with-side-menu">
 
-<ng-include src="'../../includes/header.html'"></ng-include>
-<ng-include src="'../../includes/side-bar.html'"></ng-include>
+<div id="carrega-barra-superior"></div>
+<div id="carrega-menu"></div>
 
 
 <div class="page-content">
@@ -126,7 +126,7 @@
                                 <input type="radio" name="options" id="" autocomplete="off"> Sim
                               </label>
                               <label class="btn btn-secondary-outline">
-                                <input type="radio" name="options" id="" autocomplete="off"> Não
+                                <input type="radio" name="options" id="" autocomplete="off"> Nãoativo
                               </label>
                             </div>
                           </div>
@@ -432,12 +432,18 @@
                             <tr>
                               <td>Principal</td>
                               <td>(61) 0000-0000</td>
-                              <td><button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                              <td>
+                                <button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i
+                                        class="fa fa-times" aria-hidden="true"></i></button>
+                              </td>
                             </tr>
                             <tr>
                               <td>Comercial</td>
                               <td>(61) 0000-0000</td>
-                              <td><button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                              <td>
+                                <button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i
+                                        class="fa fa-times" aria-hidden="true"></i></button>
+                              </td>
                             </tr>
                             </tbody>
                           </table>
@@ -492,7 +498,7 @@
             <div class="row">
               <div class="col-sm-3">
                 <label class="form-label semibold" for="">Situação</label>
-                <p class="text-success">Ativo</p>
+                <p class="text-success"><strong><i class="fa fa-check" aria-hidden="true"></i> Ativo</strong></p>
               </div>
               <div class="col-sm-3">
                 <label class="form-label semibold" for="">Unidade</label>
@@ -616,6 +622,9 @@
 
       </div>
       <div class="modal-footer">
+        <button type="button" class="btn btn-secondary-outline"><i class="fa fa-pencil-square-o"
+                                                                            aria-hidden="true"></i> Editar
+        </button>
         <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
     </div>
@@ -639,8 +648,8 @@
 <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
 <script src="../../js/lib/input-mask/input-mask-init.js"></script>
 
-<script src="../../js/lib/angular/angular.min.js"></script>
-<script src="../../js/lib/angular/controllers.js"></script>
+<!-- script par carregar includes - Jogar fora -->
+<script src="../../js/load-includes.js"></script>
 
 </body>
 </html>

@@ -21,10 +21,10 @@
 
 
 </head>
-<body class="with-side-menu" ng-app="">
+<body class="with-side-menu">
 
-<ng-include src="'../../includes/header.html'"></ng-include>
-<ng-include src="'../../includes/side-bar.html'"></ng-include>
+<div id="carrega-barra-superior"></div>
+<div id="carrega-menu"></div>
 
 
 <div class="page-content">
@@ -89,7 +89,7 @@
                   </div>
                 </div>
                 <div class="row mt-md divider-top">
-                  <div class="col-md-6">
+                  <div class="col-md-4">
                     <label class="form-label semibold" for="">Selecione um curso <span
                             class="semibold text-danger h4">*</span></label>
                     <select class="select2 select2-arrow">
@@ -100,33 +100,33 @@
                       <option>JUNIOR</option>
                     </select>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-4">
                     <fieldset class="form-group">
                       <label class="form-label semibold" for="">Nome<span
                               class="semibold text-danger h4">*</span></label>
                       <input type="text" class="form-control" id="" value="4A">
                     </fieldset>
                   </div>
-                </div>
-                <div class="row divider-top pb-md">
-                  <div class="col-sm-3">
-                    <label class="form-label semibold" for=""> Quantidade de unidades <span
-                            class="semibold text-danger h4">*</span></label>
+                  <div class="col-sm-4">
+                    <label class="form-label semibold" for="">Quantidade de unidades avaliativas</label>
                     <input type="number" class="form-control" id="" value="3">
                   </div>
-                  <div class="col-sm-3">
+                </div>
+                <div class="row divider-top pb-md">
+
+                  <div class="col-sm-4">
                     <div class="checkbox-toggle mt-lg">
                       <input type="checkbox" id="check-RepTest" checked>
                       <label for="check-RepTest">Replacement test</label>
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4">
                     <div class="checkbox-toggle mt-lg">
                       <input type="checkbox" id="check-Certificado" checked>
                       <label for="check-Certificado">Certificado</label>
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4">
                     <div class="checkbox-toggle mt-lg">
                       <input type="checkbox" id="check-matOb" checked>
                       <label for="check-matOb">Material didático obrigatório</label>
@@ -195,7 +195,7 @@
                         </div>-->
                         <div>
                           <p class="text-warning ml-md text-center"><i class="fa fa-exclamation-triangle mr-xs"
-                                                               aria-hidden="true"></i>
+                                                                       aria-hidden="true"></i>
                             <strong>Pendência:</strong><br/>
                             Não existem materiais didáticos associados
                           </p>
@@ -265,7 +265,7 @@
               </div>
               <div class="col-md-2">
                 <label class="form-label semibold">Situação</label>
-                <p class="semibold text-success">Ativo</p>
+                <p class="text-success"><strong><i class="fa fa-check" aria-hidden="true"></i> Ativo</strong></p>
               </div>
             </div>
           </div>
@@ -387,9 +387,6 @@
 <script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
 <script src="../../js/lib/select2/select2.full.min.js"></script>
 
-<script src="../../js/lib/angular/angular.min.js"></script>
-<script src="../../js/lib/angular/controllers.js"></script>
-
 <script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
 <script src="../../js/lib/notie/notie.js"></script>
 <script src="../../js/lib/notie/notie-init.js"></script>
@@ -429,6 +426,11 @@
     });
   });
 </script>
+
+
+<!-- script par carregar includes - Jogar fora -->
+<script src="../../js/load-includes.js"></script>
+
 
 </body>
 </html>

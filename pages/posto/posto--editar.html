@@ -21,10 +21,10 @@
 
 
 </head>
-<body class="with-side-menu" ng-app="">
+<body class="with-side-menu">
 
-<ng-include src="'../../includes/header.html'"></ng-include>
-<ng-include src="'../../includes/side-bar.html'"></ng-include>
+<div id="carrega-barra-superior"></div>
+<div id="carrega-menu"></div>
 
 
 <div class="page-content">
@@ -177,10 +177,6 @@
                 <div class="card-block">
                   <div class="row">
                     <div class="col-sm-6">
-                      <label class="form-label semibold" for="">Gestor do contrato</label>
-                      <input type="text" class="form-control" aria-label="" value="Otávio Goncalves Souza">
-                    </div>
-                    <div class="col-sm-6">
                       <label class="form-label semibold" for="">Responsável acadêmico</label>
                       <select class="select2 select2-arrow">
                         <option>Selecione</option>
@@ -189,9 +185,7 @@
                         <option>Ana Souza Martins</option>
                       </select>
                     </div>
-                  </div>
-                  <div class="row mt-md">
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                       <label class="form-label semibold" for="">Interessados</label>
                       <select class="select2" multiple="multiple">
                         <option>Luan Almeida Barbosa</option>
@@ -413,12 +407,18 @@
                   <tr>
                     <td>Principal</td>
                     <td>(61) 0000-0000</td>
-                    <td><button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                    <td>
+                      <button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i
+                              class="fa fa-times" aria-hidden="true"></i></button>
+                    </td>
                   </tr>
                   <tr>
                     <td>Comercial</td>
                     <td>(61) 0000-0000</td>
-                    <td><button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                    <td>
+                      <button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i
+                              class="fa fa-times" aria-hidden="true"></i></button>
+                    </td>
                   </tr>
                   </tbody>
                 </table>
@@ -433,9 +433,6 @@
     </div>
   </div>
 </div>
-
-
-
 
 
 <script src="../../js/lib/jquery/jquery.min.js"></script>
@@ -453,10 +450,6 @@
 
 <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
 <script src="../../js/lib/input-mask/input-mask-init.js"></script>
-
-<script src="../../js/lib/angular/angular.min.js"></script>
-<script src="../../js/lib/angular/controllers.js"></script>
-
 
 <script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
 <script src="../../js/lib/notie/notie.js"></script>
@@ -497,6 +490,9 @@
     });
   });
 </script>
+
+<!-- script par carregar includes - Jogar fora -->
+<script src="../../js/load-includes.js"></script>
 
 </body>
 </html>
