@@ -21,8 +21,308 @@
 </head>
 <body class="with-side-menu">
 
-<div id="carrega-barra-superior"></div>
-<div id="carrega-menu"></div>
+<header class="site-header">
+  <div class="container-fluid">
+    <a href="#" class="site-logo">
+      <img class="hidden-md-down" src="../../img/logo-ctj-flow.png" alt="">
+      <img class="hidden-lg-up" src="../../img/logo-2-mob.png" alt="">
+    </a>
+    <button class="hamburger hamburger--htla">
+      <span>Menu</span>
+    </button>
+    <div class="site-header-content">
+      <div class="site-header-content-in">
+        <div class="site-header-shown">
+          <div class="dropdown dropdown-notification notif">
+            <a href="#"
+               class="header-alarm dropdown-toggle active"
+               id="dd-notification"
+               data-toggle="dropdown"
+               aria-haspopup="true"
+               aria-expanded="false">
+              <i class="font-icon-alarm"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
+              <div class="dropdown-menu-notif-header">
+                Notifications
+                <span class="label label-pill label-danger">4</span>
+              </div>
+              <div class="dropdown-menu-notif-list">
+                <div class="dropdown-menu-notif-item">
+                  <div class="photo">
+                    <img src="../../img/photo-64-1.jpg" alt="">
+                  </div>
+                  <div class="dot"></div>
+                  <a href="#">Morgan</a> was bothering about something
+                  <div class="color-blue-grey-lighter">7 hours ago</div>
+                </div>
+                <div class="dropdown-menu-notif-item">
+                  <div class="photo">
+                    <img src="../../img/photo-64-2.jpg" alt="">
+                  </div>
+                  <div class="dot"></div>
+                  <a href="#">Lioneli</a> had commented on this <a href="#">Super Important Thing</a>
+                  <div class="color-blue-grey-lighter">7 hours ago</div>
+                </div>
+                <div class="dropdown-menu-notif-item">
+                  <div class="photo">
+                    <img src="../../img/photo-64-3.jpg" alt="">
+                  </div>
+                  <div class="dot"></div>
+                  <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
+                  <div class="color-blue-grey-lighter">7 hours ago</div>
+                </div>
+                <div class="dropdown-menu-notif-item">
+                  <div class="photo">
+                    <img src="../../img/photo-64-4.jpg" alt="">
+                  </div>
+                  <a href="#">Lionely</a> wants to go to <a href="#">Cinema</a> with you to see <a href="#">This
+                  Movie</a>
+                  <div class="color-blue-grey-lighter">7 hours ago</div>
+                </div>
+              </div>
+              <div class="dropdown-menu-notif-more">
+                <a href="#">See more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown dropdown-lang">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+              <span class="flag-icon flag-icon-br"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-menu-col">
+                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-us"></span>English</a>
+                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-fr"></span>French</a>
+                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-it"></span>Italiano</a>
+                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-es"></span>Español</a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="dropdown user-menu">
+            <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+              <img src="../../img/avatar-2-64.png" alt="">
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
+              <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Perfil</a>
+              <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Configurações</a>
+              <a class="dropdown-item" href="#"><span
+                      class="font-icon glyphicon glyphicon-question-sign"></span>Ajuda</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Sair</a>
+            </div>
+          </div>
+
+          <button type="button" class="burger-right">
+            <i class="font-icon-menu-addl"></i>
+          </button>
+        </div><!--.site-header-shown-->
+
+        <div class="mobile-menu-right-overlay"></div>
+        <!--<div class="site-header-collapsed">
+          <div class="site-header-collapsed-in">
+            <div class="dropdown dropdown-typical dropdown-filtro">
+              Unidade :
+              <a class="dropdown-toggle" id="dd-header-sales" data-target="#" href="http://example.com"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="text-success">ASA SUL</span>
+              </a>
+
+              <div class="dropdown-menu dropdown-typical dropdown-typical" aria-labelledby="dd-header-sales">
+                <div class="row">
+                  <div class="col-md-4">
+                    <section>
+                      <ul class="side-table-of-contents">
+                        <li><a href="#">Unidades:</a>
+                          <ul>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>AGUAS CLARAS</a></li>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>ASA NORTE</a></li>
+                            <li><a href="#" class="active"><span class="fa fa-caret-right mr-xs"></span>ASA SUL</a></li>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>LAGO SUL</a></li>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>SUDUESTE</a></li>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>TAGUATINGA</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </section>
+                  </div>
+                  <div class="col-md-4">
+                    <section>
+                      <ul class="side-table-of-contents">
+                        <li><a href="#">Postos Avançados:</a>
+                          <ul>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>CIMAN</a></li>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>GALOIS</a></li>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>LEONARDO DA VINCI</a></li>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>MACKENZIE</a></li>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>MARISTA</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </section>
+                  </div>
+                  <div class="col-md-4">
+                    <section>
+                      <ul class="side-table-of-contents">
+                        <li><a href="#">&nbsp;</a>
+                          <ul>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>SANTO ANTÔNIO</a></li>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>COR JESU</a></li>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>CATÓLICA</a></li>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>OBJETIVO</a></li>
+                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>UPIS</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!--.site-header-collapsed-in-->
+        </div><!--.site-header-collapsed-->
+      </div><!--site-header-content-in-->
+    </div><!--.site-header-content-->
+  </div><!--.container-fluid-->
+</header><!--.site-header-->
+<div class="mobile-menu-left-overlay"></div>
+<nav class="side-menu">
+  <ul class="side-menu-list">
+    <li class="purple">
+	            <span>
+	                <i class="font-icon font-icon-dashboard mr-xs" aria-hidden="true"></i>
+	                <span class="lbl">Dashboard</span>
+	            </span>
+    </li>
+    <li class="blue with-sub">
+	            <span>
+	                <i class="fa fa-book" aria-hidden="true"></i>
+	                <span class="lbl">Acadêmico</span>
+	            </span>
+      <ul>
+        <li><a href="../posto/unidade.html"><span class="lbl">Unidades</span></a></li>
+        <li><a href="../posto/posto.html"><span class="lbl">Posto avançado</span></a></li>
+        <li><a href="../academico/grupos.html" class="active"><span class="lbl">Grupos</span></a></li>
+        <li><a href="../academico/cursos.html"><span class="lbl">Cursos</span></a></li>
+        <li><a href="../academico/niveis.html"><span class="lbl">Níveis</span></a></li>
+        <li><a href="../servicos/servicos.html"><span class="lbl">Serviços</span></a></li>
+      </ul>
+    </li>
+    <li class="green with-sub">
+	            <span>
+	                <i class="fa fa-building" aria-hidden="true"></i>
+	                <span class="lbl">Administrativo</span>
+	            </span>
+      <ul>
+        <li><a href="#"><span class="lbl">opção #</span></a></li>
+        <li><a href="#"><span class="lbl">opção #</span></a></li>
+        <li><a href="#"><span class="lbl">opção #</span></a></li>
+      </ul>
+    </li>
+    <li class="gold with-sub">
+	            <span>
+	                <i class="fa fa-money" aria-hidden="true"></i>
+	                <span class="lbl">Financeiro</span>
+	            </span>
+      <ul>
+        <li><a href="#"><span class="lbl">opção #</span></a></li>
+        <li><a href="#"><span class="lbl">opção #</span></a></li>
+        <li><a href="#"><span class="lbl">opção #</span></a></li>
+      </ul>
+    </li>
+    <li class="blue-dirty with-sub">
+	            <span>
+	                <i class="fa fa-cogs" aria-hidden="true"></i>
+	                <span class="lbl">Suporte</span>
+	            </span>
+      <ul>
+        <li><a href="#"><span class="lbl">opção #</span></a></li>
+        <li><a href="#"><span class="lbl">opção #</span></a></li>
+        <li><a href="#"><span class="lbl">opção #</span></a></li>
+      </ul>
+    </li>
+    <li class="red with-sub">
+	            <span>
+	                <i class="fa fa-lock" aria-hidden="true"></i>
+	                <span class="lbl">Segurança</span>
+	            </span>
+      <ul>
+        <li><a href="#"><span class="lbl">opção #</span></a></li>
+        <li><a href="#"><span class="lbl">opção #</span></a></li>
+        <li><a href="#"><span class="lbl">opção #</span></a></li>
+      </ul>
+    </li>
+    <li class="grey with-sub">
+	            <span>
+	                <span class="font-icon font-icon-burger"></span>
+	                <span class="lbl">Nested Menu</span>
+	            </span>
+      <ul>
+        <li><a href="#"><span class="lbl">Level 1</span></a></li>
+        <li><a href="#"><span class="lbl">Level 1</span></a></li>
+        <li class="with-sub">
+	                    <span>
+	                        <span class="lbl">Level 2</span>
+	                    </span>
+          <ul>
+            <li><a href="#"><span class="lbl">Level 2</span></a></li>
+            <li><a href="#"><span class="lbl">Level 2</span></a></li>
+            <li class="with-sub">
+	                            <span>
+	                                <span class="lbl">Level 3</span>
+	                            </span>
+              <ul>
+                <li><a href="#"><span class="lbl">Level 3</span></a></li>
+                <li><a href="#"><span class="lbl">Level 3</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <section>
+    <header class="side-menu-title">FAVORITOS</header>
+    <ul class="side-menu-list">
+      <li>
+        <a href="#">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <span class="lbl">Cadastro de Alunos</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <span class="lbl">Gerenciar Calendário</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <span class="lbl">Relatório Alunos</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <span class="lbl">Relatório Carga Horaria</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <span class="lbl">Relatório Evasão</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</nav><!--.side-menu-->
 
 
 <div class="page-content">
