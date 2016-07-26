@@ -1,1279 +1,1184 @@
 <!DOCTYPE html>
 <html>
-<head lang="pt-br">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>CTJFlow</title>
+    <head lang="pt-br">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>CTJFlow</title>
 
-  <link href="../../img/favicon.ico" rel="shortcut icon">
+        <link href="../../img/favicon.ico" rel="shortcut icon">
 
-  <!-- css's especificos -->
-  <link rel="stylesheet" href="../../css/lib/datatables-net/datatables.min.css">
+        <!-- css's especificos -->
+        <link rel="stylesheet" href="../../css/lib/datatables-net/datatables.min.css">
 
-  <!-- css's gerais -->
-  <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
-  <link rel="stylesheet" href="../../css/main.css">
-  <link rel="stylesheet" href="../../css/custom.css">
+        <!-- css's gerais -->
+        <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/custom.css">
 
 
-</head>
-<body class="with-side-menu">
+    </head>
+    <body class="with-side-menu">
 
-<header class="site-header">
-  <div class="container-fluid">
-    <a href="#" class="site-logo">
-      <img class="hidden-md-down" src="../../img/logo-ctj-flow.png" alt="">
-      <img class="hidden-lg-up" src="../../img/logo-2-mob.png" alt="">
-    </a>
-    <button class="hamburger hamburger--htla">
-      <span>Menu</span>
-    </button>
-    <div class="site-header-content">
-      <div class="site-header-content-in">
-        <div class="site-header-shown">
-          <div class="dropdown dropdown-notification notif">
-            <a href="#"
-               class="header-alarm dropdown-toggle active"
-               id="dd-notification"
-               data-toggle="dropdown"
-               aria-haspopup="true"
-               aria-expanded="false">
-              <i class="font-icon-alarm"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
-              <div class="dropdown-menu-notif-header">
-                Notifications
-                <span class="label label-pill label-danger">4</span>
-              </div>
-              <div class="dropdown-menu-notif-list">
-                <div class="dropdown-menu-notif-item">
-                  <div class="photo">
-                    <img src="../../img/photo-64-1.jpg" alt="">
-                  </div>
-                  <div class="dot"></div>
-                  <a href="#">Morgan</a> was bothering about something
-                  <div class="color-blue-grey-lighter">7 hours ago</div>
-                </div>
-                <div class="dropdown-menu-notif-item">
-                  <div class="photo">
-                    <img src="../../img/photo-64-2.jpg" alt="">
-                  </div>
-                  <div class="dot"></div>
-                  <a href="#">Lioneli</a> had commented on this <a href="#">Super Important Thing</a>
-                  <div class="color-blue-grey-lighter">7 hours ago</div>
-                </div>
-                <div class="dropdown-menu-notif-item">
-                  <div class="photo">
-                    <img src="../../img/photo-64-3.jpg" alt="">
-                  </div>
-                  <div class="dot"></div>
-                  <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
-                  <div class="color-blue-grey-lighter">7 hours ago</div>
-                </div>
-                <div class="dropdown-menu-notif-item">
-                  <div class="photo">
-                    <img src="../../img/photo-64-4.jpg" alt="">
-                  </div>
-                  <a href="#">Lionely</a> wants to go to <a href="#">Cinema</a> with you to see <a href="#">This
-                  Movie</a>
-                  <div class="color-blue-grey-lighter">7 hours ago</div>
-                </div>
-              </div>
-              <div class="dropdown-menu-notif-more">
-                <a href="#">See more</a>
-              </div>
-            </div>
-          </div>
+        <header class="site-header">
+            <div class="container-fluid">
+                <a href="#" class="site-logo"> <img class="hidden-md-down" src="../../img/logo-ctj-flow.png" alt="">
+                    <img class="hidden-lg-up" src="../../img/logo-2-mob.png" alt=""> </a>
+                <button class="hamburger hamburger--htla">
+                    <span>Menu</span>
+                </button>
+                <div class="site-header-content">
+                    <div class="site-header-content-in">
+                        <div class="site-header-shown">
+                            <div class="dropdown dropdown-notification notif">
+                                <a href="#" class="header-alarm dropdown-toggle active" id="dd-notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="font-icon-alarm"></i> </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
+                                    <div class="dropdown-menu-notif-header">
+                                        Notifications <span class="label label-pill label-danger">4</span>
+                                    </div>
+                                    <div class="dropdown-menu-notif-list">
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-1.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Morgan</a> was bothering about something
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-2.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Lioneli</a> had commented on this
+                                            <a href="#">Super Important Thing</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-3.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-4.jpg" alt="">
+                                            </div>
+                                            <a href="#">Lionely</a> wants to go to
+                                            <a href="#">Cinema</a> with you to see <a href="#">This Movie</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-menu-notif-more">
+                                        <a href="#">See more</a>
+                                    </div>
+                                </div>
+                            </div>
 
-          <div class="dropdown dropdown-lang">
-            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-              <span class="flag-icon flag-icon-br"></span>
-            </button>
-            <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-menu-col">
-                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-us"></span>English</a>
-                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-fr"></span>French</a>
-                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-it"></span>Italiano</a>
-                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-es"></span>Español</a>
-              </div>
+                            <div class="dropdown dropdown-lang">
+                                <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-br"></span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-menu-col">
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-us"></span>English</a>
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-fr"></span>French</a>
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-it"></span>Italiano</a>
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-es"></span>Español</a>
+                                    </div>
 
-            </div>
-          </div>
+                                </div>
+                            </div>
 
-          <div class="dropdown user-menu">
-            <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-              <img src="../../img/avatar-2-64.png" alt="">
-            </button>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
-              <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Perfil</a>
-              <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Configurações</a>
-              <a class="dropdown-item" href="#"><span
-                      class="font-icon glyphicon glyphicon-question-sign"></span>Ajuda</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Sair</a>
-            </div>
-          </div>
+                            <div class="dropdown user-menu">
+                                <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="../../img/avatar-2-64.png" alt="">
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Perfil</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Configurações</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Ajuda</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Sair</a>
+                                </div>
+                            </div>
 
-          <button type="button" class="burger-right">
-            <i class="font-icon-menu-addl"></i>
-          </button>
-        </div><!--.site-header-shown-->
+                            <button type="button" class="burger-right">
+                                <i class="font-icon-menu-addl"></i>
+                            </button>
+                        </div><!--.site-header-shown-->
 
-        <div class="mobile-menu-right-overlay"></div>
-        <!--<div class="site-header-collapsed">
-          <div class="site-header-collapsed-in">
-            <div class="dropdown dropdown-typical dropdown-filtro">
-              Unidade :
-              <a class="dropdown-toggle" id="dd-header-sales" data-target="#" href="http://example.com"
-                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="text-success">ASA SUL</span>
-              </a>
+                        <div class="mobile-menu-right-overlay"></div>
 
-              <div class="dropdown-menu dropdown-typical dropdown-typical" aria-labelledby="dd-header-sales">
-                <div class="row">
-                  <div class="col-md-4">
-                    <section>
-                      <ul class="side-table-of-contents">
-                        <li><a href="#">Unidades:</a>
-                          <ul>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>AGUAS CLARAS</a></li>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>ASA NORTE</a></li>
-                            <li><a href="#" class="active"><span class="fa fa-caret-right mr-xs"></span>ASA SUL</a></li>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>LAGO SUL</a></li>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>SUDUESTE</a></li>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>TAGUATINGA</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
-                  <div class="col-md-4">
-                    <section>
-                      <ul class="side-table-of-contents">
-                        <li><a href="#">Postos Avançados:</a>
-                          <ul>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>CIMAN</a></li>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>GALOIS</a></li>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>LEONARDO DA VINCI</a></li>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>MACKENZIE</a></li>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>MARISTA</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
-                  <div class="col-md-4">
-                    <section>
-                      <ul class="side-table-of-contents">
-                        <li><a href="#">&nbsp;</a>
-                          <ul>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>SANTO ANTÔNIO</a></li>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>COR JESU</a></li>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>CATÓLICA</a></li>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>OBJETIVO</a></li>
-                            <li><a href="#"><span class="fa fa-caret-right mr-xs"></span>UPIS</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!--.site-header-collapsed-in-->
-        </div><!--.site-header-collapsed-->
-      </div><!--site-header-content-in-->
-    </div><!--.site-header-content-->
-  </div><!--.container-fluid-->
-</header><!--.site-header-->
-<div class="mobile-menu-left-overlay"></div>
-<nav class="side-menu">
-  <ul class="side-menu-list">
-    <li class="purple">
+
+                    </div><!--.site-header-collapsed-->
+                </div><!--site-header-content-in-->
+            </div><!--.site-header-content--></div><!--.container-fluid-->
+        </header><!--.site-header-->
+        <div class="mobile-menu-left-overlay"></div>
+        <nav class="side-menu">
+            <ul class="side-menu-list">
+                <li class="purple">
 	            <span>
 	                <i class="font-icon font-icon-dashboard mr-xs" aria-hidden="true"></i>
 	                <span class="lbl">Dashboard</span>
 	            </span>
-    </li>
-    <li class="blue with-sub">
+                </li>
+                <li class="blue with-sub">
 	            <span>
 	                <i class="fa fa-book" aria-hidden="true"></i>
 	                <span class="lbl">Acadêmico</span>
 	            </span>
-      <ul>
-        <li><a href="../posto/unidade.html"><span class="lbl">Unidades</span></a></li>
-        <li><a href="../posto/posto.html"><span class="lbl">Posto avançado</span></a></li>
-        <li><a href="../academico/grupos.html" class="active"><span class="lbl">Grupos</span></a></li>
-        <li><a href="../academico/cursos.html"><span class="lbl">Cursos</span></a></li>
-        <li><a href="../academico/niveis.html"><span class="lbl">Níveis</span></a></li>
-        <li><a href="../servicos/servicos.html"><span class="lbl">Serviços</span></a></li>
-      </ul>
-    </li>
-    <li class="green with-sub">
+                    <ul>
+                        <li><a href="../posto/unidade.html"><span class="lbl">Unidades</span></a></li>
+                        <li><a href="../posto/posto.html"><span class="lbl">Posto avançado</span></a></li>
+                        <li><a href="../academico/grupos.html" class="active"><span class="lbl">Grupos</span></a></li>
+                        <li><a href="../academico/cursos.html"><span class="lbl">Cursos</span></a></li>
+                        <li><a href="../academico/niveis.html"><span class="lbl">Níveis</span></a></li>
+                        <li><a href="../servicos/servicos.html"><span class="lbl">Serviços</span></a></li>
+                    </ul>
+                </li>
+                <li class="green with-sub">
 	            <span>
 	                <i class="fa fa-building" aria-hidden="true"></i>
 	                <span class="lbl">Administrativo</span>
 	            </span>
-      <ul>
-        <li><a href="#"><span class="lbl">opção #</span></a></li>
-        <li><a href="#"><span class="lbl">opção #</span></a></li>
-        <li><a href="#"><span class="lbl">opção #</span></a></li>
-      </ul>
-    </li>
-    <li class="gold with-sub">
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="gold with-sub">
 	            <span>
 	                <i class="fa fa-money" aria-hidden="true"></i>
 	                <span class="lbl">Financeiro</span>
 	            </span>
-      <ul>
-        <li><a href="#"><span class="lbl">opção #</span></a></li>
-        <li><a href="#"><span class="lbl">opção #</span></a></li>
-        <li><a href="#"><span class="lbl">opção #</span></a></li>
-      </ul>
-    </li>
-    <li class="blue-dirty with-sub">
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="blue-dirty with-sub">
 	            <span>
 	                <i class="fa fa-cogs" aria-hidden="true"></i>
 	                <span class="lbl">Suporte</span>
 	            </span>
-      <ul>
-        <li><a href="#"><span class="lbl">opção #</span></a></li>
-        <li><a href="#"><span class="lbl">opção #</span></a></li>
-        <li><a href="#"><span class="lbl">opção #</span></a></li>
-      </ul>
-    </li>
-    <li class="red with-sub">
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="red with-sub">
 	            <span>
 	                <i class="fa fa-lock" aria-hidden="true"></i>
 	                <span class="lbl">Segurança</span>
 	            </span>
-      <ul>
-        <li><a href="#"><span class="lbl">opção #</span></a></li>
-        <li><a href="#"><span class="lbl">opção #</span></a></li>
-        <li><a href="#"><span class="lbl">opção #</span></a></li>
-      </ul>
-    </li>
-    <li class="grey with-sub">
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="grey with-sub">
 	            <span>
 	                <span class="font-icon font-icon-burger"></span>
 	                <span class="lbl">Nested Menu</span>
 	            </span>
-      <ul>
-        <li><a href="#"><span class="lbl">Level 1</span></a></li>
-        <li><a href="#"><span class="lbl">Level 1</span></a></li>
-        <li class="with-sub">
+                    <ul>
+                        <li><a href="#"><span class="lbl">Level 1</span></a></li>
+                        <li><a href="#"><span class="lbl">Level 1</span></a></li>
+                        <li class="with-sub">
 	                    <span>
 	                        <span class="lbl">Level 2</span>
 	                    </span>
-          <ul>
-            <li><a href="#"><span class="lbl">Level 2</span></a></li>
-            <li><a href="#"><span class="lbl">Level 2</span></a></li>
-            <li class="with-sub">
+                            <ul>
+                                <li><a href="#"><span class="lbl">Level 2</span></a></li>
+                                <li><a href="#"><span class="lbl">Level 2</span></a></li>
+                                <li class="with-sub">
 	                            <span>
 	                                <span class="lbl">Level 3</span>
 	                            </span>
-              <ul>
-                <li><a href="#"><span class="lbl">Level 3</span></a></li>
-                <li><a href="#"><span class="lbl">Level 3</span></a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
+                                    <ul>
+                                        <li><a href="#"><span class="lbl">Level 3</span></a></li>
+                                        <li><a href="#"><span class="lbl">Level 3</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 
-  <section>
-    <header class="side-menu-title">FAVORITOS</header>
-    <ul class="side-menu-list">
-      <li>
-        <a href="#">
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <span class="lbl">Cadastro de Alunos</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <span class="lbl">Gerenciar Calendário</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <span class="lbl">Relatório Alunos</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <span class="lbl">Relatório Carga Horaria</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <span class="lbl">Relatório Evasão</span>
-        </a>
-      </li>
-    </ul>
-  </section>
-</nav><!--.side-menu-->
+            <section>
+                <header class="side-menu-title">FAVORITOS</header>
+                <ul class="side-menu-list">
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Cadastro de Alunos</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Gerenciar Calendário</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Relatório Alunos</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Relatório Carga Horaria</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Relatório Evasão</span> </a>
+                    </li>
+                </ul>
+            </section>
+        </nav><!--.side-menu-->
 
-<div class="page-content">
+        <div class="page-content">
 
-  <div class="container-fluid">
-    <section>
-      <ol class="breadcrumb blue-ctj">
-        <li><a href="#">Acadêmico</a></li>
-        <li class="ml-xs mr-xs"> /</li>
-        <li class="active">Postos avançados</li>
-        <li style="float:right;">
-          <button class="btn btn-inline btn-secondary-outline btn-sm"><i class="fa fa-question-circle"
-                                                                         aria-hidden="true"></i> Ajuda
-          </button>
-        </li>
-      </ol>
-    </section>
+            <div class="container-fluid">
+                <section>
+                    <ol class="breadcrumb blue-ctj">
+                        <li><a href="#">Acadêmico</a></li>
+                        <li class="ml-xs mr-xs"> /</li>
+                        <li class="active">Postos avançados</li>
+                        <li style="float:right;">
+                            <button class="btn btn-inline btn-secondary-outline btn-sm">
+                                <i class="fa fa-question-circle" aria-hidden="true"></i> Ajuda
+                            </button>
+                        </li>
+                    </ol>
+                </section>
 
-    <div class="row mt-sm">
-      <div class="col-lg-12">
-        <div class="tabs-section">
-          <div class="tabs-section-nav">
-            <div class="tbl">
-              <ul class="nav" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#tabs-servicos-tab-1" role="tab" data-toggle="tab">
+                <div class="row mt-sm">
+                    <div class="col-lg-12">
+                        <div class="tabs-section">
+                            <div class="tabs-section-nav">
+                                <div class="tbl">
+                                    <ul class="nav" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#tabs-servicos-tab-1" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
 										Postos avançados
 										<span class="label label-pill label-primary">100</span>
-									</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#tabs-servicos-tab-2" role="tab" data-toggle="tab">
+									</span> </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tabs-servicos-tab-2" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
 										<i class="fa fa-plus mr-xs" aria-hidden="true"></i>
  Criar novo posto avançado
-									</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div><!--.tabs-section-nav-->
-
-          <div class="tab-content">
-
-
-            <section role="tabpanel" class="tab-pane fade in active" id="tabs-servicos-tab-1">
-              <section>
-                <div id="collapse-busca-one" class="collapse mb-md" role="tabpanel"
-                     aria-labelledby="collapse-busca-one"
-                     aria-expanded="true">
-                  <section class="card">
-                    <div class="card-block">
-                      <div class="row">
-
-                        <div class="col-md-3">
-                          <label class="form-label semibold" for="">Nome</label>
-                          <input type="text" class="form-control" aria-label="" placeholder="Nome">
-                        </div>
-                        <div class="col-md-3">
-                          <label class="form-label semibold" for="">Unidade</label>
-                          <select class="select2 select2-arrow">
-                            <option>Selecione</option>
-                            <option>Asa sul</option>
-                            <option>Asa norte</option>
-                            <option>Águas claras</option>
-                          </select>
-                        </div>
-                        <div class="col-lg-3">
-                          <label class="form-label semibold" for="">Situação</label>
-                          <div class="form-group">
-                            <div class="btn-group btn-group-sm" data-toggle="buttons">
-                              <label class="btn btn-secondary-outline active">
-                                <input type="radio" name="options" id="" autocomplete="off" checked="">
-                                Todos
-                              </label>
-                              <label class="btn btn-secondary-outline">
-                                <input type="radio" name="options" id="" autocomplete="off"> Ativo
-                              </label>
-                              <label class="btn btn-secondary-outline">
-                                <input type="radio" name="options" id="" autocomplete="off"> Inativo
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3">
-                          <label class="form-label semibold" for="">Pendente</label>
-                          <div class="form-group">
-                            <div class="btn-group btn-group-sm" data-toggle="buttons">
-                              <label class="btn btn-secondary-outline active">
-                                <input type="radio" name="options" id="" autocomplete="off" checked="">
-                                Todos
-                              </label>
-                              <label class="btn btn-secondary-outline">
-                                <input type="radio" name="options" id="" autocomplete="off"> Sim
-                              </label>
-                              <label class="btn btn-secondary-outline">
-                                <input type="radio" name="options" id="" autocomplete="off"> Não
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row divider-top">
-                        <div class="col-sm-12">
-                          <div>
-                            <button type="button" class="btn btn-primary btn-sm mt-sm"><i class="fa fa-search mr-xs"
-                                                                                          aria-hidden="true"></i>
-                              Buscar
-                            </button>
-                            <button type="button" class="btn btn-secondary btn-sm ml-md mt-sm" data-toggle="collapse"
-                                    data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
-                                    aria-controls="collapseOne"><i class="fa fa-times" aria-hidden="true"></i> Cancelar
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
-                <div class="row">
-                  <div class="col-sm-9">
-                    <div class="form-control-wrapper form-control-icon-right">
-                      <input type="text" class="form-control input-table-custom" placeholder="Filtre nos resultados">
-                      <i class="fa fa-search"></i>
-                    </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <p class="mt-sm">
-                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true"
-                         aria-controls="collapseOne">
-                        <i class="fa fa-search-plus"
-                           aria-hidden="true"></i> Busca avançada</a>
-                    </p>
-                  </div>
-                </div>
-
-              </section>
-              <div class="row mt-md">
-                <div class="col-sm-12">
-                  <div class="table-responsive table-custom">
-                    <table class="datatable-on table table-hover" cellspacing="0" width="100%">
-                      <thead>
-                      <tr>
-                        <th>Nome</th>
-                        <th>Unidade</th>
-                        <th>Gestor principal</th>
-                        <th>Telefone</th>
-                        <th>Situação</th>
-                        <th class="text-right">Ações</th>
-                      </tr>
-                      </thead>
-                      <tbody>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">CIMAN</a></strong></td>
-                        <td>Asa Sul</td>
-                        <td>Elton Carvalho</td>
-                        <td>(61) 3213-3762</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="pull-right">
-                            <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
-                              <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Galois</a></strong></td>
-                        <td>Asa Sul</td>
-                        <td>Rosangela Matsunaga</td>
-                        <td>(61) 3442-5501</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="pull-right">
-                            <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
-                              <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Leonardo da Vinci - Asa Norte</a></strong></td>
-                        <td>Asa Norte</td>
-                        <td>Eliane Lima</td>
-                        <td>(61) 3442-5780</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="pull-right">
-                            <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
-                              <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Leonardo da Vinci - Asa Sul</a></strong></td>
-                        <td>Leonardo da Vinci - Asa Sul</td>
-                        <td>Regina Lopes</td>
-                        <td>(61) 3442-5501</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="pull-right">
-                            <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
-                              <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Leonardo da Vinci - Taguatinga</a></strong></td>
-                        <td>Taguatinga</td>
-                        <td>Erika Oya</td>
-                        <td>(61) 3442-5781</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="pull-right">
-                            <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
-                              <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Mackenzie</a></strong></td>
-                        <td>Lago Sul</td>
-                        <td>Sônia Arantes</td>
-                        <td>(61) 2106-9036</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="pull-right">
-                            <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
-                              <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Marista - (615 Sul)</a></strong></td>
-                        <td>Asa Sul</td>
-                        <td>Telma Fontes</td>
-                        <td>(61) 8404-7358</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="pull-right">
-                            <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
-                              <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Marista - (609 Sul)</a></strong></td>
-                        <td>Asa Sul</td>
-                        <td>Telma Fontes</td>
-                        <td>(61) 8404-7358</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="pull-right">
-                            <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
-                              <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Marista João Paulo II</a></strong></td>
-                        <td>Asa Norte</td>
-                        <td>Elaine Viegas</td>
-                        <td>(61) 3442-5665</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="pull-right">
-                            <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
-                              <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Santo Antônio</a></strong></td>
-                        <td>Asa Sul</td>
-                        <td>Lueli Loivos Ceruti</td>
-                        <td>(61) 3442-5784</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="pull-right">
-                            <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
-                              <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Cor Jesu</a></strong></td>
-                        <td>Asa Sul</td>
-                        <td>Lueli Loivos Ceruti</td>
-                        <td>(61) 3442-5784</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="pull-right">
-                            <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
-                              <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">Centro Educacional Católica de Brasília</a></strong>
-                        </td>
-                        <td>Taguatinga Sul</td>
-                        <td>Márcia Ribeiro</td>
-                        <td>(61) 9847-4670</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="pull-right">
-                            <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
-                              <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong><a data-toggle="modal" data-target="#ModalDetalhaPosto"
-                                       href="#ModalDetalhaPosto">UPIS</a></strong></td>
-                        <td>Asa Sul</td>
-                        <td>Erika Cruvinel</td>
-                        <td>(61) 3442 5701</td>
-                        <td>Ativo</td>
-                        <td>
-                          <div class="pull-right">
-                            <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
-                              <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section role="tabpanel" class="tab-pane fade" id="tabs-servicos-tab-2">
-              <div class="row mt-sm">
-                <div class="col-sm-12">
-                  <h4 class="semibold"> Cadastrar novo posto avançado</h4>
-                  <small>Campos com asterisco vermelho ( <span class="semibold text-danger">*</span> ) são
-                    obrigatórios
-                  </small>
-                </div>
-              </div>
-
-              <section class="card card-default mt-md">
-                <header class="card-header">
-                  <h5 class="semibold"><i class="fa fa-building-o mr-xs" aria-hidden="true"></i> Dados
-                  </h5>
-                </header>
-                <div class="card-block">
-                  <div class="row">
-                    <div class="col-sm-4">
-                      <label class="form-label semibold" for="">Unidade</label>
-                      <select class="select2 select2-arrow">
-                        <option>Selecione</option>
-                        <option>Asa sul</option>
-                        <option>Asa norte</option>
-                        <option>Águas claras</option>
-                      </select>
-                    </div>
-                    <div class="col-sm-8">
-                      <label class="form-label semibold" for="">Nome</label>
-                      <select class="select2 select2-arrow">
-                        <option>Selecione</option>
-                        <option>Leonardo da Vinci</option>
-                        <option>Sigma</option>
-                        <option>CTJ</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row mt-lg">
-                    <div class="col-sm-4">
-                      <label class="form-label semibold" for="">CNPJ</label>
-                      <p>000.000.000/0000-00</p>
-                    </div>
-                    <div class="col-sm-4">
-                      <label class="form-label semibold" for="">Centro de custo</label>
-                      <p>Centro de custo</p>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="checkbox-toggle mt-md pt-sm">
-                        <input type="checkbox" id="check-qtd-niveis" checked/>
-                        <label class="form-label" for="check-qtd-niveis">Ativo</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-
-              <section class="card card-default mt-md">
-                <header class="card-header">
-                  <h5 class="semibold"><i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização
-                  </h5>
-                </header>
-                <div class="card-block">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <label class="form-label semibold" for="">Endereço</label>
-                      <p>Avenida Maria Teresa, quadra 43, rua antonieta, 1646</p>
-                    </div>
-                    <div class="col-sm-3">
-                      <label class="form-label semibold" for="">Número</label>
-                      <p>1289</p>
-                    </div>
-                    <div class="col-sm-3">
-                      <label class="form-label semibold" for="">Complemento</label>
-                      <p>Alameda 303</p>
-                    </div>
-                  </div>
-                  <div class="row mt-md">
-                    <div class="col-sm-3">
-                      <label class="form-label semibold" for="">Bairro</label>
-                      <p>Asa sul</p>
-                    </div>
-                    <div class="col-sm-3">
-                      <label class="form-label semibold" for="">Cidade</label>
-                      <p>Brasília</p>
-                    </div>
-                    <div class="col-sm-3">
-                      <label class="form-label semibold" for="">UF</label>
-                      <p>Distrito Federal</p>
-                    </div>
-                    <div class="col-sm-3">
-                      <label class="form-label semibold" for="">CEP</label>
-                      <p>00000-000</p>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section class="card card-default mt-md">
-                <header class="card-header">
-                  <h5 class="semibold"><i class="fa fa-commenting mr-xs" aria-hidden="true"></i> Contatos
-                  </h5>
-                </header>
-                <div class="card-block">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <label class="form-label semibold" for="">Responsável acadêmico</label>
-                      <select class="select2 select2-arrow">
-                        <option>Selecione</option>
-                        <option>Luan Almeida Barbosa</option>
-                        <option>Otávio Goncalves Souza</option>
-                        <option>Ana Souza Martins</option>
-                      </select>
-                    </div>
-                    <div class="col-sm-6">
-                      <label class="form-label semibold" for="">Interessados</label>
-                      <select class="select2" multiple="multiple">
-                        <option>Luan Almeida Barbosa</option>
-                        <option>Otávio Goncalves Souza</option>
-                        <option>Ana Souza Martins</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <div class="row mt-md">
-                <div class="col-sm-12">
-                  <section class="box-typical">
-                    <header class="box-typical-header header-bordered">
-                      <div class="tbl-row">
-                        <div class="tbl-cell tbl-cell-title">
-                          <h5 class="semibold"><i class="fa fa-phone" aria-hidden="true"></i> Telefones
-                          </h5>
-                        </div>
-                        <div class="tbl-cell tbl-cell-action-bordered">
-                          <form>
-                            <button type="button" class="action-btn" data-toggle="modal"
-                                    data-target="#ModalContatosPosto"><i
-                                    class="fa fa-plus-circle mr-xs"></i>Adicionar
-                            </button>
-                          </form>
-                        </div>
-                      </div>
-                    </header>
-                    <div class="card-block">
-                      <div class="table-responsive">
-                        <table class="table table-hover">
-                          <thead>
-                          <tr>
-                            <th>Nome</th>
-                            <th>Telefone(s) / E-mail</th>
-                            <th>Observações</th>
-                            <th class="text-right">Ações</th>
-                          </tr>
-                          </thead>
-                          <tbody>
-                          <tr>
-                            <td><p>Luan Almeida Barbosa</p></td>
-                            <td>
-                              <ul class="chart-legend-list">
-                                <li>
-                                  <div class="dot blue"></div>
-                                  (00) 0000-0000 - Principal
-                                </li>
-                                <li>
-                                  <div class="dot blue"></div>
-                                  (00) 0000-0000 - Outros
-                                </li>
-                              </ul>
-                              <p class="divider-top pb-sm">E-mail: luan.almeida@email.com.br</p>
-                            </td>
-                            <td>
-
-                              <p>Observações:
-                                <br>Gerente do posto, atendimento das 14h00 ás 22h00</p></td>
-                            <td class="text-right">
-                              <div class="btn-group btn-group-sm pull-right">
-                                <button type="button" class="btn btn-default-outline dropdown-toggle"
-                                        data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">Ações
-                                </button>
-                                <div class="dropdown-menu">
-                                  <a class="dropdown-item" data-toggle="modal"
-                                     data-target="#ModalContatosPosto"><i
-                                          class="fa fa-pencil-square-o mr-xs"
-                                          aria-hidden="true"></i>
-                                    Editar</a>
-                                  <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs"
-                                                                       aria-hidden="true"></i>
-                                    Remover</a>
+									</span> </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td><p>Iranyr Almeida Barbosa</p></td>
-                            <td>
-                              <ul class="chart-legend-list">
-                                <li>
-                                  <div class="dot blue"></div>
-                                  (00) 0000-0000 - Principal
-                                </li>
-                                <li>
-                                  <div class="dot blue"></div>
-                                  (00) 0000-0000 - Outros
-                                </li>
-                              </ul>
-                              <p class="divider-top pb-sm">E-mail: luan.almeida@email.com.br</p>
-                            </td>
-                            <td>
+                            </div><!--.tabs-section-nav-->
 
-                              <p>Observações:
-                                <br>Gerente do posto, atendimento das 14h00 ás 22h00</p></td>
-                            <td class="text-right">
-                              <div class="btn-group btn-group-sm pull-right">
-                                <button type="button" class="btn btn-default-outline dropdown-toggle"
-                                        data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">Ações
-                                </button>
-                                <div class="dropdown-menu">
-                                  <a class="dropdown-item" data-toggle="modal"
-                                     data-target="#ModalContatosPosto"><i
-                                          class="fa fa-pencil-square-o mr-xs"
-                                          aria-hidden="true"></i>
-                                    Editar</a>
-                                  <div class="dropdown-divider"></div>
-                                  <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs"
-                                                                       aria-hidden="true"></i>
-                                    Remover</a>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                            <div class="tab-content">
+
+
+                                <section role="tabpanel" class="tab-pane fade in active" id="tabs-servicos-tab-1">
+                                    <section>
+                                        <div id="collapse-busca-one" class="collapse mb-md" role="tabpanel" aria-labelledby="collapse-busca-one" aria-expanded="true">
+                                            <section class="card">
+                                                <div class="card-block">
+                                                    <div class="row">
+
+                                                        <div class="col-md-3">
+                                                            <label class="form-label semibold" for="">Nome</label>
+                                                            <input type="text" class="form-control" aria-label="" placeholder="Nome">
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label class="form-label semibold" for="">Unidade</label>
+                                                            <select class="select2 select2-arrow">
+                                                                <option>Selecione</option>
+                                                                <option>Asa sul</option>
+                                                                <option>Asa norte</option>
+                                                                <option>Águas claras</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <label class="form-label semibold" for="">Situação</label>
+                                                            <div class="form-group">
+                                                                <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                                    <label class="btn btn-secondary-outline active">
+                                                                        <input type="radio" name="options" id="" autocomplete="off" checked=""> Todos
+                                                                    </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off"> Ativo
+                                                                </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off"> Inativo
+                                                                </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <label class="form-label semibold" for="">Pendente</label>
+                                                            <div class="form-group">
+                                                                <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                                    <label class="btn btn-secondary-outline active">
+                                                                        <input type="radio" name="options" id="" autocomplete="off" checked=""> Todos
+                                                                    </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off"> Sim
+                                                                </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off"> Não
+                                                                </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row divider-top">
+                                                        <div class="col-sm-12">
+                                                            <div>
+                                                                <button type="button" class="btn btn-primary btn-sm mt-sm">
+                                                                    <i class="fa fa-search mr-xs" aria-hidden="true"></i> Buscar
+                                                                </button>
+                                                                <button type="button" class="btn btn-secondary btn-sm ml-md mt-sm" data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true" aria-controls="collapseOne">
+                                                                    <i class="fa fa-times" aria-hidden="true"></i> Cancelar
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-9">
+                                                <div class="form-control-wrapper form-control-icon-right">
+                                                    <input type="text" class="form-control input-table-custom" placeholder="Filtre nos resultados">
+                                                    <i class="fa fa-search"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="mt-sm">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true" aria-controls="collapseOne">
+                                                        <i class="fa fa-search-plus" aria-hidden="true"></i> Busca avançada</a>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                    <div class="row mt-md">
+                                        <div class="col-sm-12">
+                                            <div class="table-responsive table-custom">
+                                                <table class="datatable-on table table-hover" cellspacing="0" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Nome</th>
+                                                            <th>Unidade</th>
+                                                            <th>Gestor principal</th>
+                                                            <th>Telefone</th>
+                                                            <th>Situação</th>
+                                                            <th class="text-right">Ações</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaPosto" href="#ModalDetalhaPosto">CIMAN</a></strong>
+                                                            </td>
+                                                            <td>Asa Sul</td>
+                                                            <td>Elton Carvalho</td>
+                                                            <td>(61) 3213-3762</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="pull-right">
+                                                                    <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
+                                                                        <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaPosto" href="#ModalDetalhaPosto">Galois</a></strong>
+                                                            </td>
+                                                            <td>Asa Sul</td>
+                                                            <td>Rosangela Matsunaga</td>
+                                                            <td>(61) 3442-5501</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="pull-right">
+                                                                    <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
+                                                                        <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaPosto" href="#ModalDetalhaPosto">Leonardo da Vinci - Asa Norte</a></strong>
+                                                            </td>
+                                                            <td>Asa Norte</td>
+                                                            <td>Eliane Lima</td>
+                                                            <td>(61) 3442-5780</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="pull-right">
+                                                                    <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
+                                                                        <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaPosto" href="#ModalDetalhaPosto">Leonardo da Vinci - Asa Sul</a></strong>
+                                                            </td>
+                                                            <td>Leonardo da Vinci - Asa Sul</td>
+                                                            <td>Regina Lopes</td>
+                                                            <td>(61) 3442-5501</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="pull-right">
+                                                                    <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
+                                                                        <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaPosto" href="#ModalDetalhaPosto">Leonardo da Vinci - Taguatinga</a></strong>
+                                                            </td>
+                                                            <td>Taguatinga</td>
+                                                            <td>Erika Oya</td>
+                                                            <td>(61) 3442-5781</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="pull-right">
+                                                                    <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
+                                                                        <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaPosto" href="#ModalDetalhaPosto">Mackenzie</a></strong>
+                                                            </td>
+                                                            <td>Lago Sul</td>
+                                                            <td>Sônia Arantes</td>
+                                                            <td>(61) 2106-9036</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="pull-right">
+                                                                    <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
+                                                                        <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaPosto" href="#ModalDetalhaPosto">Marista - (615 Sul)</a></strong>
+                                                            </td>
+                                                            <td>Asa Sul</td>
+                                                            <td>Telma Fontes</td>
+                                                            <td>(61) 8404-7358</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="pull-right">
+                                                                    <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
+                                                                        <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaPosto" href="#ModalDetalhaPosto">Marista - (609 Sul)</a></strong>
+                                                            </td>
+                                                            <td>Asa Sul</td>
+                                                            <td>Telma Fontes</td>
+                                                            <td>(61) 8404-7358</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="pull-right">
+                                                                    <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
+                                                                        <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaPosto" href="#ModalDetalhaPosto">Marista João Paulo II</a></strong>
+                                                            </td>
+                                                            <td>Asa Norte</td>
+                                                            <td>Elaine Viegas</td>
+                                                            <td>(61) 3442-5665</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="pull-right">
+                                                                    <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
+                                                                        <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaPosto" href="#ModalDetalhaPosto">Santo Antônio</a></strong>
+                                                            </td>
+                                                            <td>Asa Sul</td>
+                                                            <td>Lueli Loivos Ceruti</td>
+                                                            <td>(61) 3442-5784</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="pull-right">
+                                                                    <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
+                                                                        <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaPosto" href="#ModalDetalhaPosto">Cor Jesu</a></strong>
+                                                            </td>
+                                                            <td>Asa Sul</td>
+                                                            <td>Lueli Loivos Ceruti</td>
+                                                            <td>(61) 3442-5784</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="pull-right">
+                                                                    <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
+                                                                        <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaPosto" href="#ModalDetalhaPosto">Centro Educacional Católica de Brasília</a></strong>
+                                                            </td>
+                                                            <td>Taguatinga Sul</td>
+                                                            <td>Márcia Ribeiro</td>
+                                                            <td>(61) 9847-4670</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="pull-right">
+                                                                    <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
+                                                                        <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaPosto" href="#ModalDetalhaPosto">UPIS</a></strong>
+                                                            </td>
+                                                            <td>Asa Sul</td>
+                                                            <td>Erika Cruvinel</td>
+                                                            <td>(61) 3442 5701</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="pull-right">
+                                                                    <a class="btn btn-default-outline btn-sm" href="posto--editar.html">
+                                                                        <i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section role="tabpanel" class="tab-pane fade" id="tabs-servicos-tab-2">
+                                    <div class="row mt-sm">
+                                        <div class="col-sm-12">
+                                            <h4 class="semibold"> Cadastrar novo posto avançado</h4>
+                                            <small>Campos com asterisco vermelho (
+                                                <span class="semibold text-danger">*</span> ) são obrigatórios
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <section class="card card-default mt-md">
+                                        <header class="card-header">
+                                            <h5 class="semibold">
+                                                <i class="fa fa-building-o mr-xs" aria-hidden="true"></i> Dados </h5>
+                                        </header>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label class="form-label semibold" for="">Unidade</label>
+                                                    <select class="select2 select2-arrow">
+                                                        <option>Selecione</option>
+                                                        <option>Asa sul</option>
+                                                        <option>Asa norte</option>
+                                                        <option>Águas claras</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <label class="form-label semibold" for="">Nome</label>
+                                                    <select class="select2 select2-arrow">
+                                                        <option>Selecione</option>
+                                                        <option>Leonardo da Vinci</option>
+                                                        <option>Sigma</option>
+                                                        <option>CTJ</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-lg">
+                                                <div class="col-sm-4">
+                                                    <label class="form-label semibold" for="">CNPJ</label>
+                                                    <p>000.000.000/0000-00</p>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <label class="form-label semibold" for="">Centro de custo</label>
+                                                    <p>Centro de custo</p>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox-toggle mt-md pt-sm">
+                                                        <input type="checkbox" id="check-qtd-niveis" checked/>
+                                                        <label class="form-label" for="check-qtd-niveis">Ativo</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+
+                                    <section class="card card-default mt-md">
+                                        <header class="card-header">
+                                            <h5 class="semibold">
+                                                <i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização
+                                            </h5>
+                                        </header>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label semibold" for="">Endereço</label>
+                                                    <p>Avenida Maria Teresa, quadra 43, rua antonieta, 1646</p>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">Número</label>
+                                                    <p>1289</p>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">Complemento</label>
+                                                    <p>Alameda 303</p>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-md">
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">Bairro</label>
+                                                    <p>Asa sul</p>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">Cidade</label>
+                                                    <p>Brasília</p>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">UF</label>
+                                                    <p>Distrito Federal</p>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">CEP</label>
+                                                    <p>00000-000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <section class="card card-default mt-md">
+                                        <header class="card-header">
+                                            <h5 class="semibold">
+                                                <i class="fa fa-commenting mr-xs" aria-hidden="true"></i> Contatos </h5>
+                                        </header>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label semibold" for="">Responsável acadêmico</label>
+                                                    <select class="select2 select2-arrow">
+                                                        <option>Selecione</option>
+                                                        <option>Luan Almeida Barbosa</option>
+                                                        <option>Otávio Goncalves Souza</option>
+                                                        <option>Ana Souza Martins</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="form-label semibold" for="">Interessados</label>
+                                                    <select class="select2" multiple="multiple">
+                                                        <option>Luan Almeida Barbosa</option>
+                                                        <option>Otávio Goncalves Souza</option>
+                                                        <option>Ana Souza Martins</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <div class="row mt-md">
+                                        <div class="col-sm-12">
+                                            <section class="box-typical">
+                                                <header class="box-typical-header header-bordered">
+                                                    <div class="tbl-row">
+                                                        <div class="tbl-cell tbl-cell-title">
+                                                            <h5 class="semibold">
+                                                                <i class="fa fa-phone" aria-hidden="true"></i> Telefones
+                                                            </h5>
+                                                        </div>
+                                                        <div class="tbl-cell tbl-cell-action-bordered">
+                                                            <form>
+                                                                <button type="button" class="action-btn" data-toggle="modal" data-target="#ModalContatosPosto">
+                                                                    <i class="fa fa-plus-circle mr-xs"></i>Adicionar
+                                                                </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </header>
+                                                <div class="card-block">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nome</th>
+                                                                    <th>Telefone(s) / E-mail</th>
+                                                                    <th>Observações</th>
+                                                                    <th class="text-right">Ações</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><p>Luan Almeida Barbosa</p></td>
+                                                                    <td>
+                                                                        <ul class="chart-legend-list">
+                                                                            <li>
+                                                                                <div class="dot blue"></div>
+                                                                                (00) 0000-0000 - Principal
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="dot blue"></div>
+                                                                                (00) 0000-0000 - Outros
+                                                                            </li>
+                                                                        </ul>
+                                                                        <p class="divider-top pb-sm">E-mail: luan.almeida@email.com.br</p>
+                                                                    </td>
+                                                                    <td>
+
+                                                                        <p>Observações:
+                                                                            <br>Gerente do posto, atendimento das 14h00 ás 22h00
+                                                                        </p></td>
+                                                                    <td class="text-right">
+                                                                        <div class="btn-group btn-group-sm pull-right">
+                                                                            <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                            </button>
+                                                                            <div class="dropdown-menu">
+                                                                                <a class="dropdown-item" data-toggle="modal" data-target="#ModalContatosPosto"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                                <div class="dropdown-divider"></div>
+                                                                                <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i> Remover</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><p>Iranyr Almeida Barbosa</p></td>
+                                                                    <td>
+                                                                        <ul class="chart-legend-list">
+                                                                            <li>
+                                                                                <div class="dot blue"></div>
+                                                                                (00) 0000-0000 - Principal
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="dot blue"></div>
+                                                                                (00) 0000-0000 - Outros
+                                                                            </li>
+                                                                        </ul>
+                                                                        <p class="divider-top pb-sm">E-mail: luan.almeida@email.com.br</p>
+                                                                    </td>
+                                                                    <td>
+
+                                                                        <p>Observações:
+                                                                            <br>Gerente do posto, atendimento das 14h00 ás 22h00
+                                                                        </p></td>
+                                                                    <td class="text-right">
+                                                                        <div class="btn-group btn-group-sm pull-right">
+                                                                            <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                            </button>
+                                                                            <div class="dropdown-menu">
+                                                                                <a class="dropdown-item" data-toggle="modal" data-target="#ModalContatosPosto"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                                <div class="dropdown-divider"></div>
+                                                                                <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i> Remover</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row divider-top pb-md">
+                                        <div class="col-sm-12">
+                                            <button type="button" class="btn btn-primary btn-success" data-dismiss="modal">
+                                                <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
+                                            </button>
+                                            <button type="button" class="btn btn-secondary ml-sm">
+                                                <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!--.tab-pane novo -->
+                            </div><!--.tab-content-->
+                        </div><!--.tabs-section-->
                     </div>
-                  </section>
                 </div>
-              </div>
+            </div><!--.container-fluid-->
+        </div><!--.page-content-->
 
 
-              <div class="row divider-top pb-md">
-                <div class="col-sm-12">
-                  <button type="button" class="btn btn-primary btn-success" data-dismiss="modal"><i
-                          class="fa fa-floppy-o mr-xs"
-                          aria-hidden="true"></i>
-                    Salvar
-                  </button>
-                  <button type="button" class="btn btn-secondary ml-sm">
-                    <i class="fa fa-ban mr-xs" aria-hidden="true"></i>
-                    Cancelar
-                  </button>
-                </div>
-              </div>
-            </section>
-            <!--.tab-pane novo -->
-          </div><!--.tab-content-->
-        </div><!--.tabs-section-->
-      </div>
-    </div>
-  </div><!--.container-fluid-->
-</div><!--.page-content-->
-
-
-<!-- Modal contatos posto -->
-<div class="modal fade" id="ModalContatosPosto" tabindex="-1" role="dialog" aria-labelledby="ModalContatosPosto">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Contatos do posto avançado</h4>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-sm-6">
-            <label class="form-label semibold" for="">Nome</label>
-            <input type="text" class="form-control" aria-label="" placeholder="Nome">
-          </div>
-          <div class="col-sm-6">
-            <label class="form-label semibold" for="">E-mail</label>
-            <input type="email" class="form-control" aria-label="" placeholder="E-mail">
-          </div>
-        </div>
-        <div class="row mt-md">
-          <div class="col-sm-12">
-            <label class="form-label semibold" for="">Observações</label>
-            <textarea rows="4" class="form-control maxlength-custom-message" placeholder="Observações" maxlength="20"></textarea>
-          </div>
-        </div>
-        <section class="card card-default mt-md">
-          <header class="card-header">
-            <h5 class="semibold"><i class="fa fa-phone mr-xs" aria-hidden="true"></i> Telefones
-            </h5>
-          </header>
-          <div class="card-block">
-            <div class="row">
-              <div class="col-sm-7 mt-xl">
-                <div class="row">
-                  <div class="col-sm-5">
-                    <label class="form-label semibold" for="">Tipo</label>
-                    <select class="select2 select2-arrow">
-                      <option>Selecione</option>
-                      <option>Principal</option>
-                      <option>Comercial</option>
-                      <option>Outros</option>
-                    </select>
-                  </div>
-                  <div class="col-sm-7">
-                    <label class="form-label semibold" for="">Número</label>
-                    <div class="input-group">
-                      <input type="number" class="form-control" placeholder="Número">
+        <!-- Modal contatos posto -->
+        <div class="modal fade" id="ModalContatosPosto" tabindex="-1" role="dialog" aria-labelledby="ModalContatosPosto">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Contatos do posto avançado</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="form-label semibold" for="">Nome</label>
+                                <input type="text" class="form-control" aria-label="" placeholder="Nome">
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="form-label semibold" for="">E-mail</label>
+                                <input type="email" class="form-control" aria-label="" placeholder="E-mail">
+                            </div>
+                        </div>
+                        <div class="row mt-md">
+                            <div class="col-sm-12">
+                                <label class="form-label semibold" for="">Observações</label>
+                                <textarea rows="4" class="form-control maxlength-custom-message" placeholder="Observações" maxlength="20"></textarea>
+                            </div>
+                        </div>
+                        <section class="card card-default mt-md">
+                            <header class="card-header">
+                                <h5 class="semibold"><i class="fa fa-phone mr-xs" aria-hidden="true"></i> Telefones
+                                </h5>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-7 mt-xl">
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <label class="form-label semibold" for="">Tipo</label>
+                                                <select class="select2 select2-arrow">
+                                                    <option>Selecione</option>
+                                                    <option>Principal</option>
+                                                    <option>Comercial</option>
+                                                    <option>Outros</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                <label class="form-label semibold" for="">Número</label>
+                                                <div class="input-group">
+                                                    <input type="number" class="form-control" placeholder="Número">
                         <span class="input-group-btn">
-                          <button class="btn btn-success-outline" type="button"><i class="fa fa-plus"
-                                                                                   aria-hidden="true"></i>
+                          <button class="btn btn-success-outline" type="button">
+                              <i class="fa fa-plus" aria-hidden="true"></i>
                           </button>
                         </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <label class="form-label semibold" for="">Telefones cadastrados</label>
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Tipo</th>
+                                                    <th>Número</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Principal</td>
+                                                    <td>(61) 0000-0000</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm">
+                                                            <i class="fa fa-times" aria-hidden="true"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Comercial</td>
+                                                    <td>(61) 0000-0000</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm">
+                                                            <i class="fa fa-times" aria-hidden="true"></i></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
-                  </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    </div>
                 </div>
-              </div>
-              <div class="col-sm-5">
-                <label class="form-label semibold" for="">Telefones cadastrados</label>
-                <table class="table">
-                  <thead>
-                  <tr>
-                    <th>Tipo</th>
-                    <th>Número</th>
-                    <th></th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>Principal</td>
-                    <td>(61) 0000-0000</td>
-                    <td>
-                      <button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i
-                              class="fa fa-times" aria-hidden="true"></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Comercial</td>
-                    <td>(61) 0000-0000</td>
-                    <td>
-                      <button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm"><i
-                              class="fa fa-times" aria-hidden="true"></i></button>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
             </div>
-          </div>
-        </section>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Modal detalha posto -->
-<div class="modal fade" id="ModalDetalhaPosto" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaPosto">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Detalhes do posto avançado</h4>
-      </div>
-      <div class="modal-body">
-
-
-        <section class="card card-default mt-md">
-          <header class="card-header">
-            <h5 class="semibold"><i class="fa fa-building-o mr-xs" aria-hidden="true"></i> Dados
-            </h5>
-          </header>
-          <div class="card-block">
-            <div class="row">
-              <div class="col-sm-4">
-                <label class="form-label semibold" for="">Situação</label>
-                <p class="text-success"><strong><i class="fa fa-check" aria-hidden="true"></i> Ativo</strong></p>
-              </div>
-              <div class="col-sm-4">
-                <label class="form-label semibold" for="">CNPJ</label>
-                <p>000.000.000/0000-00</p>
-              </div>
-              <div class="col-sm-4">
-                <label class="form-label semibold" for="">Centro de custo</label>
-                <p>000.000.000/0000-00</p>
-              </div>
-            </div>
-            <div class="row mt-md">
-              <div class="col-sm-6">
-                <label class="form-label semibold" for="">Nome</label>
-                <p>Centro Educacional Católica de Brasília</p>
-              </div>
-              <div class="col-sm-6">
-                <label class="form-label semibold" for="">Unidade</label>
-                <p>Taguatinga Sul</p>
-              </div>
-
-
-            </div>
-          </div>
-        </section>
-
-
-        <section class="card card-default mt-md">
-          <header class="card-header">
-            <h5 class="semibold"><i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização
-            </h5>
-          </header>
-          <div class="card-block">
-            <div class="row">
-              <div class="col-sm-6">
-                <label class="form-label semibold" for="">Endereço</label>
-                <p>Avenida Maria Teresa, quadra 43</p>
-              </div>
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">Número</label>
-                <p>1289</p>
-              </div>
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">Complemento</label>
-                <p>Alameda 303</p>
-              </div>
-            </div>
-            <div class="row mt-md">
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">Bairro</label>
-                <p>Taguatinga Sul</p>
-              </div>
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">Cidade</label>
-                <p>Brasília</p>
-              </div>
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">UF</label>
-                <p>Distrito Federal</p>
-              </div>
-              <div class="col-sm-3">
-                <label class="form-label semibold" for="">CEP</label>
-                <p>00000-000</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="card card-default mt-md">
-          <header class="card-header">
-            <h5 class="semibold"><i class="fa fa-commenting mr-xs" aria-hidden="true"></i> Contatos
-            </h5>
-          </header>
-          <div class="card-block">
-            <div class="row">
-              <div class="col-sm-4">
-                <label class="form-label semibold" for="">Gestor do contrato</label>
-                <p>Rodrigo Sousa Martins</p>
-              </div>
-              <div class="col-sm-4">
-                <label class="form-label semibold" for="">Responsável acadêmico</label>
-                <p>Márcia Ribeiro</p>
-              </div>
-              <div class="col-sm-4">
-                <label class="form-label semibold" for="">Interessados</label>
-                <p>Luan Almeida Barbosa</p>
-                <p>Otávio Goncalves Souza</p>
-                <p>Ana Souza Martins</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div class="row mt-md">
-          <div class="col-sm-12">
-            <section class="box-typical">
-              <header class="box-typical-header header-bordered">
-                <div class="tbl-row">
-                  <div class="tbl-cell tbl-cell-title">
-                    <h5 class="semibold"><i class="fa fa-phone" aria-hidden="true"></i> Telefones
-                    </h5>
-                  </div>
-                </div>
-              </header>
-              <div class="card-block">
-                <div class="table-responsive">
-                  <table class="table table-hover">
-                    <thead>
-                    <tr>
-                      <th>Nome</th>
-                      <th>Telefone(s) / E-mail</th>
-                      <th>Observações</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                      <td><p>Luan Almeida Barbosa</p></td>
-                      <td>
-                        <ul class="chart-legend-list">
-                          <li>
-                            <div class="dot blue"></div>
-                            (00) 0000-0000 - Principal
-                          </li>
-                          <li>
-                            <div class="dot blue"></div>
-                            (00) 0000-0000 - Outros
-                          </li>
-                        </ul>
-                        <p class="divider-top pb-sm">E-mail: luan.almeida@email.com.br</p>
-                      </td>
-                      <td>
-                        <p>Observações:
-                          <br>Gerente do posto, atendimento das 14h00 ás 22h00</p></td>
-                    </tr>
-                    <tr>
-                      <td><p>Iranyr Almeida Barbosa</p></td>
-                      <td>
-                        <ul class="chart-legend-list">
-                          <li>
-                            <div class="dot blue"></div>
-                            (00) 0000-0000 - Principal
-                          </li>
-                          <li>
-                            <div class="dot blue"></div>
-                            (00) 0000-0000 - Outros
-                          </li>
-                        </ul>
-                        <p class="divider-top pb-sm">E-mail: luan.almeida@email.com.br</p>
-                      </td>
-                      <td>
-                        <p>Observações:
-                          <br>Gerente do posto, atendimento das 14h00 ás 22h00</p></td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </section>
-          </div>
         </div>
 
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
-      </div>
-    </div>
-  </div>
-</div>
+        <!-- Modal detalha posto -->
+        <div class="modal fade" id="ModalDetalhaPosto" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaPosto">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Detalhes do posto avançado</h4>
+                    </div>
+                    <div class="modal-body">
 
 
-<script src="../../js/lib/jquery/jquery.min.js"></script>
-<script src="../../js/lib/tether/tether.min.js"></script>
-<script src="../../js/lib/bootstrap/bootstrap.min.js"></script>
+                        <section class="card card-default mt-md">
+                            <header class="card-header">
+                                <h5 class="semibold"><i class="fa fa-building-o mr-xs" aria-hidden="true"></i> Dados
+                                </h5>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold" for="">Situação</label>
+                                        <p class="text-success">
+                                            <strong><i class="fa fa-check" aria-hidden="true"></i> Ativo</strong></p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold" for="">CNPJ</label>
+                                        <p>000.000.000/0000-00</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold" for="">Centro de custo</label>
+                                        <p>000.000.000/0000-00</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-md">
+                                    <div class="col-sm-6">
+                                        <label class="form-label semibold" for="">Nome</label>
+                                        <p>Centro Educacional Católica de Brasília</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label semibold" for="">Unidade</label>
+                                        <p>Taguatinga Sul</p>
+                                    </div>
 
-<script src="../../js/lib/datatables-net/datatables.min.js"></script>
-<script src="../../js/start-datatables.js"></script>
 
-<script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
-<script src="../../js/lib/select2/select2.full.min.js"></script>
-
-<script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
-<script src="../../js/lib/input-mask/input-mask-init.js"></script>
+                                </div>
+                            </div>
+                        </section>
 
 
-<script src="../../js/app.js"></script>
-<script src="../../js/plugins.js"></script>
+                        <section class="card card-default mt-md">
+                            <header class="card-header">
+                                <h5 class="semibold">
+                                    <i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização </h5>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label class="form-label semibold" for="">Endereço</label>
+                                        <p>Avenida Maria Teresa, quadra 43</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label class="form-label semibold" for="">Número</label>
+                                        <p>1289</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label class="form-label semibold" for="">Complemento</label>
+                                        <p>Alameda 303</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-md">
+                                    <div class="col-sm-3">
+                                        <label class="form-label semibold" for="">Bairro</label>
+                                        <p>Taguatinga Sul</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label class="form-label semibold" for="">Cidade</label>
+                                        <p>Brasília</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label class="form-label semibold" for="">UF</label>
+                                        <p>Distrito Federal</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label class="form-label semibold" for="">CEP</label>
+                                        <p>00000-000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="card card-default mt-md">
+                            <header class="card-header">
+                                <h5 class="semibold"><i class="fa fa-commenting mr-xs" aria-hidden="true"></i> Contatos
+                                </h5>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold" for="">Gestor do contrato</label>
+                                        <p>Rodrigo Sousa Martins</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold" for="">Responsável acadêmico</label>
+                                        <p>Márcia Ribeiro</p>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label semibold" for="">Interessados</label>
+                                        <p>Luan Almeida Barbosa</p>
+                                        <p>Otávio Goncalves Souza</p>
+                                        <p>Ana Souza Martins</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="row mt-md">
+                            <div class="col-sm-12">
+                                <section class="box-typical">
+                                    <header class="box-typical-header header-bordered">
+                                        <div class="tbl-row">
+                                            <div class="tbl-cell tbl-cell-title">
+                                                <h5 class="semibold">
+                                                    <i class="fa fa-phone" aria-hidden="true"></i> Telefones </h5>
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <div class="card-block">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nome</th>
+                                                        <th>Telefone(s) / E-mail</th>
+                                                        <th>Observações</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><p>Luan Almeida Barbosa</p></td>
+                                                        <td>
+                                                            <ul class="chart-legend-list">
+                                                                <li>
+                                                                    <div class="dot blue"></div>
+                                                                    (00) 0000-0000 - Principal
+                                                                </li>
+                                                                <li>
+                                                                    <div class="dot blue"></div>
+                                                                    (00) 0000-0000 - Outros
+                                                                </li>
+                                                            </ul>
+                                                            <p class="divider-top pb-sm">E-mail: luan.almeida@email.com.br</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>Observações:
+                                                                <br>Gerente do posto, atendimento das 14h00 ás 22h00</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><p>Iranyr Almeida Barbosa</p></td>
+                                                        <td>
+                                                            <ul class="chart-legend-list">
+                                                                <li>
+                                                                    <div class="dot blue"></div>
+                                                                    (00) 0000-0000 - Principal
+                                                                </li>
+                                                                <li>
+                                                                    <div class="dot blue"></div>
+                                                                    (00) 0000-0000 - Outros
+                                                                </li>
+                                                            </ul>
+                                                            <p class="divider-top pb-sm">E-mail: luan.almeida@email.com.br</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>Observações:
+                                                                <br>Gerente do posto, atendimento das 14h00 ás 22h00</p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
 
 
-<!-- script par carregar includes - Jogar fora -->
-<script src="../../js/load-includes.js"></script>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-<script src="../../js/lib/bootstrap-maxlength/bootstrap-maxlength.js"></script>
-<script src="../../js/lib/bootstrap-maxlength/bootstrap-maxlength-init.js"></script>
+        <script src="../../js/lib/jquery/jquery.min.js"></script>
+        <script src="../../js/lib/tether/tether.min.js"></script>
+        <script src="../../js/lib/bootstrap/bootstrap.min.js"></script>
 
-<script>
-</script>
+        <script src="../../js/lib/datatables-net/datatables.min.js"></script>
+        <script src="../../js/start-datatables.js"></script>
 
-</body>
+        <script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+        <script src="../../js/lib/select2/select2.full.min.js"></script>
+
+        <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
+        <script src="../../js/lib/input-mask/input-mask-init.js"></script>
+
+
+        <script src="../../js/app.js"></script>
+        <script src="../../js/plugins.js"></script>
+
+
+        <!-- script par carregar includes - Jogar fora -->
+        <script src="../../js/load-includes.js"></script>
+
+
+        <script src="../../js/lib/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+        <script src="../../js/lib/bootstrap-maxlength/bootstrap-maxlength-init.js"></script>
+
+        <script></script>
+
+    </body>
 </html>
