@@ -136,12 +136,18 @@
 	                <span class="lbl">Acadêmico</span>
 	            </span>
                     <ul>
-                        <li><a href="../posto/unidade.html"><span class="lbl">Unidades</span></a></li>
+                        <li><a href="../posto/unidade.html"><span class="lbl">Unidade</span></a></li>
                         <li><a href="../posto/posto.html"><span class="lbl">Posto avançado</span></a></li>
-                        <li><a href="../academico/grupos.html" class="active"><span class="lbl">Grupos</span></a></li>
-                        <li><a href="../academico/cursos.html"><span class="lbl">Cursos</span></a></li>
-                        <li><a href="../academico/niveis.html"><span class="lbl">Níveis</span></a></li>
-                        <li><a href="../servicos/servicos.html"><span class="lbl">Serviços</span></a></li>
+                        <li class="with-sub">
+                            <span class="lbl">Grupos</span></a>
+                            <ul>
+                                <li><a href="../academico/grupos.html" class="active"><span class="lbl">Curso</span></a></li>
+                                <li><a href="../academico/grupos.html"><span class="lbl">Serviço</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../academico/cursos.html"><span class="lbl">Curso</span></a></li>
+                        <li><a href="../academico/niveis.html"><span class="lbl">Nível</span></a></li>
+                        <li><a href="../servicos/servicos.html"><span class="lbl">Serviço</span></a></li>
                     </ul>
                 </li>
                 <li class="green with-sub">
@@ -186,34 +192,6 @@
                         <li><a href="#"><span class="lbl">opção #</span></a></li>
                         <li><a href="#"><span class="lbl">opção #</span></a></li>
                         <li><a href="#"><span class="lbl">opção #</span></a></li>
-                    </ul>
-                </li>
-                <li class="grey with-sub">
-	            <span>
-	                <span class="font-icon font-icon-burger"></span>
-	                <span class="lbl">Nested Menu</span>
-	            </span>
-                    <ul>
-                        <li><a href="#"><span class="lbl">Level 1</span></a></li>
-                        <li><a href="#"><span class="lbl">Level 1</span></a></li>
-                        <li class="with-sub">
-	                    <span>
-	                        <span class="lbl">Level 2</span>
-	                    </span>
-                            <ul>
-                                <li><a href="#"><span class="lbl">Level 2</span></a></li>
-                                <li><a href="#"><span class="lbl">Level 2</span></a></li>
-                                <li class="with-sub">
-	                            <span>
-	                                <span class="lbl">Level 3</span>
-	                            </span>
-                                    <ul>
-                                        <li><a href="#"><span class="lbl">Level 3</span></a></li>
-                                        <li><a href="#"><span class="lbl">Level 3</span></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
                 </li>
             </ul>
@@ -518,10 +496,6 @@
                 });
             });
         </script>
-
-
-        <!-- script par carregar includes - Jogar fora -->
-        <script src="../../js/load-includes.js"></script>
 
     </body>
 </html>

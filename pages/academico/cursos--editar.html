@@ -136,12 +136,18 @@
 	                <span class="lbl">Acadêmico</span>
 	            </span>
                     <ul>
-                        <li><a href="../posto/unidade.html"><span class="lbl">Unidades</span></a></li>
+                        <li><a href="../posto/unidade.html"><span class="lbl">Unidade</span></a></li>
                         <li><a href="../posto/posto.html"><span class="lbl">Posto avançado</span></a></li>
-                        <li><a href="../academico/grupos.html" class="active"><span class="lbl">Grupos</span></a></li>
-                        <li><a href="../academico/cursos.html"><span class="lbl">Cursos</span></a></li>
-                        <li><a href="../academico/niveis.html"><span class="lbl">Níveis</span></a></li>
-                        <li><a href="../servicos/servicos.html"><span class="lbl">Serviços</span></a></li>
+                        <li class="with-sub">
+                            <span class="lbl">Grupos</span></a>
+                            <ul>
+                                <li><a href="../academico/grupos.html" class="active"><span class="lbl">Curso</span></a></li>
+                                <li><a href="../academico/grupos.html"><span class="lbl">Serviço</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../academico/cursos.html"><span class="lbl">Curso</span></a></li>
+                        <li><a href="../academico/niveis.html"><span class="lbl">Nível</span></a></li>
+                        <li><a href="../servicos/servicos.html"><span class="lbl">Serviço</span></a></li>
                     </ul>
                 </li>
                 <li class="green with-sub">
@@ -186,34 +192,6 @@
                         <li><a href="#"><span class="lbl">opção #</span></a></li>
                         <li><a href="#"><span class="lbl">opção #</span></a></li>
                         <li><a href="#"><span class="lbl">opção #</span></a></li>
-                    </ul>
-                </li>
-                <li class="grey with-sub">
-	            <span>
-	                <span class="font-icon font-icon-burger"></span>
-	                <span class="lbl">Nested Menu</span>
-	            </span>
-                    <ul>
-                        <li><a href="#"><span class="lbl">Level 1</span></a></li>
-                        <li><a href="#"><span class="lbl">Level 1</span></a></li>
-                        <li class="with-sub">
-	                    <span>
-	                        <span class="lbl">Level 2</span>
-	                    </span>
-                            <ul>
-                                <li><a href="#"><span class="lbl">Level 2</span></a></li>
-                                <li><a href="#"><span class="lbl">Level 2</span></a></li>
-                                <li class="with-sub">
-	                            <span>
-	                                <span class="lbl">Level 3</span>
-	                            </span>
-                                    <ul>
-                                        <li><a href="#"><span class="lbl">Level 3</span></a></li>
-                                        <li><a href="#"><span class="lbl">Level 3</span></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
                 </li>
             </ul>
@@ -404,15 +382,19 @@
                                                                     <th>Data fim</th>
                                                                     <th>Situação</th>
                                                                     <th>Valor</th>
+                                                                    <th>Observações</th>
                                                                     <th class="text-right">Ações</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <tr class="table-active-next" data-toggle="tooltip" data-placement="top" title="Próximo valor vigente">
+                                                                <tr class="table-active-next" data-toggle="tooltip" data-placement="bottom" title="Próximo valor vigente">
                                                                     <td>00/00/0000</td>
                                                                     <td>00/00/0000</td>
                                                                     <td>Ativo</td>
                                                                     <td>R$450,00</td>
+                                                                    <td>
+                                                                        <a tabindex="0" data-container="body" data-trigger="focus" title="Observações" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Reajustado de acordo...</a>
+                                                                    </td>
                                                                     <td class="text-right">
                                                                         <div class="btn-group btn-group-sm pull-right">
                                                                             <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
@@ -425,11 +407,14 @@
                                                                         </div>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="table-active-visual" data-toggle="tooltip" data-placement="top" title="Valor vigente">
+                                                                <tr class="table-active-visual" data-toggle="tooltip" data-placement="bottom" title="Valor vigente">
                                                                     <td>00/00/0000</td>
                                                                     <td>00/00/0000</td>
                                                                     <td>Ativo</td>
                                                                     <td>R$450,00</td>
+                                                                    <td>
+                                                                        <a tabindex="0" data-container="body" data-trigger="focus" title="Observações" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Reajustado de acordo...</a>
+                                                                    </td>
                                                                     <td class="text-right">
                                                                         <div class="btn-group btn-group-sm pull-right">
                                                                             <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
@@ -442,11 +427,14 @@
                                                                         </div>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="table-inactive" data-toggle="tooltip" data-placement="top" title="Valor inativo">
+                                                                <tr class="table-inactive" data-toggle="tooltip" data-placement="bottom" title="Valor inativo">
                                                                     <td>00/00/0000</td>
                                                                     <td>00/00/0000</td>
                                                                     <td>Ativo</td>
                                                                     <td>R$450,00</td>
+                                                                    <td>
+                                                                        <a tabindex="0" data-container="body" data-trigger="focus" title="Observações" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Reajustado de acordo...</a>
+                                                                    </td>
                                                                     <td class="text-right"></td>
                                                                 </tr>
                                                             </tbody>
@@ -872,10 +860,5 @@
                 });
             });
         </script>
-
-
-        <!-- script par carregar includes - Jogar fora -->
-        <script src="../../js/load-includes.js"></script>
-
     </body>
 </html>
