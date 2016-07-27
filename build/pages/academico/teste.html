@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-br">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>CTJFlow</title>
+
+        <link href="../../img/favicon.ico" rel="shortcut icon">
+
+        <!-- css's especificos -->
+        <link rel="stylesheet" href="../../css/lib/datatables-net/datatables.min.css">
+
+        <!-- css's gerais -->
+        <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/custom.css">
+
+
+    </head>
+    <body class="with-side-menu">
+
+        <header class="site-header">
+            <div class="container-fluid">
+                <a href="#" class="site-logo"> <img class="hidden-md-down" src="../../img/logo-ctj-flow.png" alt="">
+                    <img class="hidden-lg-up" src="../../img/logo-2-mob.png" alt=""> </a>
+                <button class="hamburger hamburger--htla">
+                    <span>Menu</span>
+                </button>
+                <div class="site-header-content">
+                    <div class="site-header-content-in">
+                        <div class="site-header-shown">
+                            <div class="dropdown dropdown-notification notif">
+                                <a href="#" class="header-alarm dropdown-toggle active" id="dd-notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="font-icon-alarm"></i> </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
+                                    <div class="dropdown-menu-notif-header">
+                                        Notifications <span class="label label-pill label-danger">4</span>
+                                    </div>
+                                    <div class="dropdown-menu-notif-list">
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-1.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Morgan</a> was bothering about something
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-2.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Lioneli</a> had commented on this
+                                            <a href="#">Super Important Thing</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-3.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-4.jpg" alt="">
+                                            </div>
+                                            <a href="#">Lionely</a> wants to go to
+                                            <a href="#">Cinema</a> with you to see <a href="#">This Movie</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-menu-notif-more">
+                                        <a href="#">See more</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown dropdown-lang">
+                                <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-br"></span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-menu-col">
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-us"></span>English</a>
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-fr"></span>French</a>
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-it"></span>Italiano</a>
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-es"></span>Español</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="dropdown user-menu">
+                                <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="../../img/avatar-2-64.png" alt="">
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Perfil</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Configurações</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Ajuda</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Sair</a>
+                                </div>
+                            </div>
+
+                            <button type="button" class="burger-right">
+                                <i class="font-icon-menu-addl"></i>
+                            </button>
+                        </div><!--.site-header-shown-->
+
+                        <div class="mobile-menu-right-overlay"></div>
+
+
+                    </div><!--.site-header-collapsed-->
+                </div><!--site-header-content-in-->
+            </div><!--.site-header-content--></div><!--.container-fluid-->
+        </header><!--.site-header-->
+        <div class="mobile-menu-left-overlay"></div>
+        <nav class="side-menu">
+            <ul class="side-menu-list">
+                <li class="purple">
+	            <span>
+	                <i class="font-icon font-icon-dashboard mr-xs" aria-hidden="true"></i>
+	                <span class="lbl">Dashboard</span>
+	            </span>
+                </li>
+                <li class="blue with-sub">
+	            <span>
+	                <i class="fa fa-book" aria-hidden="true"></i>
+	                <span class="lbl">Acadêmico</span>
+	            </span>
+                    <ul>
+                        <li><a href="../posto/unidade.html"><span class="lbl">Unidades</span></a></li>
+                        <li><a href="../posto/posto.html"><span class="lbl">Posto avançado</span></a></li>
+                        <li><a href="../academico/grupos.html" class="active"><span class="lbl">Grupos</span></a></li>
+                        <li><a href="../academico/cursos.html"><span class="lbl">Cursos</span></a></li>
+                        <li><a href="../academico/niveis.html"><span class="lbl">Níveis</span></a></li>
+                        <li><a href="../servicos/servicos.html"><span class="lbl">Serviços</span></a></li>
+                    </ul>
+                </li>
+                <li class="green with-sub">
+	            <span>
+	                <i class="fa fa-building" aria-hidden="true"></i>
+	                <span class="lbl">Administrativo</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="gold with-sub">
+	            <span>
+	                <i class="fa fa-money" aria-hidden="true"></i>
+	                <span class="lbl">Financeiro</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="blue-dirty with-sub">
+	            <span>
+	                <i class="fa fa-cogs" aria-hidden="true"></i>
+	                <span class="lbl">Suporte</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="red with-sub">
+	            <span>
+	                <i class="fa fa-lock" aria-hidden="true"></i>
+	                <span class="lbl">Segurança</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="grey with-sub">
+	            <span>
+	                <span class="font-icon font-icon-burger"></span>
+	                <span class="lbl">Nested Menu</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">Level 1</span></a></li>
+                        <li><a href="#"><span class="lbl">Level 1</span></a></li>
+                        <li class="with-sub">
+	                    <span>
+	                        <span class="lbl">Level 2</span>
+	                    </span>
+                            <ul>
+                                <li><a href="#"><span class="lbl">Level 2</span></a></li>
+                                <li><a href="#"><span class="lbl">Level 2</span></a></li>
+                                <li class="with-sub">
+	                            <span>
+	                                <span class="lbl">Level 3</span>
+	                            </span>
+                                    <ul>
+                                        <li><a href="#"><span class="lbl">Level 3</span></a></li>
+                                        <li><a href="#"><span class="lbl">Level 3</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <section>
+                <header class="side-menu-title">FAVORITOS</header>
+                <ul class="side-menu-list">
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Cadastro de Alunos</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Gerenciar Calendário</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Relatório Alunos</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Relatório Carga Horaria</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Relatório Evasão</span> </a>
+                    </li>
+                </ul>
+            </section>
+        </nav><!--.side-menu-->
+
+
+        <div class="page-content">
+
+            <div class="container-fluid">
+                <section>
+                    <ol class="breadcrumb blue-ctj">
+                        <li><a href="#">Acadêmico</a></li>
+                        <li class="ml-xs mr-xs"> /</li>
+                        <li class="active">Níveis</li>
+                        <li style="float:right;">
+                            <button class="btn btn-inline btn-secondary-outline btn-sm">
+                                <i class="fa fa-question-circle" aria-hidden="true"></i> Ajuda
+                            </button>
+                        </li>
+                    </ol>
+                </section>
+
+
+                <section>
+                    <div class="row mt-sm">
+                        <div class="col-lg-12">
+                            <section class="tabs-section">
+                                <div class="tabs-section-nav">
+                                    <div class="tbl">
+                                        <ul class="nav" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" href="#tabs-cursos-tab-1" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+										Níveis
+										<span class="label label-pill label-primary">100</span>
+									</span> </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#tabs-cursos-tab-2" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+										<i class="fa fa-plus mr-xs" aria-hidden="true"></i>
+ Criar novo nível
+									</span> </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!--.tabs-section-nav-->
+
+                                <div class="tab-content">
+                                    <section role="tabpanel" class="tab-pane fade in active" id="tabs-cursos-tab-1">
+                                        <section>
+                                            <div id="collapse-busca-one" class="collapse mb-md" role="tabpanel" aria-labelledby="collapse-busca-one" aria-expanded="true">
+                                                <div class="card">
+                                                    <div class="card-block">
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <fieldset class="form-group mb-0">
+                                                                    <label class="form-label semibold" for="">Quantidade de unidades avaliativas</label>
+                                                                    <input type="text" class="form-control" id="" placeholder="000">
+                                                                </fieldset>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <label class="form-label semibold" for="">Certificado</label>
+                                                                <div class="form-group">
+                                                                    <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                                        <label class="btn btn-secondary-outline active">
+                                                                            <input type="radio" name="options" id="option3" autocomplete="off" checked=""> Todos
+                                                                        </label>
+                                                                        <label class="btn btn-secondary-outline">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off"> Sim
+                                                                        </label>
+                                                                        <label class="btn btn-secondary-outline">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> Não
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row divider-top">
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label semibold" for="">Material Didático a definir</label>
+                                                                <div class="form-group">
+                                                                    <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                                        <label class="btn btn-secondary-outline active">
+                                                                            <input type="radio" name="options" id="option3" autocomplete="off" checked=""> Todos
+                                                                        </label>
+                                                                        <label class="btn btn-secondary-outline">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off"> Sim
+                                                                        </label>
+                                                                        <label class="btn btn-secondary-outline">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> Não
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label semibold" for="">Situação</label>
+                                                                <div class="form-group">
+                                                                    <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                                        <label class="btn btn-secondary-outline active">
+                                                                            <input type="radio" name="options" id="option3" autocomplete="off" checked=""> Todos
+                                                                        </label>
+                                                                        <label class="btn btn-secondary-outline">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off"> Ativo
+                                                                        </label>
+                                                                        <label class="btn btn-secondary-outline">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> Inativo
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <label class="form-label semibold" for="">Pendente</label>
+                                                                <div class="form-group">
+                                                                    <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                                        <label class="btn btn-secondary-outline active">
+                                                                            <input type="radio" name="options" id="option3" autocomplete="off" checked=""> Todos
+                                                                        </label>
+                                                                        <label class="btn btn-secondary-outline">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off"> Sim
+                                                                        </label>
+                                                                        <label class="btn btn-secondary-outline">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> Não
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row divider-top">
+                                                            <div class="col-sm-12">
+                                                                <button type="button" class="btn btn-primary btn-sm">
+                                                                    <i class="fa fa-search mr-xs" aria-hidden="true"></i> Buscar
+                                                                </button>
+                                                                <button type="button" class="btn btn-secondary btn-sm ml-md" data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true" aria-controls="collapseOne">
+                                                                    <i class="fa fa-times" aria-hidden="true"></i> Cancelar
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-9">
+                                                    <div class="form-control-wrapper form-control-icon-right">
+                                                        <input type="text" class="form-control input-table-custom" placeholder="Filtre nos resultados">
+                                                        <i class="fa fa-search"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <p class="mt-sm">
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true" aria-controls="collapseOne">
+                                                            <i class="fa fa-search-plus" aria-hidden="true"></i> Busca avançada</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </section>
+
+
+                                        <div class="row mt-md">
+                                            <div class="col-sm-12">
+                                                <div class="table-responsive table-custom">
+                                                    <table class="datatable-on table table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Nome do nível</th>
+                                                                <th>Curso</th>
+                                                                <th>Certificado</th>
+                                                                <th>Situação</th>
+                                                                <th class="text-right">Ações</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>1</strong></a>
+                                                                </td>
+                                                                <td>Junior</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong class="text-warning">2<i class="fa fa-exclamation-triangle mr-xs" aria-hidden="true"></i></strong></a>
+                                                                </td>
+                                                                <td>Junior</td>
+                                                                <td>Sim</td>
+                                                                <td>Inativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>3</strong></a>
+                                                                </td>
+                                                                <td>Junior</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>4</strong></a>
+                                                                </td>
+                                                                <td>Junior</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>1</strong></a>
+                                                                </td>
+                                                                <td>Teens</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>2</strong></a>
+                                                                </td>
+                                                                <td>Teens</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>3</strong></a>
+                                                                </td>
+                                                                <td>Teens</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>4</strong></a>
+                                                                </td>
+                                                                <td>Teens</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>5</strong></a>
+                                                                </td>
+                                                                <td>Teens</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>6</strong></a>
+                                                                </td>
+                                                                <td>Teens</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>7</strong></a>
+                                                                </td>
+                                                                <td>Teens</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>1A1</strong></a>
+                                                                </td>
+                                                                <td>Basic</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>1A2</strong></a>
+                                                                </td>
+                                                                <td>Basic</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>1B1</strong></a>
+                                                                </td>
+                                                                <td>Basic</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>1B2</strong></a>
+                                                                </td>
+                                                                <td>Basic</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>2A</strong></a>
+                                                                </td>
+                                                                <td>Intermediate</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>2B</strong></a>
+                                                                </td>
+                                                                <td>Intermediate</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>3A</strong></a>
+                                                                </td>
+                                                                <td>Intermediate</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>3A</strong></a>
+                                                                </td>
+                                                                <td>Intermediate</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong class="text-warning">4A
+                                                                        <i class="fa fa-exclamation-triangle mr-xs" aria-hidden="true"></i></strong></a>
+                                                                </td>
+                                                                <td>Advance</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>4B</strong></a>
+                                                                </td>
+                                                                <td>Advance</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>5A</strong></a>
+                                                                </td>
+                                                                <td>Advance</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="ModalDetalhaNivel" data-toggle="modal" data-target="#ModalDetalhaNivel"><strong>5B</strong></a>
+                                                                </td>
+                                                                <td>Advance</td>
+                                                                <td>Sim</td>
+                                                                <td>Ativo</td>
+                                                                <td>
+                                                                    <div class="btn-group btn-group-sm pull-right">
+                                                                        <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="niveis--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-xs" aria-hidden="true"></i> Replicar</a>
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </section><!--.tab-pane 1-->
+
+
+                                    <section role="tabpanel" class="tab-pane fade" id="tabs-cursos-tab-2">
+                                        <div class="row mt-sm">
+                                            <div class="col-sm-12">
+                                                <h4 class="semibold"> Cadastrar novo nível</h4>
+                                                <small>Campos com asterisco vermelho (
+                                                    <span class="semibold text-danger">*</span> ) são obrigatórios
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-md divider-top">
+                                            <div class="col-sm-4">
+                                                <label class="form-label semibold" for="">Selecione um curso
+                                                    <span class="semibold text-danger h4">*</span></label>
+                                                <select class="select2 select2-arrow">
+                                                    <option>KIDS FUN</option>
+                                                    <option>JOVENS E ADULTOS</option>
+                                                    <option>TEENS</option>
+                                                    <option>TOP KIDS</option>
+                                                    <option>JUNIOR</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Nome<span class="semibold text-danger h4">*</span></label>
+                                                    <input type="text" class="form-control" id="" placeholder="Nome">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label class="form-label semibold" for="">Quantidade de unidades avaliativas</label>
+                                                <input type="number" class="form-control" id="" placeholder="00">
+                                            </div>
+                                        </div>
+                                        <div class="row divider-top pb-md">
+                                            <div class="col-sm-4">
+                                                <div class="checkbox-toggle mt-lg">
+                                                    <input type="checkbox" id="check-matdid">
+                                                    <label for="check-matdid">Material didático obrigatório</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="checkbox-toggle mt-lg">
+                                                    <input type="checkbox" id="check-RepTest">
+                                                    <label for="check-RepTest">Replacement test</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="checkbox-toggle mt-lg">
+                                                    <input type="checkbox" id="check-Certificado">
+                                                    <label for="check-Certificado">Certificado</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <section class="box-typical mt-md">
+                                                    <header class="box-typical-header header-bordered">
+                                                        <div class="tbl-row">
+                                                            <div class="tbl-cell tbl-cell-title">
+                                                                <h5 class="semibold">
+                                                                    <i class="fa fa-book mr-xs" aria-hidden="true"></i> Materiais didáticos
+                                                                </h5>
+                                                            </div>
+                                                            <div class="tbl-cell tbl-cell-action-bordered">
+                                                                <form>
+                                                                    <button type="button" class="action-btn" data-toggle="modal" data-target="#ModalSelecionaMatDid">
+                                                                        <i class="fa fa-plus-circle mr-xs"></i>Adicionar
+                                                                    </button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </header>
+                                                    <div class="card-block">
+                                                        <div class="table-responsive">
+                                                            <table class="datatable-on table table-hover">
+                                                                <thead class="hidden-iten">
+                                                                    <tr>
+                                                                        <th></th>
+                                                                        <th class="text-right"></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><p>
+                                                                            <img src="../../img/cursos/junior/junior-001.jpg" class="img-circle-xs"> Teens 1: Time Zones 1A - (Combo Split) + Activity Pack Teens 1 – Cengage Learning
+                                                                        </p></td>
+                                                                        <td class="text-right">
+                                                                            <button type="button" class="tabledit-edit-button btn btn-sm btn-danger">
+                                                                                <i class="fa fa-times mr-xs" aria-hidden="true"></i> Remover
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><p>
+                                                                            <img src="../../img/cursos/kids/hooray-a1.jpg" class="img-circle-xs"> Hooray! A – Student’s Book – Helbling Languages
+                                                                        </p></td>
+                                                                        <td class="text-right">
+                                                                            <button type="button" class="tabledit-edit-button btn btn-sm btn-danger">
+                                                                                <i class="fa fa-times mr-xs" aria-hidden="true"></i> Remover
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </section>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="row divider-top pb-md">
+                                            <div class="col-sm-12">
+                                                <button type="button" class="btn btn-primary btn-success" data-dismiss="modal">
+                                                    <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
+                                                </button>
+                                                <button type="button" class="btn btn-secondary ml-sm">
+                                                    <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <!--.tab-pane novo curso -->
+                                </div><!--.tab-content-->
+                            </section><!--.tabs-section-->
+                        </div>
+                    </div>
+                </section>
+            </div><!--.container-fluid-->
+        </div><!--.page-content-->
+
+
+        <!-- Modal detalha níveis -->
+        <div class="modal fade" id="ModalDetalhaNivel" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaNivel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Detalhes do nível</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <section class="card card-default">
+                            <header class="card-header">
+                                <h5 class="semibold"><i class="fa fa-list mr-xs" aria-hidden="true"></i> Nível A1</h5>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <label class="form-label semibold">Situação</label>
+                                        <p class="text-success">
+                                            <strong><i class="fa fa-check" aria-hidden="true"></i> Ativo</strong></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label semibold">Quantidade de unidades avaliativas</label>
+                                        <p>0000</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label semibold">Curso(s)</label>
+                                        <p>TEENS / Jovens e adultos</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="form-label semibold">Certificado</label>
+                                        <p>Sim</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="card card-default mt-md">
+                            <header class="card-header">
+                                <h5 class="semibold">
+                                    <i class="fa fa-book mr-xs" aria-hidden="true"></i> Materiais didáticos</h5>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="b-t-0"><p>
+                                                            <img src="../../img/cursos/junior/junior-001.jpg" class="img-circle-xs"> Teens 1: Time Zones 1A - (Combo Split) + Activity Pack Teens 1 – Cengage Learning
+                                                        </p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><p>
+                                                            <img src="../../img/cursos/kids/hooray-a1.jpg" class="img-circle-xs"> Hooray! A – Student’s Book – Helbling Languages
+                                                        </p></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal seleciona material didático -->
+        <div class="modal fade" id="ModalSelecionaMatDid" tabindex="-1" role="dialog" aria-labelledby="ModalSelecionaMatDid">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">
+                            <i class="fa fa-book mr-xs" aria-hidden="true"></i> Selecione o material didático</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="table-responsive mt-md">
+                                    <table class="datatable-on table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div class="checkbox-bird mb-0">
+                                                        <input type="checkbox" id="check-modal-01"/>
+                                                        <label for="check-modal-01"></label>
+                                                    </div>
+                                                </th>
+                                                <th>Material didático</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox-bird">
+                                                        <input type="checkbox" id="check-modal-02"/>
+                                                        <label for="check-modal-02"></label>
+                                                    </div>
+                                                </td>
+                                                <td><p>
+                                                    <img src="../../img/cursos/junior/junior-001.jpg" class="img-circle-xs"> Teens 1: Time Zones 1A - (Combo Split) + Activity Pack Teens 1 – Cengage Learning
+                                                </p></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="checkbox-bird">
+                                                        <input type="checkbox" id="check-modal-03"/>
+                                                        <label for="check-modal-03"></label>
+                                                    </div>
+                                                </td>
+                                                <td><p>
+                                                    <img src="../../img/cursos/kids/hooray-a1.jpg" class="img-circle-xs"> Hooray! A – Student’s Book – Helbling Languages
+                                                </p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="../../js/lib/jquery/jquery.min.js"></script>
+        <script src="../../js/lib/tether/tether.min.js"></script>
+        <script src="../../js/lib/bootstrap/bootstrap.min.js"></script>
+
+        <script src="../../js/lib/datatables-net/datatables.min.js"></script>
+        <script src="../../js/start-datatables2.js"></script>
+
+        <script src="../../js/app.js"></script>
+        <script src="../../js/plugins.js"></script>
+
+        <script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+        <script src="../../js/lib/select2/select2.full.min.js"></script>
+
+        <!-- script par carregar includes - Jogar fora -->
+        <script src="../../js/load-includes.js"></script>
+
+    </body>
+</html>

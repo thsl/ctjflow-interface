@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-br">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>CTJFlow</title>
+
+        <link href="../../img/favicon.ico" rel="shortcut icon">
+
+        <!-- css's especificos -->
+        <link rel="stylesheet" href="../../css/lib/datatables-net/datatables.min.css">
+
+        <!-- css's gerais -->
+        <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
+
+        <link rel="stylesheet" href="../../css/lib/bootstrap-sweetalert/sweetalert.css"/>
+
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/custom.css">
+
+
+    </head>
+    <body class="with-side-menu">
+
+        <header class="site-header">
+            <div class="container-fluid">
+                <a href="#" class="site-logo"> <img class="hidden-md-down" src="../../img/logo-ctj-flow.png" alt="">
+                    <img class="hidden-lg-up" src="../../img/logo-2-mob.png" alt=""> </a>
+                <button class="hamburger hamburger--htla">
+                    <span>Menu</span>
+                </button>
+                <div class="site-header-content">
+                    <div class="site-header-content-in">
+                        <div class="site-header-shown">
+                            <div class="dropdown dropdown-notification notif">
+                                <a href="#" class="header-alarm dropdown-toggle active" id="dd-notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="font-icon-alarm"></i> </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
+                                    <div class="dropdown-menu-notif-header">
+                                        Notifications <span class="label label-pill label-danger">4</span>
+                                    </div>
+                                    <div class="dropdown-menu-notif-list">
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-1.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Morgan</a> was bothering about something
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-2.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Lioneli</a> had commented on this
+                                            <a href="#">Super Important Thing</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-3.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-4.jpg" alt="">
+                                            </div>
+                                            <a href="#">Lionely</a> wants to go to
+                                            <a href="#">Cinema</a> with you to see <a href="#">This Movie</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-menu-notif-more">
+                                        <a href="#">See more</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown dropdown-lang">
+                                <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-br"></span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-menu-col">
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-us"></span>English</a>
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-fr"></span>French</a>
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-it"></span>Italiano</a>
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-es"></span>Español</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="dropdown user-menu">
+                                <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="../../img/avatar-2-64.png" alt="">
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Perfil</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Configurações</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Ajuda</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Sair</a>
+                                </div>
+                            </div>
+
+                            <button type="button" class="burger-right">
+                                <i class="font-icon-menu-addl"></i>
+                            </button>
+                        </div><!--.site-header-shown-->
+
+                        <div class="mobile-menu-right-overlay"></div>
+
+
+                    </div><!--.site-header-collapsed-->
+                </div><!--site-header-content-in-->
+            </div><!--.site-header-content--></div><!--.container-fluid-->
+        </header><!--.site-header-->
+        <div class="mobile-menu-left-overlay"></div>
+        <nav class="side-menu">
+            <ul class="side-menu-list">
+                <li class="purple">
+	            <span>
+	                <i class="font-icon font-icon-dashboard mr-xs" aria-hidden="true"></i>
+	                <span class="lbl">Dashboard</span>
+	            </span>
+                </li>
+                <li class="blue with-sub">
+	            <span>
+	                <i class="fa fa-book" aria-hidden="true"></i>
+	                <span class="lbl">Acadêmico</span>
+	            </span>
+                    <ul>
+                        <li><a href="../posto/unidade.html"><span class="lbl">Unidades</span></a></li>
+                        <li><a href="../posto/posto.html"><span class="lbl">Posto avançado</span></a></li>
+                        <li><a href="../academico/grupos.html" class="active"><span class="lbl">Grupos</span></a></li>
+                        <li><a href="../academico/cursos.html"><span class="lbl">Cursos</span></a></li>
+                        <li><a href="../academico/niveis.html"><span class="lbl">Níveis</span></a></li>
+                        <li><a href="../servicos/servicos.html"><span class="lbl">Serviços</span></a></li>
+                    </ul>
+                </li>
+                <li class="green with-sub">
+	            <span>
+	                <i class="fa fa-building" aria-hidden="true"></i>
+	                <span class="lbl">Administrativo</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="gold with-sub">
+	            <span>
+	                <i class="fa fa-money" aria-hidden="true"></i>
+	                <span class="lbl">Financeiro</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="blue-dirty with-sub">
+	            <span>
+	                <i class="fa fa-cogs" aria-hidden="true"></i>
+	                <span class="lbl">Suporte</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="red with-sub">
+	            <span>
+	                <i class="fa fa-lock" aria-hidden="true"></i>
+	                <span class="lbl">Segurança</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="grey with-sub">
+	            <span>
+	                <span class="font-icon font-icon-burger"></span>
+	                <span class="lbl">Nested Menu</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">Level 1</span></a></li>
+                        <li><a href="#"><span class="lbl">Level 1</span></a></li>
+                        <li class="with-sub">
+	                    <span>
+	                        <span class="lbl">Level 2</span>
+	                    </span>
+                            <ul>
+                                <li><a href="#"><span class="lbl">Level 2</span></a></li>
+                                <li><a href="#"><span class="lbl">Level 2</span></a></li>
+                                <li class="with-sub">
+	                            <span>
+	                                <span class="lbl">Level 3</span>
+	                            </span>
+                                    <ul>
+                                        <li><a href="#"><span class="lbl">Level 3</span></a></li>
+                                        <li><a href="#"><span class="lbl">Level 3</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <section>
+                <header class="side-menu-title">FAVORITOS</header>
+                <ul class="side-menu-list">
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Cadastro de Alunos</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Gerenciar Calendário</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Relatório Alunos</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Relatório Carga Horaria</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Relatório Evasão</span> </a>
+                    </li>
+                </ul>
+            </section>
+        </nav><!--.side-menu-->
+
+
+        <div class="page-content">
+
+            <div class="container-fluid">
+                <section>
+                    <ol class="breadcrumb blue-ctj">
+                        <li><a href="#">Acadêmico</a></li>
+                        <li class="ml-xs mr-xs"> /</li>
+                        <li class="active">Unidades</li>
+                        <li style="float:right;">
+                            <button class="btn btn-inline btn-secondary-outline btn-sm">
+                                <i class="fa fa-question-circle" aria-hidden="true"></i> Ajuda
+                            </button>
+                        </li>
+                    </ol>
+                </section>
+
+                <div class="row mt-sm">
+                    <div class="col-lg-12">
+                        <div class="tabs-section">
+                            <div class="tabs-section-nav">
+                                <div class="tbl">
+                                    <ul class="nav" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="unidade.html">
+									<span class="nav-link-in">
+										Unidades
+										<span class="label label-pill label-primary">100</span>
+									</span> </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="unidade.html">
+									<span class="nav-link-in">
+										<i class="fa fa-plus mr-xs" aria-hidden="true"></i>
+ Criar nova unidade
+									</span> </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#">
+									<span class="nav-link-in">
+										<i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar Unidade
+									</span> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!--.tabs-section-nav-->
+
+                            <div class="tab-content">
+
+
+                                <section role="tabpanel" class="tab-pane fade in active" id="tabs-servicos-tab-3">
+                                    <div class="row mt-sm">
+                                        <div class="col-sm-12">
+                                            <h4 class="semibold"> Editar unidade</h4>
+                                            <small>Campos com asterisco vermelho (
+                                                <span class="semibold text-danger">*</span> ) são obrigatórios
+                                            </small>
+                                        </div>
+                                    </div>
+
+                                    <section class="card card-default mt-md">
+                                        <header class="card-header">
+                                            <h5 class="semibold">
+                                                <i class="fa fa-building-o mr-xs" aria-hidden="true"></i> Dados </h5>
+                                        </header>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">Unidade
+                                                        <span class="semibold text-danger h4">*</span></label>
+                                                    <select class="select2 select2-arrow">
+                                                        <option>Selecione</option>
+                                                        <option selected>Águas claras</option>
+                                                        <option>Asa sul</option>
+                                                        <option>Asa norte</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">CNPJ</label>
+                                                    <p>000.000.000/0000-00</p>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">Centro de custo</label>
+                                                    <p>000.000.000/0000-00</p>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="checkbox-toggle mt-md pt-sm">
+                                                        <input type="checkbox" id="check-qtd-niveis" checked/>
+                                                        <label class="form-label" for="check-qtd-niveis">Ativo</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+
+                                    <section class="card card-default mt-md">
+                                        <header class="card-header">
+                                            <h5 class="semibold">
+                                                <i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização
+                                            </h5>
+                                        </header>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="form-label semibold" for="">Endereço</label>
+                                                    <p>Av. das Araucárias, Rua 9 Sul</p>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">Número</label>
+                                                    <p>1001</p>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">Complemento</label>
+                                                    <p>Alameda 303</p>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-md">
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">Bairro</label>
+                                                    <p>Águas Claras</p>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">Cidade</label>
+                                                    <p>Brasília</p>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">UF</label>
+                                                    <p>Distrito Federal</p>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <label class="form-label semibold" for="">CEP</label>
+                                                    <p>71938-360</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <section class="card card-default mt-lg">
+                                        <header class="card-header">
+                                            <h5 class="semibold">
+                                                <i class="fa fa-commenting mr-xs" aria-hidden="true"></i> Contatos </h5>
+                                        </header>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <label class="form-label semibold" for="">Responsável pedagógico
+                                                        <span class="semibold text-danger h4">*</span></label>
+                                                    <select class="select2 select2-arrow">
+                                                        <option>Selecione</option>
+                                                        <option selected>Vânia Rodrigues</option>
+                                                        <option>Otávio Goncalves Souza</option>
+                                                        <option>Ana Souza Martins</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-md">
+                                                <div class="col-sm-12">
+                                                    <label class="form-label semibold" for="">Interessados</label>
+                                                    <select class="select2" multiple="multiple">
+                                                        <option>Selecione</option>
+                                                        <option>Luan Almeida Barbosa</option>
+                                                        <option selected>Otávio Goncalves Souza</option>
+                                                        <option selected>Ana Souza Martins</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+
+                                    <section class="card card-default mt-md">
+                                        <header class="card-header">
+                                            <h5 class="semibold">
+                                                <i class="fa fa-phone mr-xs" aria-hidden="true"></i> Telefones </h5>
+                                        </header>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="row mt-md">
+                                                        <div class="col-sm-7">
+                                                            <div class="row mt-lg">
+                                                                <div class="col-sm-5">
+                                                                    <label class="form-label semibold" for="">Tipo</label>
+                                                                    <select class="select2 select2-arrow">
+                                                                        <option>Selecione</option>
+                                                                        <option>Principal</option>
+                                                                        <option>Comercial</option>
+                                                                        <option>Celular</option>
+                                                                        <option>Fax</option>
+                                                                        <option>Outros</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-sm-7">
+                                                                    <label class="form-label semibold" for="">Número</label>
+                                                                    <div class="input-group">
+                                                                        <input type="number" class="form-control" placeholder="Número">
+                        <span class="input-group-btn">
+                          <button class="btn btn-success-outline" type="button">
+                              <i class="fa fa-plus" aria-hidden="true"></i>
+                          </button>
+                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <label class="form-label semibold" for="">Telefones cadastrados</label>
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Tipo</th>
+                                                                        <th>Número</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Principal</td>
+                                                                        <td>(61) 0000-0000</td>
+                                                                        <td>
+                                                                            <button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm">
+                                                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Comercial</td>
+                                                                        <td>(61) 0000-0000</td>
+                                                                        <td>
+                                                                            <button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm">
+                                                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+
+                                    <div class="row divider-top pb-md">
+                                        <div class="col-sm-12">
+                                            <button id="notie-success" type="button" class="btn btn-primary btn-success">
+                                                <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
+                                            </button>
+                                            <a href="cursos.html" class="btn btn-secondary ml-sm">
+                                                <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar</a>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!--.tab-pane novo -->
+                            </div><!--.tab-content-->
+                        </div><!--.tabs-section-->
+                    </div>
+                </div>
+            </div><!--.container-fluid-->
+        </div><!--.page-content-->
+
+
+        <script src="../../js/lib/jquery/jquery.min.js"></script>
+        <script src="../../js/lib/tether/tether.min.js"></script>
+        <script src="../../js/lib/bootstrap/bootstrap.min.js"></script>
+
+        <script src="../../js/lib/datatables-net/datatables.min.js"></script>
+        <script src="../../js/start-datatables.js"></script>
+
+        <script src="../../js/app.js"></script>
+        <script src="../../js/plugins.js"></script>
+
+        <script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+        <script src="../../js/lib/select2/select2.full.min.js"></script>
+
+        <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
+        <script src="../../js/lib/input-mask/input-mask-init.js"></script>
+
+        <script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
+
+        <script src="../../js/lib/notie/notie.js"></script>
+        <script src="../../js/lib/notie/notie-init.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('.swal-btn-cancel').click(function (e) {
+                    e.preventDefault();
+                    swal({
+                                title: "Você tem certeza desta ação?",
+                                text: "Esta ação excuirá este registro",
+                                type: "warning",
+                                showCancelButton: true,
+                                confirmButtonClass: "btn-danger",
+                                confirmButtonText: "Sim, excluir",
+                                cancelButtonText: "Não, cancelar",
+                                closeOnConfirm: false,
+                                closeOnCancel: false
+                            },
+                            function (isConfirm) {
+                                if (isConfirm) {
+                                    swal({
+                                        title: "Excluído!",
+                                        text: "O registro foi excluído",
+                                        type: "success",
+                                        confirmButtonClass: "btn-success"
+                                    });
+                                } else {
+                                    swal({
+                                        title: "Cancelado",
+                                        text: "Ação cancelada",
+                                        type: "error",
+                                        confirmButtonClass: "btn-danger"
+                                    });
+                                }
+                            });
+                });
+            });
+        </script>
+
+
+        <!-- script par carregar includes - Jogar fora -->
+        <script src="../../js/load-includes.js"></script>
+
+
+    </body>
+</html>

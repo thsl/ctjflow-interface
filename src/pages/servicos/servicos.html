@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-br">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>CTJFlow</title>
+
+        <link href="../../img/favicon.ico" rel="shortcut icon">
+
+        <!-- css's especificos -->
+        <link rel="stylesheet" href="../../css/lib/datatables-net/datatables.min.css">
+
+        <!-- css's gerais -->
+        <link rel="stylesheet" href="../../css/lib/font-awesome/font-awesome.min.css">
+        <link rel="stylesheet" href="../../css/main.css">
+        <link rel="stylesheet" href="../../css/custom.css">
+
+
+    </head>
+    <body class="with-side-menu">
+
+        <header class="site-header">
+            <div class="container-fluid">
+                <a href="#" class="site-logo"> <img class="hidden-md-down" src="../../img/logo-ctj-flow.png" alt="">
+                    <img class="hidden-lg-up" src="../../img/logo-2-mob.png" alt=""> </a>
+                <button class="hamburger hamburger--htla">
+                    <span>Menu</span>
+                </button>
+                <div class="site-header-content">
+                    <div class="site-header-content-in">
+                        <div class="site-header-shown">
+                            <div class="dropdown dropdown-notification notif">
+                                <a href="#" class="header-alarm dropdown-toggle active" id="dd-notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="font-icon-alarm"></i> </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
+                                    <div class="dropdown-menu-notif-header">
+                                        Notifications <span class="label label-pill label-danger">4</span>
+                                    </div>
+                                    <div class="dropdown-menu-notif-list">
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-1.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Morgan</a> was bothering about something
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-2.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Lioneli</a> had commented on this
+                                            <a href="#">Super Important Thing</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-3.jpg" alt="">
+                                            </div>
+                                            <div class="dot"></div>
+                                            <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                        <div class="dropdown-menu-notif-item">
+                                            <div class="photo">
+                                                <img src="../../img/photo-64-4.jpg" alt="">
+                                            </div>
+                                            <a href="#">Lionely</a> wants to go to
+                                            <a href="#">Cinema</a> with you to see <a href="#">This Movie</a>
+                                            <div class="color-blue-grey-lighter">7 hours ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-menu-notif-more">
+                                        <a href="#">See more</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown dropdown-lang">
+                                <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="flag-icon flag-icon-br"></span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-menu-col">
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-us"></span>English</a>
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-fr"></span>French</a>
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-it"></span>Italiano</a>
+                                        <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-es"></span>Español</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="dropdown user-menu">
+                                <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="../../img/avatar-2-64.png" alt="">
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Perfil</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Configurações</a>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Ajuda</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Sair</a>
+                                </div>
+                            </div>
+
+                            <button type="button" class="burger-right">
+                                <i class="font-icon-menu-addl"></i>
+                            </button>
+                        </div><!--.site-header-shown-->
+
+                        <div class="mobile-menu-right-overlay"></div>
+
+
+                    </div><!--.site-header-collapsed-->
+                </div><!--site-header-content-in-->
+            </div><!--.site-header-content--></div><!--.container-fluid-->
+        </header><!--.site-header-->
+        <div class="mobile-menu-left-overlay"></div>
+        <nav class="side-menu">
+            <ul class="side-menu-list">
+                <li class="purple">
+	            <span>
+	                <i class="font-icon font-icon-dashboard mr-xs" aria-hidden="true"></i>
+	                <span class="lbl">Dashboard</span>
+	            </span>
+                </li>
+                <li class="blue with-sub">
+	            <span>
+	                <i class="fa fa-book" aria-hidden="true"></i>
+	                <span class="lbl">Acadêmico</span>
+	            </span>
+                    <ul>
+                        <li><a href="../posto/unidade.html"><span class="lbl">Unidades</span></a></li>
+                        <li><a href="../posto/posto.html"><span class="lbl">Posto avançado</span></a></li>
+                        <li><a href="../academico/grupos.html" class="active"><span class="lbl">Grupos</span></a></li>
+                        <li><a href="../academico/cursos.html"><span class="lbl">Cursos</span></a></li>
+                        <li><a href="../academico/niveis.html"><span class="lbl">Níveis</span></a></li>
+                        <li><a href="../servicos/servicos.html"><span class="lbl">Serviços</span></a></li>
+                    </ul>
+                </li>
+                <li class="green with-sub">
+	            <span>
+	                <i class="fa fa-building" aria-hidden="true"></i>
+	                <span class="lbl">Administrativo</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="gold with-sub">
+	            <span>
+	                <i class="fa fa-money" aria-hidden="true"></i>
+	                <span class="lbl">Financeiro</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="blue-dirty with-sub">
+	            <span>
+	                <i class="fa fa-cogs" aria-hidden="true"></i>
+	                <span class="lbl">Suporte</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="red with-sub">
+	            <span>
+	                <i class="fa fa-lock" aria-hidden="true"></i>
+	                <span class="lbl">Segurança</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                        <li><a href="#"><span class="lbl">opção #</span></a></li>
+                    </ul>
+                </li>
+                <li class="grey with-sub">
+	            <span>
+	                <span class="font-icon font-icon-burger"></span>
+	                <span class="lbl">Nested Menu</span>
+	            </span>
+                    <ul>
+                        <li><a href="#"><span class="lbl">Level 1</span></a></li>
+                        <li><a href="#"><span class="lbl">Level 1</span></a></li>
+                        <li class="with-sub">
+	                    <span>
+	                        <span class="lbl">Level 2</span>
+	                    </span>
+                            <ul>
+                                <li><a href="#"><span class="lbl">Level 2</span></a></li>
+                                <li><a href="#"><span class="lbl">Level 2</span></a></li>
+                                <li class="with-sub">
+	                            <span>
+	                                <span class="lbl">Level 3</span>
+	                            </span>
+                                    <ul>
+                                        <li><a href="#"><span class="lbl">Level 3</span></a></li>
+                                        <li><a href="#"><span class="lbl">Level 3</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <section>
+                <header class="side-menu-title">FAVORITOS</header>
+                <ul class="side-menu-list">
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Cadastro de Alunos</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Gerenciar Calendário</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Relatório Alunos</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Relatório Carga Horaria</span> </a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="lbl">Relatório Evasão</span> </a>
+                    </li>
+                </ul>
+            </section>
+        </nav><!--.side-menu-->
+
+
+        <div class="page-content">
+
+            <div class="container-fluid">
+                <section>
+                    <ol class="breadcrumb blue-ctj">
+                        <li><a href="#">Acadêmico</a></li>
+                        <li class="ml-xs mr-xs"> /</li>
+                        <li class="active">Serviços</li>
+                        <li style="float:right;">
+                            <button class="btn btn-inline btn-secondary-outline btn-sm">
+                                <i class="fa fa-question-circle" aria-hidden="true"></i> Ajuda
+                            </button>
+                        </li>
+                    </ol>
+                </section>
+
+                <div class="row mt-sm">
+                    <div class="col-lg-12">
+                        <div class="tabs-section">
+                            <div class="tabs-section-nav">
+                                <div class="tbl">
+                                    <ul class="nav" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#tabs-servicos-tab-1" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+										Serviços
+										<span class="label label-pill label-primary">100</span>
+									</span> </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#tabs-servicos-tab-2" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+										<i class="fa fa-plus mr-xs" aria-hidden="true"></i>
+ Criar novo serviço
+									</span> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!--.tabs-section-nav-->
+
+                            <div class="tab-content">
+
+
+                                <section role="tabpanel" class="tab-pane fade in active" id="tabs-servicos-tab-1">
+                                    <section>
+                                        <div id="collapse-busca-one" class="collapse mb-md" role="tabpanel" aria-labelledby="collapse-busca-one" aria-expanded="true">
+                                            <section class="card">
+                                                <div class="card-block">
+                                                    <div class="row">
+                                                        <div class="col-sm-8">
+                                                            <label class="form-label semibold" for="">Nome</label>
+                                                            <input type="text" class="form-control" aria-label="" placeholder="Nome">
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <label class="form-label semibold" for="">Tipo</label>
+                                                            <select class="select2-arrow">
+                                                                <option>Workshop</option>
+                                                                <option>Teste</option>
+                                                                <option>Evento</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-md divider-top">
+                                                        <div class="col-sm-4">
+                                                            <label class="form-label semibold" for="">Público-alvo</label>
+                                                            <select class="select2-arrow">
+                                                                <option>Empresários</option>
+                                                                <option>Melhor idade</option>
+                                                                <option>Jovens</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <label class="form-label semibold" for="">Situação</label>
+                                                            <div class="form-group">
+                                                                <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                                    <label class="btn btn-secondary-outline active">
+                                                                        <input type="radio" name="options" id="" autocomplete="off" checked=""> Todos
+                                                                    </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off" checked=""> Ativo
+                                                                </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off"> Inativo
+                                                                </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <label class="form-label semibold" for="">Gratuidade</label>
+                                                            <div class="form-group">
+                                                                <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                                    <label class="btn btn-secondary-outline active">
+                                                                        <input type="radio" name="options" id="" autocomplete="off" checked=""> Todos
+                                                                    </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off" checked=""> Sim
+                                                                </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off">Não
+                                                                </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row mt-md divider-top">
+                                                        <div class="col-sm-4">
+                                                            <label class="form-label semibold" for="">Divulgação no site</label>
+                                                            <div class="form-group">
+                                                                <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                                    <label class="btn btn-secondary-outline active">
+                                                                        <input type="radio" name="options" id="" autocomplete="off" checked=""> Todos
+                                                                    </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off" checked=""> Privado
+                                                                </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off"> Publico
+                                                                </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <label class="form-label semibold" for="">Desconto</label>
+                                                            <div class="form-group">
+                                                                <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                                    <label class="btn btn-secondary-outline active">
+                                                                        <input type="radio" name="options" id="" autocomplete="off" checked=""> Todos
+                                                                    </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off" checked=""> Sim
+                                                                </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off">Não
+                                                                </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <label class="form-label semibold" for="">Certificado</label>
+                                                            <div class="form-group">
+                                                                <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                                    <label class="btn btn-secondary-outline active">
+                                                                        <input type="radio" name="options" id="" autocomplete="off" checked=""> Todos
+                                                                    </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off" checked=""> Sim
+                                                                </label> <label class="btn btn-secondary-outline">
+                                                                    <input type="radio" name="options" id="" autocomplete="off">Não
+                                                                </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row divider-top">
+                                                        <div class="col-sm-12">
+                                                            <div>
+                                                                <button type="button" class="btn btn-primary btn-sm mt-sm">
+                                                                    <i class="fa fa-search mr-xs" aria-hidden="true"></i> Buscar
+                                                                </button>
+                                                                <button type="button" class="btn btn-secondary btn-sm ml-md mt-sm" data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true" aria-controls="collapseOne">
+                                                                    <i class="fa fa-times" aria-hidden="true"></i> Cancelar
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-9">
+                                                <div class="form-control-wrapper form-control-icon-right">
+                                                    <input type="text" class="form-control input-table-custom" placeholder="Filtre nos resultados">
+                                                    <i class="fa fa-search"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="mt-sm">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true" aria-controls="collapseOne">
+                                                        <i class="fa fa-search-plus" aria-hidden="true"></i> Busca avançada</a>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                    <div class="row mt-md">
+                                        <div class="col-sm-12">
+                                            <div class="table-responsive table-custom">
+                                                <table class="datatable-on table table-hover" cellspacing="0" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Serviço</th>
+                                                            <th>Grupo</th>
+                                                            <th>Tipo</th>
+                                                            <th>Carga horária</th>
+                                                            <th>Valor</th>
+                                                            <th>Situação</th>
+                                                            <th class="text-right">Ações</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaServico" href="#ModalDetalhaServico">Getting Stared</a></strong>
+                                                            </td>
+                                                            <td>Serviço de Orientação</td>
+                                                            <td>Orientação</td>
+                                                            <td>40 horas</td>
+                                                            <td>R$ 000,00</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="btn-group btn-group-sm pull-right">
+                                                                    <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                    </button>
+                                                                    <div class="dropdown-menu">
+                                                                        <a class="dropdown-item" href="servicos--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaServico" href="#ModalDetalhaServico">Atendimento Preliminares</a></strong>
+                                                            </td>
+                                                            <td>Serviço de Orientação</td>
+                                                            <td>Orientação</td>
+                                                            <td>40 horas</td>
+                                                            <td>R$ 000,00</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="btn-group btn-group-sm pull-right">
+                                                                    <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                    </button>
+                                                                    <div class="dropdown-menu">
+                                                                        <a class="dropdown-item" href="servicos--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaServico" href="#ModalDetalhaServico">Inglês Intensivo</a></strong>
+                                                            </td>
+                                                            <td>Serviço de Orientação</td>
+                                                            <td>Orientação</td>
+                                                            <td>60 horas</td>
+                                                            <td>R$ 000,00</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="btn-group btn-group-sm pull-right">
+                                                                    <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                    </button>
+                                                                    <div class="dropdown-menu">
+                                                                        <a class="dropdown-item" href="servicos--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaServico" href="#ModalDetalhaServico">Tradução Certificada</a></strong>
+                                                            </td>
+                                                            <td>Serviço de Tradução</td>
+                                                            <td>Tradução</td>
+                                                            <td>24 horas</td>
+                                                            <td>R$ 000,00</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="btn-group btn-group-sm pull-right">
+                                                                    <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                    </button>
+                                                                    <div class="dropdown-menu">
+                                                                        <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <strong><a data-toggle="modal" data-target="#ModalDetalhaServico" href="#ModalDetalhaServico">Locação de Livro</a></strong>
+                                                            </td>
+                                                            <td>Biblioteca</td>
+                                                            <td>Locação</td>
+                                                            <td>0 horas</td>
+                                                            <td>R$ 000,00</td>
+                                                            <td>Ativo</td>
+                                                            <td>
+                                                                <div class="btn-group btn-group-sm pull-right">
+                                                                    <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                    </button>
+                                                                    <div class="dropdown-menu">
+                                                                        <a class="dropdown-item" href="servicos--editar.html"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#"><i class="fa fa-trash mr-xs" aria-hidden="true"></i> Excluir</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section role="tabpanel" class="tab-pane fade" id="tabs-servicos-tab-2">
+                                    <div class="row mt-sm">
+                                        <div class="col-sm-12">
+                                            <h4 class="semibold"> Cadastrar novo serviço</h4>
+                                            <small>Campos com asterisco vermelho (
+                                                <span class="semibold text-danger">*</span> ) são obrigatórios
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-md divider-top">
+                                        <div class="col-lg-8">
+                                            <fieldset class="form-group">
+                                                <label class="form-label semibold" for="">Nome<span class="semibold text-danger h4">*</span></label>
+                                                <input type="text" class="form-control" id="" placeholder="Nome">
+                                            </fieldset>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <label class="form-label semibold" for="">Tipo de serviço
+                                                <span class="semibold text-danger h4">*</span></label>
+                                            <select class="select2 select2-arrow">
+                                                <option>Workshop</option>
+                                                <option>Teste</option>
+                                                <option>Evento</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-md divider-top">
+                                        <div class="col-sm-4">
+                                            <label class="form-label semibold" for="">Setor</label>
+                                            <select class="select2 select2-arrow">
+                                                <option>T.I.</option>
+                                                <option>Biblioteca</option>
+                                                <option>Dep. de testes</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label class="form-label semibold" for="">Carga horária</label>
+                                            <input type="number" class="form-control" id="" placeholder="Carga horária">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label class="form-label semibold" for="">Público-alvo</label>
+                                            <select class="select2 select2-arrow">
+                                                <option>Empresários</option>
+                                                <option>Melhor idade</option>
+                                                <option>Jovens</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-md divider-top">
+                                        <div class="col-sm-4">
+                                            <div class="checkbox-toggle mt-lg">
+                                                <input type="checkbox" id="check-toggle-Divulg"/>
+                                                <label class="form-label" for="check-toggle-Divulg">Divulgação no site</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="checkbox-toggle mt-lg">
+                                                <input type="checkbox" id="check-toggle-sit"/>
+                                                <label class="form-label" for="check-toggle-sit">Ativo</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="checkbox-toggle mt-lg">
+                                                <input type="checkbox" id="check-toggle-cert"/>
+                                                <label class="form-label" for="check-toggle-cert">Certificado</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row divider-top">
+                                        <div class="col-sm-12">
+                                            <label class="form-label semibold" for="">Grupos(s)
+                                                <span class="semibold text-danger h4">*</span></label>
+                                            <select class="select2" multiple="multiple">
+                                                <option>Acadêmico</option>
+                                                <option>Resource center</option>
+                                                <option>Departamento de testes</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row divider-top pb-md">
+                                        <div class="col-sm-12">
+                                            <label class="form-label semibold" for="">Descrição<span class="semibold text-danger h4">*</span></label>
+                                            <textarea rows="4" class="form-control" placeholder="Descrição"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row divider-top pb-md">
+                                        <div class="col-sm-12">
+                                            <button type="button" class="btn btn-primary btn-success">
+                                                <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
+                                            </button>
+                                            <button type="button" class="btn btn-secondary ml-sm">
+                                                <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!--.tab-pane novo -->
+                            </div><!--.tab-content-->
+                        </div><!--.tabs-section-->
+                    </div>
+                </div>
+            </div><!--.container-fluid-->
+        </div><!--.page-content-->
+
+
+        <!-- Modal cadastrar curso -->
+        <div class="modal fade" id="ModalDetalhaServico" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaServico">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Detalhes</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <section class="card card-default">
+                            <header class="card-header">
+                                <h5 class="semibold"><i class="fa fa-cogs mr-xs" aria-hidden="true"></i> Teste aplicado
+                                </h5>
+                            </header>
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label class="form-label semibold">Situação</label>
+                                        <p class="text-success">
+                                            <strong><i class="fa fa-check" aria-hidden="true"></i> Ativo</strong></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label semibold">Carga horária</label>
+                                        <p>000 horas</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label semibold">Valor</label>
+                                        <p>R$ 000,00</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-lg">
+                                    <div class="col-md-4">
+                                        <label class="form-label semibold">Gratuito</label>
+                                        <p>Sim</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label semibold">Certificado</label>
+                                        <p>Sim</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label semibold">Desconto</label>
+                                        <p>Sim</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-lg">
+                                    <div class="col-md-12">
+                                        <label class="form-label semibold">Descrição</label>
+                                        <p>Nosso Departamento de Testes Internacionais é credenciado para aplicar os mais reconhecidos exames de proficiência em língua inglesa. Somos credenciados pelas principais bancas examinadoras no mundo: universidade de Cambridge (Cambridge English Language Assessments), ETS (English Testing Services) e CaMLA (Cambridge-Michigan Language Assessments). Somos centro examinador para os mais importantes exames em língua inglesa: KET, PET, FCE e CAE (Cambridge), YLTE e ECPE (CaMLA), TOEFL iBT, TOEFL ITP, GRE e TOEIC (ETS). Além disso, a partir de 2016, funcionaremos como local de provas para o exame IELTS, oferecido pelo Conselho Britânico.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="../../js/lib/jquery/jquery.min.js"></script>
+        <script src="../../js/lib/tether/tether.min.js"></script>
+        <script src="../../js/lib/bootstrap/bootstrap.min.js"></script>
+
+        <script src="../../js/lib/datatables-net/datatables.min.js"></script>
+        <script src="../../js/start-datatables.js"></script>
+
+        <script src="../../js/app.js"></script>
+        <script src="../../js/plugins.js"></script>
+
+        <script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+        <script src="../../js/lib/select2/select2.full.min.js"></script>
+
+        <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
+        <script src="../../js/lib/input-mask/input-mask-init.js"></script>
+
+        <!-- script par carregar includes - Jogar fora -->
+        <script src="../../js/load-includes.js"></script>
+
+    </body>
+</html>
