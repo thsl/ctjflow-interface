@@ -316,7 +316,7 @@
                                     <div class="row divider-top">
                                         <div class="col-sm-4">
                                             <label class="form-label semibold" for="">Idade mínima</label>
-                                            <input type="number" class="form-control" id="" placeholder="Idade">
+                                            <input type="text" class="form-control" id="" placeholder="Idade">
                                         </div>
                                         <div class="col-sm-4">
                                             <label class="form-label semibold" for="">Escolaridade</label>
@@ -350,8 +350,8 @@
                                     <div class="row divider-top">
                                         <div class="col-sm-12">
                                             <label class="form-label semibold" for="">Objetivos</label>
-                  <textarea rows="4" class="form-control" placeholder="Objetivos do curso">Neste curso, o jovem aprende a língua inglesa por meio de diálogos, leituras, redações, jogos, vídeos e discussão de textos que exploram temas de seu interesse. Todas as atividades integram as quatro habilidades básicas (falar, ouvir, ler e escrever) necessárias ao domínio do inglês.
-                  </textarea>
+                                            <textarea rows="4" id="curso-objetivos" class="form-control" placeholder="Objetivos"></textarea>
+                                            <small>Você tem <span id="curso-objetivos-counter" class="counter-value semibold"></span> caracteres restantes.</small>
                                         </div>
                                     </div>
                                     <div class="row mt-lg">
@@ -766,7 +766,7 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <label class="form-label semibold" for="">Valor</label>
-                                <input type="number" class="form-control" aria-label="" placeholder="Valor">
+                                <input type="text" class="form-control" aria-label="" placeholder="Valor">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label semibold" for="">Período de vigência</label>
@@ -792,7 +792,8 @@
                         <div class="row mt-md">
                             <div class="col-sm-12">
                                 <label class="form-label semibold" for="">Observações</label>
-                                <textarea rows="4" class="form-control" placeholder="Observações"></textarea>
+                                <textarea rows="4" id="curso-observacao" class="form-control" placeholder="Observações"></textarea>
+                                <p>Você tem <span id="curso-observacao-counter" class="counter-value semibold"></span> characters restantes.</p>
                             </div>
                         </div>
                     </div>
@@ -818,47 +819,12 @@
         <script src="../../js/lib/select2/select2.full.min.js"></script>
 
         <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
-        <script src="../../js/lib/input-mask/input-mask-init.js"></script>
+        <script src="../../js/lib/jquery-simply-countable/jquery.simplyCountable.js"></script>
 
         <script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
         <script src="../../js/lib/notie/notie.js"></script>
         <script src="../../js/lib/notie/notie-init.js"></script>
 
-
-        <script>
-            $(document).ready(function () {
-                $('.swal-btn-cancel').click(function (e) {
-                    e.preventDefault();
-                    swal({
-                                title: "Você tem certeza desta ação?",
-                                text: "Esta ação excuirá este registro",
-                                type: "warning",
-                                showCancelButton: true,
-                                confirmButtonClass: "btn-danger",
-                                confirmButtonText: "Sim, excluir",
-                                cancelButtonText: "Não, cancelar",
-                                closeOnConfirm: false,
-                                closeOnCancel: false
-                            },
-                            function (isConfirm) {
-                                if (isConfirm) {
-                                    swal({
-                                        title: "Excluído!",
-                                        text: "O registro foi excluído",
-                                        type: "success",
-                                        confirmButtonClass: "btn-success"
-                                    });
-                                } else {
-                                    swal({
-                                        title: "Cancelado",
-                                        text: "Ação cancelada",
-                                        type: "error",
-                                        confirmButtonClass: "btn-danger"
-                                    });
-                                }
-                            });
-                });
-            });
-        </script>
+        <script src="js/cursos-editar-scripts.js"></script>
     </body>
 </html>

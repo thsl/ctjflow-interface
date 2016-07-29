@@ -265,16 +265,18 @@
 
                             <div class="tab-content">
 
-
                                 <section role="tabpanel" class="tab-pane fade in active" id="tabs-cursos-tab-1">
                                     <section>
                                         <div id="collapse-busca-one" class="collapse mb-md" role="tabpanel" aria-labelledby="collapse-busca-one" aria-expanded="true">
                                             <section class="card">
                                                 <div class="card-block">
+
                                                     <div class="row">
                                                         <div class="col-sm-8">
-                                                            <label class="form-label semibold" for="">Nome</label>
-                                                            <input type="text" class="form-control" aria-label="" placeholder="Nome do curso">
+                                                            <fieldset class="form-group">
+                                                                <label class="form-label semibold" for="">Nome</label>
+                                                                <input type="text" class="form-control" aria-label="" placeholder="Nome do curso">
+                                                            </fieldset>
                                                         </div>
                                                         <div class="col-sm-4">
                                                             <label class="form-label semibold" for="">Situação</label>
@@ -293,14 +295,16 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-sm-8">
-                                                            <label class="form-label semibold" for="">Grupos</label>
-                                                            <select class="select2" multiple="multiple">
-                                                                <option>Crianças</option>
-                                                                <option>Jovens e adultos</option>
-                                                                <option>TEENS</option>
-                                                                <option>TOP KIDS</option>
-                                                                <option>JUNIOR</option>
-                                                            </select>
+                                                            <div class="form-group">
+                                                                <label class="form-label semibold" for="">Grupos</label>
+                                                                <select class="select2" multiple="multiple">
+                                                                    <option>Crianças</option>
+                                                                    <option>Jovens e adultos</option>
+                                                                    <option>TEENS</option>
+                                                                    <option>TOP KIDS</option>
+                                                                    <option>JUNIOR</option>
+                                                                </select>
+                                                            </div>
                                                         </div>
                                                         <div class="col-sm-4">
                                                             <label class="form-label semibold" for="">Pendente</label>
@@ -531,200 +535,206 @@
                                             </small>
                                         </div>
                                     </div>
-                                    <div class="row mt-md divider-top">
-                                        <div class="col-lg-8">
-                                            <fieldset class="form-group">
-                                                <label class="form-label semibold" for="">Nome<span class="semibold text-danger h4">*</span></label>
-                                                <input type="text" class="form-control" id="" placeholder="Nome">
-                                            </fieldset>
-                                        </div>
-
-                                        <div class="col-sm-4">
-                                            <label class="form-label semibold" for="">Tipo<span class="semibold text-danger h4">*</span></label>
-                                            <select class="select2 select2-arrow">
-                                                <option>Online</option>
-                                                <option>Híbrido</option>
-                                                <option>Presencial</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row divider-top">
-                                        <div class="col-sm-12">
-                                            <label class="form-label semibold" for="">Grupo(s)
-                                                <span class="semibold text-danger h4">*</span></label>
-                                            <select class="select2" multiple="multiple">
-                                                <option>Crianças</option>
-                                                <option>Adolescentes</option>
-                                                <option>Jovens e adultos</option>
-                                                <option>Cursos online</option>
-                                                <option>Cursos especiais</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row divider-top">
-                                        <div class="col-sm-4">
-                                            <label class="form-label semibold" for="">Idade mínima</label>
-                                            <input type="number" class="form-control" id="" placeholder="Idade">
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <label class="form-label semibold" for="">Escolaridade</label>
-                                            <input type="text" class="form-control" id="" placeholder="Escolaridade">
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="checkbox-toggle mt-md pt-sm">
-                                                <input type="checkbox" id="check-qtd-niveis" checked/>
-                                                <label class="form-label" for="check-qtd-niveis">Multinível</label>
+                                    <form id="cursos-form" class="validate-form" name="" method="">
+                                        <div class="row mt-md divider-top">
+                                            <div class="col-lg-8">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold">Nome<span class="semibold text-danger h4">*</span></label>
+                                                    <input type="text" class="form-control" id="cursonome" name="cursonome" placeholder="Nome">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Tipo<span class="semibold text-danger h4">*</span></label>
+                                                    <select class="select2 select2-arrow" id="cursotipo" name="cursotipo">
+                                                        <option value="0">Online</option>
+                                                        <option value="1">Híbrido</option>
+                                                        <option value="2">Presencial</option>
+                                                    </select>
+                                                </fieldset>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row divider-top">
-                                        <div class="col-sm-4">
-                                            <div class="checkbox-toggle mt-md">
-                                                <input type="checkbox" id="check-toggle-esp"/>
-                                                <label class="form-label" for="check-toggle-esp">Curso especial</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="checkbox-toggle mt-md">
-                                                <input type="checkbox" id="check-toggle-situacao"/>
-                                                <label class="form-label" for="check-toggle-situacao">Ativo</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <label class="form-label semibold" for="">Data de criação</label>
-                                            <p>00/00/0000</p>
-                                        </div>
-                                    </div>
-                                    <div class="row divider-top">
-                                        <div class="col-sm-12">
-                                            <label class="form-label semibold" for="">Objetivos</label>
-                                            <textarea rows="4" class="form-control" placeholder="Objetivos"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mt-md">
-                                        <div class="col-sm-12">
-                                            <section class="box-typical">
-                                                <header class="box-typical-header header-bordered">
-                                                    <div class="tbl-row">
-                                                        <div class="tbl-cell tbl-cell-title">
-                                                            <h5 class="semibold">
-                                                                <i class="fa fa-money mr-xs" aria-hidden="true"></i> Valores
-                                                            </h5>
-                                                        </div>
-                                                        <div class="tbl-cell tbl-cell-action-bordered">
-                                                            <form>
-                                                                <button type="button" class="action-btn" data-toggle="modal" data-target="#ModalValores">
-                                                                    <i class="fa fa-plus-circle mr-xs"></i>Adicionar
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </header>
-                                                <div class="card-block">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-hover">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Data início</th>
-                                                                    <th>Data fim</th>
-                                                                    <th>Situação</th>
-                                                                    <th>Valor</th>
-                                                                    <th>Observações</th>
-                                                                    <th class="text-right">Ações</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr class="table-active-next" data-toggle="tooltip" data-placement="bottom" title="Próximo valor vigente">
-                                                                    <td>00/00/0000</td>
-                                                                    <td>00/00/0000</td>
-                                                                    <td>Ativo</td>
-                                                                    <td>R$450,00</td>
-                                                                    <td>
-                                                                        <a tabindex="0" data-container="body" data-trigger="focus" title="Observações" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Reajustado de acordo...</a>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                        <div class="btn-group btn-group-sm pull-right">
-                                                                            <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
-                                                                            </button>
-                                                                            <div class="dropdown-menu">
-                                                                                <a class="dropdown-item" data-toggle="modal" data-target="#ModalValores"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
-                                                                                <div class="dropdown-divider"></div>
-                                                                                <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i> Remover</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="table-active-visual" data-toggle="tooltip" data-placement="bottom" title="Valor vigente">
-                                                                    <td>00/00/0000</td>
-                                                                    <td>00/00/0000</td>
-                                                                    <td>Ativo</td>
-                                                                    <td>R$450,00</td>
-                                                                    <td>
-                                                                        <a tabindex="0" data-container="body" data-trigger="focus" title="Observações" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Reajustado de acordo...</a>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                        <div class="btn-group btn-group-sm pull-right">
-                                                                            <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
-                                                                            </button>
-                                                                            <div class="dropdown-menu">
-                                                                                <a class="dropdown-item" data-toggle="modal" data-target="#ModalValores"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
-                                                                                <div class="dropdown-divider"></div>
-                                                                                <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i> Remover</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="table-inactive" data-toggle="tooltip" data-placement="bottom" title="Valor inativo">
-                                                                    <td>00/00/0000</td>
-                                                                    <td>00/00/0000</td>
-                                                                    <td>Ativo</td>
-                                                                    <td>R$450,00</td>
-                                                                    <td>
-                                                                        <a tabindex="0" data-container="body" data-trigger="focus" title="Observações" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Reajustado de acordo...</a>
-                                                                    </td>
-                                                                    <td class="text-right"></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <div class="row mt-md">
-                                                        <div class="col-xs-12 mb-sm">
-                                                            <strong>
-                                                                <small>Legenda da tabela</small>
-                                                            </strong>
-                                                        </div>
-                                                        <div class="col-sm-4 text-center">
-                                                            <small>
-                                                                <i class="fa fa-circle-thin mr-xs" aria-hidden="true"></i> Próximo valor vigente
-                                                            </small>
-                                                        </div>
-                                                        <div class="col-sm-4 text-center">
-                                                            <small>
-                                                                <i class="fa fa-circle mr-xs text-success" aria-hidden="true"></i> Valor vigente
-                                                            </small>
-                                                        </div>
-                                                        <div class="col-sm-4 text-center">
-                                                            <small>
-                                                                <i class="fa fa-circle mr-xs text-light-grey" aria-hidden="true"></i> Valor inativo
-                                                            </small>
-                                                        </div>
-                                                    </div>
+                                        <div class="row divider-top">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label semibold" for="">Grupo(s)
+                                                        <span class="semibold text-danger h4">*</span></label>
+                                                    <select class="select2" multiple="multiple" id="cursogrupo" name="cursogrupo">
+                                                        <option value="0">Crianças</option>
+                                                        <option value="1">Adolescentes</option>
+                                                        <option value="2">Jovens e adultos</option>
+                                                        <option value="3">Cursos online</option>
+                                                        <option value="4">Cursos especiais</option>
+                                                    </select>
                                                 </div>
-                                            </section>
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    <div class="row divider-top">
-                                        <div class="col-sm-12">
-                                            <button type="button" class="btn btn-primary btn-success">
-                                                <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
-                                            </button>
-                                            <button type="button" class="btn btn-secondary ml-sm">
-                                                <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar
-                                            </button>
+                                        <div class="row divider-top">
+                                            <div class="col-sm-4">
+                                                <label class="form-label semibold" for="">Idade mínima</label>
+                                                <input type="text" class="form-control" id="idade-minima" placeholder="Idade">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label class="form-label semibold" for="">Escolaridade</label>
+                                                <input type="text" class="form-control" id="" placeholder="Escolaridade">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="checkbox-toggle mt-md pt-sm">
+                                                    <input type="checkbox" id="check-qtd-niveis" checked/>
+                                                    <label class="form-label" for="check-qtd-niveis">Multinível</label>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="row divider-top">
+                                            <div class="col-sm-4">
+                                                <div class="checkbox-toggle mt-md">
+                                                    <input type="checkbox" id="check-toggle-esp"/>
+                                                    <label class="form-label" for="check-toggle-esp">Curso especial</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="checkbox-toggle mt-md">
+                                                    <input type="checkbox" id="check-toggle-situacao"/>
+                                                    <label class="form-label" for="check-toggle-situacao">Ativo</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label class="form-label semibold" for="">Data de criação</label>
+                                                <p>00/00/0000</p>
+                                            </div>
+                                        </div>
+                                        <div class="row divider-top">
+                                            <div class="col-sm-12">
+                                                <label class="form-label semibold" for="">Objetivos</label>
+                                                <textarea rows="4" id="curso-objetivos" class="form-control" placeholder="Objetivos"></textarea>
+                                                <small>Você tem
+                                                    <span id="curso-objetivos-counter" class="counter-value semibold"></span> caracteres restantes.
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-md">
+                                            <div class="col-sm-12">
+                                                <section class="box-typical">
+                                                    <header class="box-typical-header header-bordered">
+                                                        <div class="tbl-row">
+                                                            <div class="tbl-cell tbl-cell-title">
+                                                                <h5 class="semibold">
+                                                                    <i class="fa fa-money mr-xs" aria-hidden="true"></i> Valores
+                                                                </h5>
+                                                            </div>
+                                                            <div class="tbl-cell tbl-cell-action-bordered">
+                                                                <div>
+                                                                    <button type="button" class="action-btn" data-toggle="modal" data-target="#ModalValores">
+                                                                        <i class="fa fa-plus-circle mr-xs"></i>Adicionar
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </header>
+                                                    <div class="card-block">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Data início</th>
+                                                                        <th>Data fim</th>
+                                                                        <th>Situação</th>
+                                                                        <th>Valor</th>
+                                                                        <th>Observações</th>
+                                                                        <th class="text-right">Ações</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="table-active-next" data-toggle="tooltip" data-placement="bottom" title="Próximo valor vigente">
+                                                                        <td>00/00/0000</td>
+                                                                        <td>00/00/0000</td>
+                                                                        <td>Ativo</td>
+                                                                        <td>R$450,00</td>
+                                                                        <td>
+                                                                            <a tabindex="0" data-container="body" data-trigger="focus" title="Observações" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Reajustado de acordo...</a>
+                                                                        </td>
+                                                                        <td class="text-right">
+                                                                            <div class="btn-group btn-group-sm pull-right">
+                                                                                <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                                </button>
+                                                                                <div class="dropdown-menu">
+                                                                                    <a class="dropdown-item" data-toggle="modal" data-target="#ModalValores"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                                    <div class="dropdown-divider"></div>
+                                                                                    <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i> Remover</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="table-active-visual" data-toggle="tooltip" data-placement="bottom" title="Valor vigente">
+                                                                        <td>00/00/0000</td>
+                                                                        <td>00/00/0000</td>
+                                                                        <td>Ativo</td>
+                                                                        <td>R$450,00</td>
+                                                                        <td>
+                                                                            <a tabindex="0" data-container="body" data-trigger="focus" title="Observações" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Reajustado de acordo...</a>
+                                                                        </td>
+                                                                        <td class="text-right">
+                                                                            <div class="btn-group btn-group-sm pull-right">
+                                                                                <button type="button" class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ações
+                                                                                </button>
+                                                                                <div class="dropdown-menu">
+                                                                                    <a class="dropdown-item" data-toggle="modal" data-target="#ModalValores"><i class="fa fa-pencil-square-o mr-xs" aria-hidden="true"></i> Editar</a>
+                                                                                    <div class="dropdown-divider"></div>
+                                                                                    <a class="dropdown-item" href="#"><i class="fa fa-ban mr-xs" aria-hidden="true"></i> Remover</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="table-inactive" data-toggle="tooltip" data-placement="bottom" title="Valor inativo">
+                                                                        <td>00/00/0000</td>
+                                                                        <td>00/00/0000</td>
+                                                                        <td>Ativo</td>
+                                                                        <td>R$450,00</td>
+                                                                        <td>
+                                                                            <a tabindex="0" data-container="body" data-trigger="focus" title="Observações" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Reajustado de acordo...</a>
+                                                                        </td>
+                                                                        <td class="text-right"></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="row mt-md">
+                                                            <div class="col-xs-12 mb-sm">
+                                                                <strong>
+                                                                    <small>Legenda da tabela</small>
+                                                                </strong>
+                                                            </div>
+                                                            <div class="col-sm-4 text-center">
+                                                                <small>
+                                                                    <i class="fa fa-circle-thin mr-xs" aria-hidden="true"></i> Próximo valor vigente
+                                                                </small>
+                                                            </div>
+                                                            <div class="col-sm-4 text-center">
+                                                                <small>
+                                                                    <i class="fa fa-circle mr-xs text-success" aria-hidden="true"></i> Valor vigente
+                                                                </small>
+                                                            </div>
+                                                            <div class="col-sm-4 text-center">
+                                                                <small>
+                                                                    <i class="fa fa-circle mr-xs text-light-grey" aria-hidden="true"></i> Valor inativo
+                                                                </small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                        <div class="row divider-top">
+                                            <div class="col-sm-12">
+                                                <button type="submit" class="btn btn-primary btn-success">
+                                                    <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
+                                                </button>
+                                                <button type="button" class="btn btn-secondary ml-sm">
+                                                    <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </section>
                                 <!--.tab-pane novo curso -->
 
@@ -1000,19 +1010,19 @@
                         <div class="row">
                             <div class="col-sm-4">
                                 <label class="form-label semibold" for="">Valor</label>
-                                <input type="number" class="form-control" aria-label="" placeholder="Valor">
+                                <input type="text" class="form-control" id="curso-valor" aria-label="" placeholder="R$">
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label semibold" for="">Período de vigência</label>
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <input id="datetimepicker-inicial" type="text" value="" class="form-control" placeholder="Selecione a data inicial">
+                                        <input id="datetimepicker-inicial" type="text" value="" class="form-control datas" placeholder="Selecione a data inicial">
                                     </div>
                                     <div class="col-sm-1 text-center">
                                         <p class="mt-sm">à</p>
                                     </div>
                                     <div class="col-sm-5">
-                                        <input id="datetimepicker-final" type="text" value="" class="form-control" placeholder="Selecione a data final">
+                                        <input id="datetimepicker-final" type="text" value="" class="form-control datas" placeholder="Selecione a data final">
                                     </div>
                                 </div>
                             </div>
@@ -1026,7 +1036,10 @@
                         <div class="row mt-md">
                             <div class="col-sm-12">
                                 <label class="form-label semibold" for="">Observações</label>
-                                <textarea rows="4" class="form-control" placeholder="Observações"></textarea>
+                                <textarea rows="4" id="curso-observacao" class="form-control" placeholder="Observações"></textarea>
+                                <p>Você tem
+                                    <span id="curso-observacao-counter" class="counter-value semibold"></span> characters restantes.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1042,30 +1055,24 @@
         <script src="../../js/lib/tether/tether.min.js"></script>
         <script src="../../js/lib/bootstrap/bootstrap.min.js"></script>
 
-        <script src="../../js/lib/datatables-net/datatables.min.js"></script>
-        <script src="../../js/start-datatables.js"></script>
-
         <script src="../../js/plugins.js"></script>
-        <script src="../../js/app.js"></script>
+
+        <script src="../../js/lib/datatables-net/datatables.min.js"></script>
 
         <script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
         <script src="../../js/lib/select2/select2.full.min.js"></script>
 
         <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
-        <script src="../../js/lib/input-mask/input-mask-init.js"></script>
-
+        <script src="../../js/lib/jquery-simply-countable/jquery.simplyCountable.js"></script>
 
         <script src="../../js/lib/eonasdan-bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
-        <script type="text/javascript">
-            $('#datetimepicker-inicial, #datetimepicker-final').datetimepicker({
-                locale: 'pt-br',
-                format: "DD/MM/YYYY"
-            });
-            $('[data-toggle="popover"]').popover();
-            $('.popover-dismiss').popover({
-                trigger: 'focus'
-            });
-        </script>
+
+        <script src="../../js/lib/jquery-validate/jquery.validate.js"></script>
+
+        <script src="../../js/app.js"></script>
+
+        <script src="../../js/start-datatables.js"></script>
+        <script src="js/cursos-scripts.js"></script>
 
     </body>
 </html>

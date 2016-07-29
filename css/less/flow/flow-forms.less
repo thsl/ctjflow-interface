@@ -8,6 +8,40 @@
 }
 
 /* ==========================================================================
+   Validações
+   ========================================================================== */
+
+.has-danger {
+  & .select2-container--default,
+  & .select2-selection--single,
+  & .select2-selection__rendered,
+  & .select2-container--arrow,
+  & .select2-selection--single,
+  & .select2-selection__rendered,
+  & .select2-container--white,
+  & .select2-selection--single,
+  & .select2-selection__rendered,
+  & .select2-container--default,
+  & .select2-container--focus,
+  & .select2-selection--multiple,
+  & .select2-container--arrow.select2-container--focus,
+  & .select2-selection--multiple,
+  & .select2-container--white.select2-container--focus,
+  & .select2-selection--multiple {
+    border-color: @btn-danger-border !important;
+  }
+  & > .error {
+    color: @btn-danger-border;
+  }
+  & > .form-control {
+    border-color: @btn-danger-border;
+    :focus {
+      border-color: @btn-danger-border;
+    }
+  }
+}
+
+/* ==========================================================================
    Buttons
    ========================================================================== */
 
@@ -103,8 +137,8 @@
     background-color: @color-link;
     border-color: @color-link;
     &:hover {
-      background-color: lighten( @color-link, 10%);
-      border-color: lighten( @color-link, 10%);
+      background-color: lighten(@color-link, 10%);
+      border-color: lighten(@color-link, 10%);
     }
   }
   &.btn-secondary {
@@ -288,10 +322,6 @@ a.btn-square-icon {
   padding-top: 11px;
 }
 
-
-
-
-
 // remove as setas dos campos type number
 
 input[type=number]::-webkit-inner-spin-button,
@@ -299,6 +329,7 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   /* display: none; <- Crashes Chrome on hover */
