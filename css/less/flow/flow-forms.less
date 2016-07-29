@@ -89,7 +89,7 @@
   &.btn-info,
   &.btn-warning,
   &.btn-danger {
-    color: #fff !important;
+    color: #fff;
   }
   &.btn-default {
     background-color: @color-grey;
@@ -161,7 +161,7 @@
       background-color: #fff;
     }
     &:hover {
-      color: #fff !important;
+      color: #fff;
     }
   }
   &.btn-primary-outline,
@@ -288,3 +288,20 @@ a.btn-square-icon {
   padding-top: 11px;
 }
 
+
+
+
+
+// remove as setas dos campos type number
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
