@@ -1,55 +1,19 @@
 // Extensão que faz com que o datatable ordene corretamente nomas que começam com caracteres especiais (ex. Águas claras)
 $(document).ready(function () {
-    // Seletor de data
-    $('#datetimepicker-inicial, #datetimepicker-final').datetimepicker({
-        locale: 'pt-br',
-        format: "DD/MM/YYYY"
-    });
-    // inicia o popover
-    $('[data-toggle="popover"]').popover();
-    // popover fecha ao clicar em outro lugar
-    $('.popover-dismiss').popover({
-        trigger: 'focus'
-    });
-
     // Mascaramento dos campos
-    $('#idade-minima').mask('000');
-    $('#curso-valor').mask('000.000.000.000.000,00', {reverse: true});
-    $('.datas').mask("00/00/0000", {placeholder: "__/__/____"});
+    $('#qtd-uni-avaliativas').mask('0000');
 
-    // Contador de caracteres
-
-    $('#curso-objetivos').simplyCountable({
-        counter: '#curso-objetivos-counter',
-        countType: 'characters',
-        strictMax: true,
-        countDirection: 'down',
-        maxCount: 150
-    });
-    $('#curso-observacao').simplyCountable({
-        counter: '#curso-observacao-counter',
-        countType: 'characters',
-        strictMax: true,
-        countDirection: 'down',
-        maxCount: 150
-    });
-
-// Validador de campos
-
-
-    $("#cursos-form").validate({
+    // Validador de campos
+    $("#nivel-form").validate({
         rules: {
-            cursotipo: {
+            cursonome: {
                 selectcheck: true
             },
-            cursogrupo: {
-                required: true
-            },
-            cursonome: "required"
+            nivelnome: "required"
         },
         messages: {
-            cursonome: "Este campo não pode ser em branco",
-            cursogrupo: "Selecione pelo menos um grupo"
+            nivelnome: "Este campo não pode ser em branco",
+            cursonome: "Selecione pelo menos um grupo"
         },
         errorElement: "em",
         errorPlacement: function (error, element) {

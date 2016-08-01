@@ -1,21 +1,5 @@
 // Extensão que faz com que o datatable ordene corretamente nomas que começam com caracteres especiais (ex. Águas claras)
 $(document).ready(function () {
-    // Seletor de data
-    $('#datetimepicker-inicial, #datetimepicker-final').datetimepicker({
-        locale: 'pt-br',
-        format: "DD/MM/YYYY"
-    });
-    // inicia o popover
-    $('[data-toggle="popover"]').popover();
-    // popover fecha ao clicar em outro lugar
-    $('.popover-dismiss').popover({
-        trigger: 'focus'
-    });
-
-    // Mascaramento dos campos
-    $('#idade-minima').mask('000');
-    $('#curso-valor').mask('000.000.000.000.000,00', {reverse: true});
-    $('.datas').mask("00/00/0000", {placeholder: "__/__/____"});
 
     // Contador de caracteres
 
@@ -28,49 +12,14 @@ $(document).ready(function () {
     });
 
 // Validador de campos
-
-
     $("#grupos-form").validate({
         rules: {
             gruponome: "required",
-            grupodescricao: "required",
-            username: {
-                required: true,
-                minlength: 2
-            },
-            password: {
-                required: true,
-                minlength: 5
-            },
-            confirm_password: {
-                required: true,
-                minlength: 5,
-                equalTo: "#password"
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            agree: "required"
+            grupodescricao: "required"
         },
         messages: {
             gruponome: "Preencha o nome do grupo",
-            grupodescricao: "Descreva o grupo",
-            username: {
-                required: "Please enter a username",
-                minlength: "Your username must consist of at least 2 characters"
-            },
-            password: {
-                required: "Please provide a password",
-                minlength: "Your password must be at least 5 characters long"
-            },
-            confirm_password: {
-                required: "Please provide a password",
-                minlength: "Your password must be at least 5 characters long",
-                equalTo: "Please enter the same password as above"
-            },
-            email: "Please enter a valid email address",
-            agree: "Please accept our policy"
+            grupodescricao: "Descreva o grupo"
         },
         errorElement: "em",
         errorPlacement: function (error, element) {

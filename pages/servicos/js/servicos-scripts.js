@@ -1,33 +1,11 @@
 // Extensão que faz com que o datatable ordene corretamente nomas que começam com caracteres especiais (ex. Águas claras)
 $(document).ready(function () {
-    // Seletor de data
-    $('#datetimepicker-inicial, #datetimepicker-final').datetimepicker({
-        locale: 'pt-br',
-        format: "DD/MM/YYYY"
-    });
-    // inicia o popover
-    $('[data-toggle="popover"]').popover();
-    // popover fecha ao clicar em outro lugar
-    $('.popover-dismiss').popover({
-        trigger: 'focus'
-    });
-
     // Mascaramento dos campos
-    $('#idade-minima').mask('000');
-    $('#curso-valor').mask('000.000.000.000.000,00', {reverse: true});
-    $('.datas').mask("00/00/0000", {placeholder: "__/__/____"});
+    $('#cargahoraria').mask('000');
 
     // Contador de caracteres
-
-    $('#curso-objetivos').simplyCountable({
-        counter: '#curso-objetivos-counter',
-        countType: 'characters',
-        strictMax: true,
-        countDirection: 'down',
-        maxCount: 150
-    });
-    $('#curso-observacao').simplyCountable({
-        counter: '#curso-observacao-counter',
+    $('#servicodescricao').simplyCountable({
+        counter: '#servico-descricao-counter',
         countType: 'characters',
         strictMax: true,
         countDirection: 'down',
@@ -35,21 +13,25 @@ $(document).ready(function () {
     });
 
 // Validador de campos
-
-
-    $("#cursos-form").validate({
+    $("#servicos-form").validate({
         rules: {
-            cursotipo: {
+            tiposervico: {
                 selectcheck: true
             },
             cursogrupo: {
                 required: true
             },
-            cursonome: "required"
+            servicogrupos: {
+                required: true
+            },
+            nomeservico: "required",
+            servicodescricao: "required"
         },
         messages: {
-            cursonome: "Este campo não pode ser em branco",
-            cursogrupo: "Selecione pelo menos um grupo"
+            nomeservico: "Este campo não pode ser em branco",
+            tiposervico: "Selecione pelo menos uma opção",
+            servicogrupos: "Selecione pelo menos um grupo",
+            servicodescricao: "A descrição não pode ser vazia"
         },
         errorElement: "em",
         errorPlacement: function (error, element) {

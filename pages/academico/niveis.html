@@ -138,7 +138,8 @@
                         <li class="with-sub">
                             <span class="lbl">Grupos</span></a>
                             <ul>
-                                <li><a href="../academico/grupos.html" class="active"><span class="lbl">Curso</span></a></li>
+                                <li><a href="../academico/grupos.html" class="active"><span class="lbl">Curso</span></a>
+                                </li>
                                 <li><a href="../academico/grupos.html"><span class="lbl">Serviço</span></a></li>
                             </ul>
                         </li>
@@ -890,118 +891,123 @@
                                                 </small>
                                             </div>
                                         </div>
-                                        <div class="row mt-md divider-top">
-                                            <div class="col-sm-4">
-                                                <label class="form-label semibold" for="">Selecione um curso
-                                                    <span class="semibold text-danger h4">*</span></label>
-                                                <select class="select2 select2-arrow">
-                                                    <option>KIDS FUN</option>
-                                                    <option>JOVENS E ADULTOS</option>
-                                                    <option>TEENS</option>
-                                                    <option>TOP KIDS</option>
-                                                    <option>JUNIOR</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <fieldset class="form-group">
-                                                    <label class="form-label semibold" for="">Nome<span class="semibold text-danger h4">*</span></label>
-                                                    <input type="text" class="form-control" id="" placeholder="Nome">
-                                                </fieldset>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <label class="form-label semibold" for="">Quantidade de unidades avaliativas</label>
-                                                <input type="text" class="form-control" id="" placeholder="00">
-                                            </div>
-                                        </div>
-                                        <div class="row divider-top pb-md">
-                                            <div class="col-sm-4">
-                                                <div class="checkbox-toggle mt-lg">
-                                                    <input type="checkbox" id="check-matdid">
-                                                    <label for="check-matdid">Material didático obrigatório</label>
+                                        <form id="nivel-form" class="validate-form" name="" method="">
+                                            <div class="row mt-md divider-top">
+                                                <div class="col-sm-4">
+                                                    <fieldset class="form-group">
+                                                        <label class="form-label semibold" for="">Selecione um curso
+                                                            <span class="semibold text-danger h4">*</span></label>
+                                                        <select class="select2 select2-arrow" id="cursonome" name="cursonome">
+                                                            <option value="0">Selecione</option>
+                                                            <option value="1">KIDS FUN</option>
+                                                            <option value="2">JOVENS E ADULTOS</option>
+                                                            <option value="3">TEENS</option>
+                                                            <option value="4">TOP KIDS</option>
+                                                            <option value="5">JUNIOR</option>
+                                                        </select>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <fieldset class="form-group">
+                                                        <label class="form-label semibold" for="">Nome<span class="semibold text-danger h4">*</span></label>
+                                                        <input type="text" class="form-control" id="nivelnome" name="nivelnome" placeholder="Nome">
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <label class="form-label semibold" for="">Quantidade de unidades avaliativas</label>
+                                                    <input type="text" class="form-control" id="qtd-uni-avaliativas">
                                                 </div>
                                             </div>
-                                            <div class="col-sm-4">
-                                                <div class="checkbox-toggle mt-lg">
-                                                    <input type="checkbox" id="check-RepTest">
-                                                    <label for="check-RepTest">Replacement test</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="checkbox-toggle mt-lg">
-                                                    <input type="checkbox" id="check-Certificado">
-                                                    <label for="check-Certificado">Certificado</label>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <section class="box-typical mt-md">
-                                                    <header class="box-typical-header header-bordered">
-                                                        <div class="tbl-row">
-                                                            <div class="tbl-cell tbl-cell-title">
-                                                                <h5 class="semibold">
-                                                                    <i class="fa fa-book mr-xs" aria-hidden="true"></i> Materiais didáticos
-                                                                </h5>
-                                                            </div>
-                                                            <div class="tbl-cell tbl-cell-action-bordered">
-                                                                <form>
-                                                                    <button type="button" class="action-btn" data-toggle="modal" data-target="#ModalSelecionaMatDid">
-                                                                        <i class="fa fa-plus-circle mr-xs"></i>Adicionar
-                                                                    </button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </header>
-                                                    <div class="card-block">
-                                                        <div class="table-responsive">
-                                                            <table class="datatable-on table table-hover">
-                                                                <thead class="hidden-iten">
-                                                                    <tr>
-                                                                        <th></th>
-                                                                        <th class="text-right"></th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td><p>
-                                                                            <img src="../../img/cursos/junior/junior-001.jpg" class="img-circle-xs"> Teens 1: Time Zones 1A - (Combo Split) + Activity Pack Teens 1 – Cengage Learning
-                                                                        </p></td>
-                                                                        <td class="text-right">
-                                                                            <button type="button" class="btn btn-sm btn-circle btn-inline btn-danger-outline" data-toggle="tooltip" data-placement="top" title="remover">
-                                                                                <i class="fa fa-times mr-xs" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td><p>
-                                                                            <img src="../../img/cursos/kids/hooray-a1.jpg" class="img-circle-xs"> Hooray! A – Student’s Book – Helbling Languages
-                                                                        </p></td>
-                                                                        <td class="text-right">
-                                                                            <button type="button" class="btn btn-sm btn-circle btn-inline btn-danger-outline" data-toggle="tooltip" data-placement="top" title="remover">
-                                                                                <i class="fa fa-times mr-xs" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
+                                            <div class="row divider-top pb-md">
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox-toggle mt-lg">
+                                                        <input type="checkbox" id="check-matdid">
+                                                        <label for="check-matdid">Material didático obrigatório</label>
                                                     </div>
-                                                </section>
-
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox-toggle mt-lg">
+                                                        <input type="checkbox" id="check-RepTest">
+                                                        <label for="check-RepTest">Replacement test</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="checkbox-toggle mt-lg">
+                                                        <input type="checkbox" id="check-Certificado">
+                                                        <label for="check-Certificado">Certificado</label>
+                                                    </div>
+                                                </div>
 
                                             </div>
-                                        </div>
-                                        <div class="row divider-top pb-md">
-                                            <div class="col-sm-12">
-                                                <button type="button" class="btn btn-primary btn-success" data-dismiss="modal">
-                                                    <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
-                                                </button>
-                                                <button type="button" class="btn btn-secondary ml-sm">
-                                                    <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar
-                                                </button>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <section class="box-typical mt-md">
+                                                        <header class="box-typical-header header-bordered">
+                                                            <div class="tbl-row">
+                                                                <div class="tbl-cell tbl-cell-title">
+                                                                    <h5 class="semibold">
+                                                                        <i class="fa fa-book mr-xs" aria-hidden="true"></i> Materiais didáticos
+                                                                    </h5>
+                                                                </div>
+                                                                <div class="tbl-cell tbl-cell-action-bordered">
+                                                                    <div>
+                                                                        <button type="button" class="action-btn" data-toggle="modal" data-target="#ModalSelecionaMatDid">
+                                                                            <i class="fa fa-plus-circle mr-xs"></i>Adicionar
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </header>
+                                                        <div class="card-block">
+                                                            <div class="table-responsive">
+                                                                <table class="datatable-on table table-hover">
+                                                                    <thead class="hidden-iten">
+                                                                        <tr>
+                                                                            <th></th>
+                                                                            <th class="text-right"></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td><p>
+                                                                                <img src="../../img/cursos/junior/junior-001.jpg" class="img-circle-xs"> Teens 1: Time Zones 1A - (Combo Split) + Activity Pack Teens 1 – Cengage Learning
+                                                                            </p></td>
+                                                                            <td class="text-right">
+                                                                                <button type="button" class="btn btn-sm btn-circle btn-inline btn-danger-outline" data-toggle="tooltip" data-placement="top" title="remover">
+                                                                                    <i class="fa fa-times mr-xs" aria-hidden="true"></i>
+                                                                                </button>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><p>
+                                                                                <img src="../../img/cursos/kids/hooray-a1.jpg" class="img-circle-xs"> Hooray! A – Student’s Book – Helbling Languages
+                                                                            </p></td>
+                                                                            <td class="text-right">
+                                                                                <button type="button" class="btn btn-sm btn-circle btn-inline btn-danger-outline" data-toggle="tooltip" data-placement="top" title="remover">
+                                                                                    <i class="fa fa-times mr-xs" aria-hidden="true"></i>
+                                                                                </button>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+
+                                                </div>
                                             </div>
-                                        </div>
+                                            <div class="row divider-top pb-md">
+                                                <div class="col-sm-12">
+                                                    <button type="submit" class="btn btn-primary btn-success">
+                                                        <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
+                                                    </button>
+                                                    <button type="button" class="btn btn-secondary ml-sm">
+                                                        <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </section>
                                     <!--.tab-pane novo curso -->
                                 </div><!--.tab-content-->
@@ -1167,11 +1173,18 @@
         <script src="../../js/lib/datatables-net/datatables.min.js"></script>
         <script src="../../js/start-datatables2.js"></script>
 
-        <script src="../../js/app.js"></script>
         <script src="../../js/plugins.js"></script>
 
         <script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
         <script src="../../js/lib/select2/select2.full.min.js"></script>
+
+        <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
+
+        <script src="../../js/lib/jquery-validate/jquery.validate.js"></script>
+
+        <script src="../../js/app.js"></script>
+
+        <script src="js/nivel-scripts.js"></script>
 
     </body>
 </html>

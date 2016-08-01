@@ -138,7 +138,8 @@
                         <li class="with-sub">
                             <span class="lbl">Grupos</span></a>
                             <ul>
-                                <li><a href="../academico/grupos.html" class="active"><span class="lbl">Curso</span></a></li>
+                                <li><a href="../academico/grupos.html" class="active"><span class="lbl">Curso</span></a>
+                                </li>
                                 <li><a href="../academico/grupos.html"><span class="lbl">Serviço</span></a></li>
                             </ul>
                         </li>
@@ -541,93 +542,107 @@
                                             </small>
                                         </div>
                                     </div>
-                                    <div class="row mt-md divider-top">
-                                        <div class="col-lg-8">
-                                            <fieldset class="form-group">
-                                                <label class="form-label semibold" for="">Nome<span class="semibold text-danger h4">*</span></label>
-                                                <input type="text" class="form-control" id="" placeholder="Nome">
-                                            </fieldset>
-                                        </div>
+                                    <form id="servicos-form" class="validate-form" name="" method="">
+                                        <div class="row mt-md divider-top">
+                                            <div class="col-lg-8">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Nome<span class="semibold text-danger h4">*</span></label>
+                                                    <input type="text" class="form-control" id="nomeservico" name="nomeservico" placeholder="Nome">
+                                                </fieldset>
+                                            </div>
 
-                                        <div class="col-sm-4">
-                                            <label class="form-label semibold" for="">Tipo de serviço
-                                                <span class="semibold text-danger h4">*</span></label>
-                                            <select class="select2 select2-arrow">
-                                                <option>Workshop</option>
-                                                <option>Teste</option>
-                                                <option>Evento</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-md divider-top">
-                                        <div class="col-sm-4">
-                                            <label class="form-label semibold" for="">Setor</label>
-                                            <select class="select2 select2-arrow">
-                                                <option>T.I.</option>
-                                                <option>Biblioteca</option>
-                                                <option>Dep. de testes</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <label class="form-label semibold" for="">Carga horária</label>
-                                            <input type="text" class="form-control" id="" placeholder="Carga horária">
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <label class="form-label semibold" for="">Público-alvo</label>
-                                            <select class="select2 select2-arrow">
-                                                <option>Empresários</option>
-                                                <option>Melhor idade</option>
-                                                <option>Jovens</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-md divider-top">
-                                        <div class="col-sm-4">
-                                            <div class="checkbox-toggle mt-lg">
-                                                <input type="checkbox" id="check-toggle-Divulg"/>
-                                                <label class="form-label" for="check-toggle-Divulg">Divulgação no site</label>
+                                            <div class="col-sm-4">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Tipo de serviço
+                                                        <span class="semibold text-danger h4">*</span></label>
+                                                    <select class="select2 select2-arrow" id="tiposervico" name="tiposervico">
+                                                        <option value="0">Selecione</option>
+                                                        <option value="1">Workshop</option>
+                                                        <option value="2">Teste</option>
+                                                        <option value="3">Evento</option>
+                                                    </select>
+                                                </fieldset>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="checkbox-toggle mt-lg">
-                                                <input type="checkbox" id="check-toggle-sit"/>
-                                                <label class="form-label" for="check-toggle-sit">Ativo</label>
+                                        <div class="row mt-md divider-top">
+                                            <div class="col-sm-4">
+                                                <label class="form-label semibold" for="">Setor</label>
+                                                <select class="select2 select2-arrow">
+                                                    <option>T.I.</option>
+                                                    <option>Biblioteca</option>
+                                                    <option>Dep. de testes</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label class="form-label semibold" for="">Carga horária</label>
+                                                <input type="text" class="form-control" id="" placeholder="Carga horária" id="cargahoraria">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label class="form-label semibold" for="">Público-alvo</label>
+                                                <select class="select2 select2-arrow">
+                                                    <option selected>Selecione</option>
+                                                    <option>Empresários</option>
+                                                    <option>Melhor idade</option>
+                                                    <option>Jovens</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="checkbox-toggle mt-lg">
-                                                <input type="checkbox" id="check-toggle-cert"/>
-                                                <label class="form-label" for="check-toggle-cert">Certificado</label>
+                                        <div class="row mt-md divider-top">
+                                            <div class="col-sm-4">
+                                                <div class="checkbox-toggle mt-lg">
+                                                    <input type="checkbox" id="check-toggle-Divulg"/>
+                                                    <label class="form-label" for="check-toggle-Divulg">Divulgação no site</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="checkbox-toggle mt-lg">
+                                                    <input type="checkbox" id="check-toggle-sit"/>
+                                                    <label class="form-label" for="check-toggle-sit">Ativo</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="checkbox-toggle mt-lg">
+                                                    <input type="checkbox" id="check-toggle-cert"/>
+                                                    <label class="form-label" for="check-toggle-cert">Certificado</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row divider-top">
-                                        <div class="col-sm-12">
-                                            <label class="form-label semibold" for="">Grupo(s)
-                                                <span class="semibold text-danger h4">*</span></label>
-                                            <select class="select2" multiple="multiple">
-                                                <option>Acadêmico</option>
-                                                <option>Resource center</option>
-                                                <option>Departamento de testes</option>
-                                            </select>
+                                        <div class="row divider-top">
+                                            <div class="col-sm-12">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Grupo(s)
+                                                        <span class="semibold text-danger h4">*</span></label>
+                                                    <select class="select2" multiple="multiple" id="servicogrupos" name="servicogrupos">
+                                                        <option value="0">Selecione</option>
+                                                        <option value="1">Acadêmico</option>
+                                                        <option value="2">Resource center</option>
+                                                        <option value="3">Departamento de testes</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row divider-top pb-md">
-                                        <div class="col-sm-12">
-                                            <label class="form-label semibold" for="">Descrição<span class="semibold text-danger h4">*</span></label>
-                                            <textarea rows="4" class="form-control" placeholder="Descrição"></textarea>
+                                        <div class="row divider-top pb-md">
+                                            <div class="col-sm-12">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Descrição<span class="semibold text-danger h4">*</span></label>
+                                                    <textarea rows="4" class="form-control" placeholder="Descrição" id="servicodescricao" name="servicodescricao"></textarea>
+                                                    <small>Você tem
+                                                        <span id="servico-descricao-counter" class="counter-value semibold"></span> caracteres restantes.
+                                                    </small>
+                                                </fieldset>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row divider-top pb-md">
-                                        <div class="col-sm-12">
-                                            <button type="button" class="btn btn-primary btn-success">
-                                                <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
-                                            </button>
-                                            <button type="button" class="btn btn-secondary ml-sm">
-                                                <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar
-                                            </button>
+                                        <div class="row divider-top">
+                                            <div class="col-sm-12">
+                                                <button type="submit" class="btn btn-primary btn-success">
+                                                    <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
+                                                </button>
+                                                <button type="button" class="btn btn-secondary ml-sm">
+                                                    <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar
+                                                </button>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </section>
                                 <!--.tab-pane novo -->
                             </div><!--.tab-content-->
@@ -638,7 +653,7 @@
         </div><!--.page-content-->
 
 
-        <!-- Modal cadastrar curso -->
+        <!-- Modal -->
         <div class="modal fade" id="ModalDetalhaServico" tabindex="-1" role="dialog" aria-labelledby="ModalDetalhaServico">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -706,17 +721,22 @@
         <script src="../../js/lib/tether/tether.min.js"></script>
         <script src="../../js/lib/bootstrap/bootstrap.min.js"></script>
 
+        <script src="../../js/plugins.js"></script>
+
         <script src="../../js/lib/datatables-net/datatables.min.js"></script>
         <script src="../../js/start-datatables.js"></script>
-
-        <script src="../../js/app.js"></script>
-        <script src="../../js/plugins.js"></script>
 
         <script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
         <script src="../../js/lib/select2/select2.full.min.js"></script>
 
         <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
-        <script src="../../js/lib/input-mask/input-mask-init.js"></script>
+        <script src="../../js/lib/jquery-simply-countable/jquery.simplyCountable.js"></script>
+
+        <script src="../../js/lib/jquery-validate/jquery.validate.js"></script>
+
+        <script src="../../js/app.js"></script>
+
+        <script src="js/servicos-scripts.js"></script>
 
     </body>
 </html>

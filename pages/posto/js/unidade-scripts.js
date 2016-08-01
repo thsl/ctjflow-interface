@@ -1,10 +1,5 @@
 // Extensão que faz com que o datatable ordene corretamente nomas que começam com caracteres especiais (ex. Águas claras)
 $(document).ready(function () {
-    // Seletor de data
-    $('#datetimepicker-inicial, #datetimepicker-final').datetimepicker({
-        locale: 'pt-br',
-        format: "DD/MM/YYYY"
-    });
     // inicia o popover
     $('[data-toggle="popover"]').popover();
     // popover fecha ao clicar em outro lugar
@@ -18,22 +13,6 @@ $(document).ready(function () {
     $('.datas').mask("00/00/0000", {placeholder: "__/__/____"});
     $('#telefone-unidade').mask('(00) 0000-0000', {placeholder: "(___) ___-____"});
 
-    // Contador de caracteres
-
-    /*$('#curso-objetivos').simplyCountable({
-        counter: '#curso-objetivos-counter',
-        countType: 'characters',
-        strictMax: true,
-        countDirection: 'down',
-        maxCount: 150
-    });
-    $('#curso-observacao').simplyCountable({
-        counter: '#curso-observacao-counter',
-        countType: 'characters',
-        strictMax: true,
-        countDirection: 'down',
-        maxCount: 150
-    });*/
 
 // Validador de campos
 
@@ -48,46 +27,11 @@ $(document).ready(function () {
             },
             cursogrupo: {
                 required: true
-            },
-            cursonome: "required",
-            lastname: "required",
-            username: {
-                required: true,
-                minlength: 2
-            },
-            password: {
-                required: true,
-                minlength: 5
-            },
-            confirm_password: {
-                required: true,
-                minlength: 5,
-                equalTo: "#password"
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            agree: "required"
+            }
         },
         messages: {
             cursonome: "Este campo não pode ser em branco",
-            cursogrupo: "Selecione pelo menos um grupo",
-            username: {
-                required: "Please enter a username",
-                minlength: "Your username must consist of at least 2 characters"
-            },
-            password: {
-                required: "Please provide a password",
-                minlength: "Your password must be at least 5 characters long"
-            },
-            confirm_password: {
-                required: "Please provide a password",
-                minlength: "Your password must be at least 5 characters long",
-                equalTo: "Please enter the same password as above"
-            },
-            email: "Please enter a valid email address",
-            agree: "Please accept our policy"
+            cursogrupo: "Selecione pelo menos um grupo"
         },
         errorElement: "em",
         errorPlacement: function (error, element) {
