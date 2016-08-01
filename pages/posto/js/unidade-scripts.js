@@ -1,12 +1,5 @@
 $(document).ready(function () {
-    // inicia o popover
-    $('[data-toggle="popover"]').popover();
-    // popover fecha ao clicar em outro lugar
-    $('.popover-dismiss').popover({
-        trigger: 'focus'
-    });
-
-    // Mascaramento dos campos
+// Mascaramento dos campos
     $('#idade-minima').mask('000');
     $('#curso-valor').mask('000.000.000.000.000,00', {reverse: true});
     $('.datas').mask("00/00/0000", {placeholder: "__/__/____"});
