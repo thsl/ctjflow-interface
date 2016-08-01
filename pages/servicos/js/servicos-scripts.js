@@ -1,7 +1,6 @@
-// Extensão que faz com que o datatable ordene corretamente nomas que começam com caracteres especiais (ex. Águas claras)
 $(document).ready(function () {
     // Mascaramento dos campos
-    $('#cargahoraria').mask('000');
+    $('#cargahoraria').mask('0000');
 
     // Contador de caracteres
     $('#servicodescricao').simplyCountable({

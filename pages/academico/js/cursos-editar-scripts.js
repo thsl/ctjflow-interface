@@ -1,4 +1,3 @@
-// Extensão que faz com que o datatable ordene corretamente nomas que começam com caracteres especiais (ex. Águas claras)
 $(document).ready(function () {
 
 // Seletor de data
