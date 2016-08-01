@@ -1,7 +1,6 @@
 // Extensão que faz com que o datatable ordene corretamente nomas que começam com caracteres especiais (ex. Águas claras)
 $(document).ready(function () {
-
-// Seletor de data
+    // Seletor de data
     $('#datetimepicker-inicial, #datetimepicker-final').datetimepicker({
         locale: 'pt-br',
         format: "DD/MM/YYYY"
@@ -17,10 +16,11 @@ $(document).ready(function () {
     $('#idade-minima').mask('000');
     $('#curso-valor').mask('000.000.000.000.000,00', {reverse: true});
     $('.datas').mask("00/00/0000", {placeholder: "__/__/____"});
+    $('#telefone-unidade').mask('(00) 0000-0000', {placeholder: "(___) ___-____"});
 
     // Contador de caracteres
 
-    $('#curso-objetivos').simplyCountable({
+    /*$('#curso-objetivos').simplyCountable({
         counter: '#curso-objetivos-counter',
         countType: 'characters',
         strictMax: true,
@@ -33,14 +33,17 @@ $(document).ready(function () {
         strictMax: true,
         countDirection: 'down',
         maxCount: 150
-    });
+    });*/
 
 // Validador de campos
 
 
-    $("#cursos-form").validate({
+    $("#unidade-form").validate({
         rules: {
-            cursotipo: {
+            selectunidade: {
+                selectcheck: true
+            },
+            selectresponsavel: {
                 selectcheck: true
             },
             cursogrupo: {
@@ -115,45 +118,6 @@ $(document).ready(function () {
     // Adiciona o select2 na validação
     jQuery.validator.addMethod('selectcheck', function (value) {
         return (value != '0');
-    }, "Selecione");
-
-// alertas quando deletar
-    $('.swal-btn-cancel').click(function (e) {
-        e.preventDefault();
-        swal({
-                title: "Você tem certeza desta ação?",
-                text: "Esta ação excuirá este registro",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonClass: "btn-danger",
-                confirmButtonText: "Sim, excluir",
-                cancelButtonText: "Não, cancelar",
-                closeOnConfirm: false,
-                closeOnCancel: false
-            },
-            function (isConfirm) {
-                if (isConfirm) {
-                    swal({
-                        title: "Excluído!",
-                        text: "O registro foi excluído",
-                        type: "success",
-                        confirmButtonClass: "btn-success"
-                    });
-                } else {
-                    swal({
-                        title: "Cancelado",
-                        text: "Ação cancelada",
-                        type: "error",
-                        confirmButtonClass: "btn-danger"
-                    });
-                }
-            });
-    });
+    }, "Selecione ao menos uma opção");
 
 });
-
-
-
-
-
-

@@ -267,20 +267,6 @@
 
                                 <section role="tabpanel" class="tab-pane fade in active" id="tabs-servicos-tab-1">
                                     <section>
-                                        <div class="row mb-md">
-                                            <div class="col-sm-9">
-                                                <div class="form-control-wrapper form-control-icon-right">
-                                                    <input type="text" class="form-control input-table-custom" placeholder="Filtre nos resultados">
-                                                    <i class="fa fa-search"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <p class="mt-sm">
-                                                    <a class="semibold" data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true" aria-controls="collapseOne">
-                                                        <i class="fa fa-search-plus" aria-hidden="true"></i> Busca avançada</a>
-                                                </p>
-                                            </div>
-                                        </div>
                                         <div id="collapse-busca-one" class="collapse" role="tabpanel" aria-labelledby="collapse-busca-one" aria-expanded="true">
                                             <section class="card">
                                                 <div class="card-block">
@@ -333,6 +319,21 @@
                                                 </div>
                                             </section>
                                         </div>
+                                        <div class="row mb-md">
+                                            <div class="col-sm-9">
+                                                <div class="form-control-wrapper form-control-icon-right">
+                                                    <input type="text" class="form-control input-table-custom" placeholder="Filtre nos resultados">
+                                                    <i class="fa fa-search"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="mt-sm">
+                                                    <a class="semibold" data-toggle="collapse" data-parent="#accordion" href="#collapse-busca-one" aria-expanded="true" aria-controls="collapseOne">
+                                                        <i class="fa fa-search-plus" aria-hidden="true"></i> Busca avançada</a>
+                                                </p>
+                                            </div>
+                                        </div>
+
                                     </section>
                                     <div class="row mt-md">
                                         <div class="col-sm-12">
@@ -462,204 +463,211 @@
                                             </small>
                                         </div>
                                     </div>
+                                    <form id="unidade-form" class="validate-form" name="" method="">
+                                        <section class="card card-default mt-md">
+                                            <header class="card-header">
+                                                <h5 class="semibold">
+                                                    <i class="fa fa-building-o mr-xs" aria-hidden="true"></i> Dados
+                                                </h5>
+                                            </header>
+                                            <div class="card-block">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <fieldset class="form-group">
+                                                            <label class="form-label semibold" for="">Unidade
+                                                                <span class="semibold text-danger h4">*</span></label>
+                                                            <select class="select2 select2-arrow" id="selectunidade" name="selectunidade">
+                                                                <option value="0">Selecione</option>
+                                                                <option value="1">Asa sul</option>
+                                                                <option value="2">Asa norte</option>
+                                                                <option value="3">Águas claras</option>
+                                                            </select>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <label class="form-label semibold" for="">CNPJ</label>
+                                                        <p>000.000.000/0000-00</p>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <label class="form-label semibold" for="">Centro de custo</label>
+                                                        <p>Centro de custo</p>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="checkbox-toggle mt-md pt-sm">
+                                                            <input type="checkbox" id="check-qtd-niveis" checked/>
+                                                            <label class="form-label" for="check-qtd-niveis">Ativo</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
 
-                                    <section class="card card-default mt-md">
-                                        <header class="card-header">
-                                            <h5 class="semibold">
-                                                <i class="fa fa-building-o mr-xs" aria-hidden="true"></i> Dados </h5>
-                                        </header>
-                                        <div class="card-block">
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <label class="form-label semibold" for="">Unidade
-                                                        <span class="semibold text-danger h4">*</span></label>
-                                                    <select class="select2 select2-arrow">
-                                                        <option>Selecione</option>
-                                                        <option>Asa sul</option>
-                                                        <option>Asa norte</option>
-                                                        <option>Águas claras</option>
-                                                    </select>
+
+                                        <section class="card card-default mt-md">
+                                            <header class="card-header">
+                                                <h5 class="semibold">
+                                                    <i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização
+                                                </h5>
+                                            </header>
+                                            <div class="card-block">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <label class="form-label semibold" for="">Endereço</label>
+                                                        <p>Avenida Maria Teresa, quadra 43, rua antonieta, 1646</p>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <label class="form-label semibold" for="">Número</label>
+                                                        <p>1289</p>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <label class="form-label semibold" for="">Complemento</label>
+                                                        <p>Alameda 303</p>
+                                                    </div>
                                                 </div>
-                                                <div class="col-sm-3">
-                                                    <label class="form-label semibold" for="">CNPJ</label>
-                                                    <p>000.000.000/0000-00</p>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <label class="form-label semibold" for="">Centro de custo</label>
-                                                    <p>Centro de custo</p>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="checkbox-toggle mt-md pt-sm">
-                                                        <input type="checkbox" id="check-qtd-niveis" checked/>
-                                                        <label class="form-label" for="check-qtd-niveis">Ativo</label>
+                                                <div class="row mt-md">
+                                                    <div class="col-sm-3">
+                                                        <label class="form-label semibold" for="">Bairro</label>
+                                                        <p>Asa sul</p>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <label class="form-label semibold" for="">Cidade</label>
+                                                        <p>Brasília</p>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <label class="form-label semibold" for="">UF</label>
+                                                        <p>Distrito Federal</p>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <label class="form-label semibold" for="">CEP</label>
+                                                        <p>00000-000</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </section>
+                                        </section>
 
-
-                                    <section class="card card-default mt-md">
-                                        <header class="card-header">
-                                            <h5 class="semibold">
-                                                <i class="fa fa-map-marker mr-xs" aria-hidden="true"></i> Localização
-                                            </h5>
-                                        </header>
-                                        <div class="card-block">
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label class="form-label semibold" for="">Endereço</label>
-                                                    <p>Avenida Maria Teresa, quadra 43, rua antonieta, 1646</p>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <label class="form-label semibold" for="">Número</label>
-                                                    <p>1289</p>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <label class="form-label semibold" for="">Complemento</label>
-                                                    <p>Alameda 303</p>
-                                                </div>
-                                            </div>
-                                            <div class="row mt-md">
-                                                <div class="col-sm-3">
-                                                    <label class="form-label semibold" for="">Bairro</label>
-                                                    <p>Asa sul</p>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <label class="form-label semibold" for="">Cidade</label>
-                                                    <p>Brasília</p>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <label class="form-label semibold" for="">UF</label>
-                                                    <p>Distrito Federal</p>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <label class="form-label semibold" for="">CEP</label>
-                                                    <p>00000-000</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-
-                                    <section class="card card-default mt-md">
-                                        <header class="card-header">
-                                            <h5 class="semibold">
-                                                <i class="fa fa-commenting mr-xs" aria-hidden="true"></i> Contatos </h5>
-                                        </header>
-                                        <div class="card-block">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <label class="form-label semibold" for="">Responsável pedagógico
-                                                        <span class="semibold text-danger h4">*</span></label>
-                                                    <select class="select2 select2-arrow">
-                                                        <option>Selecione</option>
-                                                        <option>Luan Almeida Barbosa</option>
-                                                        <option>Otávio Goncalves Souza</option>
-                                                        <option>Ana Souza Martins</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="row mt-md">
-                                                <div class="col-sm-12">
-                                                    <label class="form-label semibold" for="">Interessados</label>
-                                                    <select class="select2" multiple="multiple">
-                                                        <option>Selecione</option>
-                                                        <option>Luan Almeida Barbosa</option>
-                                                        <option>Otávio Goncalves Souza</option>
-                                                        <option>Ana Souza Martins</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-
-                                    <div class="row mt-md">
-                                        <div class="col-sm-12">
-                                            <section class="box-typical">
-                                                <header class="box-typical-header header-bordered">
-                                                    <div class="tbl-row">
-                                                        <div class="tbl-cell tbl-cell-title">
-                                                            <h5 class="semibold">
-                                                                <i class="fa fa-phone mr-xs" aria-hidden="true"></i> Telefones
-                                                            </h5>
-                                                        </div>
-                                                        <div class="tbl-cell tbl-cell-action-bordered">
-                                                            <form>
-                                                                <button type="button" class="action-btn" data-toggle="collapse" data-target="#add-telefone" aria-expanded="false" aria-controls="add-telefone">
-                                                                    <i class="fa fa-plus-circle mr-xs"></i>Adicionar
-                                                                </button>
-                                                            </form>
-                                                        </div>
+                                        <section class="card card-default mt-md">
+                                            <header class="card-header">
+                                                <h5 class="semibold">
+                                                    <i class="fa fa-commenting mr-xs" aria-hidden="true"></i> Contatos
+                                                </h5>
+                                            </header>
+                                            <div class="card-block">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <fieldset class="form-group">
+                                                            <label class="form-label semibold" for="">Responsável pedagógico
+                                                                <span class="semibold text-danger h4">*</span></label>
+                                                            <select class="select2 select2-arrow" id="selectresponsavel" name="selectresponsavel">
+                                                                <option value="0">Selecione</option>
+                                                                <option value="1">Luan Almeida Barbosa</option>
+                                                                <option value="2">Otávio Goncalves Souza</option>
+                                                                <option value="3">Ana Souza Martins</option>
+                                                            </select>
+                                                        </fieldset>
                                                     </div>
-                                                </header>
-                                                <div class="p-0">
-                                                    <div class="collapse" id="add-telefone">
-                                                        <div class="clearfix p-a mb-0 divider-bottom">
-                                                            <div class="col-sm-5">
-                                                                <label class="form-label semibold" for="">Tipo</label>
-                                                                <select class="select2 select2-arrow">
-                                                                    <option>Selecione</option>
-                                                                    <option>Principal</option>
-                                                                    <option>Comercial</option>
-                                                                    <option>Celular</option>
-                                                                    <option>Fax</option>
-                                                                    <option>Outros</option>
-                                                                </select>
+                                                </div>
+                                                <div class="row mt-md">
+                                                    <div class="col-sm-12">
+                                                        <label class="form-label semibold" for="">Interessados</label>
+                                                        <select class="select2" multiple="multiple">
+                                                            <option>Selecione</option>
+                                                            <option>Luan Almeida Barbosa</option>
+                                                            <option>Otávio Goncalves Souza</option>
+                                                            <option>Ana Souza Martins</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <div class="row mt-md">
+                                            <div class="col-sm-12">
+                                                <section class="box-typical">
+                                                    <header class="box-typical-header header-bordered">
+                                                        <div class="tbl-row">
+                                                            <div class="tbl-cell tbl-cell-title">
+                                                                <h5 class="semibold">
+                                                                    <i class="fa fa-phone mr-xs" aria-hidden="true"></i> Telefones
+                                                                </h5>
                                                             </div>
-                                                            <div class="col-sm-7">
-                                                                <label class="form-label semibold" for="">Número</label>
-                                                                <div class="input-group">
-                                                                    <input type="text" class="form-control" placeholder="Número">
+                                                            <div class="tbl-cell tbl-cell-action-bordered">
+                                                                <div>
+                                                                    <button type="button" class="action-btn" data-toggle="collapse" data-target="#add-telefone" aria-expanded="false" aria-controls="add-telefone">
+                                                                        <i class="fa fa-plus-circle mr-xs"></i>Adicionar
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </header>
+                                                    <div class="p-0">
+                                                        <div class="collapse" id="add-telefone">
+                                                            <div class="clearfix p-a mb-0 divider-bottom">
+                                                                <div class="col-sm-5">
+                                                                    <label class="form-label semibold" for="">Tipo</label>
+                                                                    <select class="select2 select2-arrow">
+                                                                        <option>Selecione</option>
+                                                                        <option>Principal</option>
+                                                                        <option>Comercial</option>
+                                                                        <option>Celular</option>
+                                                                        <option>Fax</option>
+                                                                        <option>Outros</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-sm-7">
+                                                                    <label class="form-label semibold" for="">Número</label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" placeholder="Número" id="telefone-unidade">
                                                                         <span class="input-group-btn">
                                                                           <button class="btn btn-secondary-outline" type="button">
                                                                               <i class="fa fa-plus" aria-hidden="true"></i>
                                                                           </button>
                                                                         </span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="table-responsive">
-                                                        <table class="table table-hover table-box-typical text-center">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="text-center">Tipo</th>
-                                                                    <th class="text-center">Telefone</th>
-                                                                    <th class="text-center"></th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <p>Principal</p></td>
-                                                                    <td>
-                                                                        (00) 0000-0000
-                                                                    </td>
-                                                                    <td class="text-center">
-                                                                        <button type="button" class="btn btn-sm btn-circle btn-inline btn-danger-outline" data-toggle="tooltip" data-placement="top" title="remover">
-                                                                            <i class="fa fa-times mr-xs" aria-hidden="true"></i>
-                                                                        </button>
-                                                                    </td>
-                                                                </tr>
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover table-box-typical text-center">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="text-center">Tipo</th>
+                                                                        <th class="text-center">Telefone</th>
+                                                                        <th class="text-center"></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <p>Principal</p></td>
+                                                                        <td>
+                                                                            (00) 0000-0000
+                                                                        </td>
+                                                                        <td class="text-center">
+                                                                            <button type="button" class="btn btn-sm btn-circle btn-inline btn-danger-outline" data-toggle="tooltip" data-placement="top" title="remover">
+                                                                                <i class="fa fa-times mr-xs" aria-hidden="true"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
 
-                                                            </tbody>
-                                                        </table>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </section>
+                                                </section>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="row divider-top pb-md">
-                                        <div class="col-sm-12">
-                                            <button type="button" class="btn btn-primary btn-success" data-dismiss="modal">
-                                                <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
-                                            </button>
-                                            <button type="button" class="btn btn-secondary ml-sm">
-                                                <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar
-                                            </button>
+                                        <div class="row divider-top pb-md">
+                                            <div class="col-sm-12">
+                                                <button type="submit" class="btn btn-primary btn-success" data-dismiss="modal">
+                                                    <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
+                                                </button>
+                                                <button type="button" class="btn btn-secondary ml-sm">
+                                                    <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar
+                                                </button>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </section>
                                 <!--.tab-pane novo -->
                             </div><!--.tab-content-->
@@ -780,8 +788,7 @@
                                         <div class="tbl-row">
                                             <div class="tbl-cell tbl-cell-title">
                                                 <h5 class="semibold">
-                                                    <i class="fa fa-phone mr-xs" aria-hidden="true"></i> Telefones
-                                                </h5>
+                                                    <i class="fa fa-phone mr-xs" aria-hidden="true"></i> Telefones </h5>
                                             </div>
                                         </div>
                                     </header>
@@ -845,6 +852,10 @@
 
         <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
         <script src="../../js/lib/input-mask/input-mask-init.js"></script>
+
+        <script src="../../js/lib/jquery-validate/jquery.validate.js"></script>
+
+        <script src="js/unidade-scripts.js"></script>
 
     </body>
 </html>
