@@ -1,6 +1,7 @@
 $(document).ready(function () {
     // Mascaramento dos campos
     $('#qtd-uni-avaliativas').mask('0000');
+    $('#qtdunav-busca').mask('0000');
 
     // Validador de campos
     $("#nivel-form").validate({
