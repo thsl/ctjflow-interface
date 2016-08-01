@@ -140,7 +140,8 @@
                         <li class="with-sub">
                             <span class="lbl">Grupos</span></a>
                             <ul>
-                                <li><a href="../academico/grupos.html" class="active"><span class="lbl">Curso</span></a></li>
+                                <li><a href="../academico/grupos.html" class="active"><span class="lbl">Curso</span></a>
+                                </li>
                                 <li><a href="../academico/grupos.html"><span class="lbl">Serviço</span></a></li>
                             </ul>
                         </li>
@@ -447,43 +448,50 @@
                                 </section>
 
                                 <section role="tabpanel" class="tab-pane fade" id="tabs-grupos-tab-2">
-                                    <div class="row mt-sm">
-                                        <div class="col-sm-12">
-                                            <h4 class="semibold"> Cadastrar novo grupo</h4>
-                                            <small>Campos com asterisco vermelho (
-                                                <span class="semibold text-danger">*</span> ) são obrigatórios
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-md divider-top">
-                                        <div class="col-lg-9">
-                                            <fieldset class="form-group">
-                                                <label class="form-label semibold" for="">Nome<span class="semibold text-danger h4">*</span></label>
-                                                <input type="text" class="form-control" id="" placeholder="Nome">
-                                            </fieldset>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="checkbox-toggle mt-lg">
-                                                <input type="checkbox" id="check-toggle-1"/>
-                                                <label class="form-label" for="check-toggle-1">Ativo</label>
+                                    <form id="grupos-form" class="validate-form" name="" method="">
+                                        <div class="row mt-sm">
+                                            <div class="col-sm-12">
+                                                <h4 class="semibold"> Cadastrar novo grupo</h4>
+                                                <small>Campos com asterisco vermelho (
+                                                    <span class="semibold text-danger">*</span> ) são obrigatórios
+                                                </small>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-lg">
-                                        <div class="col-sm-12">
-                                            <label class="form-label semibold" for="">Descrição<span class="semibold text-danger h4">*</span></label>
-                                            <textarea rows="4" class="form-control" placeholder="Descrição"></textarea>
+                                        <div class="row mt-md divider-top">
+                                            <div class="col-lg-9">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Nome<span class="semibold text-danger h4">*</span></label>
+                                                    <input type="text" class="form-control" id="gruponome" name="gruponome" placeholder="Nome">
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="checkbox-toggle mt-lg">
+                                                    <input type="checkbox" id="check-toggle-1"/>
+                                                    <label class="form-label" for="check-toggle-1">Ativo</label>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row divider-top pb-md">
-                                        <div class="col-sm-12">
-                                            <button type="button" class="btn btn-primary btn-success" id="notie-success">
-                                                <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
-                                            </button>
-                                            <a href="#tabs-grupos-tab-1" data-toggle="tab" class="btn btn-secondary ml-md">
-                                                <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar</a>
+                                        <div class="row mb-lg">
+                                            <div class="col-sm-12">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Descrição<span class="semibold text-danger h4">*</span></label>
+                                                    <textarea rows="4" class="form-control" id="grupodescricao" name="grupodescricao" placeholder="Descrição"></textarea>
+                                                    <small>Você tem
+                                                        <span id="grupo-descricao-counter" class="counter-value semibold"></span> characters restantes.
+                                                    </small>
+                                                </fieldset>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="row divider-top pb-md">
+                                            <div class="col-sm-12">
+                                                <button type="submit" class="btn btn-primary btn-success">
+                                                    <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
+                                                </button>
+                                                <a href="#tabs-grupos-tab-1" data-toggle="tab" class="btn btn-secondary ml-md">
+                                                    <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar</a>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </section>
                                 <!--.tab-pane novo curso -->
                             </div><!--.tab-content-->
@@ -566,44 +574,14 @@
         <script src="../../js/lib/notie/notie.js"></script>
         <script src="../../js/lib/notie/notie-init.js"></script>
 
+        <script src="../../js/lib/jquery-validate/jquery.validate.js"></script>
+
+        <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
+        <script src="../../js/lib/jquery-simply-countable/jquery.simplyCountable.js"></script>
 
         <script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
 
-        <script>
-            $(document).ready(function () {
-                $('.swal-btn-cancel').click(function (e) {
-                    e.preventDefault();
-                    swal({
-                                title: "Você tem certeza desta ação?",
-                                text: "Isto excluirá o grupo, mas não excluirá os cursos vinculados a ele.",
-                                type: "warning",
-                                showCancelButton: true,
-                                confirmButtonClass: "btn-danger",
-                                confirmButtonText: "Sim, deletar",
-                                cancelButtonText: "Não, cancelar",
-                                closeOnConfirm: false,
-                                closeOnCancel: false
-                            },
-                            function (isConfirm) {
-                                if (isConfirm) {
-                                    swal({
-                                        title: "Excluído!",
-                                        text: "O grupo foi excluído",
-                                        type: "success",
-                                        confirmButtonClass: "btn-success"
-                                    });
-                                } else {
-                                    swal({
-                                        title: "Cancelado",
-                                        text: "Ação cancelada",
-                                        type: "error",
-                                        confirmButtonClass: "btn-danger"
-                                    });
-                                }
-                            });
-                });
-            });
-        </script>
+        <script src="js/grupos-scripts.js"></script>
 
     </body>
 </html>
