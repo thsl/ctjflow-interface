@@ -10,7 +10,7 @@ $(document).ready(function () {
     $('#idade-minima').mask('000');
     $('#curso-valor').mask('000.000.000.000.000,00', {reverse: true});
     $('.datas').mask("00/00/0000", {placeholder: "__/__/____"});
-    $('#telefone-unidade').mask('(00) 0000-0000', {placeholder: "(___) ___-____"});
+    $('#telefone-unidade').mask('(00) 000000000', {placeholder: "(___) ___________"});
 
 
 // Validador de campos
@@ -62,5 +62,38 @@ $(document).ready(function () {
     jQuery.validator.addMethod('selectcheck', function (value) {
         return (value != '0');
     }, "Selecione ao menos uma opção");
+
+    $('.swal-btn-cancel').click(function (e) {
+        e.preventDefault();
+        swal({
+                title: "Você tem certeza desta ação?",
+                text: "Esta ação excuirá este registro",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Sim, excluir",
+                cancelButtonText: "Não, cancelar",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            },
+            function (isConfirm) {
+                if (isConfirm) {
+                    swal({
+                        title: "Excluído!",
+                        text: "O registro foi excluído",
+                        type: "success",
+                        confirmButtonClass: "btn-success"
+                    });
+                } else {
+                    swal({
+                        title: "Cancelado",
+                        text: "Ação cancelada",
+                        type: "error",
+                        confirmButtonClass: "btn-danger"
+                    });
+                }
+            });
+    });
+
 
 });

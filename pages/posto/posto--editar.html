@@ -141,7 +141,8 @@
                         <li class="with-sub">
                             <span class="lbl">Grupos</span></a>
                             <ul>
-                                <li><a href="../academico/grupos.html" class="active"><span class="lbl">Curso</span></a></li>
+                                <li><a href="../academico/grupos.html" class="active"><span class="lbl">Curso</span></a>
+                                </li>
                                 <li><a href="../academico/grupos.html"><span class="lbl">Serviço</span></a></li>
                             </ul>
                         </li>
@@ -231,7 +232,7 @@
                     <ol class="breadcrumb blue-ctj">
                         <li><a href="#">Acadêmico</a></li>
                         <li class="ml-xs mr-xs"> /</li>
-                        <li class="active">Postos avançados</li>
+                        <li class="active">Posto avançado</li>
                         <li style="float:right;">
                             <button class="btn btn-inline btn-secondary-outline btn-sm">
                                 <i class="fa fa-question-circle" aria-hidden="true"></i> Ajuda
@@ -433,11 +434,11 @@
                                                                         <ul class="chart-legend-list">
                                                                             <li>
                                                                                 <div class="dot blue"></div>
-                                                                                (00) 0000-0000 - Principal
+                                                                                (00) 00000000 - Principal
                                                                             </li>
                                                                             <li>
                                                                                 <div class="dot blue"></div>
-                                                                                (00) 0000-0000 - Outros
+                                                                                (00) 00000000 - Outros
                                                                             </li>
                                                                         </ul>
                                                                     </td>
@@ -540,75 +541,87 @@
                         <div class="row mt-md">
                             <div class="col-sm-12">
                                 <label class="form-label semibold" for="">Observações</label>
-                                <textarea rows="4" class="form-control" placeholder="Observações"></textarea>
+                                <textarea rows="4" class="form-control" placeholder="Observações" id="posto-observacao"></textarea>
+                                <p>Você tem
+                                    <span id="posto-observacao-counter" class="counter-value semibold"></span> caracteres restantes.
+                                </p>
                             </div>
                         </div>
-                        <section class="card card-default mt-md">
-                            <header class="card-header">
-                                <h5 class="semibold"><i class="fa fa-phone mr-xs" aria-hidden="true"></i> Telefones
-                                </h5>
-                            </header>
-                            <div class="card-block">
-                                <div class="row">
-                                    <div class="col-sm-7 mt-xl">
-                                        <div class="row">
-                                            <div class="col-sm-5">
-                                                <label class="form-label semibold" for="">Tipo</label>
-                                                <select class="select2 select2-arrow">
-                                                    <option>Selecione</option>
-                                                    <option>Principal</option>
-                                                    <option>Comercial</option>
-                                                    <option>Celular</option>
-                                                    <option>Fax</option>
-                                                    <option>Outros</option>
-                                                </select>
+                        <div class="row mt-md">
+                            <div class="col-sm-12">
+                                <section class="box-typical">
+                                    <header class="box-typical-header header-bordered">
+                                        <div class="tbl-row">
+                                            <div class="tbl-cell tbl-cell-title">
+                                                <h5 class="semibold">
+                                                    <i class="fa fa-phone mr-xs" aria-hidden="true"></i> Telefones </h5>
                                             </div>
-                                            <div class="col-sm-7">
-                                                <label class="form-label semibold" for="">Número</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" placeholder="Número">
-                                                    <span class="input-group-btn">
-                                                      <button class="btn btn-success-outline" type="button">
-                                                          <i class="fa fa-plus" aria-hidden="true"></i>
-                                                      </button>
-                                                    </span>
+                                            <div class="tbl-cell tbl-cell-action-bordered">
+                                                <div>
+                                                    <button type="button" class="action-btn" data-toggle="collapse" data-target="#add-telefone" aria-expanded="false" aria-controls="add-telefone">
+                                                        <i class="fa fa-plus-circle mr-xs"></i>Adicionar
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
+                                    </header>
+                                    <div class="p-0">
+                                        <div class="collapse" id="add-telefone">
+                                            <div class="clearfix p-a mb-0 divider-bottom">
+                                                <div class="col-sm-5">
+                                                    <label class="form-label semibold" for="">Tipo</label>
+                                                    <select class="select2 select2-arrow">
+                                                        <option>Selecione</option>
+                                                        <option>Principal</option>
+                                                        <option>Comercial</option>
+                                                        <option>Celular</option>
+                                                        <option>Fax</option>
+                                                        <option>Outros</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <label class="form-label semibold" for="">Número</label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Número" id="telefone-posto">
+                                                                        <span class="input-group-btn">
+                                                                          <button class="btn btn-secondary-outline" type="button">
+                                                                              <i class="fa fa-plus" aria-hidden="true"></i>
+                                                                          </button>
+                                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-hover table-box-typical text-center">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">Tipo</th>
+                                                        <th class="text-center">Telefone</th>
+                                                        <th class="text-center"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <p>Principal</p></td>
+                                                        <td>
+                                                            (00) 00000000
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <button type="button" class="btn btn-sm btn-circle btn-inline btn-danger-outline" data-toggle="tooltip" data-placement="top" title="remover">
+                                                                <i class="fa fa-times mr-xs" aria-hidden="true"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-5">
-                                        <label class="form-label semibold" for="">Telefones cadastrados</label>
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Tipo</th>
-                                                    <th>Número</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Principal</td>
-                                                    <td>(61) 0000-0000</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm">
-                                                            <i class="fa fa-times" aria-hidden="true"></i></button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Comercial</td>
-                                                    <td>(61) 0000-0000</td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-rounded btn-inline btn-danger-outline btn-sm">
-                                                            <i class="fa fa-times" aria-hidden="true"></i></button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+                                </section>
                             </div>
-                        </section>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
@@ -625,54 +638,21 @@
         <script src="../../js/lib/datatables-net/datatables.min.js"></script>
         <script src="../../js/start-datatables.js"></script>
 
-        <script src="../../js/app.js"></script>
+
         <script src="../../js/plugins.js"></script>
 
         <script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
         <script src="../../js/lib/select2/select2.full.min.js"></script>
 
         <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
-        <script src="../../js/lib/input-mask/input-mask-init.js"></script>
+        <script src="../../js/lib/jquery-simply-countable/jquery.simplyCountable.js"></script>
 
         <script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
         <script src="../../js/lib/notie/notie.js"></script>
         <script src="../../js/lib/notie/notie-init.js"></script>
 
-        <script>
-            $(document).ready(function () {
-                $('.swal-btn-cancel').click(function (e) {
-                    e.preventDefault();
-                    swal({
-                                title: "Você tem certeza desta ação?",
-                                text: "Esta ação excuirá este registro",
-                                type: "warning",
-                                showCancelButton: true,
-                                confirmButtonClass: "btn-danger",
-                                confirmButtonText: "Sim, excluir",
-                                cancelButtonText: "Não, cancelar",
-                                closeOnConfirm: false,
-                                closeOnCancel: false
-                            },
-                            function (isConfirm) {
-                                if (isConfirm) {
-                                    swal({
-                                        title: "Excluído!",
-                                        text: "O registro foi excluído",
-                                        type: "success",
-                                        confirmButtonClass: "btn-success"
-                                    });
-                                } else {
-                                    swal({
-                                        title: "Cancelado",
-                                        text: "Ação cancelada",
-                                        type: "error",
-                                        confirmButtonClass: "btn-danger"
-                                    });
-                                }
-                            });
-                });
-            });
-        </script>
+        <script src="../../js/app.js"></script>
+        <script src="js/posto-scripts.js"></script>
 
     </body>
 </html>

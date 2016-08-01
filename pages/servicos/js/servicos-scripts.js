@@ -63,4 +63,40 @@ $(document).ready(function () {
         return (value != '0');
     }, "Selecione");
 
+
+
+    $('.swal-btn-cancel').click(function (e) {
+        e.preventDefault();
+        swal({
+                title: "Você tem certeza desta ação?",
+                text: "Esta ação excuirá este registro",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Sim, excluir",
+                cancelButtonText: "Não, cancelar",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            },
+            function (isConfirm) {
+                if (isConfirm) {
+                    swal({
+                        title: "Excluído!",
+                        text: "O registro foi excluído",
+                        type: "success",
+                        confirmButtonClass: "btn-success"
+                    });
+                } else {
+                    swal({
+                        title: "Cancelado",
+                        text: "Ação cancelada",
+                        type: "error",
+                        confirmButtonClass: "btn-danger"
+                    });
+                }
+            });
+    });
+
+
+
 });

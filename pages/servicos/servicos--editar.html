@@ -141,7 +141,8 @@
                         <li class="with-sub">
                             <span class="lbl">Grupos</span></a>
                             <ul>
-                                <li><a href="../academico/grupos.html" class="active"><span class="lbl">Curso</span></a></li>
+                                <li><a href="../academico/grupos.html" class="active"><span class="lbl">Curso</span></a>
+                                </li>
                                 <li><a href="../academico/grupos.html"><span class="lbl">Serviço</span></a></li>
                             </ul>
                         </li>
@@ -230,7 +231,7 @@
                     <ol class="breadcrumb blue-ctj">
                         <li><a href="#">Acadêmico</a></li>
                         <li class="ml-xs mr-xs"> /</li>
-                        <li class="active">Serviços</li>
+                        <li class="active">Serviço</li>
                         <li style="float:right;">
                             <button class="btn btn-inline btn-secondary-outline btn-sm">
                                 <i class="fa fa-question-circle" aria-hidden="true"></i> Ajuda
@@ -280,95 +281,110 @@
                                             </small>
                                         </div>
                                     </div>
-                                    <div class="row mt-md divider-top">
-                                        <div class="col-lg-8">
-                                            <fieldset class="form-group">
-                                                <label class="form-label semibold" for="">Nome<span class="semibold text-danger h4">*</span></label>
-                                                <input type="text" class="form-control" id="" placeholder="Nome" value="Teste aplicado">
-                                            </fieldset>
-                                        </div>
+                                    <form id="servicos-form" class="validate-form" name="" method="">
+                                        <div class="row mt-md divider-top">
+                                            <div class="col-lg-8">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Nome<span class="semibold text-danger h4">*</span></label>
+                                                    <input type="text" class="form-control" id="nomeservico" name="nomeservico" placeholder="Nome" value="Teste aplicado">
+                                                </fieldset>
+                                            </div>
 
-                                        <div class="col-sm-4">
-                                            <label class="form-label semibold" for="">Tipo de serviço
-                                                <span class="semibold text-danger h4">*</span></label>
-                                            <select class="select2 select2-arrow">
-                                                <option>Workshop</option>
-                                                <option selected>Teste</option>
-                                                <option>Evento</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-md divider-top">
-                                        <div class="col-sm-4">
-                                            <label class="form-label semibold" for="">Setor</label>
-                                            <select class="select2 select2-arrow">
-                                                <option>T.I.</option>
-                                                <option>Biblioteca</option>
-                                                <option selected>Dep. de testes</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <label class="form-label semibold" for="">Carga horária</label>
-                                            <input type="text" class="form-control" id="" placeholder="Carga horária" value="30">
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <label class="form-label semibold" for="">Público-alvo</label>
-                                            <select class="select2 select2-arrow">
-                                                <option>Empresários</option>
-                                                <option>Melhor idade</option>
-                                                <option>Jovens</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-md divider-top">
-                                        <div class="col-sm-4">
-                                            <div class="checkbox-toggle mt-lg">
-                                                <input type="checkbox" id="check-toggle-Divulg" checked/>
-                                                <label class="form-label" for="check-toggle-Divulg">Divulgação no site</label>
+                                            <div class="col-sm-4">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Tipo de serviço
+                                                        <span class="semibold text-danger h4">*</span></label>
+                                                    <select class="select2 select2-arrow" id="tiposervico" name="tiposervico">
+                                                        <option value="0">Selecione</option>
+                                                        <option value="1">Workshop</option>
+                                                        <option value="2" selected>Teste</option>
+                                                        <option value="3">Evento</option>
+                                                    </select>
+                                                </fieldset>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="checkbox-toggle mt-lg">
-                                                <input type="checkbox" id="check-toggle-sit" checked/>
-                                                <label class="form-label" for="check-toggle-sit">Ativo</label>
+                                        <div class="row mt-md divider-top">
+                                            <div class="col-sm-4">
+                                                <label class="form-label semibold" for="">Setor</label>
+                                                <select class="select2 select2-arrow">
+                                                    <option>T.I.</option>
+                                                    <option>Biblioteca</option>
+                                                    <option selected>Dep. de testes</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label class="form-label semibold" for="">Carga horária</label>
+                                                <input type="text" class="form-control" id="cargahoraria" placeholder="Carga horária" value="30">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label class="form-label semibold" for="">Público-alvo</label>
+                                                <select class="select2 select2-arrow">
+                                                    <option selected>Selecione</option>
+                                                    <option selected>Empresários</option>
+                                                    <option>Melhor idade</option>
+                                                    <option>Jovens</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="checkbox-toggle mt-lg">
-                                                <input type="checkbox" id="check-toggle-cert" checked/>
-                                                <label class="form-label" for="check-toggle-cert">Certificado</label>
+                                        <div class="row mt-md divider-top">
+                                            <div class="col-sm-4">
+                                                <div class="checkbox-toggle mt-lg">
+                                                    <input type="checkbox" id="check-toggle-Divulg" checked/>
+                                                    <label class="form-label" for="check-toggle-Divulg">Divulgação no site</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="checkbox-toggle mt-lg">
+                                                    <input type="checkbox" id="check-toggle-sit" checked/>
+                                                    <label class="form-label" for="check-toggle-sit">Ativo</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="checkbox-toggle mt-lg">
+                                                    <input type="checkbox" id="check-toggle-cert" checked/>
+                                                    <label class="form-label" for="check-toggle-cert">Certificado</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row divider-top">
-                                        <div class="col-sm-12">
-                                            <label class="form-label semibold" for="">Grupo(s)
-                                                <span class="semibold text-danger h4">*</span></label>
-                                            <select class="select2" multiple="multiple">
-                                                <option selected>Acadêmico</option>
-                                                <option>Resource center</option>
-                                                <option selected>Departamento de testes</option>
-                                            </select>
+                                        <div class="row divider-top">
+                                            <div class="col-sm-12">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Grupo(s)
+                                                        <span class="semibold text-danger h4">*</span></label>
+                                                    <select class="select2" multiple="multiple" id="servicogrupos" name="servicogrupos">
+                                                        <option value="0">Selecione</option>
+                                                        <option value="1" selected>Acadêmico</option>
+                                                        <option value="2">Resource center</option>
+                                                        <option value="3" selected>Departamento de testes</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row divider-top pb-md">
-                                        <div class="col-sm-12">
-                                            <label class="form-label semibold" for="">Descrição<span class="semibold text-danger h4">*</span></label>
-                                            <textarea rows="4" class="form-control" placeholder="Descrição">O resultado deste teste é apenas um indicativo do conhecimento do candidato. Antes de efetivar a matrícula em nossos cursos presenciais, o candidato fará um teste oral em uma de nossas unidades.</textarea>
+                                        <div class="row divider-top pb-md">
+                                            <div class="col-sm-12">
+                                                <fieldset class="form-group">
+                                                    <label class="form-label semibold" for="">Descrição<span class="semibold text-danger h4">*</span></label>
+                                                    <textarea rows="4" class="form-control" placeholder="Descrição" id="servicodescricao" name="servicodescricao">O resultado deste teste é apenas um indicativo do conhecimento do candidato.</textarea>
+                                                    <small>Você tem
+                                                        <span id="servico-descricao-counter" class="counter-value semibold"></span> caracteres restantes.
+                                                    </small>
+                                                </fieldset>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row divider-top pb-md">
-                                        <div class="col-sm-12">
-                                            <button type="button" class="btn btn-primary btn-success">
-                                                <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
-                                            </button>
-                                            <button type="button" class="btn btn-primary btn-danger swal-btn-cancel ml-sm">
-                                                <i class="fa fa-times mr-xs" aria-hidden="true"></i> Excluir
-                                            </button>
-                                            <a href="cursos.html" class="btn btn-secondary ml-sm">
-                                                <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar</a>
+                                        <div class="row divider-top">
+                                            <div class="col-sm-12">
+                                                <button type="submit" class="btn btn-primary btn-success">
+                                                    <i class="fa fa-floppy-o mr-xs" aria-hidden="true"></i> Salvar
+                                                </button>
+                                                <button type="button" class="btn btn-primary btn-danger swal-btn-cancel ml-sm">
+                                                    <i class="fa fa-times mr-xs" aria-hidden="true"></i> Excluir
+                                                </button>
+                                                <button type="button" class="btn btn-secondary ml-sm">
+                                                    <i class="fa fa-ban mr-xs" aria-hidden="true"></i> Cancelar
+                                                </button>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </section>
                                 <!--.tab-pane novo -->
                             </div><!--.tab-content-->
@@ -450,52 +466,22 @@
         <script src="../../js/lib/datatables-net/datatables.min.js"></script>
         <script src="../../js/start-datatables.js"></script>
 
-        <script src="../../js/app.js"></script>
         <script src="../../js/plugins.js"></script>
 
         <script src="../../js/lib/bootstrap-select/bootstrap-select.min.js"></script>
         <script src="../../js/lib/select2/select2.full.min.js"></script>
 
         <script src="../../js/lib/input-mask/jquery.mask.min.js"></script>
-        <script src="../../js/lib/input-mask/input-mask-init.js"></script>
+        <script src="../../js/lib/jquery-simply-countable/jquery.simplyCountable.js"></script>
+
+        <script src="../../js/lib/jquery-validate/jquery.validate.js"></script>
 
         <script src="../../js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
 
-        <script>
-            $(document).ready(function () {
-                $('.swal-btn-cancel').click(function (e) {
-                    e.preventDefault();
-                    swal({
-                                title: "Você tem certeza desta ação?",
-                                text: "Esta ação excuirá este registro",
-                                type: "warning",
-                                showCancelButton: true,
-                                confirmButtonClass: "btn-danger",
-                                confirmButtonText: "Sim, excluir",
-                                cancelButtonText: "Não, cancelar",
-                                closeOnConfirm: false,
-                                closeOnCancel: false
-                            },
-                            function (isConfirm) {
-                                if (isConfirm) {
-                                    swal({
-                                        title: "Excluído!",
-                                        text: "O registro foi excluído",
-                                        type: "success",
-                                        confirmButtonClass: "btn-success"
-                                    });
-                                } else {
-                                    swal({
-                                        title: "Cancelado",
-                                        text: "Ação cancelada",
-                                        type: "error",
-                                        confirmButtonClass: "btn-danger"
-                                    });
-                                }
-                            });
-                });
-            });
-        </script>
+        <script src="../../js/app.js"></script>
+
+        <script src="js/servicos-scripts.js"></script>
+
 
     </body>
 </html>
