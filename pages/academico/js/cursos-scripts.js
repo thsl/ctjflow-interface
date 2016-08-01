@@ -4,12 +4,6 @@ $(document).ready(function () {
         locale: 'pt-br',
         format: "DD/MM/YYYY"
     });
-    // inicia o popover
-    $('[data-toggle="popover"]').popover();
-    // popover fecha ao clicar em outro lugar
-    $('.popover-dismiss').popover({
-        trigger: 'focus'
-    });
 
     // Mascaramento dos campos
     $('#idade-minima').mask('000');

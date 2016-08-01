@@ -46,8 +46,6 @@ $(document).ready(function () {
     }, "Selecione");
 
 
-
-
     $('.swal-btn-cancel').click(function (e) {
         e.preventDefault();
         swal({
@@ -79,8 +77,5 @@ $(document).ready(function () {
                 }
             });
     });
-
-
-
 
 });
