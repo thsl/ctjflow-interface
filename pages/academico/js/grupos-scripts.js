@@ -7,7 +7,7 @@ $(document).ready(function () {
         countType: 'characters',
         strictMax: true,
         countDirection: 'down',
-        maxCount: 150
+        maxCount: 1000
     });
 
 // Validador de campos

@@ -8,7 +8,7 @@
       border-color: #d4dee6;
       background-color: #efefef;
       color: #6b7a85;
-      &:hover{
+      &:hover {
         color: #91a1ad !important;
       }
     }
@@ -16,7 +16,7 @@
       background-color: #5cb85c;
       border-color: #5cb85c;
       color: #fff;
-      &:hover{
+      &:hover {
         color: #fff !important;
       }
     }
@@ -55,4 +55,21 @@
     line-height: 1.33;
     border-radius: 35px;
   }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @btn-border-radius-large);
+}
+
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+}
+
+.btn-xs {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
 }
