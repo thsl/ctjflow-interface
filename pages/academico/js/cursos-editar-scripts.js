@@ -8,6 +8,7 @@ $(document).ready(function () {
 
     // Mascaramento dos campos
     $('#idade-minima').mask('000');
+    $('#idade-maxima').mask('000');
     $('#curso-valor').mask('000.000.000.000.000,00', {reverse: true});
     $('.datas').mask("00/00/0000", {placeholder: "__/__/____"});
 
